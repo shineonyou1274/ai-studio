@@ -6,3 +6,5 @@ _work/
 fonts/
 music/*
 !music/여기에_음악을_넣으세요.txt
+motion/*
+!motion/여기에_오프닝_엔딩을_넣으세요.txt
