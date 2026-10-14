@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 에이전트 사무실</title>
+<style>
+:root{--panel:rgba(17,21,33,.84);--line:rgba(255,255,255,.12);--text:#eef2f8;--sub:#9aa6bb;--accent:#7aa2ff}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#e7edf5;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;color:var(--text)}
+#stage{position:fixed;inset:0}
+#stage canvas{display:block;touch-action:none;cursor:grab}
+#stage canvas:active{cursor:grabbing}
+#labels{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.tag{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;display:flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:rgba(17,21,33,.86);border:1px solid var(--line);font-size:12px;pointer-events:auto;cursor:pointer;transition:box-shadow .3s,border-color .3s}
+.tag .d{width:8px;height:8px;border-radius:50%;flex:none}
+.tag b{font-weight:700}
+.tag em{font-style:normal;font-size:11px;color:var(--sub);padding-left:6px;border-left:1px solid var(--line)}
+.tag.on{border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 30%,transparent)}
+.tag.on em{color:#fff}
+.tag.fin em{color:#8ee6a8}
+.hud{position:fixed;background:var(--panel);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+#top{left:16px;top:16px;padding:14px 16px;width:min(760px,calc(100% - 32px))}
+.row1{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:12px;flex:none;background:conic-gradient(#4f8cff,#ff9f43,#d36bf0,#22c55e,#06b6d4,#f5b301,#4f8cff);display:grid;place-items:center}
+.logo::after{content:"";width:16px;height:16px;border-radius:5px;background:#11151f}
+h1{margin:0;font-size:17px;letter-spacing:-.2px}
+#proj{margin:2px 0 0;font-size:13px;color:var(--sub)}
+#proj b{color:#ffd27a;font-weight:600}
+.clock{margin-left:auto;text-align:right;font-variant-numeric:tabular-nums}
+.clock strong{display:block;font-size:20px}
+.clock span{font-size:11px;color:var(--sub)}
+#pipe{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+#pipe li{position:relative;padding:7px 8px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid transparent;cursor:pointer;min-width:0}
+#pipe li .n{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;white-space:nowrap}
+#pipe li .n i{width:7px;height:7px;border-radius:50%;flex:none}
+#pipe li .s{font-size:11px;color:var(--sub);margin-top:2px;white-space:nowrap}
+#pipe li .bar{height:3px;border-radius:2px;background:rgba(255,255,255,.08);margin-top:6px;overflow:hidden}
+#pipe li .bar i{display:block;height:100%;width:0;background:var(--c)}
+#pipe li.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+#pipe li.on .s{color:#fff}
+#pipe li.fin .s{color:#8ee6a8}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.seg{display:flex;background:rgba(255,255,255,.06);border-radius:10px;padding:3px}
+.seg button,.btn{border:0;background:transparent;color:var(--text);font:inherit;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.seg button.on{background:var(--accent);color:#0c1020;font-weight:700}
+.btn{background:rgba(255,255,255,.06)}
+.btn:hover,.seg button:hover:not(.on){background:rgba(255,255,255,.12)}
+#feed{left:16px;bottom:16px;width:min(380px,calc(100% - 32px));padding:12px 14px}
+#feed h2,#detail h3{margin:0 0 8px;font-size:12px;color:var(--sub);font-weight:600;letter-spacing:.2px}
+#feedList{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+#feedList li{display:flex;gap:8px;font-size:12px;line-height:1.45;animation:in .4s ease}
+#feedList li time{color:var(--sub);font-variant-numeric:tabular-nums;flex:none}
+#feedList li i{width:7px;height:7px;border-radius:50%;flex:none;margin-top:5px}
+@keyframes in{from{opacity:0;transform:translateY(-4px)}to{opacity:1}}
+#detail{right:16px;top:16px;width:min(360px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto;padding:16px}
+#detail[hidden]{display:none}
+.dh{display:flex;gap:12px;align-items:flex-start}
+.badge{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:18px;color:#0c1020;flex:none}
+.dh h2{margin:0;font-size:17px}
+.dh h2 small{font-size:11px;color:var(--sub);font-weight:500;margin-left:6px;padding:2px 6px;border:1px solid var(--line);border-radius:6px}
+.dh p{margin:4px 0 0;font-size:12.5px;color:var(--sub);line-height:1.5}
+.x{margin-left:auto;border:0;background:rgba(255,255,255,.08);color:var(--text);width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:16px;flex:none}
+.card{margin-top:12px;padding:12px;border-radius:12px;background:rgba(255,255,255,.05)}
+.st{display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
+.chip{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.1)}
+.pb{height:6px;border-radius:3px;background:rgba(255,255,255,.08);margin-top:10px;overflow:hidden}
+.pb i{display:block;height:100%;transition:width .25s}
+.card p{margin:0;font-size:13px;line-height:1.55}
+.card .empty{color:var(--sub)}
+.log{list-style:none;margin:0;padding:0;font-size:12px;line-height:1.5;display:flex;flex-direction:column;gap:5px;font-variant-numeric:tabular-nums}
+.log time{color:var(--sub);margin-right:6px}
+#hint{position:fixed;right:16px;bottom:38px;font-size:12px;color:#5b6475;background:rgba(255,255,255,.72);padding:7px 11px;border-radius:10px;max-width:calc(100% - 32px)}
+body.dark #hint{color:#c7cfdd;background:rgba(17,21,33,.6)}
+footer{position:fixed;right:16px;bottom:12px;font-size:11px;color:#7d8697}
+body.dark footer{color:#8a93a6}
+@media (max-width:760px){
+ #pipe{grid-template-columns:repeat(3,1fr)}
+ #feed{display:none}
+ #hint{bottom:34px;left:16px;right:16px}
+ .clock strong{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="labels"></div>
+
+<header class="hud" id="top">
+ <div class="row1">
+  <div class="logo" aria-hidden="true"></div>
+  <div style="min-width:0">
+   <h1>AI 에이전트 사무실</h1>
+   <p id="proj"></p>
+  </div>
+  <div class="clock"><strong id="clock">09:00</strong><span id="cycle">1번째 프로젝트</span></div>
+ </div>
+ <ol id="pipe"></ol>
+ <div class="ctrls">
+  <div class="seg" id="tod">
+   <button data-v="day" class="on">낮</button><button data-v="dusk">노을</button><button data-v="night">밤</button><button data-v="auto">자동</button>
+  </div>
+  <div class="seg" id="spd">
+   <button data-v="1" class="on">1배</button><button data-v="2">2배</button><button data-v="4">4배</button>
+  </div>
+  <button class="btn" id="pause">일시 정지</button>
+  <button class="btn" id="reset">시점 초기화</button>
+ </div>
+</header>
+
+<aside class="hud" id="feed"><h2>협업 기록</h2><ul id="feedList"></ul></aside>
+<aside class="hud" id="detail" hidden></aside>
+<div id="hint">화면을 끌면 시점이 돌아가고, 휠로 확대·축소합니다. 로봇을 누르면 지금 하는 일을 볼 수 있습니다.</div>
+<footer>© shiny-peace</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ---------- 데이터 ---------- */
+const ROLES=[
+ {name:'리서처',code:'SCOUT-01',color:0x4f8cff,css:'#4f8cff',desc:'필요한 자료를 찾아 비교하고, 핵심 쟁점을 정리합니다.'},
+ {name:'작가',code:'QUILL-02',color:0xff9f43,css:'#ff9f43',desc:'정리된 자료를 바탕으로 읽기 쉬운 초안을 씁니다.'},
+ {name:'디자이너',code:'PIXEL-03',color:0xd36bf0,css:'#d36bf0',desc:'초안을 화면과 지면에 맞게 배치하고 시각 요소를 만듭니다.'},
+ {name:'코더',code:'BYTE-04',color:0x22c55e,css:'#22c55e',desc:'디자인을 실제로 작동하는 웹 화면으로 구현합니다.'},
+ {name:'검수자',code:'LENS-05',color:0x06b6d4,css:'#06b6d4',desc:'사실 오류, 어색한 문장, 작동 문제를 찾아 고치도록 요청합니다.'},
+ {name:'매니저',code:'CHIEF-06',color:0xf5b301,css:'#f5b301',desc:'전체 결과물을 확인하고 최종 승인과 배포를 결정합니다.'}
+];
+const PROJECTS=[
+ {title:'고1 영어 수업 「AI와 저작권」 토론 자료',steps:[
+  ['수업 목표와 학생 수준을 확인하고 있습니다.','AI 생성 이미지의 저작권 판결 기사 5건을 비교하고 쟁점을 추리고 있습니다.','기사 요약 5건과 핵심 쟁점 3가지'],
+  ['쟁점 3가지를 어떤 순서로 제시할지 정하고 있습니다.','고1 수준의 어휘로 찬반 읽기 자료 2쪽을 쓰고 있습니다.','찬반 읽기 자료 초안 2쪽'],
+  ['읽기 자료와 활동을 한 장에 담을 구성을 고르고 있습니다.','활동지 레이아웃을 잡고 쟁점별 아이콘을 그리고 있습니다.','활동지 시안 1종과 아이콘 3개'],
+  ['토론 중에 필요한 기능을 정리하고 있습니다.','모둠별 발언 타이머와 의견 투표 화면을 만들고 있습니다.','토론 타이머·투표 웹앱'],
+  ['확인할 항목의 목록을 만들고 있습니다.','판결 날짜와 어휘 난이도를 검토하고, 타이머가 제대로 작동하는지 시험하고 있습니다.','사실 오류 1건과 어려운 어휘 4개 수정'],
+  ['수업 목표와 결과물이 맞는지 비교하고 있습니다.','자료 묶음을 최종 확인하고 배포 문서를 준비하고 있습니다.','수업 자료 묶음 최종 승인']]},
+ {title:'학부모 안내문 「1인 1기기 사용 수칙」',steps:[
+  ['학교의 기기 운영 규정을 확인하고 있습니다.','다른 학교 안내문 4건과 교육청 지침을 비교하고 있습니다.','필수 안내 항목 7가지'],
+  ['학부모가 가장 궁금해할 내용을 먼저 고르고 있습니다.','안내문 1쪽과 자주 묻는 질문 5개를 쓰고 있습니다.','안내문 초안과 자주 묻는 질문 5개'],
+  ['한 장에 잘 읽히는 정보의 순서를 정하고 있습니다.','사용 수칙을 그림 카드 6장으로 바꾸고 있습니다.','안내문 지면 시안과 그림 카드 6장'],
+  ['학부모가 휴대전화로 안내문을 보는 상황을 가정하고 있습니다.','모바일 안내 페이지와 확인 서명 양식을 만들고 있습니다.','모바일 안내 페이지와 확인 양식'],
+  ['개인정보와 관련된 문구를 먼저 살피고 있습니다.','개인정보 수집 문구, 글자 크기, 링크 작동을 점검하고 있습니다.','개인정보 문구 1곳 보완과 링크 2개 수정'],
+  ['발송 일정과 대상 학년을 확인하고 있습니다.','안내문을 최종 확인하고 발송 예약을 준비하고 있습니다.','학부모 안내문 발송 승인']]},
+ {title:'진로 수업 「직무 탐색 웹 활동지」',steps:[
+  ['학생들이 관심을 보인 직무를 모으고 있습니다.','채용 공고 12건에서 공통으로 요구하는 역량을 뽑고 있습니다.','직무 6개와 요구 역량 표'],
+  ['요구 역량을 고등학생의 경험으로 바꿔 말할 방법을 찾고 있습니다.','직무별 자기 점검 문항 30개를 쓰고 있습니다.','자기 점검 문항 30개'],
+  ['결과를 한눈에 보여 줄 그래프의 형태를 고르고 있습니다.','역량 그래프와 직무 카드 화면을 디자인하고 있습니다.','결과 화면 시안과 직무 카드 6장'],
+  ['문항 응답을 점수로 바꾸는 방식을 정하고 있습니다.','응답을 점수로 계산하고 그래프로 그리는 기능을 만들고 있습니다.','직무 탐색 웹 활동지'],
+  ['학생이 오해할 수 있는 문항을 찾고 있습니다.','문항 표현과 점수 계산을 표본 응답 10건으로 시험하고 있습니다.','문항 3개 수정과 계산 오류 1건 해결'],
+  ['수업 차시의 흐름과 맞는지 확인하고 있습니다.','활동지를 최종 확인하고 학생 배포 링크를 만들고 있습니다.','직무 탐색 활동지 배포 승인']]}
+];
+const DESK=[[-6,-3.6],[0,-3.6],[6,-3.6],[6,3.6],[0,3.6],[-6,3.6]];
+const STATE_TXT={idle:'대기 중',think:'생각 중',work:'작업 중',done:'완료'};
+const DUR={think:2.6,work:5.4,done:1.2,transfer:1.9};
+
+/* ---------- 기본 장면 ---------- */
+const stage=document.getElementById('stage');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+stage.appendChild(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0xe7edf5);
+const camera=new THREE.PerspectiveCamera(32,1,0.1,300);
+
+const M=(c,o={})=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.65,metalness:.04},o));
+function add(mesh,x,y,z,parent){mesh.position.set(x,y,z);mesh.castShadow=true;mesh.receiveShadow=true;(parent||scene).add(mesh);return mesh}
+const box=(w,h,d,m,x,y,z,p)=>add(new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m),x,y,z,p);
+const cyl=(rt,rb,h,m,x,y,z,p,s=20)=>add(new THREE.Mesh(new THREE.CylinderGeometry(rt,rb,h,s),m),x,y,z,p);
+const sph=(r,m,x,y,z,p)=>add(new THREE.Mesh(new THREE.SphereGeometry(r,20,14),m),x,y,z,p);
+
+/* 조명 */
+const hemi=new THREE.HemisphereLight(0xffffff,0xb9c2d0,.75);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xfff1dc,1.25);
+sun.position.set(8,16,6);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+Object.assign(sun.shadow.camera,{left:-16,right:16,top:16,bottom:-16,near:1,far:60});sun.shadow.bias=-.0004;sun.shadow.radius=4;
+scene.add(sun);scene.add(sun.target);
+
+/* 방 */
+const floorM=M(0xdfe3ea,{roughness:.9});
+box(24,.2,18,floorM,0,-.1,0).castShadow=false;
+const aisle=box(24,.02,2,M(0xcfae88,{roughness:.8}),0,.01,0);aisle.castShadow=false;
+const wallM=M(0xf3f4f7,{roughness:.95});
+box(24,6.4,.3,wallM,0,3.2,-9.15);box(.3,6.4,18.3,wallM,-12.15,3.2,0);
+box(24,.25,.06,M(0xb7bfcc),0,.12,-8.98);box(.06,.25,18,M(0xb7bfcc),-11.98,.12,0);
+const windowMats=[];const frameM=M(0x2d3442,{metalness:.3,roughness:.4});
+function makeWindow(x,z,rotY){
+ const g=new THREE.Group();g.position.set(x,3.4,z);g.rotation.y=rotY;scene.add(g);
+ const mat=new THREE.MeshBasicMaterial({color:0xbfe2ff});windowMats.push(mat);
+ const pane=new THREE.Mesh(new THREE.PlaneGeometry(3,2.4),mat);pane.position.z=.01;g.add(pane);
+ box(3.2,.1,.12,frameM,0,1.25,.04,g);box(3.2,.1,.12,frameM,0,-1.25,.04,g);
+ box(.1,2.5,.12,frameM,-1.55,0,.04,g);box(.1,2.5,.12,frameM,1.55,0,.04,g);box(.06,2.4,.08,frameM,0,0,.04,g);
+ box(3.4,.08,.3,M(0xe6e8ec),0,-1.32,.12,g);
+}
+[-8.5,-3.5,3.5,8.5].forEach(x=>makeWindow(x,-8.99,0));
+[-6,6].forEach(z=>makeWindow(-11.99,z,Math.PI/2));
+
+/* 프로젝트 보드 */
+const boardCv=document.createElement('canvas');boardCv.width=1024;boardCv.height=560;
+const boardCtx=boardCv.getContext('2d');const boardTex=new THREE.CanvasTexture(boardCv);boardTex.encoding=THREE.sRGBEncoding;boardTex.anisotropy=4;
+const boardG=new THREE.Group();boardG.position.set(-11.97,3.1,0);boardG.rotation.y=Math.PI/2;scene.add(boardG);
+box(5.5,3.1,.08,M(0x2d3442),0,0,0,boardG);
+const boardPlane=new THREE.Mesh(new THREE.PlaneGeometry(5.3,2.9),new THREE.MeshBasicMaterial({map:boardTex}));boardPlane.position.z=.05;boardG.add(boardPlane);
+const BOARD_POS=new THREE.Vector3(-11.6,3.1,0);
+
+/* 소품 */
+function plant(x,z,s=1){
+ const g=new THREE.Group();g.position.set(x,0,z);g.scale.setScalar(s);scene.add(g);
+ cyl(.35,.28,.6,M(0xe9e2d6),0,.3,0,g);
+ const leaf=M(0x4f9d69,{roughness:.8});
+ [[0,1.05,0,.5],[.22,.8,.1,.35],[-.2,.85,-.1,.38],[.05,1.4,.05,.3]].forEach(([a,b,c,r])=>sph(r,leaf,a,b,c,g));
+}
+plant(-11,-8,1.1);plant(11,-8,1.2);plant(-11,8,1);plant(11,1.5,.9);
+const sofaM=M(0x8fa3c4,{roughness:.9});
+box(3,.5,1.1,sofaM,9.5,.45,-7.9);box(3,.8,.3,sofaM,9.5,.95,-8.4);
+box(1.6,.06,.9,M(0xffffff),9.5,.62,-6.6);cyl(.06,.06,.6,frameM,9.5,.3,-6.6);
+const rug=box(7,.02,3.2,M(0xe8d9c5,{roughness:1}),-6,.015,0.02);rug.castShadow=false;rug.visible=false;
+
+/* 활성 표시 링 */
+const ring=new THREE.Mesh(new THREE.RingGeometry(1.75,1.95,64),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.6,side:THREE.DoubleSide}));
+ring.rotation.x=-Math.PI/2;ring.position.y=.03;scene.add(ring);
+
+/* ---------- 에이전트 ---------- */
+const agents=[];const pickables=[];
+const labelsEl=document.getElementById('labels');
+function buildAgent(i){
+ const r=ROLES[i],[dx,dz]=DESK[i];
+ const g=new THREE.Group();g.position.set(dx,0,dz);scene.add(g);
+ const deskM=M(0xf8f8f6),legM=M(0x3b4252,{metalness:.4,roughness:.4});
+ const roleM=M(r.color,{emissive:r.color,emissiveIntensity:.35});
+ box(2.6,.12,1.4,deskM,0,1.1,0,g);
+ box(2.62,.05,.05,roleM,0,1.05,.7,g);
+ [[-1.2,-.6],[1.2,-.6],[-1.2,.6],[1.2,.6]].forEach(([x,z])=>cyl(.05,.05,1.04,legM,x,.52,z,g));
+ // 모니터
+ const mon=new THREE.Group();mon.position.set(0,1.16,.35);g.add(mon);
+ box(.5,.03,.3,legM,0,.015,0,mon);box(.1,.42,.1,legM,0,.22,0,mon);
+ box(1.2,.74,.06,M(0x1d2230,{roughness:.4}),0,.74,0,mon);
+ const cv=document.createElement('canvas');cv.width=256;cv.height=150;
+ const tex=new THREE.CanvasTexture(cv);tex.encoding=THREE.sRGBEncoding;
+ const scr=new THREE.Mesh(new THREE.PlaneGeometry(1.1,.64),new THREE.MeshBasicMaterial({map:tex}));
+ scr.position.set(0,.74,-.035);scr.rotation.y=Math.PI;mon.add(scr);
+ // 키보드·머그
+ box(.85,.04,.3,M(0xe2e5ea),0,1.18,-.25,g);
+ cyl(.09,.08,.2,M(r.color,{roughness:.5}),-.95,1.26,-.2,g);
+ // 스탠드 조명
+ const lampM=M(0xffe7b0,{emissive:0xffc66b,emissiveIntensity:0});
+ cyl(.14,.16,.05,legM,1.0,1.185,.25,g);cyl(.025,.025,.6,legM,1.0,1.5,.25,g);
+ const shade=add(new THREE.Mesh(new THREE.ConeGeometry(.2,.22,20,1,true),M(0xf1f1ee,{side:THREE.DoubleSide})),.92,1.82,.15,g);shade.rotation.x=.4;
+ sph(.07,lampM,.92,1.76,.13,g);
+ const lampLight=new THREE.PointLight(0xffc77a,0,4.2,2);lampLight.position.set(.9,1.7,.0);g.add(lampLight);
+ // 의자
+ const chairM=M(new THREE.Color(r.color).lerp(new THREE.Color(0x2b3140),.55),{roughness:.8});
+ cyl(.06,.06,.6,legM,0,.4,-1.05,g);cyl(.4,.4,.04,legM,0,.08,-1.05,g,6);
+ box(.95,.12,.9,chairM,0,.76,-1.05,g);box(.95,.9,.12,chairM,0,1.3,-1.52,g);
+ // 로봇
+ const robot=new THREE.Group();robot.position.set(0,0,-1.0);g.add(robot);
+ const bodyM=M(0xf4f6fa,{roughness:.35,metalness:.1}),darkM=M(0x232a38,{roughness:.3,metalness:.3});
+ const eyeM=new THREE.MeshStandardMaterial({color:r.color,emissive:r.color,emissiveIntensity:1.4});
+ box(.72,.26,.55,darkM,0,.96,0,robot);
+ box(.82,.8,.56,bodyM,0,1.5,0,robot);
+ const chest=box(.42,.24,.03,eyeM,0,1.56,.29,robot);
+ cyl(.1,.12,.18,darkM,0,1.98,0,robot);
+ [[-.18],[.18]].forEach(([x])=>{box(.22,.2,.6,bodyM,x,.9,.28,robot);box(.2,.62,.22,darkM,x,.55,.55,robot)});
+ const head=new THREE.Group();head.position.set(0,2.32,0);robot.add(head);
+ box(.8,.6,.64,bodyM,0,0,0,head);
+ box(.64,.3,.04,darkM,0,.02,.33,head);
+ sph(.055,eyeM,-.14,.03,.355,head);sph(.055,eyeM,.14,.03,.355,head);
+ cyl(.02,.02,.24,darkM,0,.42,0,head);
+ const bulbM=new THREE.MeshStandardMaterial({color:r.color,emissive:r.color,emissiveIntensity:1});
+ sph(.07,bulbM,0,.57,0,head);
+ box(.08,.22,.22,darkM,-.43,0,0,head);box(.08,.22,.22,darkM,.43,0,0,head);
+ const anchor=new THREE.Object3D();anchor.position.set(0,.85,0);head.add(anchor);
+ function arm(side){
+  const sh=new THREE.Group();sh.position.set(side*.5,1.8,0);robot.add(sh);
+  sph(.13,darkM,0,0,0,sh);box(.17,.48,.17,bodyM,0,-.26,0,sh);
+  const fo=new THREE.Group();fo.position.set(0,-.5,0);sh.add(fo);
+  box(.15,.42,.15,darkM,0,-.2,0,fo);sph(.1,bodyM,0,-.45,0,fo);
+  return [sh,fo];
+ }
+ const [shL,foL]=arm(-1),[shR,foR]=arm(1);
+ g.traverse(o=>{if(o.isMesh){o.userData.agent=i;pickables.push(o)}});
+ // 이름표
+ const tag=document.createElement('div');tag.className='tag';tag.style.setProperty('--c',r.css);
+ tag.innerHTML=`<span class="d" style="background:${r.css}"></span><b>${r.name}</b><em>대기 중</em>`;
+ tag.onclick=()=>openDetail(i);labelsEl.appendChild(tag);
+ const a={i,g,robot,head,shL,shR,foL,foR,eyeM,bulbM,chestM:eyeM,lampM,lampLight,cv,ctx:cv.getContext('2d'),tex,tag,tagEm:tag.querySelector('em'),
+  pos:new THREE.Vector3(dx,0,dz),screenPos:new THREE.Vector3(dx,2.0,dz+.35),anchor,yaw:0,lastScreen:-1,state:'idle',celebrate:0};
+ agents.push(a);
+}
+ROLES.forEach((_,i)=>buildAgent(i));
+
+/* 모니터 화면 */
+function drawScreen(a,st,t){
+ const c=a.ctx,W=256,H=150,col=ROLES[a.i].css;
+ c.fillStyle=st==='idle'?'#151a26':'#0f1522';c.fillRect(0,0,W,H);
+ c.fillStyle=col;c.globalAlpha=st==='idle'?.35:1;c.fillRect(0,0,W,16);c.globalAlpha=1;
+ c.fillStyle='#0c1020';c.font='bold 10px sans-serif';c.fillText(ROLES[a.i].code,6,12);
+ if(st==='work'){
+  const n=Math.floor(t*7);
+  for(let k=0;k<10;k++){
+   const seed=(n+k)*9301%233,w=40+(seed*37%150),ind=(seed%3)*12;
+   c.fillStyle=k%4===0?col:'rgba(220,230,245,.55)';
+   c.fillRect(10+ind,26+k*12,Math.min(w,W-30-ind),5);
+  }
+  c.fillStyle=col;c.fillRect(10,H-8,(t*40)%(W-20),3);
+ }else if(st==='think'){
+  for(let k=0;k<3;k++){const ph=Math.sin(t*6-k*.8)*.5+.5;c.fillStyle=col;c.globalAlpha=.3+ph*.7;
+   c.beginPath();c.arc(W/2-24+k*24,H/2+8,7+ph*2,0,7);c.fill()}
+  c.globalAlpha=1;
+ }else if(st==='done'){
+  c.strokeStyle='#8ee6a8';c.lineWidth=7;c.beginPath();c.arc(W/2,H/2+8,30,0,7);c.stroke();
+  c.beginPath();c.moveTo(W/2-14,H/2+9);c.lineTo(W/2-3,H/2+20);c.lineTo(W/2+16,H/2-3);c.stroke();
+ }else{
+  c.fillStyle='rgba(200,210,230,.35)';c.font='14px sans-serif';c.textAlign='center';c.fillText('대기 중',W/2,H/2+12);c.textAlign='left';
+ }
+ a.tex.needsUpdate=true;
+}
+
+/* 문서 큐브 */
+const cubeMat=new THREE.MeshStandardMaterial({color:0xffffff,emissive:0xffffff,emissiveIntensity:1.3,transparent:true});
+const cube=new THREE.Mesh(new THREE.BoxGeometry(.36,.36,.36),cubeMat);scene.add(cube);
+const halo=new THREE.Mesh(new THREE.BoxGeometry(.6,.6,.6),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:.55}));cube.add(halo);
+const cubeLight=new THREE.PointLight(0xffffff,1.4,4.5,2);cube.add(cubeLight);
+const trail=[];for(let k=0;k<16;k++){const m=new THREE.Mesh(new THREE.SphereGeometry(.07,10,8),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true}));m.visible=false;scene.add(m);trail.push(m)}
+const hist=[];cube.visible=false;
+
+/* ---------- 프로젝트 보드 그리기 ---------- */
+let completed=0;
+function drawBoard(){
+ const c=boardCtx,W=1024,H=560,p=PROJECTS[sim.proj];
+ c.fillStyle='#fbfbf8';c.fillRect(0,0,W,H);
+ c.fillStyle='#1f2533';c.fillRect(0,0,W,70);
+ c.fillStyle='#fff';c.font='bold 30px sans-serif';c.fillText('프로젝트 보드',32,46);
+ c.font='22px sans-serif';c.fillStyle='#ffd27a';c.textAlign='right';c.fillText(`완료한 프로젝트 ${completed}건`,W-32,45);c.textAlign='left';
+ c.fillStyle='#1f2533';c.font='bold 28px sans-serif';c.fillText(p.title,32,118);
+ ROLES.forEach((r,k)=>{
+  const y=165+k*62,st=agentState(k);
+  c.fillStyle=st==='idle'?'#eef0f4':'#ffffff';c.strokeStyle=st==='idle'?'#eef0f4':r.css;c.lineWidth=3;
+  c.beginPath();c.roundRect?c.roundRect(28,y,W-56,50,12):c.rect(28,y,W-56,50);c.fill();c.stroke();
+  c.fillStyle=r.css;c.beginPath();c.arc(56,y+25,10,0,7);c.fill();
+  c.fillStyle='#1f2533';c.font='bold 22px sans-serif';c.fillText(r.name,80,y+33);
+  c.font='21px sans-serif';
+  if(st==='done'){c.fillStyle='#2f9e5b';c.fillText('✓ '+p.steps[k][2],210,y+33)}
+  else if(st==='idle'){c.fillStyle='#9aa3b2';c.fillText('앞 단계의 자료를 기다리고 있습니다.',210,y+33)}
+  else{c.fillStyle='#4a5468';c.fillText(st==='think'?'작업 방향을 정하고 있습니다.':'결과물을 만들고 있습니다.',210,y+33)}
+ });
+ boardTex.needsUpdate=true;
+}
+
+/* ---------- 시뮬레이션 ---------- */
+const sim={step:0,phase:'think',t:0,cycle:1,proj:0,clock:0,speed:1,paused:false};
+const logs=ROLES.map(()=>[]);const feed=[];
+function agentState(i){if(i<sim.step)return'done';if(i>sim.step)return'idle';return sim.phase==='think'?'think':sim.phase==='work'?'work':'done'}
+function clockStr(){const m=540+Math.floor(sim.clock*2);return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0')}
+function log(i,text){
+ const e={time:clockStr(),i,text};logs[i].push(e);if(logs[i].length>30)logs[i].shift();
+ feed.unshift(e);if(feed.length>6)feed.pop();renderFeed();
+}
+function renderFeed(){
+ document.getElementById('feedList').innerHTML=feed.map(e=>`<li><time>${e.time}</time><i style="background:${ROLES[e.i].css}"></i><span><b>${ROLES[e.i].name}</b> · ${e.text}</span></li>`).join('');
+}
+const flight={from:new THREE.Vector3(),to:new THREE.Vector3(),ctrl:new THREE.Vector3()};
+function startProject(){
+ log(0,'새 프로젝트 요청서를 받았습니다.');
+ renderHeader();drawBoard();
+}
+function advance(){
+ const i=sim.step,P=PROJECTS[sim.proj].steps;
+ if(sim.phase==='think'){sim.phase='work';log(i,'작업을 시작했습니다.')}
+ else if(sim.phase==='work'){sim.phase='done';agents[i].celebrate=1;log(i,'완료: '+P[i][2])}
+ else if(sim.phase==='done'){
+  sim.phase='transfer';
+  flight.from.copy(agents[i].screenPos);
+  flight.to.copy(i<5?agents[i+1].screenPos:BOARD_POS);
+  flight.ctrl.copy(flight.from).add(flight.to).multiplyScalar(.5);flight.ctrl.y+=3.2;
+  hist.length=0;
+  log(i,i<5?`${ROLES[i+1].name}에게 결과물을 넘겼습니다.`:'최종 결과물을 프로젝트 보드에 올렸습니다.');
+ }else{
+  if(i<5){sim.step++;sim.phase='think';log(sim.step,'받은 자료: '+P[i][2])}
+  else{completed++;sim.cycle++;sim.proj=(sim.proj+1)%PROJECTS.length;sim.step=0;sim.phase='think';startProject()}
+ }
+ drawBoard();renderHeader();
+}
+function updateSim(dt){
+ sim.clock+=dt;sim.t+=dt;
+ while(sim.t>=DUR[sim.phase]){sim.t-=DUR[sim.phase];advance()}
+}
+function phaseProgress(i){
+ const st=agentState(i);if(st==='done')return 1;if(st==='idle')return 0;
+ const tot=DUR.think+DUR.work;return sim.phase==='think'?sim.t/tot:(DUR.think+sim.t)/tot;
+}
+
+/* ---------- 상단 HUD ---------- */
+const pipeEl=document.getElementById('pipe');
+pipeEl.innerHTML=ROLES.map((r,i)=>`<li style="--c:${r.css}" data-i="${i}"><div class="n"><i style="background:${r.css}"></i>${r.name}</div><div class="s">대기 중</div><div class="bar"><i></i></div></li>`).join('');
+pipeEl.querySelectorAll('li').forEach(li=>li.onclick=()=>openDetail(+li.dataset.i));
+function renderHeader(){
+ document.getElementById('proj').innerHTML=`현재 프로젝트: <b>${PROJECTS[sim.proj].title}</b>`;
+ document.getElementById('cycle').textContent=`${sim.cycle}번째 프로젝트`;
+}
+function tickHeader(){
+ document.getElementById('clock').textContent=clockStr();
+ pipeEl.querySelectorAll('li').forEach((li,i)=>{
+  const st=agentState(i);li.classList.toggle('on',st==='think'||st==='work'||(i===sim.step&&st==='done'));
+  li.classList.toggle('fin',st==='done');li.querySelector('.s').textContent=STATE_TXT[st];
+  li.querySelector('.bar i').style.width=(phaseProgress(i)*100)+'%';
+ });
+}
+
+/* ---------- 상세 패널 ---------- */
+const detail=document.getElementById('detail');let detailIdx=-1;
+detail.innerHTML='<button class="x" aria-label="닫기" style="position:absolute;right:14px;top:14px">×</button><div id="dbody"></div>';
+detail.querySelector('.x').onclick=()=>closeDetail();const dbody=document.getElementById('dbody');
+function openDetail(i){detailIdx=i;detail.hidden=false;renderDetail()}
+function renderDetail(){
+ if(detailIdx<0)return;const i=detailIdx,r=ROLES[i],st=agentState(i),P=PROJECTS[sim.proj].steps;
+ const input=i===0?'프로젝트 요청서':P[i-1][2];
+ const hasInput=i<=sim.step;
+ const now=st==='think'?P[i][0]:st==='work'?P[i][1]:st==='done'?'작업을 마치고 결과물을 다음 단계로 넘겼습니다.':'앞 단계의 자료가 도착하기를 기다리고 있습니다.';
+ dbody.innerHTML=`
+ <div class="dh" style="padding-right:36px"><div class="badge" style="background:${r.css}">${r.name[0]}</div>
+  <div><h2>${r.name}<small>${r.code}</small></h2><p>${r.desc}</p></div>
+  </div>
+ <div class="card"><div class="st"><span>현재 상태</span><span class="chip" style="${st!=='idle'?`background:${r.css};color:#0c1020`:''}">${STATE_TXT[st]}</span></div>
+  <div class="pb"><i style="width:${phaseProgress(i)*100}%;background:${r.css}"></i></div></div>
+ <div class="card"><h3>받은 자료</h3><p class="${hasInput?'':'empty'}">${hasInput?input:'아직 받은 자료가 없습니다.'}</p></div>
+ <div class="card"><h3>지금 하는 일</h3><p>${now}</p></div>
+ <div class="card"><h3>만든 결과물</h3><p class="${st==='done'?'':'empty'}">${st==='done'?P[i][2]:'아직 완성된 결과물이 없습니다.'}</p></div>
+ <div class="card"><h3>이 에이전트의 기록</h3><ul class="log">${logs[i].slice(-8).reverse().map(e=>`<li><time>${e.time}</time>${e.text}</li>`).join('')||'<li style="color:var(--sub)">아직 기록이 없습니다.</li>'}</ul></div>`;
+}
+function closeDetail(){detailIdx=-1;detail.hidden=true}
+
+/* ---------- 낮과 밤 ---------- */
+const TOD={
+ day:{bg:0xe7edf5,sky:0xbfe2ff,sun:1.25,sunC:0xfff1dc,hemi:.75,lamp:0,exp:1.05,sp:[8,16,6]},
+ dusk:{bg:0xefd9cc,sky:0xffa16e,sun:.75,sunC:0xffa25e,hemi:.42,lamp:.5,exp:1.0,sp:[-14,6,5]},
+ night:{bg:0x0f1424,sky:0x15204a,sun:.06,sunC:0x8fa6ff,hemi:.1,lamp:1.1,exp:1.0,sp:[-6,14,-6]}
+};
+const cur={bg:new THREE.Color(0xe7edf5),sky:new THREE.Color(0xbfe2ff),sunC:new THREE.Color(0xfff1dc),sun:1.25,hemi:.75,lamp:0,exp:1.05,sp:new THREE.Vector3(8,16,6)};
+let todKey='day',autoTod=false,autoT=0;const AUTO_ORDER=['day','dusk','night'];
+function lerpTod(dt){
+ const T=TOD[todKey],k=Math.min(1,dt*2.2),tc=new THREE.Color();
+ cur.bg.lerp(tc.set(T.bg),k);cur.sky.lerp(tc.set(T.sky),k);cur.sunC.lerp(tc.set(T.sunC),k);
+ cur.sun+=(T.sun-cur.sun)*k;cur.hemi+=(T.hemi-cur.hemi)*k;cur.lamp+=(T.lamp-cur.lamp)*k;cur.exp+=(T.exp-cur.exp)*k;
+ cur.sp.lerp(new THREE.Vector3(...T.sp),k);
+ scene.background.copy(cur.bg);windowMats.forEach(m=>m.color.copy(cur.sky));
+ sun.intensity=cur.sun;sun.color.copy(cur.sunC);sun.position.copy(cur.sp);hemi.intensity=cur.hemi;
+ renderer.toneMappingExposure=cur.exp;
+ agents.forEach(a=>{a.lampLight.intensity=cur.lamp;a.lampM.emissiveIntensity=cur.lamp*1.2});
+ document.body.classList.toggle('dark',cur.hemi<.3);
+}
+function setTod(v){
+ autoTod=v==='auto';if(!autoTod)todKey=v;autoT=0;
+ document.querySelectorAll('#tod button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+}
+document.querySelectorAll('#tod button').forEach(b=>b.onclick=()=>setTod(b.dataset.v));
+document.querySelectorAll('#spd button').forEach(b=>b.onclick=()=>{sim.speed=+b.dataset.v;document.querySelectorAll('#spd button').forEach(x=>x.classList.toggle('on',x===b))});
+const pauseBtn=document.getElementById('pause');
+pauseBtn.onclick=()=>{sim.paused=!sim.paused;pauseBtn.textContent=sim.paused?'다시 재생':'일시 정지'};
+
+/* ---------- 시점 조작 ---------- */
+const DEF={theta:Math.PI/4,phi:.98,r:33,target:new THREE.Vector3(-2.2,2.6,-1.6)};
+const orbit={theta:DEF.theta,phi:DEF.phi,r:DEF.r,target:DEF.target.clone()};
+const goal={theta:DEF.theta,phi:DEF.phi,r:DEF.r,target:DEF.target.clone()};
+function applyCam(dt){
+ const k=Math.min(1,dt*8);
+ orbit.theta+=(goal.theta-orbit.theta)*k;orbit.phi+=(goal.phi-orbit.phi)*k;orbit.r+=(goal.r-orbit.r)*k;orbit.target.lerp(goal.target,k);
+ const {theta,phi,r,target}=orbit;
+ camera.position.set(target.x+r*Math.sin(phi)*Math.cos(theta),target.y+r*Math.cos(phi),target.z+r*Math.sin(phi)*Math.sin(theta));
+ camera.lookAt(target);
+}
+document.getElementById('reset').onclick=()=>{goal.theta=DEF.theta;goal.phi=DEF.phi;goal.r=baseR();goal.target.copy(DEF.target)};
+const cvs=renderer.domElement;const ptrs=new Map();let downPos=null,pinch0=0,moved=false;
+cvs.addEventListener('contextmenu',e=>e.preventDefault());
+cvs.addEventListener('pointerdown',e=>{cvs.setPointerCapture(e.pointerId);ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY,b:e.button});downPos={x:e.clientX,y:e.clientY};moved=false;
+ if(ptrs.size===2){const [p,q]=[...ptrs.values()];pinch0=Math.hypot(p.x-q.x,p.y-q.y)}});
+cvs.addEventListener('pointermove',e=>{
+ const p=ptrs.get(e.pointerId);if(!p)return;const dx=e.clientX-p.x,dy=e.clientY-p.y;p.x=e.clientX;p.y=e.clientY;
+ if(Math.hypot(e.clientX-downPos.x,e.clientY-downPos.y)>5)moved=true;
+ if(ptrs.size===2){const [a,b]=[...ptrs.values()];const d=Math.hypot(a.x-b.x,a.y-b.y);if(pinch0){goal.r=Math.min(60,Math.max(12,goal.r*pinch0/d))}pinch0=d;return}
+ if(p.b===2||e.shiftKey){
+  const s=goal.r*.0016,right=new THREE.Vector3(-Math.sin(orbit.theta),0,Math.cos(orbit.theta)),fwd=new THREE.Vector3(-Math.cos(orbit.theta),0,-Math.sin(orbit.theta));
+  goal.target.addScaledVector(right,-dx*s).addScaledVector(fwd,dy*s);
+  goal.target.x=Math.max(-12,Math.min(12,goal.target.x));goal.target.z=Math.max(-9,Math.min(9,goal.target.z));
+ }else{goal.theta+=dx*.006;goal.phi=Math.min(1.4,Math.max(.35,goal.phi-dy*.005))}
+});
+function endPtr(e){
+ const p=ptrs.get(e.pointerId);ptrs.delete(e.pointerId);if(ptrs.size<2)pinch0=0;
+ if(p&&!moved&&p.b===0&&e.type==='pointerup')pick(e.clientX,e.clientY);
+}
+cvs.addEventListener('pointerup',endPtr);cvs.addEventListener('pointercancel',endPtr);
+cvs.addEventListener('wheel',e=>{e.preventDefault();goal.r=Math.min(60,Math.max(12,goal.r*(1+e.deltaY*.001)))},{passive:false});
+const ray=new THREE.Raycaster(),ndc=new THREE.Vector2();
+function pick(x,y){
+ ndc.set(x/innerWidth*2-1,-(y/innerHeight)*2+1);ray.setFromCamera(ndc,camera);
+ const hit=ray.intersectObjects(pickables,false)[0];
+ if(hit)openDetail(hit.object.userData.agent);
+}
+function baseR(){return innerWidth<760?46:33}
+function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();goal.r=baseR()}
+addEventListener('resize',resize);resize();orbit.r=goal.r;
+
+/* ---------- 애니메이션 ---------- */
+const tmp=new THREE.Vector3();let animT=0,last=performance.now(),uiT=0;
+const bez=(t,a,c,b,out)=>out.set(0,0,0).addScaledVector(a,(1-t)*(1-t)).addScaledVector(c,2*(1-t)*t).addScaledVector(b,t*t);
+const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function animateAgents(dt){
+ agents.forEach(a=>{
+  const st=agentState(a.i),t=animT+a.i*1.3;
+  const restSh=-.95,restFo=-.55;let shL=restSh,shR=restSh,foL=restFo,foR=restFo,yaw=0,tilt=0,bob=Math.sin(t*2)*.015;
+  if(st==='work'){shL+=Math.sin(t*18)*.09;shR+=Math.sin(t*18+Math.PI)*.09;foL+=Math.sin(t*18+.6)*.08;foR+=Math.sin(t*18+3.7)*.08;tilt=-.12+Math.sin(t*3)*.03;yaw=Math.sin(t*.9)*.12}
+  else if(st==='think'){shR=-2.1;foR=-1.7;tilt=Math.sin(t*1.6)*.12;yaw=Math.sin(t*1.1)*.35}
+  else if(st==='idle'){shL=-.25;shR=-.25;foL=-.3;foR=-.3;yaw=Math.sin(t*.5)*.25}
+  if(a.celebrate>0){a.celebrate=Math.max(0,a.celebrate-dt*.8);const c=Math.sin(a.celebrate*Math.PI);shL=restSh+(-2.9-restSh)*c+Math.sin(t*14)*.1*c;shR=shL;foL=foR=restFo*(1-c);bob+=c*.08}
+  // 전달할 때와 받을 때 고개를 돌린다
+  if(sim.phase==='transfer'){
+   let look=null;if(a.i===sim.step)look=sim.step<5?agents[sim.step+1].pos:BOARD_POS;else if(a.i===sim.step+1)look=agents[sim.step].pos;
+   if(look){tmp.copy(look).sub(a.pos);yaw=Math.max(-1.3,Math.min(1.3,Math.atan2(tmp.x,tmp.z)))}
+  }
+  const k=Math.min(1,dt*7);
+  a.shL.rotation.x+=(shL-a.shL.rotation.x)*k;a.shR.rotation.x+=(shR-a.shR.rotation.x)*k;
+  a.foL.rotation.x+=(foL-a.foL.rotation.x)*k;a.foR.rotation.x+=(foR-a.foR.rotation.x)*k;
+  a.head.rotation.y+=(yaw-a.head.rotation.y)*Math.min(1,dt*4);a.head.rotation.x+=(tilt-a.head.rotation.x)*k;
+  a.robot.position.y=bob;
+  a.bulbM.emissiveIntensity=st==='think'?(Math.sin(t*8)>0?2.2:.4):st==='work'?1.6:st==='done'?1.2:.35;
+  a.eyeM.emissiveIntensity=st==='idle'?.5:1.6;
+  if(a.state!==st){a.state=st;a.tagEm.textContent=STATE_TXT[st];a.tag.classList.toggle('on',st==='think'||st==='work');a.tag.classList.toggle('fin',st==='done');drawScreen(a,st,animT);a.lastScreen=animT}
+  else if((st==='work'||st==='think')&&animT-a.lastScreen>.1){drawScreen(a,st,animT);a.lastScreen=animT}
+ });
+ const act=agents[Math.min(sim.step,5)];
+ ring.position.x+=(act.pos.x-ring.position.x)*Math.min(1,dt*5);ring.position.z+=(act.pos.z-.5-ring.position.z)*Math.min(1,dt*5);
+ ring.material.color.set(ROLES[act.i].color);ring.material.opacity=.35+Math.sin(animT*3)*.2;
+}
+function animateCube(dt){
+ const i=sim.step;
+ if(sim.phase==='done'){
+  const p=sim.t/DUR.done,s=ease(Math.min(1,p*1.4));
+  cube.visible=true;cube.position.copy(agents[i].screenPos);cube.position.y=1.7+.5*s;cube.scale.setScalar(Math.max(.01,s));
+  cubeMat.color.set(ROLES[i].color);cubeMat.emissive.set(ROLES[i].color);halo.material.color.set(ROLES[i].color);cubeLight.color.set(ROLES[i].color);
+  cubeMat.opacity=1;
+ }else if(sim.phase==='transfer'){
+  const p=ease(sim.t/DUR.transfer);cube.visible=true;cube.scale.setScalar(1);
+  bez(p,flight.from,flight.ctrl,flight.to,cube.position);cube.position.y+=.0;
+  const nc=new THREE.Color(ROLES[i].color).lerp(new THREE.Color(i<5?ROLES[i+1].color:0xffffff),p);
+  cubeMat.color.copy(nc);cubeMat.emissive.copy(nc);halo.material.color.copy(nc);cubeLight.color.copy(nc);
+  if(i===5&&p>.85){cube.scale.setScalar(1+(p-.85)*8);cubeMat.opacity=1-(p-.85)/.15}
+  hist.unshift(cube.position.clone());if(hist.length>trail.length*2)hist.pop();
+ }else if(sim.phase==='think'&&sim.t<.45&&sim.cycle+sim.step>1){
+  const p=sim.t/.45;cube.visible=true;cube.position.copy(agents[i].screenPos);cube.position.y=2.0-.4*p;cube.scale.setScalar(Math.max(.01,1-p));
+  hist.length=0;
+ }else{cube.visible=false;hist.length=0}
+ cube.rotation.x+=dt*1.5;cube.rotation.y+=dt*2;halo.rotation.z-=dt*2.5;
+ trail.forEach((m,k)=>{const h=hist[k*2];if(h&&cube.visible){m.visible=true;m.position.copy(h);m.material.color.copy(cubeMat.color);m.material.opacity=.6*(1-k/trail.length);m.scale.setScalar(1-k/trail.length)}else m.visible=false});
+}
+function placeLabels(){
+ agents.forEach(a=>{
+  a.anchor.getWorldPosition(tmp);tmp.project(camera);
+  if(tmp.z>1){a.tag.style.display='none';return}
+  a.tag.style.display='';a.tag.style.left=((tmp.x+1)/2*innerWidth)+'px';a.tag.style.top=((1-tmp.y)/2*innerHeight)+'px';
+ });
+}
+function loop(now){
+ const dt=Math.min(.05,(now-last)/1000);last=now;
+ const sdt=sim.paused?0:dt*sim.speed;
+ animT+=sdt;updateSim(sdt);
+ if(autoTod){autoT+=dt;if(autoT>12){autoT=0;todKey=AUTO_ORDER[(AUTO_ORDER.indexOf(todKey)+1)%3]}}
+ lerpTod(dt);animateAgents(sdt||dt*0);animateCube(sdt);applyCam(dt);
+ renderer.render(scene,camera);placeLabels();
+ uiT+=dt;if(uiT>.2){uiT=0;tickHeader();renderDetail()}
+ requestAnimationFrame(loop);
+}
+agents.forEach(a=>drawScreen(a,'idle',0));
+startProject();tickHeader();
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
