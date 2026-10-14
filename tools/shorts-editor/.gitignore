@@ -1,0 +1,6 @@
+# 내 영상과 만든 결과물은 저장소에 올리지 않는다
+videos/*
+!videos/여기에_영상을_넣으세요.txt
+output/
+_work/
+fonts/
