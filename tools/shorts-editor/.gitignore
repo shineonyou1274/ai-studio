@@ -4,3 +4,5 @@ videos/*
 output/
 _work/
 fonts/
+music/*
+!music/여기에_음악을_넣으세요.txt

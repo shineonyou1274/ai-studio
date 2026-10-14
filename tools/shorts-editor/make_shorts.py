@@ -12,7 +12,7 @@
     · 본편: 0.5초씩 빠른 컷(한 영상에서 전경·확대 등 여러 컷), 컷 안에서 아주 조금 다가감
     · 위쪽에 제목 고정, 왼쪽 아래에 머리표(DAY·번호·시간)와 장면 글자(settings.json 의 "장면글자")
       "주제"를 고르면 머리표와 핀 표시가 그 주제에 맞게 정해집니다(여행·맛집·일상·홍보·없음).
-    · 소리는 도입부 효과음뿐. 음악은 올릴 때 앱에서 고르세요(컷 0.5초 = 분당 120박 음악과 맞음).
+    · 소리는 도입부 효과음 + 배경음악(music 폴더에 넣었을 때만). 컷 0.5초 = 분당 120박 음악과 맞음.
 
 필요한 것: Python 3.9 이상, Pillow(pip install pillow), ffmpeg(PATH 에 있어야 함)
 """
@@ -34,6 +34,7 @@ WORK = HERE / "_work"
 W, H, FPS = 1080, 1920, 30
 VIDEO_EXT = {".mp4", ".mov", ".m4v", ".mkv", ".webm", ".avi"}
 PHOTO_EXT = {".jpg", ".jpeg", ".png"}
+AUDIO_EXT = {".mp3", ".m4a", ".wav", ".aac", ".ogg", ".flac"}
 # 주제별 기본값: 머리표(노란 딱지에 들어갈 것)와 핀(📍 모양) 표시
 TOPICS = {
     "여행": {"머리표": "DAY", "핀": True},       # DAY 2 · 📍 자카르타 대성당
@@ -55,6 +56,9 @@ DEFAULTS = {
     "효과음": True,
     "장면글자": {},          # "파일 이름 일부": "그 장면에 붙일 한 줄"
     "색보정": True,
+    "배경음악": "",          # 비우면 music 폴더의 첫 음악 파일, "없음"이면 끔, 파일 이름을 적으면 그 파일
+    "음악크기": -8,          # dB. 0 이 원래 크기, -10 이면 작게
+    "음악시작": 0,           # 노래의 몇 초부터 쓸지(후렴부터 쓰고 싶을 때)
     # 아래 둘은 비워 두면 "주제"에 따라 정해짐. 직접 적으면 그 값이 우선
     "머리표": None,          # "DAY" | "번호" | "시간" | "없음"
     "핀": None,              # true | false
@@ -235,6 +239,22 @@ def label_png(key: str, head: str, place: str, font: str, pin: bool = True) -> P
 
 
 # ── 컷 계획 ─────────────────────────────────────────────────────────────
+def find_music(s: dict) -> "Path | None":
+    """배경음악 파일: "없음"이면 끔, 이름을 적었으면 그 파일, 비웠으면 music 폴더의 첫 음악."""
+    want = str(s.get("배경음악") or "").strip()
+    if want in ("없음", "끔", "false", "False"):
+        return None
+    folder = HERE / "music"
+    if want:
+        for c in (Path(want), folder / want):
+            c = c if c.is_absolute() else HERE / c
+            if c.exists():
+                return c
+        fail(f"배경음악 '{want}' 을 찾지 못했습니다. music 폴더에 넣고 파일 이름을 그대로 적어 주세요.")
+    songs = sorted(f for f in folder.glob("*") if f.suffix.lower() in AUDIO_EXT) if folder.exists() else []
+    return songs[0] if songs else None
+
+
 def plan(items: list[dict], s: dict) -> tuple[list, list, float]:
     """(도입부 몽타주 컷, 본편 컷, 도입부 길이). 컷 = dict(item, ss, dur, zoom, fx, fy)"""
     beat = float(s["컷길이"])
@@ -359,6 +379,14 @@ def main() -> None:
             fc.append(f"[{idx}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={vol}dB,"
                       f"adelay={int(at * 1000)}:all=1[s{k}]")
             mix.append(f"[s{k}]"); idx += 1
+    music = find_music(s)
+    if music:                                             # 배경음악: 짧으면 반복, 앞뒤로 부드럽게
+        ins += ["-stream_loop", "-1", "-ss", f"{float(s['음악시작']):.3f}", "-i", str(music)]
+        fade_out = min(1.0, total / 3)
+        fc.append(f"[{idx}:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{total:.3f},"
+                  f"asetpts=PTS-STARTPTS,volume={float(s['음악크기'])}dB,afade=t=in:d=0.3,"
+                  f"afade=t=out:st={total - fade_out:.3f}:d={fade_out:.3f}[bgm]")
+        mix.append("[bgm]"); idx += 1
     fc.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first[au]")
 
     out = HERE / "output" / "shorts.mp4"
@@ -379,6 +407,7 @@ def main() -> None:
     if r.returncode != 0:
         fail("ffmpeg 가 영상을 만들지 못했습니다:\n" + "\n".join((r.stderr or "").strip().splitlines()[-6:]))
     print(f"완성: {out}  ({total:.1f}초)")
+    print(f"배경음악: {music.name if music else '없음 (music 폴더에 음악 파일을 넣으면 들어갑니다)'}")
     print(f"주제: {s.get('주제')}  (머리표 {mode}, 핀 {'있음' if s['핀'] else '없음'})")
     print("장면마다 글자를 넣으려면 settings.json 의 \"장면글자\"에  \"파일 이름 일부\": \"한 줄\"  을 적으세요.")
     for it in items:
