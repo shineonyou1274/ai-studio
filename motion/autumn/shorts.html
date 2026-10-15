@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가을 여행 쇼츠 인트로</title>
+<style>
+  @font-face { font-family: 'Archivo'; src: url(../fonts/archivo.woff2) format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
+  @font-face { font-family: 'JBMono'; src: url(../fonts/jbmono.woff2) format('woff2'); font-weight: 100 800; }
+  @font-face { font-family: 'Pretendard'; src: url(../fonts/pretendard-black.woff2) format('woff2'); font-weight: 900; }
+  @font-face { font-family: 'Pretendard'; src: url(../fonts/pretendard-bold.woff2) format('woff2'); font-weight: 700; }
+  html, body { margin: 0; background: #140c08; }
+  canvas { display: block; height: 100vh; width: auto; margin: 0 auto; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// ===== Shiny Peace — 가을 여행 쇼츠 인트로 (9:16, 15s, house/bright). 사진 없이 전부 코드로 그림 =====
+// 안전 영역: 핵심 내용은 y 260~1500 안. 시간은 모두 build/timeline.json 에서 온다.
+const W = 1080, H = 1920, FPS = 30;
+let BEAT = 60 / 128, BAR = BEAT * 4, DUR = BAR * 8, TL = null, SHAKES = [];
+const C = { ink: '#140c08', cream: '#fff3dc', maple: '#d8361c', amber: '#f2961b', gold: '#ffd060',
+            rust: '#9c3a12', plum: '#4a2342', dusk: '#26305c' };
+const LEAF_COLORS = [C.maple, C.amber, C.gold, '#b8481a', '#e86a1e'];
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d', { willReadFrequently: true });
+
+// ---------- utils ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, p) => a + (b - a) * p;
+const expoOut = p => p >= 1 ? 1 : 1 - Math.pow(2, -10 * clamp(p));
+const expoIn = p => p <= 0 ? 0 : Math.pow(2, 10 * clamp(p) - 10);
+const backOut = p => { p = clamp(p); const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const frameNo = t => Math.floor(t * FPS + 1e-6);
+
+// kr: 한글(Pretendard), logo: 로고용 Archivo, mono: HUD
+function font(size, { weight = 900, kr = true, mono = false } = {}) {
+  ctx.font = mono ? `${weight} ${size}px JBMono` : kr ? `${weight} ${size}px Pretendard` : `${weight} ${size}px Archivo`;
+  ctx.fontStretch = (mono || kr) ? 'normal' : 'expanded';
+}
+function text(str, x, y, size, color, o = {}, c = ctx) {
+  font(size, o);
+  if (c !== ctx) { c.font = ctx.font; c.fontStretch = ctx.fontStretch; }
+  c.letterSpacing = (o.tracking || 0) + 'px';
+  c.textAlign = o.align || 'center';
+  c.textBaseline = o.baseline || 'middle';
+  if (o.stroke) { c.lineWidth = o.stroke; c.strokeStyle = color; c.lineJoin = 'round'; c.strokeText(str, x, y); }
+  else { c.fillStyle = color; c.fillText(str, x, y); }
+  c.letterSpacing = '0px';
+}
+function measure(str, size, o = {}) { font(size, o); ctx.letterSpacing = (o.tracking || 0) + 'px'; const w = ctx.measureText(str).width; ctx.letterSpacing = '0px'; return w; }
+function fitSize(str, maxW, base, o) { return Math.min(base, base * maxW / measure(str, base, o)); }
+function echoText(str, x, y, size, color, dx, dy, n, o = {}) {
+  for (let i = n; i >= 1; i--) { ctx.globalAlpha = (1 - i / (n + 1)) * 0.5; text(str, x - dx * i, y - dy * i, size, color, o); }
+  ctx.globalAlpha = 1; text(str, x, y, size, color, o);
+}
+function bg(color) { ctx.fillStyle = color; ctx.fillRect(0, 0, W, H); }
+function tint(color, mode = 'color', alpha = 1) { ctx.save(); ctx.globalCompositeOperation = mode; ctx.globalAlpha = alpha; bg(color); ctx.restore(); }
+function vignette(strength = 0.6) {
+  const g = ctx.createRadialGradient(W / 2, H / 2, W * 0.35, W / 2, H / 2, H * 0.62);
+  g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, `rgba(0,0,0,${strength})`);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+function rgbSplit(px) {
+  if (px < 1) return;
+  const im = ctx.getImageData(0, 0, W, H), src = new Uint8ClampedArray(im.data), d = im.data, o = Math.round(px) * 4;
+  for (let i = 0; i < d.length; i += 4) { d[i] = src[Math.min(d.length - 4, i + o)]; d[i + 2] = src[Math.max(0, i - o) + 2]; }
+  ctx.putImageData(im, 0, 0);
+}
+const grain = document.createElement('canvas'); grain.width = grain.height = 512;
+{ const g = grain.getContext('2d'), im = g.createImageData(512, 512), r = rng(3);
+  for (let i = 0; i < im.data.length; i += 4) { const v = r() * 255; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; }
+  g.putImageData(im, 0, 0); }
+function drawGrain(t, a = 0.07) {
+  const r = rng(frameNo(t) + 11);
+  ctx.save(); ctx.globalAlpha = a; ctx.globalCompositeOperation = 'overlay';
+  const ox = -r() * 512, oy = -r() * 512;
+  for (let x = ox; x < W; x += 512) for (let y = oy; y < H; y += 512) ctx.drawImage(grain, x, y);
+  ctx.restore();
+}
+function shake(t, hits, amp) {
+  let dx = 0, dy = 0;
+  for (const h of hits) { const d = t - h; if (d >= 0 && d < 0.4) { const k = amp * Math.pow(1 - d / 0.4, 2), r = rng(frameNo(t) * 7 + 1); dx += (r() - .5) * 2 * k; dy += (r() - .5) * 2 * k; } }
+  ctx.translate(dx, dy);
+}
+
+const loadTimeline = fetch('build/timeline.json').then(r => r.json()).then(tl => {
+  TL = tl; BEAT = tl.beat; BAR = tl.bar; DUR = tl.duration; window.DUR = DUR;
+  SHAKES = [...tl.hits];
+  for (const S of tl.sections) if (S.type === 'drop') for (let k = 0; k < S.bars; k++) { const b = S.start + k * BAR; SHAKES.push(b + 1.75 * BEAT, b + 2.5 * BEAT); }
+});
+window.READY = Promise.all([loadTimeline, document.fonts.load('900 100px Pretendard', '가을'), document.fonts.load('700 100px Pretendard', '가을'), document.fonts.load('900 100px Archivo')]);
+
+// ---------- 단풍잎 ----------
+// 다섯 갈래 단풍잎(반지름 1 기준). 갈래 끝마다 작은 톱니
+const LEAF = (() => {
+  const lobes = [[-90, 1], [-38, 0.9], [-142, 0.9], [14, 0.62], [166, 0.62]].sort((a, b) => a[0] - b[0]);
+  const pts = [];
+  for (let i = 0; i < lobes.length; i++) {
+    const [a, r] = lobes[i], [a2] = lobes[(i + 1) % lobes.length];
+    const rad = a * Math.PI / 180;
+    pts.push([Math.cos(rad - 0.16) * r * 0.72, Math.sin(rad - 0.16) * r * 0.72]);
+    pts.push([Math.cos(rad - 0.07) * r * 0.86, Math.sin(rad - 0.07) * r * 0.86]);
+    pts.push([Math.cos(rad) * r, Math.sin(rad) * r]);
+    pts.push([Math.cos(rad + 0.07) * r * 0.86, Math.sin(rad + 0.07) * r * 0.86]);
+    pts.push([Math.cos(rad + 0.16) * r * 0.72, Math.sin(rad + 0.16) * r * 0.72]);
+    let mid = (a + ((a2 - a + 360) % 360) / 2) * Math.PI / 180;
+    const deep = (a > 0 && a2 > 0 && a2 - a > 100) ? 0.42 : 0.3;     // 아래쪽 잎자루 자리는 더 깊게
+    pts.push([Math.cos(mid) * deep, Math.sin(mid) * deep]);
+  }
+  return pts;
+})();
+function leaf(x, y, s, rot, color, alpha = 1, c = ctx) {
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s); c.globalAlpha = alpha;
+  c.fillStyle = color; c.beginPath();
+  LEAF.forEach(([px, py], i) => i ? c.lineTo(px, py) : c.moveTo(px, py)); c.closePath(); c.fill();
+  c.strokeStyle = 'rgba(60,15,5,0.45)'; c.lineWidth = 0.05; c.beginPath();
+  c.moveTo(0, 0.85); c.lineTo(0, -0.85); c.moveTo(0, 0); c.lineTo(0.7, -0.55); c.moveTo(0, 0); c.lineTo(-0.7, -0.55); c.stroke();
+  c.fillStyle = color; c.fillRect(-0.035, 0.3, 0.07, 0.75);
+  c.restore();
+}
+// 떨어지는 잎: 시간의 순수 함수(어느 프레임이든 같은 결과)
+const FALL = (() => { const r = rng(42), a = []; for (let i = 0; i < 70; i++) a.push({ x: r() * W, y: r() * H, s: 18 + r() * 34, sp: 0.6 + r() * 0.8, sw: 40 + r() * 90, w: 0.8 + r() * 1.6, ph: r() * 7, rs: (r() - .5) * 3, col: LEAF_COLORS[Math.floor(r() * LEAF_COLORS.length)] }); return a; })();
+function falling(t, { n = 40, speed = 1, alpha = 0.95, size = 1, wind = 60, c = ctx } = {}) {
+  for (let i = 0; i < n; i++) {
+    const L = FALL[i], y = ((L.y + t * 170 * L.sp * speed) % (H + 160)) - 80;
+    const x = ((L.x + t * wind + Math.sin(t * L.w + L.ph) * L.sw) % (W + 120) + W + 120) % (W + 120) - 60;
+    leaf(x, y, L.s * size, L.ph + t * L.rs, L.col, alpha, c);
+  }
+}
+// 한 점에서 터지는 잎(타격 순간)
+function burst(t0, t, cx, cy, seed, n = 18, power = 1) {
+  const d = t - t0; if (d < 0 || d > 1.2) return;
+  const r = rng(seed);
+  for (let i = 0; i < n; i++) {
+    const a = r() * 6.283, v = (300 + r() * 700) * power, s = 20 + r() * 30;
+    const x = cx + Math.cos(a) * v * d, y = cy + Math.sin(a) * v * d + 500 * d * d;
+    leaf(x, y, s, r() * 6 + d * (r() - .5) * 10, LEAF_COLORS[i % LEAF_COLORS.length], clamp(1.2 - d));
+  }
+}
+
+// ---------- 풍경: 노을 하늘 + 해 + 산 능선 3겹 ----------
+function landscape(t, { sunY = 1050, hue = 0, zoom = 1, cx = W / 2, cy = 1050 } = {}) {
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(zoom, zoom); ctx.translate(-cx, -cy);
+  const g = ctx.createLinearGradient(0, -200, 0, 1500);
+  g.addColorStop(0, C.dusk); g.addColorStop(0.45, '#8c3a4e'); g.addColorStop(0.72, C.amber); g.addColorStop(1, C.gold);
+  ctx.fillStyle = g; ctx.fillRect(-W, -H, W * 3, H * 3);
+  // 해
+  const sg = ctx.createRadialGradient(W / 2, sunY, 20, W / 2, sunY, 420);
+  sg.addColorStop(0, 'rgba(255,240,190,1)'); sg.addColorStop(0.3, 'rgba(255,200,110,0.65)'); sg.addColorStop(1, 'rgba(255,170,60,0)');
+  ctx.fillStyle = sg; ctx.fillRect(-W, -H, W * 3, H * 3);
+  ctx.fillStyle = '#fff1c4'; ctx.beginPath(); ctx.arc(W / 2, sunY, 150, 0, 7); ctx.fill();
+  // 능선(뒤 → 앞), 앞 능선일수록 빨리 흐름
+  const ridges = [[1180, 70, '#7a2c3e', 0.004, 12], [1330, 90, '#5a1f2c', 0.0055, 26], [1520, 110, '#2a1016', 0.007, 48]];
+  ridges.forEach(([base, amp, col, f, sp], k) => {
+    ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(-W, H * 2);
+    for (let x = -W; x <= W * 2; x += 12) {
+      const u = x + t * sp;
+      const y = base - amp * (Math.sin(u * f + k) * 0.6 + Math.sin(u * f * 2.3 + k * 3) * 0.3 + Math.sin(u * f * 5.1) * 0.1);
+      ctx.lineTo(x, y);
+    }
+    ctx.lineTo(W * 2, H * 2); ctx.closePath(); ctx.fill();
+  });
+  // 앞 능선 위 단풍 나무(점묘)
+  const r = rng(9);
+  for (let i = 0; i < 26; i++) {
+    const x = ((r() * W * 1.6 - t * 48) % (W * 1.6) + W * 1.6) % (W * 1.6) - W * 0.3, y = 1470 + r() * 160, s = 30 + r() * 40;
+    ctx.fillStyle = LEAF_COLORS[i % 5]; ctx.globalAlpha = 0.85;
+    ctx.beginPath(); ctx.arc(x, y, s, 0, 7); ctx.arc(x + s * 0.7, y + s * 0.2, s * 0.8, 0, 7); ctx.fill(); ctx.globalAlpha = 1;
+  }
+  ctx.restore();
+}
+
+// ---------- HUD ----------
+function kmStr(t) { const km = Math.min(412, Math.round(Math.pow(clamp(t / TL.main_drop), 1.6) * 412)); return `${String(km).padStart(3, '0')} KM`; }
+function hud(t, color, label) {
+  ctx.globalAlpha = 0.92;
+  text('SHINY PEACE · TRAVEL LOG', 56, 250, 20, color, { mono: true, weight: 700, align: 'left', tracking: 2 });
+  text(label, 56, 1490, 20, color, { mono: true, weight: 700, align: 'left', tracking: 2 });
+  text(kmStr(t), W - 56, 250, 24, color, { mono: true, weight: 700, align: 'right', tracking: 2 });
+  pin(W - 210, 252, 13, C.maple);
+  ctx.globalAlpha = 1;
+}
+function pin(x, y, r, color) {
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y - r * 0.4, r, Math.PI * 0.85, Math.PI * 2.15); ctx.lineTo(x, y + r * 1.4); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y - r * 0.4, r * 0.38, 0, 7); ctx.fill();
+}
+
+// 글자 안을 단풍과 노을로 채움
+const off = document.createElement('canvas'); off.width = W; off.height = H;
+const octx = off.getContext('2d');
+function leafInText(str, x, y, size, t) {
+  octx.setTransform(1, 0, 0, 1, 0, 0); octx.globalCompositeOperation = 'source-over'; octx.globalAlpha = 1; octx.clearRect(0, 0, W, H);
+  octx.setTransform(ctx.getTransform());
+  text(str, x, y, size, '#fff', {}, octx);
+  octx.setTransform(1, 0, 0, 1, 0, 0);
+  octx.globalCompositeOperation = 'source-in';
+  const g = octx.createLinearGradient(0, y - size / 2, 0, y + size / 2);
+  g.addColorStop(0, C.gold); g.addColorStop(0.55, C.amber); g.addColorStop(1, C.maple);
+  octx.fillStyle = g; octx.fillRect(0, 0, W, H);
+  octx.globalCompositeOperation = 'source-atop';
+  const r = rng(77);
+  for (let i = 0; i < 46; i++) leaf(r() * W, y - size * 0.7 + ((r() * size * 1.4 + t * 120) % (size * 1.4)), 26 + r() * 30, r() * 6 + t, LEAF_COLORS[(i + 2) % 5], 0.85, octx);
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.drawImage(off, 0, 0); ctx.restore();
+}
+
+// ---------- 로고 ----------
+let LOGO = null;
+function logoLayout() {
+  if (LOGO) return LOGO;
+  const o = { kr: false }, lines = ['SHINY', 'PEACE'];
+  const size = Math.min(fitSize('SHINY', 880, 220, o), fitSize('PEACE', 880, 220, o)), y0 = 900, lh = size * 1.02;
+  const letters = []; let tw = 0;
+  lines.forEach((word, li) => {
+    const w = measure(word, size, o); tw = Math.max(tw, w);
+    let acc = (W - w) / 2;
+    for (const ch of word) { const cw = measure(ch, size, o); letters.push({ ch, x: acc + cw / 2, y: y0 + li * lh }); acc += cw; }
+  });
+  LOGO = { size, markR: 130, markX: W / 2, cy: 590, tw, letters, tagY: y0 + lh + size * 0.85 };
+  return LOGO;
+}
+function drawMark(x, y, r, glow, rot) {
+  const g = ctx.createRadialGradient(x, y, r * 0.2, x, y, r * 1.8);
+  g.addColorStop(0, `rgba(255,170,60,${0.5 * glow})`); g.addColorStop(1, 'rgba(255,120,30,0)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r * 1.8, 0, 7); ctx.fill();
+  ctx.strokeStyle = C.gold; ctx.lineWidth = r * 0.05; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.stroke();
+  leaf(x, y + r * 0.05, r * 0.72, rot, C.maple);
+}
+
+// ================= 장면 =================
+// 마디 0–1: 노을이 뜨고 잎이 내린다. 2박마다 단어 하나
+function sIntro(t, S) {
+  const lt = t - S.start, p = lt / (S.end - S.start);
+  landscape(t, { sunY: lerp(1380, 1060, expoOut(p * 1.2)) });
+  falling(t, { n: 26, speed: 0.8, alpha: 0.9 });
+  vignette(0.45);
+  const shots = [['10월', 'OCTOBER'], ['단풍', 'MAPLE'], ['노을', 'SUNSET'], ['바람', 'BREEZE']];
+  const k = Math.floor(lt / (BEAT * 2)), i = k % shots.length, wt = lt - k * BEAT * 2;
+  const [word, sub] = shots[i];
+  const q = expoOut(wt / 0.22), sc = lerp(1.35, 1, q);
+  const size = fitSize(word, 900, 330);
+  ctx.save(); ctx.translate(W / 2, 820); ctx.scale(sc, sc); ctx.globalAlpha = q;
+  echoText(word, 0, 0, size, C.cream, 0, 14 * (1 - q), 3);
+  ctx.restore(); ctx.globalAlpha = 1;
+  text(sub, W / 2, 820 + size * 0.62, 26, C.cream, { mono: true, weight: 700, tracking: 14 });
+  hud(t, C.cream, `DAY 0${i + 1} · READY`);
+}
+
+// 마디 2–3: 연타마다 컷. "지금" / "떠나자"
+const hitIndex = (roll, lb) => { let h = -1; for (let i = 0; i < roll.length; i++) if (lb >= roll[i] - 1e-9) h = i; return h; };
+function sHook(t, S) {
+  const lt = t - S.start, lb = lt / BEAT, dive = (S.silence[0] - S.start) / BEAT - 0.5;
+  const ROLL = S.roll.map(x => (x - S.start) / BEAT);
+  if (lb >= dive) {                                   // 마지막 반 박: 해 속으로 빨려 들어감
+    const p = (lb - dive) / 0.5;
+    landscape(t, { sunY: 1060, zoom: lerp(1.2, 16, expoIn(p)), cy: 1060 });
+    ctx.globalAlpha = clamp(p * 1.1); bg('#000'); ctx.globalAlpha = 1;
+    rgbSplit(lerp(6, 28, p));
+    return;
+  }
+  const h = Math.max(0, hitIndex(ROLL, lb)), since = (lb - ROLL[h]) * BEAT, prog = clamp(lb / dive);
+  const v = h % 4, word = h % 2 ? '떠나자' : '지금';
+  const kick = expoOut(since / 0.12);
+  if (v === 0) { landscape(t, { sunY: 1060, zoom: 1.05 + prog * 0.3 }); vignette(0.5); }
+  else if (v === 1) bg(C.maple);
+  else if (v === 2) { landscape(t, { sunY: 1060, zoom: 1.2 + prog * 0.3 }); tint(C.plum, 'multiply', 0.8); }
+  else bg(C.cream);
+  falling(t, { n: 20 + Math.round(prog * 30), speed: 1.5 + prog * 2, wind: 200, alpha: v === 1 ? 0.6 : 0.9 });
+  burst(ROLL[h] * BEAT + S.start, t, W / 2, 900, h * 13 + 1, 10, 0.8);
+  const fg = v === 1 ? C.cream : (v === 3 ? C.maple : C.cream);
+  const size = fitSize(word, 940, 340) * lerp(1, 1.12, prog);
+  ctx.save(); ctx.translate(W / 2, 880); ctx.scale(lerp(1.14, 1, kick), lerp(1.14, 1, kick));
+  if (v === 3) echoText(word, 0, 0, size, fg, 0, 16 * (1 - kick), 4); else echoText(word, 0, 0, size, fg, 0, 16 * (1 - kick), 4);
+  ctx.restore();
+  const cs = lerp(28, 72, prog);
+  text(kmStr(t), W / 2, 880 + size * 0.66 + cs * 0.4, cs, fg, { mono: true, weight: 700, tracking: 6 });
+  hud(t, v === 3 ? C.ink : C.cream, 'NEXT STOP · AUTUMN');
+  rgbSplit(prog * 12);
+}
+
+// 무음 1박: 검정, 딩 소리에 작은 글자
+function sSilence(t, S) {
+  bg('#000');
+  if (S.breaker != null && t >= S.breaker) {
+    ctx.globalAlpha = 1 - clamp((t - S.breaker) / 0.2) * 0.3;
+    text('출발', W / 2, H / 2, 46, C.cream, { weight: 700, tracking: 18 });
+    ctx.globalAlpha = 1;
+  }
+}
+
+// 마디 4: 드롭 — "가을 / 여행" 글자 안에 단풍이 흐른다
+function sDrop(t, S) {
+  const lt = t - S.start, p = expoOut(lt / 0.3);
+  landscape(t, { sunY: 1000, zoom: 1.08 + lt * 0.03 });
+  tint('#000', 'multiply', 0.45);
+  falling(t, { n: 60, speed: 2.2, wind: 260, alpha: 0.95, size: 1.15 });
+  burst(S.start, t, W / 2, 860, 501, 40, 1.4);
+  const size = Math.min(fitSize('가을', 900, 400), fitSize('여행', 900, 400));
+  const rows = [['가을', 700], ['여행', 700 + size * 1.02]];
+  ctx.save(); ctx.translate(W / 2, 860); const s = lerp(1.35, 1, p) * (1 + 0.012 * Math.sin(lt * 18)); ctx.scale(s, s); ctx.translate(-W / 2, -860);
+  rows.forEach(([w, y], k) => {
+    const dir = k ? 1 : -1;
+    for (let i = 4; i >= 1; i--) { ctx.globalAlpha = 0.2 * (1 - i / 5); text(w, W / 2 + dir * i * 24 * (1 - p), y, size, C.maple); }
+    ctx.globalAlpha = 1;
+    leafInText(w, W / 2, y, size, t);
+    text(w, W / 2, y, size, C.cream, { stroke: 4 });
+  });
+  ctx.restore();
+  if (lt > BEAT) {
+    const q = expoOut((lt - BEAT) / 0.3); ctx.globalAlpha = q;
+    pin(W / 2 - 250, 1352, 18, C.maple);
+    text('AUTUMN TRIP 2026', W / 2 + 20, 1352, 30, C.cream, { mono: true, weight: 700, tracking: 10 });
+    ctx.globalAlpha = 1;
+  }
+  hud(t, C.cream, 'ARRIVED · 412 KM');
+}
+
+// 마디 5: 808 타격마다 "산" "바다" "단풍길"
+function sTrick(t, S) {
+  const lt = t - S.start, lb = lt / BEAT;
+  if (S.fill && lb >= 3.5) {                          // 끝의 연타: 색 플래시 + 잎
+    const k = Math.floor((lb - 3.5) / 0.125);
+    bg([C.maple, C.gold, C.plum, C.amber][k % 4]);
+    leaf(W / 2, 880, 300 + k * 60, k * 0.7, k % 2 ? C.cream : C.maple, 0.9);
+    rgbSplit(10);
+    return;
+  }
+  const hits = [[0, '산', 'MOUNTAIN'], [1.75, '바다', 'SEA'], [2.5, '단풍길', 'MAPLE ROAD']];
+  let hi = 0; hits.forEach((hh, i) => { if (lb >= hh[0]) hi = i; });
+  const since = (lb - hits[hi][0]) * BEAT, p = expoOut(since / 0.2);
+  if (hi === 0) { landscape(t, { sunY: 1120, zoom: 1.15 + lt * 0.04 }); }
+  else if (hi === 1) {                                // 바다: 노을 물결
+    const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, C.dusk); g.addColorStop(0.5, C.amber); g.addColorStop(0.52, '#3a5a8c'); g.addColorStop(1, '#14233f');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#fff1c4'; ctx.beginPath(); ctx.arc(W / 2, H * 0.5, 140, Math.PI, 0); ctx.fill();
+    for (let i = 0; i < 18; i++) { const y = H * 0.52 + i * i * 3.2 + 8, a = 0.5 - i * 0.025; ctx.strokeStyle = `rgba(255,210,130,${a})`; ctx.lineWidth = 3 + i * 0.4;
+      ctx.beginPath(); for (let x = 0; x <= W; x += 20) ctx.lineTo(x, y + Math.sin(x * 0.02 + t * 4 + i) * (4 + i)); ctx.stroke(); }
+  } else {                                            // 단풍길: 소실점으로 뻗는 길
+    bg(C.rust);
+    ctx.fillStyle = '#3a1a10'; ctx.beginPath(); ctx.moveTo(W / 2 - 30, 760); ctx.lineTo(W / 2 + 30, 760); ctx.lineTo(W + 200, H); ctx.lineTo(-200, H); ctx.fill();
+    ctx.strokeStyle = C.gold; ctx.lineWidth = 10; ctx.setLineDash([60, 70]); ctx.lineDashOffset = -t * 900;
+    ctx.beginPath(); ctx.moveTo(W / 2, 770); ctx.lineTo(W / 2, H); ctx.stroke(); ctx.setLineDash([]);
+    for (let side of [-1, 1]) for (let i = 0; i < 9; i++) { const d = ((i / 9 + t * 0.8) % 1), z = d * d; leaf(W / 2 + side * (60 + z * 900), 760 + z * 1100, 40 + z * 260, side * (1 + d * 3), LEAF_COLORS[i % 5], 0.95); }
+  }
+  falling(t, { n: 30, speed: 1.6, wind: 180 });
+  vignette(0.5);
+  const word = hits[hi][1], size = fitSize(word, 940, 360);
+  ctx.save(); ctx.translate(W / 2, 760); ctx.scale(lerp(1.25, 1, p), lerp(1.25, 1, p));
+  echoText(word, 0, 0, size, C.cream, 0, -20 * (1 - p), 4);
+  ctx.restore();
+  text(hits[hi][2], W / 2, 760 + size * 0.66, 28, C.cream, { mono: true, weight: 700, tracking: 12 });
+  text(['01', '02', '03'][hi] + ' / 03', W / 2, 1400, 24, C.cream, { mono: true, weight: 700, tracking: 8 });
+  hud(t, C.cream, 'ROUTE · 3 SPOTS');
+}
+
+// 마디 6: 흩어진 로고 글자가 연타마다 모임
+function sAssemble(t, S) {
+  const lt = t - S.start, lb = lt / BEAT, ROLL = S.roll.map(x => (x - S.start) / BEAT);
+  bg(C.ink);
+  if (t >= S.gap[0]) return;
+  const L = logoLayout(), h = Math.max(0, hitIndex(ROLL, lb)), pull = Math.pow((h + 1) / ROLL.length, 1.5);
+  if (h % 3 === 0) bg(C.rust); else if (h % 3 === 1) { landscape(t, { sunY: 1060, zoom: 1.3 }); tint('#000', 'multiply', 0.55); }
+  falling(t, { n: 40, speed: 2.5, wind: 300, alpha: 0.7 });
+  vignette(0.7);
+  L.letters.forEach((l, i) => {
+    const r = rng(h * 97 + i * 13 + 5);
+    const x = lerp(120 + r() * (W - 240), l.x, pull), y = lerp(340 + r() * 1100, l.y, pull), s = lerp(0.6 + r() * 1.3, 1, pull);
+    ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+    echoText(l.ch, 0, 0, L.size, r() < 0.3 ? C.amber : C.cream, (r() - .5) * 40, (r() - .5) * 40, 3, { kr: false });
+    ctx.restore();
+  });
+  ctx.globalAlpha = pull * 0.8; ctx.strokeStyle = C.gold; ctx.lineWidth = 5;
+  ctx.beginPath(); ctx.arc(L.markX, L.cy, L.markR * pull, 0, 7); ctx.stroke(); ctx.globalAlpha = 1;
+  hud(t, C.cream, 'NEXT EPISODE');
+  rgbSplit(lerp(4, 20, pull));
+}
+
+// 마디 7: 로고
+function sLogo(t, S) {
+  const lt = t - S.start, L = logoLayout();
+  landscape(t, { sunY: 1180, zoom: 1.1 });
+  tint('#000', 'multiply', 0.62);
+  falling(t, { n: 22, speed: 0.6, wind: 40, alpha: 0.75 });
+  vignette(0.85);
+  const zoom = 1 + lt * 0.012;
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(zoom, zoom); ctx.translate(-W / 2, -H / 2);
+  drawMark(L.markX, L.cy, L.markR * backOut(lt / 0.35), lt > BEAT ? 1 : 0.4, -0.5 * (1 - expoOut(lt / 0.6)));
+  const wp = expoOut(lt / 0.25);
+  L.letters.forEach(l => { ctx.save(); ctx.translate(l.x, l.y); const s = lerp(1.08, 1, wp); ctx.scale(s, s); text(l.ch, 0, 0, L.size, C.cream, { kr: false }); ctx.restore(); });
+  if (lt >= BEAT) {
+    const sp = expoOut((lt - BEAT) / 0.4);
+    ctx.globalAlpha = sp;
+    text('가을 여행', W / 2, L.tagY + 20, 76, C.amber, { tracking: lerp(60, 24, sp) });
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = C.amber; ctx.fillRect(W / 2 - L.tw * sp / 2, L.tagY - 52, L.tw * sp, 6);
+  }
+  ctx.restore();
+  const lbx = expoOut(lt / 0.5) * (H - W * 1.25) / 2;
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, lbx); ctx.fillRect(0, H - lbx, W, lbx);
+  if (lt >= BEAT * 2) {
+    ctx.globalAlpha = expoOut((lt - BEAT * 2) / 0.4);
+    text('AUTUMN TRIP  ·  2026', W / 2, 1420, 26, C.cream, { mono: true, weight: 700, tracking: 10 });
+    text('TRAVEL  ·  VLOG', W / 2, 1462, 20, C.cream, { mono: true, weight: 400, tracking: 8 });
+    ctx.globalAlpha = 1;
+  }
+}
+
+// ================= master =================
+window.render = function (t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none';
+  bg(C.ink);
+  ctx.save();
+  shake(t, SHAKES, 20);
+  const S = TL.sections.find(s => t < s.end) || TL.sections[TL.sections.length - 1];
+  if (S.type === 'intro') sIntro(t, S);
+  else if (S.type === 'hook') (t >= S.silence[0] ? sSilence : sHook)(t, S);
+  else if (S.type === 'drop') {
+    const k = Math.min(S.bars - 1, Math.floor((t - S.start) / BAR)), bar = { start: S.start + k * BAR, fill: k === S.bars - 1 };
+    const main = Math.abs(S.start - TL.main_drop) < 1e-6;
+    (main && k % 2 === 0 ? sDrop : sTrick)(t, bar);
+  }
+  else if (S.type === 'hook2') sAssemble(t, S);
+  else sLogo(t, S);
+  ctx.restore();
+  for (const h of TL.hits) if (t >= h && t < h + 1.5 / FPS) { ctx.globalAlpha = 0.85; bg(C.cream); ctx.globalAlpha = 1; }
+  const silent = TL.silences.some(([a, b]) => t >= a && t < b);
+  if (!silent) drawGrain(t);
+  if (t > DUR - 0.5) { ctx.globalAlpha = Math.pow((t - (DUR - 0.5)) / 0.5, 1.5); bg('#000'); ctx.globalAlpha = 1; }
+};
+window.FPS = FPS;
+
+if (!window.__RENDER_MODE__) {
+  Promise.all([document.fonts.ready, window.READY]).then(() => {
+    const a = new Audio('build/music.wav'); let t0 = null;
+    const loop = now => { if (t0 === null) t0 = now; render(((now - t0) / 1000) % DUR); requestAnimationFrame(loop); };
+    document.body.addEventListener('click', () => { a.currentTime = 0; a.play(); t0 = null; });
+    requestAnimationFrame(loop);
+  });
+}
+</script>
+</body>
+</html>
