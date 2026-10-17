@@ -17,27 +17,33 @@ RIM_WALL = 2.5         # rim wall around the open soundboard pocket
 POCKET_DEPTH = 4.0     # soundboard pocket depth below the rim top
 
 # Keyboard: 88 keys, A0..C8
-WHITE_W = 1.8          # white key pitch (52 whites = 93.6 mm)
+WHITE_W = 2.0          # white key pitch (52 whites = 104 mm); key = 1.7 mm >= FDM 1.6
 WHITE_L = 13.0         # exposed white key length
 KEY_GAP = 0.3          # groove between white keys
 KEYBED_TOP = 53.0      # top of the key slip / keybed
 WHITE_H = 2.5          # white key height above the keybed
-BLACK_W = 1.0
+BLACK_W = 1.6          # >= FDM 1.6 mm unsupported wall
 BLACK_L = 7.5
 BLACK_H = 1.5          # black key height above the white keys
 CHEEK_TOP = 60.0       # top of the keyboard end blocks
 
 # Lid
-LID_T = 1.5
-LID_FRONT_Y = 12.0     # lid starts behind the music desk
+LID_T = 2.0            # >= FDM 1.6 mm wall
+LID_FRONT_Y = 16.0     # lid starts behind the music desk
 LID_ANGLE = 22.0       # opening angle (deg)
-LID_SINK = 0.6         # lid sits this far into the rim so the hinge is a solid joint
+LID_SINK = 0.6         # lid sits this far into the rim; the rim is cut to a matching seat
 
 # Legs and pedal lyre
 LEG_R_TOP = 4.0
 LEG_R_BOTTOM = 3.0
 LEG_FOOT_H = 4.0       # caster block height
-PROP_R = 1.0
+PROP_R = 1.6
+PROP_XY = (30.0, 62.0)  # prop stick position on the rim floor
+PIN_R = 1.0            # locating pin on the stick top (2.0 mm >= FDM min feature)
+PIN_LEN = 1.0          # pin length into the lid
+HOLE_R = 1.2           # lid hole: 0.2 mm radial clearance on the pin
+HOLE_DEPTH = 1.3       # blind hole depth in the 2.0 mm lid
+DESK_T = 1.8           # music desk thickness
 
 OUTLINE_SPLINE = [
     (HALF_W, 28), (50, 48), (36, 66), (22, 84), (12, 104),
@@ -116,16 +122,51 @@ def black_keys() -> list[bd.Solid]:
 
 
 def music_desk() -> bd.Solid:
-    panel = bd.Box(64, 1.2, 18, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN))
+    # Stands on the soundboard (pocket floor) and stays in front of the lid
+    floor = RIM_TOP - POCKET_DEPTH - 0.5
+    panel = bd.Box(64, DESK_T, 22, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN))
     panel = bd.Rot(-14, 0, 0) * panel           # leans back toward the tail
-    return bd.Pos(0, 8, RIM_TOP - 1.0) * panel
+    return bd.Pos(0, 6, floor) * panel
+
+
+def _lid_flat(with_hole: bool = True) -> bd.Solid:
+    """The lid lying flat, underside at z=0, in the case's XY frame."""
+    slab = bd.extrude(_outline_face(LID_FRONT_Y), amount=LID_T)
+    if with_hole:
+        fx, fy = _prop_flat_xy()
+        slab = slab - bd.Pos(fx, fy, -1) * bd.Cylinder(
+            HOLE_R, HOLE_DEPTH + 1, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN)
+        )
+    return slab
+
+
+def _to_open(shape: bd.Shape) -> bd.Shape:
+    """Move a flat-lid-frame shape to the open lid position."""
+    hinge = bd.Axis((-HALF_W, 0, RIM_TOP), (0, 1, 0))
+    return (bd.Pos(0, 0, RIM_TOP - LID_SINK) * shape).rotate(hinge, -LID_ANGLE)
+
+
+def _prop_flat_xy() -> tuple[float, float]:
+    """Where the prop stick meets the lid, in the flat-lid frame."""
+    a = math.radians(LID_ANGLE)
+    dx = (PROP_XY[0] + HALF_W - LID_SINK * math.sin(a)) / math.cos(a)
+    return -HALF_W + dx, PROP_XY[1]
+
+
+def _seat_cut() -> bd.Solid:
+    """Cut for the lid seat; it runs past the hinge so the bass rim keeps no knife edge."""
+    tool = _lid_flat(with_hole=False) + bd.Pos(-HALF_W - 4, 75, LID_T / 2) * bd.Box(10, 160, LID_T)
+    return _to_open(tool)
 
 
 def lid() -> bd.Solid:
-    face = _outline_face(LID_FRONT_Y)
-    slab = bd.extrude(bd.Pos(0, 0, RIM_TOP - LID_SINK) * face, amount=LID_T)
-    hinge = bd.Axis((-HALF_W, 0, RIM_TOP), (0, 1, 0))
-    return slab.rotate(hinge, -LID_ANGLE)
+    """Lid in its open position (display)."""
+    return _to_open(_lid_flat())
+
+
+def lid_print() -> bd.Solid:
+    """Lid laid flat for printing: underside up, so the pin hole opens upward."""
+    return bd.Pos(0, 0, LID_T) * bd.Rot(180, 0, 0) * _lid_flat()
 
 
 def lid_underside_z(x: float) -> float:
@@ -133,15 +174,20 @@ def lid_underside_z(x: float) -> float:
     return RIM_TOP + (x + HALF_W) * math.tan(a) - LID_SINK / math.cos(a)
 
 
-def hinges() -> list[bd.Solid]:
-    return [bd.Pos(-HALF_W + 1.5, y, RIM_TOP + 1.0) * bd.Box(3, 6, 2.6) for y in (35, 80, 125)]
-
-
 def prop_stick() -> bd.Solid:
-    x, y = 30.0, 62.0
-    z0 = RIM_TOP - 1.0
-    z1 = lid_underside_z(x) + 0.8
-    return bd.Pos(x, y, z0) * bd.Cylinder(PROP_R, z1 - z0, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN))
+    """Prop stick trimmed flush to the lid underside, with a locating pin."""
+    x, y = PROP_XY
+    z0 = RIM_TOP - POCKET_DEPTH - 0.5          # stands on the soundboard
+    z1 = lid_underside_z(x) + 1.0              # just past the slanted underside
+    stick = bd.Pos(x, y, z0) * bd.Cylinder(
+        PROP_R, z1 - z0, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN)
+    )
+    stick = stick - _to_open(_lid_flat(with_hole=False))
+    fx, fy = _prop_flat_xy()
+    pin = _to_open(bd.Pos(fx, fy, -1.5) * bd.Cylinder(
+        PIN_R, PIN_LEN + 1.5, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN)
+    ))
+    return stick + pin
 
 
 def legs() -> list[bd.Solid]:
@@ -164,16 +210,19 @@ def lyre() -> bd.Solid:
     posts = [bd.Pos(sx * 6, y, 7.5) * bd.Cylinder(1.2, CASE_BOTTOM + 1 - 7.5,
                                                    align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN))
              for sx in (-1, 1)]
-    pedals = [bd.Pos(px, y - 3.5 - 3.0, 5.0) * bd.Box(1.4, 6.0, 1.0) for px in (-4.5, 0, 4.5)]
+    pedals = [bd.Pos(px, y - 3.5 - 3.0, 5.0) * bd.Box(1.8, 6.0, 1.8) for px in (-4.5, 0, 4.5)]
     # back prop rod from the pedal box down to the floor (as on a real lyre)
     rod = bd.Pos(0, y + 3.0, 0) * bd.Cylinder(1.0, 6.0, align=(bd.Align.CENTER, bd.Align.CENTER, bd.Align.MIN))
     return box + posts[0] + posts[1] + pedals[0] + pedals[1] + pedals[2] + rod
 
 
 def parts() -> dict[str, bd.Shape]:
-    """Every part, labelled, unfused (for display)."""
+    """Every part, labelled, unfused, in the assembled (lid open) pose.
+
+    The case is cut by the lid, so the rim forms a seat at the lid angle: the lid glues onto it as a separate print.
+    """
     return {
-        "case": case_body() + hinges()[0] + hinges()[1] + hinges()[2],
+        "case": case_body() - _seat_cut(),
         "music_desk": music_desk(),
         "lid": lid(),
         "prop_stick": prop_stick(),
