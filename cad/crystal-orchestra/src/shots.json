@@ -1,0 +1,122 @@
+{
+ "_doc": "Fixed cameras for the music video. Pass A and pass B each cover the 40-beat loop in four 10-beat shots; the edit alternates the passes on each repeat of the loop. zoom: digital push-in (>1) or pull-out (<1) over the shot.",
+ "focal": 50,
+ "passes": {
+  "A": [
+   {
+    "name": "A1_wide",
+    "position": [
+     -115,
+     -600,
+     355
+    ],
+    "target": [
+     8,
+     20,
+     50
+    ],
+    "zoom": 1.1
+   },
+   {
+    "name": "A2_piano",
+    "position": [
+     -205,
+     -40,
+     150
+    ],
+    "target": [
+     -40,
+     70,
+     72
+    ],
+    "zoom": 0.92
+   },
+   {
+    "name": "A3_harp",
+    "position": [
+     245,
+     -160,
+     125
+    ],
+    "target": [
+     122,
+     0,
+     80
+    ],
+    "zoom": 1.1
+   },
+   {
+    "name": "A4_strings",
+    "position": [
+     -20,
+     -330,
+     48
+    ],
+    "target": [
+     -10,
+     -60,
+     62
+    ],
+    "zoom": 0.92
+   }
+  ],
+  "B": [
+   {
+    "name": "B1_top",
+    "position": [
+     0,
+     -170,
+     560
+    ],
+    "target": [
+     0,
+     10,
+     20
+    ],
+    "zoom": 1.1
+   },
+   {
+    "name": "B2_timpani",
+    "position": [
+     -330,
+     -140,
+     150
+    ],
+    "target": [
+     -105,
+     45,
+     55
+    ],
+    "zoom": 0.92
+   },
+   {
+    "name": "B3_podium",
+    "position": [
+     0,
+     -230,
+     92
+    ],
+    "target": [
+     0,
+     40,
+     62
+    ],
+    "zoom": 1.1
+   },
+   {
+    "name": "B4_rear",
+    "position": [
+     270,
+     230,
+     190
+    ],
+    "target": [
+     0,
+     -10,
+     50
+    ],
+    "zoom": 0.92
+   }
+  ]
+ }
+}

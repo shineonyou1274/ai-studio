@@ -8,7 +8,7 @@ import json
 from cadgen import build123d as bd
 from cadgen import glb, srgb, step
 
-from orchestra_parts import scene_spec
+from orchestra_parts import piano_events, scene_spec
 
 BEAT = 60 / 143.55        # seconds per beat (librosa beat tracking of the song)
 FIRST_BEAT = 0.163        # seconds into the song
@@ -39,16 +39,7 @@ def _assignments():
 
 
 def _piano_events():
-    """White-key presses over the 40-beat loop: a I-V-vi-IV chord on each half-time
-    downbeat, broken-chord notes on the beats between."""
-    chords = [[23, 25, 27, 30], [20, 22, 24, 27], [21, 23, 25, 28], [19, 21, 23, 26]]   # C G Am F (white-key index, A0 = 0)
-    events = []
-    for bar in range(LOOP_BEATS // 4):
-        chord = chords[bar % 4]
-        events.append([bar * 4, chord[:3]])
-        for k, b in enumerate((1, 2, 3)):
-            events.append([bar * 4 + b, [chord[(k + 1) % 4] + 7]])
-    return [[b, [SPEC["white_keys"][i] for i in keys]] for b, keys in events]
+    return [[b, [SPEC["white_keys"][i] for i in keys]] for b, keys in piano_events()]
 
 
 DATA = {
@@ -60,6 +51,7 @@ DATA = {
     "bows": SPEC["bows"],
     "mallets": SPEC["mallets"],
     "baton": SPEC["baton"],
+    "notes": SPEC["notes"],
 }
 
 ANIMATION = r"""
@@ -119,6 +111,23 @@ export const clips = {
         m.get(p).rotate(bt.axis_lift, lift, bt.pivot);
         m.get(p).rotate(bt.axis_sweep, sweep, bt.pivot);
       });
+
+      // notes rise from whatever just played, turning as they fade
+      for (const n of D.notes) {
+        let best = null;
+        for (const tr of n.tr) {
+          const s = wrap(u - tr.b, D.loopBeats);
+          if (s < n.life && (best === null || s < best.s)) best = { s, off: tr.off };
+        }
+        const h = m.get(n.label);
+        if (best === null) { h.visible(false); continue; }
+        const p = best.s / n.life;
+        const fade = Math.min(1, p / 0.15) * (p > 0.55 ? (1 - p) / 0.45 : 1);
+        h.opacity(0.95 * fade);
+        h.rotate([0, 0, 1], 35 * Math.sin(TAU * p + n.spin0), n.rest);   // a gentle wobble, mostly facing front
+        const sway = 6 * Math.sin(Math.PI * p + n.spin0);
+        h.translate([best.off[0] + sway, best.off[1], best.off[2] + 42 * p]);
+      }
 
       // the whole stage turns gently to and fro, once per loop
       const yaw = 12 * Math.sin(TAU * t / L);

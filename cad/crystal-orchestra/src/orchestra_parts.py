@@ -345,8 +345,11 @@ def harp_parts(place: Place) -> tuple[list[Part], list[str]]:
 # --------------------------------------------------------------------------
 # Timpani
 
+TIMPANI_H = 44.0
+
+
 def timpano_parts(name: str, R: float, place: Place) -> tuple[list[Part], dict]:
-    H = 44.0
+    H = TIMPANI_H
 
     def kettle():
         bowl = bd.Pos(0, 0, H) * bd.Sphere(R)
@@ -476,6 +479,82 @@ def piano_parts() -> tuple[list[Part], list[str], list[str]]:
 
 
 # --------------------------------------------------------------------------
+# Musical notes that rise from an instrument when it plays
+
+NOTE_KINDS = ("quarter", "eighth", "beamed")
+LOOP_BEATS = 40
+
+
+NOTE_SCALE = 1.7        # notes read clearly in the wide shot
+
+
+def note_shape(kind: str):
+    """A gold note glyph standing in the local XZ plane, head centred on the origin."""
+    def head(x):
+        return bd.Pos(x, 0, 0) * bd.Rot(0, -20, 0) * bd.scale(bd.Sphere(2.4), by=(1.35, 0.9, 0.95))
+
+    def stem(x):
+        return bd.Pos(x + 2.6, 0, 0) * bd.Box(1.0, 1.6, 12.5, align=_c())
+
+    if kind == "beamed":
+        shape = head(0) + stem(0) + head(8) + stem(8) + bd.Pos(6.6, 0, 11.6) * bd.Box(9.0, 1.6, 1.9)
+    else:
+        shape = head(0) + stem(0)
+        if kind == "eighth":
+            shape = shape + bd.Pos(4.6, 0, 9.6) * bd.Rot(0, 38, 0) * bd.Box(1.1, 1.6, 6.0)
+    return bd.scale(shape, by=NOTE_SCALE)
+
+
+def piano_events():
+    """White-key presses over the loop: a I-V-vi-IV chord on each half-time downbeat,
+    broken-chord notes on the beats between. (beat, [white-key index, A0 = 0])."""
+    chords = [[23, 25, 27, 30], [20, 22, 24, 27], [21, 23, 25, 28], [19, 21, 23, 26]]   # C G Am F
+    events = []
+    for bar in range(LOOP_BEATS // 4):
+        chord = chords[bar % 4]
+        events.append((bar * 4, chord[:3]))
+        for k, b in enumerate((1, 2, 3)):
+            events.append((bar * 4 + b, [chord[(k + 1) % 4] + 7]))
+    return events
+
+
+def harp_plucks():
+    """(beat, string index): each string is plucked twice per loop."""
+    out = []
+    for i in range(len(HARP_STRING_X)):
+        b = ((i * 7) % LOOP_BEATS) * 0.5
+        out += [(b, i), (b + LOOP_BEATS / 2, i)]
+    return sorted(out)
+
+
+def _circular_gap(a, b):
+    d = abs(a - b) % LOOP_BEATS
+    return min(d, LOOP_BEATS - d)
+
+
+def schedule_notes(prefix: str, triggers: list, life: float) -> list[dict]:
+    """Share a small pool of notes among (beat, world spawn point) triggers so that
+    no note is asked to be in two places at once."""
+    pool: list[dict] = []
+    for b, spawn in sorted(triggers, key=lambda t: t[0]):
+        for note in pool:
+            if all(_circular_gap(b, t["b"]) >= life for t in note["tr"]):
+                break
+        else:
+            k = len(pool)
+            note = {"label": f"{prefix}_note{k + 1}", "kind": NOTE_KINDS[k % 3], "rest": spawn,
+                    "life": life, "spin0": 47.0 * k, "tr": []}
+            pool.append(note)
+        note["tr"].append({"b": b, "off": [spawn[i] - note["rest"][i] for i in range(3)]})
+    return pool
+
+
+def note_parts(notes: list[dict]) -> list[Part]:
+    return [Part(n["label"], "gold", (lambda n=n: bd.Pos(*n["rest"]) * note_shape(n["kind"])))
+            for n in notes]
+
+
+# --------------------------------------------------------------------------
 # The whole scene
 
 VIOLIN = StringSpec("violin1", 70, 0.13, 40, 0.62, stand=True)
@@ -496,18 +575,22 @@ def scene_spec() -> dict:
     harp, harp_strings = harp_parts(harp_place)
     parts += harp
 
-    bows = []
+    bows, string_places = [], []
     for spec, x, y, yaw, tilt in ((VIOLIN, -118, -55, 18, -8), (VIOLIN2, -68, -92, 10, -8),
                                   (CELLO, 50, -98, -12, -14), (BASS, 105, -72, -20, -12)):
-        p, motion = string_instrument_parts(spec, _upright(spec, x, y, yaw, tilt))
+        place = _upright(spec, x, y, yaw, tilt)
+        p, motion = string_instrument_parts(spec, place)
         parts += p
         bows.append(motion)
+        string_places.append((spec, place))
 
-    mallets = []
+    mallets, timpani_places = [], []
     for name, R, x, y in (("timpano1", 26.0, -138, 42), ("timpano2", 22.0, -112, 108)):
-        p, motion = timpano_parts(name, R, Place(x, y, STAGE_H, yaw=20))
+        place = Place(x, y, STAGE_H, yaw=20)
+        p, motion = timpano_parts(name, R, place)
         parts += p
         mallets.append(motion)
+        timpani_places.append((name, TIMPANI_H, place))
 
     for name, x, y, yaw in (("stand1", -95, -18, 200), ("stand2", 80, -40, 160), ("stand3", 10, 5, 180)):
         parts += music_stand_parts(name, Place(x, y, STAGE_H, yaw=yaw))
@@ -518,6 +601,21 @@ def scene_spec() -> dict:
     baton_place = Place(0, -142, STAGE_H + 7)
     parts += baton_parts(baton_place)
 
+    # Notes rise from each instrument as it plays
+    piano_trig = [(b, PIANO.point((-36 + (k % 6) * 13, -6, pp.KEYBED_TOP + 14))) for k, (b, _) in enumerate(piano_events())]
+    harp_trig = [(b, harp_place.point((HARP_STRING_X[i], -8, (_soundbox_z(HARP_STRING_X[i]) + _neck_z(HARP_STRING_X[i])) / 2)))
+                 for b, i in harp_plucks()]
+    notes = schedule_notes("piano", piano_trig, 3.2) + schedule_notes("harp", harp_trig, 2.6)
+    for k, (spec, place) in enumerate(string_places):
+        L, Lb, D, neck_top, fb_t, y_front, y_fb, y_str = _string_geometry(spec)
+        period = 4 if k < 2 else 8
+        trig = [(float(b), place.point((0, y_str - 8, 0.55 * Lb))) for b in range(k, LOOP_BEATS, period)]
+        notes += schedule_notes(spec.name, trig, 3.0)
+    for k, (name, H, place) in enumerate(timpani_places):
+        trig = [(float(b), place.point((0, 0, H + 10))) for b in range(k * 4, LOOP_BEATS, 8)]
+        notes += schedule_notes(name, trig, 3.0)
+    parts += note_parts(notes)
+
     labels = [p.label for p in parts]
     assert len(labels) == len(set(labels)), "duplicate part labels"
     return {
@@ -526,6 +624,7 @@ def scene_spec() -> dict:
         "black_keys": black_keys,
         "harp_strings": harp_strings,
         "harp_dir": harp_place.vec((0, 1, 0)),   # across the string plane
+        "notes": notes,
         "bows": bows,
         "mallets": mallets,
         "baton": {"labels": ["baton_handle", "baton_stick"],
