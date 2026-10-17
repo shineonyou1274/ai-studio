@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import math
+from pathlib import Path
 
 from cadgen import build123d as bd
 from cadgen import glb, srgb, step
@@ -29,6 +31,22 @@ MATERIALS = {
 }
 
 SPEC = scene_spec()
+SHOTS = json.loads((Path(__file__).with_name("shots.json")).read_text())
+
+
+def _note_facing(position, center=(0.0, 0.0, 60.0)):
+    """Yaw and back-tilt (degrees) that turn a front-facing note toward a camera."""
+    d = [position[i] - center[i] for i in range(3)]
+    n = math.sqrt(sum(c * c for c in d))
+    yaw = math.degrees(math.atan2(d[1], d[0])) + 90
+    tilt = math.degrees(math.asin(d[2] / n)) * 0.7
+    return [round(yaw, 2), round(tilt, 2)]
+
+
+FACING = {"play": _note_facing((-115, -600, 355))}
+for _shots in SHOTS["passes"].values():
+    for _shot in _shots:
+        FACING["shot_" + _shot["name"]] = _note_facing(_shot["position"])
 
 
 def _assignments():
@@ -52,6 +70,7 @@ DATA = {
     "mallets": SPEC["mallets"],
     "baton": SPEC["baton"],
     "notes": SPEC["notes"],
+    "facing": FACING,
 }
 
 ANIMATION = r"""
@@ -61,12 +80,8 @@ const L = D.loopBeats * D.beat;
 
 function wrap(x, n) { return ((x %% n) + n) %% n; }
 
-export const clips = {
-  play: {
-    label: "Orchestra loop (40 beats)",
-    duration: L,
-    loop: true,
-    update(t, m) {
+function play(t, m, facing) {
+      const [faceYaw, faceTilt] = facing;
       const u = (t - D.first) / D.beat;            // beats since the song's first beat
 
       // piano keys: press quickly, release softly
@@ -124,7 +139,8 @@ export const clips = {
         const p = best.s / n.life;
         const fade = Math.min(1, p / 0.15) * (p > 0.55 ? (1 - p) / 0.45 : 1);
         h.opacity(0.95 * fade);
-        h.rotate([0, 0, 1], 35 * Math.sin(TAU * p + n.spin0), n.rest);   // a gentle wobble, mostly facing front
+        h.rotate([1, 0, 0], -faceTilt, n.rest);                            // lean back toward a high camera
+        h.rotate([0, 0, 1], faceYaw + 30 * Math.sin(TAU * p + n.spin0), n.rest);   // face the camera, with a gentle wobble
         const sway = 6 * Math.sin(Math.PI * p + n.spin0);
         h.translate([best.off[0] + sway, best.off[1], best.off[2] + 42 * p]);
       }
@@ -132,9 +148,15 @@ export const clips = {
       // the whole stage turns gently to and fro, once per loop
       const yaw = 12 * Math.sin(TAU * t / L);
       for (const p of D.all) m.get(p).rotate([0, 0, 1], yaw, [0, 0, 0]);
-    },
-  },
-};
+}
+
+// One clip per camera: identical motion, notes turned to face that camera.
+export const clips = Object.fromEntries(Object.entries(D.facing).map(([name, facing]) => [name, {
+  label: name === "play" ? "Orchestra loop (40 beats)" : "Orchestra loop for " + name.slice(5),
+  duration: L,
+  loop: true,
+  update(t, m) { play(t, m, facing); },
+}]));
 """ % json.dumps(DATA)
 
 

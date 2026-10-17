@@ -25,10 +25,13 @@ SUB_FONT = "/usr/share/fonts/opentype/inter/InterDisplay-Light.otf"
 ap = argparse.ArgumentParser()
 ap.add_argument("shots"); ap.add_argument("song"); ap.add_argument("out")
 ap.add_argument("--work", default=None)
+ap.add_argument("--passes", nargs="*", help="use only these passes (e.g. A for a preview)")
 args = ap.parse_args()
 shots_dir = Path(args.shots)
 work = Path(args.work or shots_dir / "edit"); shutil.rmtree(work, ignore_errors=True); work.mkdir(parents=True)
 plan = json.load(open(Path(__file__).with_name("shots.json")))
+if args.passes:
+    plan["passes"] = {k: v for k, v in plan["passes"].items() if k in args.passes}
 
 
 def ff(*a):

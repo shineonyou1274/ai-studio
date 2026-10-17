@@ -491,7 +491,9 @@ NOTE_SCALE = 1.7        # notes read clearly in the wide shot
 def note_shape(kind: str):
     """A gold note glyph standing in the local XZ plane, head centred on the origin."""
     def head(x):
-        return bd.Pos(x, 0, 0) * bd.Rot(0, -20, 0) * bd.scale(bd.Sphere(2.4), by=(1.35, 0.9, 0.95))
+        # a flat elliptical disc in the XZ plane (a non-uniformly scaled sphere does not render)
+        disc = bd.extrude(bd.Plane.XZ * bd.Ellipse(3.3, 2.3), amount=0.9, both=True)
+        return bd.Pos(x, 0, 0) * bd.Rot(0, -20, 0) * disc
 
     def stem(x):
         return bd.Pos(x + 2.6, 0, 0) * bd.Box(1.0, 1.6, 12.5, align=_c())
@@ -501,7 +503,7 @@ def note_shape(kind: str):
     else:
         shape = head(0) + stem(0)
         if kind == "eighth":
-            shape = shape + bd.Pos(4.6, 0, 9.6) * bd.Rot(0, 38, 0) * bd.Box(1.1, 1.6, 6.0)
+            shape = shape + bd.Pos(4.9, 0, 10.0) * bd.Rot(0, -38, 0) * bd.Box(1.1, 1.6, 6.0)   # flag hangs down-right
     return bd.scale(shape, by=NOTE_SCALE)
 
 

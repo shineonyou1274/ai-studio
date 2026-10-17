@@ -35,7 +35,7 @@ for pass_shots in shots["passes"].values():
                         "floor": {"finish": "glossy", "color": "#10141F"},
                         "lighting": {"quality": "final", "exposure": 0.4},
                         "camera": {"projection": "perspective", "focalLength": shots["focal"]}},
-            "animation": {"clip": "play"},
+            "animation": {"clip": "shot_" + shot["name"]},
             "video": {"fps": 30, "quality": "high", "start": FIRST_BEAT + k * SHOT_BEATS * BEAT,
                       "seconds": SHOT_BEATS * BEAT},
             "outputs": [{"path": str(out / f"{shot['name']}.mp4"), "width": 1080, "height": 1350,
