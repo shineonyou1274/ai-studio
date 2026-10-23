@@ -5,6 +5,8 @@
 | 경로 | 내용 |
 |---|---|
 | `CLAUDE.md` | 편집장 운영 규칙 (여기부터 읽기) |
+| `AGENTS.md` | 제작 워크플로우, 2화 검수에서 나온 프롬프트 규칙, Gemini 검수 게이트 |
+| `references/` | 영상 연출·AI 프롬프트 가이드 |
 | `.claude/agents/` | 기획팀, 생성팀, 검수팀 |
 | `playbook/drama_playbook_v2/` | 드라마 플레이북 v2 원문 8개 파일 |
 | `playbook/원본_공모전팀/` | 시리즈용으로 바꾸기 전 원래 팀 정의 |
