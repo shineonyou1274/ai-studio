@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 1화 | 생결 쓰고 PC방 간 날, 담임샘과 몸이 바뀌었다 | https://www.youtube.com/shorts/chXehj3O4CI | 406 |
 | 2화 | 담임 몸으로 등교한 날, 친구들이 날 못 알아봤다 | https://www.youtube.com/shorts/Uvafh7ob50g | 1.4천 |
-| 3화 | (10/27 화 18:00 예약 공개) | — | — |
+| 3화 | (10/27 화 18:00 예약 공개, 최종본 v14 44초 — **다시 만들지 않음**) | — | — |
 
 두 편 모두 쇼츠(세로 9:16)입니다. 영상 길이, 설명란, 각 회차의 시나리오 원본은 이 환경에서 확인하지 못했습니다.
 
@@ -38,6 +38,8 @@
 | `soulchange_style.ass` | 고정 자막 스타일 헤더 |
 | `characters/`, `backgrounds/`, `voices/`, `pip.png`, `pip_t.png`, `fonts/` | 참조 이미지, 참조 음성(+원문 .txt), 영혼 원, 폰트 |
 | `gen_episode_ep3_reference.js` | 3화 빌드 스크립트 v7(참고용, PowerShell + ffmpeg) |
+| `episodes/ep3/` (**아직 푸시 전**) | `README_3화.md`(최종 대사표·컷 목록, 먼저 읽기), `clips/` 컷 원본 8개, `voices/` 최종 대사 음성 10개, `cover.png`, `ep3v14.ass`, `ep3_timeline_v14.json`, `gen_ep3.js` |
+| `episodes/ep4/` (**아직 푸시 전**) | 4화 시작 자료: `clips/m1~m4`, `voices/E4A1·E4I1·E4V1`, `soulchange-ep4-script-v1.md` |
 
 인물: [담임](원래 몸, 40대 후반 남자) ↔ [지우](여고생)가 1화에서 몸이 바뀜. 표기는 "지우 영혼(담임 몸)"처럼 영혼과 몸을 함께 씁니다.
 
