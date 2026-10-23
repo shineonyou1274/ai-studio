@@ -1,20 +1,36 @@
-# 시리즈 목록
+# 시리즈 바이블 — 소울체인지
 
-| 시리즈 | 상태 | 작가 규칙 | 기획서·원고 | 확정 배역 |
-|---|---|---|---|---|
-| 「몸 바뀐 담임」(가제, `teacher-swap`) | 첫 아크 10화 구성안, 1화 대본까지 | `teacher-swap/작가규칙.md` | `youtube-ops/series/teacher-swap.md`, `teacher-swap-arc1-v3.md` | `movie01/series/teacher-swap/cast/` (8명) |
+채널: 한입극장 [@twistbite_drama](https://www.youtube.com/@twistbite_drama) · "짧게 보고, 끝에서 뒤집히는 이야기."
 
-## 자료 위치 (클라우드 작업 환경 기준 — 사용자 컴퓨터 `C:\Projects\video_contest`에서는 받아 둔 위치로 고칩니다)
+## 올라간 회차 (2026-10-23 확인)
 
-- 기획서·원고·고증: `/home/user/youtube-ops/series/`, `/home/user/youtube-ops/sources/`
-- 확정 배역 이미지: `/home/user/movie01/series/teacher-swap/cast/`
+| 회차 | 제목 | 주소 | 조회수 |
+|---|---|---|---|
+| 1화 | 생결 쓰고 PC방 간 날, 담임샘과 몸이 바뀌었다 | https://www.youtube.com/shorts/chXehj3O4CI | 406 |
+| 2화 | 담임 몸으로 등교한 날, 친구들이 날 못 알아봤다 | https://www.youtube.com/shorts/Uvafh7ob50g | 1.4천 |
 
-두 저장소가 같은 위치에 받아져 있지 않으면 먼저 받아 둡니다(`git clone --depth 1 https://github.com/shineonyou1274/youtube-ops /home/user/youtube-ops`, `movie01`도 같은 방식). 두 저장소 모두 비공개이므로 세션에 저장소 접근 권한이 있어야 합니다.
-- 유튜브 조사 자료(제목·썸네일·쇼츠): `/home/user/youtube-ops/sources/research-shorts-title-thumb-2026-10-10.md`
+두 편 모두 쇼츠(세로 9:16)입니다. 영상 길이, 설명란, 각 회차의 시나리오 원본은 이 환경에서 확인하지 못했습니다.
 
-## 「몸 바뀐 담임」 아직 정해지지 않은 것
+## 시리즈 확정값 (회차마다 다시 묻지 않음)
 
-- 고양이들(마법부) 디자인 — 오디션 전
-- 멘토 나이 표현 — 원작자가 "다음에 보자"고 미룸
-- 첫 아크 원고 "원작자가 정할 것" 10개 (`teacher-swap-arc1-v3.md` 4절)
-- 코덱스 판정 미통과 1·5·7 (`sources/codex-review-arc1-v3-2026-10-11.md`)
+| 항목 | 값 | 근거 |
+|---|---|---|
+| 시청 계약·트랙 | 모바일 피드, 숏폼 | 1·2화 쇼츠 |
+| 프레임 | 세로 9:16 | 1·2화 |
+| 제목 형식 | `<훅> \| 소울체인지 N화` | 1·2화 |
+| 품질 모드 | **확인 필요** | — |
+| 캐릭터 시트·Voice Sheet 위치 | **확인 필요** (`C:\Projects\video_contest` 안으로 추정) | — |
+| 조명 룩·반복 장소 미술 | **확인 필요** | — |
+
+## 이야기의 바탕 자료
+
+| 자료 | 위치 |
+|---|---|
+| 작가 규칙(초안) | `teacher-swap/작가규칙.md` |
+| 기획서·원고·고증 | `youtube-ops` 저장소 `series/teacher-swap*.md`, `sources/` |
+| 오디션 때 확정한 배역 이미지 8명 | `movie01` 저장소 `series/teacher-swap/cast/` |
+
+**주의: 위 자료와 실제로 올라간 영상이 다릅니다.**
+- `youtube-ops`의 원고(첫 아크 v3)는 가로 16:9 약 2분 롱폼이고, 몸이 3화 끝에 바뀝니다. 실제 영상은 쇼츠이고, **1화에서 이미 몸이 바뀝니다.** 2화는 담임 몸으로 등교하는 이야기입니다.
+- 그래서 작가 규칙의 "한 화 약 2분, 가로 16:9" 같은 항목은 지금 시리즈와 맞지 않습니다. 고증·말투·금지 사항은 그대로 쓰되, 길이·화면 비율·회차 구성은 실제 1·2화를 기준으로 삼습니다.
+- 1·2화에서 쓴 캐릭터 시트가 `movie01`의 배역 이미지와 같은지 확인하지 못했습니다.
