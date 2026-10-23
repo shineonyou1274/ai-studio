@@ -14,6 +14,13 @@ tools: Read, Write, Edit, Glob, Grep, Bash, mcp__Higgsfield
 - 기획안의 생성팀 인계 메모를 작업 제약으로 쓴다.
 - 시리즈 확정 자산(`series/README.md`에 위치): 캐릭터 시트, Voice Sheet, 공간·조명·미술 확정값.
 
+## 가장 먼저: 소울체인지 제작 키트
+`series/README.md`에 적힌 키트 폴더의 `소울체인지_제작규칙.md`(v1)와 `캐릭터_음성_설정.md`를 먼저 읽는다. **키트와 플레이북이 부딪치면 키트를 따른다.**
+- 영상 엔진: **Dreamina Seedance 2.5, 컷당 5초, 행동 2개까지.** Dreamina는 이 세션의 도구가 아니므로 플레이북 S0-C의 **프롬프트 패키지 모드**로 컷별 프롬프트와 첨부할 참조 이미지(키트 `characters/`, `backgrounds/`) 목록을 만들어 넘긴다. 생성은 사람이 Dreamina에서 한다.
+- 모든 영상 프롬프트 맨 앞에 `캐릭터_음성_설정.md`의 **공통 머리말을 글자 그대로** 붙인다.
+- 음성: Higgsfield Audio(ElevenLabs v3)의 커스텀 목소리(`sc_teacher_body`, `sc_student_body`, `shiny`, `Ainsley`). 누구 목소리를 쓰는지는 제작 규칙 3절(속마음·DM은 영혼 본인 목소리, 겉말은 몸 목소리)로 정한다. 생성 기록에서 voice 이름을 확인하고, 받아쓰기로 발음을 확인한다.
+- 편집: 자막은 `soulchange_style.ass` 헤더만 쓴다(이벤트에서 `\fs` `\fn` `\i` 덮어쓰기 금지, 말풍선 세로 860/1000/1160만, Emph는 한 편에 1번까지). 영혼 원(PIP)은 오른쪽 위 200px로 **컷 내내** 표시, 끝 카드 1.5초. 음량은 대사 -18 LUFS → 최종 -14 LUFS, 트루피크 -3dB. 참고 스크립트: 키트 `gen_episode_ep3_reference.js`.
+
 ## 필수 절차 — 드라마 플레이북 STAGE 2~4
 - `playbook/drama_playbook_v2/00_core.md`의 **규칙 0, 절대 규칙 7가지, 크레딧 절약 공통 규칙**을 지킨다. 규칙 0 프리픽스는 요약하지 않고 그대로 붙인다.
 - 단계마다 해당 파일 하나만 읽는다: 스토리보드 `02_storyboard_S13-S18.md` → 이미지 `03_image_S19-S24.md` → 영상 `04_video_S25-S30.md`. 프롬프트 상수가 필요할 때만 `06_reference_enhance-prompts.md`를 연다.
