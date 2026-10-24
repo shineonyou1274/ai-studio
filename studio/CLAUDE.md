@@ -11,6 +11,8 @@
 3. `AGENTS.md` — 제작 워크플로우, 확인 게이트, Gemini 검수
 4. 드라마 플레이북 v2 — 단계 순서와 작법. 엔진·음성·자막처럼 위 문서가 정한 것은 플레이북보다 위 문서를 따른다(예: 영상 엔진은 플레이북의 클링3.0/시댄스2.0이 아니라 **Dreamina Seedance 2.5**, 컷당 5초).
 
+도구 현황과 역할 나누기(누가 어떤 계정으로 생성하는지, 비용 견적): `도구_현황.md`. 이 세션이 못 쓰는 계정(Dreamina, 사장님 Kling)이 필요한 일은 `위임/외부AI_지시서_템플릿.md`로 지시서를 써서 PC 쪽 AI에게 넘긴다.
+
 키트 폴더 위치: 클라우드 `/home/user/youtube-ops/series/_soulchange_kit/`, 사용자 PC `C:\Users\경남교육청\youtube-ops\series\_soulchange_kit\`. 키트는 읽기만 하고 고치지 않는다.
 
 > **제작 워크플로우와 프롬프트 작성 규칙은 [AGENTS.md](./AGENTS.md)를 따른다.** (2화 검수에서 나온 프롬프트 규칙, Gemini 검수 게이트 포함)
