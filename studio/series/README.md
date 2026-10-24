@@ -38,8 +38,8 @@
 | `soulchange_style.ass` | 고정 자막 스타일 헤더 |
 | `characters/`, `backgrounds/`, `voices/`, `pip.png`, `pip_t.png`, `fonts/` | 참조 이미지, 참조 음성(+원문 .txt), 영혼 원, 폰트 |
 | `gen_episode_ep3_reference.js` | 3화 빌드 스크립트 v7(참고용, PowerShell + ffmpeg) |
-| `episodes/ep3/` (**아직 푸시 전**) | `README_3화.md`(최종 대사표·컷 목록, 먼저 읽기), `clips/` 컷 원본 8개, `voices/` 최종 대사 음성 10개, `cover.png`, `ep3v14.ass`, `ep3_timeline_v14.json`, `gen_ep3.js` |
-| `episodes/ep4/` (**아직 푸시 전**) | 4화 시작 자료: `clips/m1~m4`, `voices/E4A1·E4I1·E4V1`, `soulchange-ep4-script-v1.md` |
+| `episodes/ep3/` (04cf0c3) | `README_3화.md`(최종 대사표·컷 목록, 먼저 읽기), `clips/` 컷 원본 8개, `voices/` 최종 대사 음성 10개, `cover.png`, `ep3v14.ass`, `ep3_timeline_v14.json`, `gen_ep3.js` |
+| `episodes/ep4/` (04cf0c3) | 4화 시작 자료: `clips/m1~m4`, `voices/E4A1·E4I1·E4V1`, `soulchange-ep4-script-v1.md` |
 
 인물: [담임](원래 몸, 40대 후반 남자) ↔ [지우](여고생)가 1화에서 몸이 바뀜. 표기는 "지우 영혼(담임 몸)"처럼 영혼과 몸을 함께 씁니다.
 
@@ -55,3 +55,7 @@
 - `youtube-ops`의 원고(첫 아크 v3)는 가로 16:9 약 2분 롱폼이고, 몸이 3화 끝에 바뀝니다. 실제 영상은 쇼츠이고, **1화에서 이미 몸이 바뀝니다.** 2화는 담임 몸으로 등교하는 이야기입니다.
 - 그래서 작가 규칙의 "한 화 약 2분, 가로 16:9" 같은 항목은 지금 시리즈와 맞지 않습니다. 고증·말투·금지 사항은 그대로 쓰되, 길이·화면 비율·회차 구성은 실제 1·2화를 기준으로 삼습니다.
 - 실제 영상의 캐릭터는 제작 키트의 참조 이미지(담임 `refT`, 지우 `refS`)입니다. `movie01`의 오디션 배역 이미지는 쓰지 않습니다.
+
+## 회차에서 새로 정해진 설정 (사장님 확정)
+- 3화: 학부모는 얼굴 없이 문자로만, 목소리 `Ainsley`. 3화 공개 주소 https://youtube.com/shorts/ifNcRf0L57E
+- 4화 구술(10/23): 두통 문자 학생 = **김서연**(우리 반 꼴찌). 담임 = **기간제 교사**(교감이 재계약을 쥠).
