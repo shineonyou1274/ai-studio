@@ -1,0 +1,52 @@
+"""4화 v11 화면 겹침 이미지: 반 단톡 폰 화면, 해외로밍 전화 수신 화면 (Jua 폰트만)"""
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from pathlib import Path
+HERE = Path(__file__).resolve().parent
+IMG = HERE.parent / '04_생성물/images'
+F = '/home/user/youtube-ops/series/_soulchange_kit/fonts/Jua-Regular.ttf'
+f = lambda s: ImageFont.truetype(F, s)
+W, H = 1080, 1920
+def phone(screen):
+    pw, ph = 760, 1400; x0, y0 = (W - pw) // 2, 190
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle([x0 + 10, y0 + 20, x0 + pw + 10, y0 + ph + 20], 80, fill=(0, 0, 0, 150))
+    im = Image.alpha_composite(im, sh.filter(ImageFilter.GaussianBlur(20)))
+    ImageDraw.Draw(im).rounded_rectangle([x0, y0, x0 + pw, y0 + ph], 80, fill=(22, 22, 26, 255))
+    sx0, sy0, sx1, sy1 = x0 + 24, y0 + 24, x0 + pw - 24, y0 + ph - 24
+    scr = Image.new('RGBA', (sx1 - sx0, sy1 - sy0)); screen(scr)
+    mask = Image.new('L', scr.size, 0); ImageDraw.Draw(mask).rounded_rectangle([0, 0, *scr.size], 58, fill=255)
+    im.paste(scr, (sx0, sy0), mask)
+    ImageDraw.Draw(im).rounded_rectangle([W // 2 - 80, y0 + 38, W // 2 + 80, y0 + 74], 18, fill=(22, 22, 26, 255))
+    return im
+def chat(s):
+    w, h = s.size; d = ImageDraw.Draw(s)
+    d.rectangle([0, 0, w, h], fill=(186, 206, 224, 255)); d.rectangle([0, 0, w, 160], fill=(170, 192, 212, 255))
+    d.text((44, 112), '<  3학년 2반 단톡  28', font=f(44), fill=(30, 30, 30), anchor='lm')
+    def other(name, text, y, col):
+        d.ellipse([30, y, 104, y + 74], fill=col); d.text((122, y + 4), name, font=f(32), fill=(60, 60, 60))
+        tw = d.textlength(text, font=f(42)); d.rounded_rectangle([122, y + 48, 122 + tw + 44, y + 122], 24, fill=(255, 255, 255))
+        d.text((144, y + 85), text, font=f(42), fill=(20, 20, 20), anchor='lm'); return y + 150
+    y = other('민준', '오늘 하은이 결석?', 200, (230, 170, 150))
+    d.ellipse([30, y, 104, y + 74], fill=(240, 190, 200)); d.text((122, y + 4), '하은', font=f(32), fill=(60, 60, 60))
+    ph = Image.open(IMG / '단톡_일본거리.png').convert('RGB'); pw = w - 170; ph = ph.resize((pw, int(pw * ph.height / ph.width)))
+    m = Image.new('L', ph.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, *ph.size], 26, fill=255)
+    s.paste(ph, (122, y + 48), m); y = y + 48 + ph.size[1] + 18
+    t = '나 일본 도착 ㅋㅋ'; tw = d.textlength(t, font=f(52))
+    d.rounded_rectangle([122, y, 122 + tw + 48, y + 88], 26, fill=(255, 255, 255)); d.text((146, y + 44), t, font=f(52), fill=(20, 20, 20), anchor='lm')
+    y += 112; d.text((122, y), '오후 1:12', font=f(28), fill=(90, 100, 110)); y += 54
+    other('서준', '?? 두통이라며 ㅋㅋ', y, (160, 200, 170))
+def call(s):
+    w, h = s.size; d = ImageDraw.Draw(s)
+    for i in range(h): d.line([(0, i), (w, i)], fill=(40 + i // 45, 48 + i // 40, 70 + i // 30, 255))
+    d.rounded_rectangle([w // 2 - 130, 170, w // 2 + 130, 240], 35, fill=(255, 214, 90))
+    d.text((w // 2, 205), '해외로밍', font=f(46), fill=(40, 40, 50), anchor='mm')
+    d.ellipse([w // 2 - 120, 320, w // 2 + 120, 560], fill=(120, 130, 150))
+    d.text((w // 2, 440), '하은', font=f(70), fill=(240, 240, 240), anchor='mm')
+    d.text((w // 2, 660), '하은이 어머니', font=f(76), fill=(255, 255, 255), anchor='mm')
+    d.text((w // 2, 745), '+81 국제전화 (일본)', font=f(38), fill=(200, 205, 220), anchor='mm')
+    d.ellipse([100, h - 290, 280, h - 110], fill=(230, 70, 70)); d.ellipse([w - 280, h - 290, w - 100, h - 110], fill=(60, 190, 110))
+    d.text((190, h - 200), '거절', font=f(40), fill=(255, 255, 255), anchor='mm'); d.text((w - 190, h - 200), '받기', font=f(40), fill=(255, 255, 255), anchor='mm')
+if __name__ == '__main__':
+    phone(chat).save(IMG / 'ovl_단톡.png'); phone(call).save(IMG / 'ovl_전화.png')
+    print('ok')
