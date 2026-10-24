@@ -42,11 +42,26 @@ def call(s):
     d.rounded_rectangle([w // 2 - 130, 170, w // 2 + 130, 240], 35, fill=(255, 214, 90))
     d.text((w // 2, 205), '해외로밍', font=f(46), fill=(40, 40, 50), anchor='mm')
     d.ellipse([w // 2 - 120, 320, w // 2 + 120, 560], fill=(120, 130, 150))
-    d.text((w // 2, 440), '하은', font=f(70), fill=(240, 240, 240), anchor='mm')
+    d.text((w // 2, 440), '학부모', font=f(60), fill=(240, 240, 240), anchor='mm')
     d.text((w // 2, 660), '하은이 어머니', font=f(76), fill=(255, 255, 255), anchor='mm')
     d.text((w // 2, 745), '+81 국제전화 (일본)', font=f(38), fill=(200, 205, 220), anchor='mm')
     d.ellipse([100, h - 290, 280, h - 110], fill=(230, 70, 70)); d.ellipse([w - 280, h - 290, w - 100, h - 110], fill=(60, 190, 110))
     d.text((190, h - 200), '거절', font=f(40), fill=(255, 255, 255), anchor='mm'); d.text((w - 190, h - 200), '받기', font=f(40), fill=(255, 255, 255), anchor='mm')
+def talking(s):
+    """통화 중 화면: 어머니 목소리가 나오는 동안 화면 속 인물 표정과 겹치지 않게 덮음"""
+    w, h = s.size; d = ImageDraw.Draw(s)
+    for i in range(h): d.line([(0, i), (w, i)], fill=(30 + i // 50, 36 + i // 45, 56 + i // 34, 255))
+    d.rounded_rectangle([w // 2 - 130, 170, w // 2 + 130, 240], 35, fill=(255, 214, 90))
+    d.text((w // 2, 205), '해외로밍', font=f(46), fill=(40, 40, 50), anchor='mm')
+    d.ellipse([w // 2 - 120, 320, w // 2 + 120, 560], fill=(120, 130, 150))
+    d.text((w // 2, 440), '학부모', font=f(60), fill=(240, 240, 240), anchor='mm')
+    d.text((w // 2, 660), '하은이 어머니', font=f(76), fill=(255, 255, 255), anchor='mm')
+    d.text((w // 2, 745), '통화 중 00:04', font=f(42), fill=(120, 230, 150), anchor='mm')
+    for k, hh in enumerate([30, 70, 110, 60, 140, 90, 40, 120, 80, 50, 100, 35]):
+        x = 110 + k * 42; d.rounded_rectangle([x, 900 - hh // 2, x + 22, 900 + hh // 2], 10, fill=(255, 120, 120))
+    d.ellipse([w // 2 - 90, h - 290, w // 2 + 90, h - 110], fill=(230, 70, 70))
+    d.text((w // 2, h - 200), '종료', font=f(40), fill=(255, 255, 255), anchor='mm')
 if __name__ == '__main__':
+    phone(talking).save(IMG / 'ovl_통화중.png')
     phone(chat).save(IMG / 'ovl_단톡.png'); phone(call).save(IMG / 'ovl_전화.png')
     print('ok')
