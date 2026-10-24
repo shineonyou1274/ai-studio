@@ -28,7 +28,7 @@ CUTS = [
     ('m1',  5.0, KIT/'episodes/ep4/clips/m1.mp4', 0.0, 'pip', 1.0, 0),
     ('m2',  5.8, KIT/'episodes/ep4/clips/m2.mp4', 0.0, 'pip', 1.15, 0),  # 보낸 문자 낭독이 끝난 뒤(30.5초) 교실로 넘어가게 늘림
     ('N6',  4.2, C/'N6.mp4', 0.8, 'pip_t', 1.0, 0),
-    ('N5',  5.4, C/'N5.mp4', 0.0, 'pip',   1.07, 0),
+    ('N5',  4.4, C/'N5.mp4', 0.0, 'pip',   1.0, 0),  # v8: 답장 뒤 빈 시간 1초 줄임(블라인드 검수: 34~41초 늘어짐)
     ('m3',  4.25, KIT/'episodes/ep4/clips/m3.mp4', 1.1, 'pip', 1.08, 0),  # 교감 입 움직임(원본 1.2~4.5초, 쉼 2.1·3.5초)을 shiny 대사의 세 덩이에 맞춤
 ]
 END = 1.5
@@ -78,7 +78,7 @@ LINES = [
     (X/'T1v4_보내지마라.wav', 20.4, 1.0, False),
     (W/'L3c_지우보낸문자.wav', 23.6, 1.0, False),
     (X/'T2v4_보냈구나.wav', 32.6, 1.0, True),
-    (V/'v6/L5s_교감_뭐보냈어요_shiny.wav', 40.9, 1.05, False),  # 입이 확실히 벌어지는 40.8초 뒤에 첫 음절
+    (V/'v6/L5s_교감_뭐보냈어요_shiny.wav', 39.9, 1.05, False),  # m3 컷 시작(39.4초) + 0.5초 = v7에서 맞춘 입 위치 그대로
     (V/'v6/GT_a_끅끅_teacher_-28.wav', 25.6, 1.0, False),   # 화면 속 담임 몸이 입 막고 웃음 → 몸 목소리(sc_teacher_body), 낮게·먹먹하게, 낭독보다 10dB 작게
 ]
 ins, fc, mixl = [], [], []
@@ -96,10 +96,10 @@ def sfx(lbl, expr, d, at, vol=1.0):
 SMS = '0.22*sin(2*PI*1320*t)*lt(t,0.08)+0.22*sin(2*PI*1760*t)*gt(t,0.12)*lt(t,0.22)'   # 문자 도착 "띠링"
 SEND = '0.18*sin(2*PI*(700+1600*t)*t)*exp(-12*t)'                                     # 전송 "슉"
 POP = '0.2*sin(2*PI*980*t)*exp(-30*t)'                                                # 수신 "톡"
-sfx('s0', SMS, 0.3, 0.05); sfx('thud', '0.5*sin(2*PI*(90-50*t)*t)*exp(-9*t)', 0.5, 0.3)
-sfx('p0', POP, 0.2, 5.1); sfx('s2', SMS, 0.3, 7.3); sfx('s1', SEND, 0.35, 10.3)
+sfx('s0', SMS, 0.3, 0.05, 0.6); sfx('thud', '0.5*sin(2*PI*(90-50*t)*t)*exp(-9*t)', 0.5, 0.3)
+sfx('p0', POP, 0.2, 5.1); sfx('s2', SMS, 0.3, 7.3, 0.6); sfx('s1', SEND, 0.35, 10.3)
 sfx('p1', POP, 0.2, 20.3); sfx('s3', SEND, 0.35, 23.45); sfx('s4', SMS, 0.3, 36.7, 0.5)
-sfx('dung', '0.35*sin(2*PI*(58+8*t)*t)*exp(-1.6*t)', 1.4, 40.0, 0.5)
+sfx('dung', '0.35*sin(2*PI*(58+8*t)*t)*exp(-1.6*t)', 1.4, 39.0, 0.5)
 # 초침 소리는 뺌(v6 검수: 뜬금없음). 대신 아래 룸톤.
 for k, (at, d) in enumerate([(10.6, 1.4), (17.6, 2.2), (22.4, 1.0)]):
     fc.append(f"anoisesrc=d={d}:c=brown:a=0.6:r=48000,bandpass=f=1800:w=900,volume='0.30*lt(mod(t,0.11),0.025)':eval=frame,"
@@ -170,8 +170,8 @@ mono(32.6, 34.6, '하… 보냈구나.', '담임 영혼 · 속마음', SKY)
 for k, dots in enumerate(['•', '••', '•••', '•', '••']):
     a = 35.1 + k * 0.32
     ev(a, a + 0.32, 'DMg', rf"{{\an4\pos(80,1160)}}{dots}", 4)
-bubble(36.8, 40.4, 'DMg', 'L', 1160, r'[로밍발신] …선생님,\N하은이 내일 등교합니다^^;')
-mono(40.9, 44.55, r'김 선생, 방금 학부모한테\N뭐 보냈어요?', '교감', '', 'Dlg')
+bubble(36.8, 39.4, 'DMg', 'L', 1160, r'[로밍발신] …선생님,\N하은이 내일 등교합니다^^;')
+mono(39.9, 43.55, r'김 선생, 방금 학부모한테\N뭐 보냈어요?', '교감', '', 'Dlg')
 
 head = (KIT / 'soulchange_style.ass').read_text(encoding='utf-8').rstrip('\n')
 (B / 'ep4.ass').write_text(head + '\n' + '\n'.join(EV) + '\n', encoding='utf-8')
