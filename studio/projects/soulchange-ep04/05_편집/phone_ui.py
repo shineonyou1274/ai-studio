@@ -90,7 +90,7 @@ def main(src, dst):
         q = sm[i]
         coef = persp_coeffs([(0, 0), (uw, 0), (uw, uh), (0, uh)], [tuple(p) for p in q])
         warped = np.asarray(ui.transform((W, H), Image.PERSPECTIVE, tuple(coef), Image.BICUBIC, fillcolor=(242, 242, 247)))
-        m = in_quad(q) & ~skin(fr)   # v14b: 사각형 안쪽 전체(회색 얼룩 포함)에서 손가락(살색)만 뺌
+        m = in_quad(q, shrink=8) & ~skin(fr) & ~(fr.max(axis=2) < 70)   # v14b: 사각형 안쪽 전체(회색 얼룩 포함)에서 손가락(살색)만 뺌
         a = Image.fromarray((m * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
         a = np.asarray(a, float)[..., None] / 255
         frames[i] = (fr * (1 - a) + warped * a).astype(np.uint8)
