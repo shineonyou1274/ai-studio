@@ -56,21 +56,42 @@ def corners(m):
     return np.array([tl, tr, br, bl], float)
 
 
+def in_quad(q, shrink=3):
+    """사각형 q 안쪽 픽셀(가장자리 shrink 픽셀 안쪽)."""
+    yy, xx = np.mgrid[0:H, 0:W]
+    c = q.mean(axis=0); q = c + (q - c) * (1 - shrink / max(1, np.linalg.norm(q[0] - c)))
+    m = np.ones((H, W), bool)
+    for i in range(4):
+        (x1, y1), (x2, y2) = q[i], q[(i + 1) % 4]
+        m &= (x2 - x1) * (yy - y1) - (y2 - y1) * (xx - x1) >= 0
+    return m
+
+
+def skin(fr):
+    r, g, b = fr[..., 0].astype(int), fr[..., 1].astype(int), fr[..., 2].astype(int)
+    return (r > 90) & (r - b > 18) & (r >= g) & (np.maximum(r, np.maximum(g, b)) - np.minimum(r, np.minimum(g, b)) > 15)
+
+
 def main(src, dst):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', src, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True).stdout
     frames = np.frombuffer(raw, np.uint8).reshape(-1, H, W, 3).copy()
     masks = [screen_mask(fr) for fr in frames]
     cs = [corners(m) for m in masks]
     # 모서리를 앞뒤 2프레임 평균으로 다듬어 떨림을 줄임(못 찾은 프레임은 이웃 값)
-    last = next(c for c in cs if c is not None)
-    cs = [last := (c if c is not None else last) for c in cs]
+    # v14b: 한 프레임 사이 모서리가 크게 튀면(손가락이 화면을 많이 가려 밝은 부분이 줄 때) 앞 프레임 모서리를 쓴다
+    last = next(c for c in cs if c is not None); out = []
+    for c in cs:
+        if c is None or np.abs(c - last).max() > 18: c = last + np.clip((c if c is not None else last) - last, -4, 4)
+        out.append(c); last = c
+    cs = out
     sm = [np.mean(cs[max(0, i - 2):i + 3], axis=0) for i in range(len(cs))]
     ui = screen_image(); uw, uh = ui.size
     for i, fr in enumerate(frames):
         q = sm[i]
         coef = persp_coeffs([(0, 0), (uw, 0), (uw, uh), (0, uh)], [tuple(p) for p in q])
         warped = np.asarray(ui.transform((W, H), Image.PERSPECTIVE, tuple(coef), Image.BICUBIC, fillcolor=(242, 242, 247)))
-        a = Image.fromarray((masks[i] * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
+        m = in_quad(q) & ~skin(fr)   # v14b: 사각형 안쪽 전체(회색 얼룩 포함)에서 손가락(살색)만 뺌
+        a = Image.fromarray((m * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
         a = np.asarray(a, float)[..., None] / 255
         frames[i] = (fr * (1 - a) + warped * a).astype(np.uint8)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',

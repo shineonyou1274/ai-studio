@@ -56,11 +56,11 @@ def talking(s):
     d.ellipse([w // 2 - 120, 320, w // 2 + 120, 560], fill=(120, 130, 150))
     d.text((w // 2, 440), '학부모', font=f(60), fill=(240, 240, 240), anchor='mm')
     d.text((w // 2, 660), '하은이 어머니', font=f(76), fill=(255, 255, 255), anchor='mm')
-    d.text((w // 2, 745), '통화 중 00:04', font=f(42), fill=(120, 230, 150), anchor='mm')
+    # 통화 시간 글자는 자막(.ass)으로 1초마다 올라가게 넣음(v14b)
     for k, hh in enumerate([30, 70, 110, 60, 140, 90, 40, 120, 80, 50, 100, 35]):
         x = 110 + k * 42; d.rounded_rectangle([x, 900 - hh // 2, x + 22, 900 + hh // 2], 10, fill=(255, 120, 120))
-    d.ellipse([w // 2 - 90, h - 290, w // 2 + 90, h - 110], fill=(230, 70, 70))
-    d.text((w // 2, h - 200), '종료', font=f(40), fill=(255, 255, 255), anchor='mm')
+    d.ellipse([w // 2 - 70, h - 170, w // 2 + 70, h - 30], fill=(230, 70, 70))   # v14b: 자막과 안 겹치게 아래로
+    d.text((w // 2, h - 100), '종료', font=f(36), fill=(255, 255, 255), anchor='mm')
 def sent(s):
     """보낸 문자 화면: 담임 몸(지우 영혼)이 들고 있는 폰이 하얗게 비어 보이던 0:33~0:35 구간을 덮음"""
     w, h = s.size; d = ImageDraw.Draw(s)
