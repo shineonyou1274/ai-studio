@@ -22,10 +22,10 @@
 ```
 cd C:\Users\경남교육청\youtube-ops\series\_soulchange_kit\episodes
 ffmpeg -ss 0.5 -i ep4\clips\m1.mp4 -frames:v 1 ep4\clips\ref_office_m1.png
-ffmpeg -ss 1.0 -i ep3\clips\c3L.mp4 -frames:v 1 ep4\clips\ref_class_c3L.png
+ffmpeg -ss 3.0 -i ep3\clips\c3L.mp4 -frames:v 1 ep4\clips\ref_class_c3L.png
 ```
 - `ref_office_m1.png` = 교무실 창가 책상의 담임 몸(m1 0.5초, 진지하게 폰 보는 얼굴)
-- `ref_class_c3L.png` = 교실 뒤 창가 벽에 기대 폰 보는 지우 몸(3화 c3L 1초)
+- `ref_class_c3L.png` = 교실 뒤 창가 벽에 기대 폰 보는 지우 몸(3화 c3L 3초)
 - ffmpeg가 없으면 영상 재생기에서 그 시점을 화면 캡처해도 됩니다. 두 파일은 커밋하지 않아도 됩니다.
 
 ## 2. 컷별 지시
@@ -47,7 +47,7 @@ ffmpeg -ss 1.0 -i ep3\clips\c3L.mp4 -frames:v 1 ep4\clips\ref_class_c3L.png
 ### N1 — 교무실, 담임 몸, 웃음 참기
 ```
 Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
-High-angle three-quarter medium shot of the middle-aged male teacher at his staff-room desk by the window, chin propped on one hand, a phone with a blank bright screen held low in the other hand. His lips stay pressed together, no speaking. He reads the phone while his shoulders shake with small held-back giggles, then taps his fingertips lightly on his cheek in a playful, girlish rhythm. Continuous breathing, blinking and small shoulder motion; blurred colleagues keep moving far behind. No one looks at the camera. Soft daylight from the window. Camera: slow gentle drift to the left with soft handheld breathing.
+High-angle three-quarter medium shot of the middle-aged male teacher at his staff-room desk by the window, chin propped on one hand, a phone with a blank bright screen held low in the other hand. His mouth stays closed, no speaking; lips stay pressed together. He reads the phone while his shoulders shake with small held-back giggles, then taps his fingertips lightly on his cheek in a playful, girlish rhythm. Continuous breathing, blinking and small shoulder motion; blurred colleagues keep moving far behind. No one looks at the camera. Soft daylight from the window. Camera: slow gentle drift to the left with soft handheld breathing.
 ```
 
 ### N2 — 교실 뒤 창가 벽, 지우 몸, 단톡 알림
