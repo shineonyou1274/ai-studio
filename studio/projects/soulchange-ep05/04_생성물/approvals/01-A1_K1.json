@@ -1,0 +1,27 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "오늘 4개 + 월 3개",
+    "미리 생성해도 됨"
+  ],
+  "approved_at_kst": "2026-10-26 00:10",
+  "cut": "A1",
+  "desc": "K1 교무실 첫 컷(담임 몸 듣다 웅얼)",
+  "model": "seedance_2_5 (Seedance 2.5), mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false (소리 없음)",
+  "aspect_ratio": "9:16",
+  "duration_s": 5,
+  "references": [
+    "906fe198-9bab-40e1-a6f7-11281d52d9a9 담임_refT",
+    "208139aa-d1c3-496b-bbb3-00ec222b68b2 교무실 프레임(4화 m1 0.5초)"
+  ],
+  "prompt_source": "대본_v2.md 8절 A1",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the middle-aged Korean male teacher from the reference image (graying hair, navy cardigan, white shirt, striped tie, eyeglass cord around his neck) sits at his desk in a busy Korean school teachers' office, seen from the side. In the left foreground, only the hand and gray suit sleeve of an older man reach into the frame, holding a smartphone out toward the seated teacher; the phone screen is a plain, evenly lit blank white screen tilted toward the camera.\nAction 1 (0-3s): the seated teacher listens with his lips pressed together, his eyes darting from the phone up toward the man and back, his fingers fidgeting and twisting together on his lap.\nAction 2 (3-5s): he draws his shoulders in, lowers his gaze and mumbles a few short hesitant words, mouth moving softly with natural lip movement.\nLighting: soft daylight from windows on the right, neutral office fluorescent fill.\nMood: awkward, tense, a little comic.\nCamera: medium close-up from the side over the foreground hand, slight high angle, slow gentle push-in. No one looks at the camera. Only the seated teacher's face is visible; the man holding the phone is cut off at the shoulder.",
+  "cost_credits_get_cost": 15,
+  "balance_before": 831.77,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 0,
+  "week_budget_this_batch": "약 45 (상한 65, 다시 뽑기 1회까지, 실제 결함만)"
+}

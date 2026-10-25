@@ -1,0 +1,27 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "오늘 4개 + 월 3개",
+    "미리 생성해도 됨"
+  ],
+  "approved_at_kst": "2026-10-26 00:10",
+  "cut": "C3",
+  "desc": "K6b 지우 몸 머리 감싸 중얼 → 책상에 엎드림(v3 새 행동)",
+  "model": "seedance_2_5 (Seedance 2.5), mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false (소리 없음)",
+  "aspect_ratio": "9:16",
+  "duration_s": 5,
+  "references": [
+    "de8bc4da-fef6-4e53-9b7d-21d9a9925b55 지우_refS",
+    "e0fa9d43-8ea0-4e71-bd53-4b8b5f2f15d7 교실 프레임(3화 c3L 3초)"
+  ],
+  "prompt_source": "대본_v3.md 5절 C3",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the Korean high school girl from the reference image (shoulder-length brown hair, ribbon hair pin on the left side, navy blazer school uniform) sits at a student desk in a Korean high school classroom during break time, three-quarter view, framed from the waist up; the desk edge hides her lap. Two other girls in the same uniform stand blurred at the left and right edges of the frame, one with a high ponytail and one with short bob-cut black hair, faces out of focus. She slouches like a worn-out middle-aged man, both elbows planted wide apart on the desk.\nAction 1 (0-1.6s): she clutches her head with both hands, fingers dug into her hair, and mutters a few words under her breath, lips moving softly, eyes unfocused on the desk.\nAction 2 (1.6-5s): she flops forward and drops her forehead heavily onto her folded arms on the desk, her face hidden in her arms, her back slowly rising and falling with long, tired breaths.\nLighting: daylight from the classroom windows, soft fill.\nMood: resigned, deadpan, comic.\nCamera: over the shoulder of the blurred girl on the left, waist-up on the seated girl at desk height, a small push-in as she drops onto the desk. No one looks at the camera. No hair flipping, no head tilting, no cute or pretty poses.",
+  "cost_credits_get_cost": 15,
+  "balance_before": 831.77,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 0,
+  "week_budget_this_batch": "약 45 (상한 65, 다시 뽑기 1회까지, 실제 결함만)"
+}
