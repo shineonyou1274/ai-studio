@@ -1,0 +1,28 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "네",
+    "뽑아"
+  ],
+  "approved_at_kst": "2026-10-27",
+  "cut": "A5a (K12a) v2 립싱크 테스트 — 녹음 음성을 audio_references로",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false (참조 음성만 넣음)",
+  "aspect_ratio": "9:16",
+  "duration_s": 8,
+  "references": [
+    "a8c256d2-0d99-4fef-b385-275b237f4e16 교감_still_vp",
+    "a598b54a-b2aa-4582-a8ca-89c778cbf786 4화 m3 1.5초 프레임",
+    "906fe198-9bab-40e1-a6f7-11281d52d9a9 담임_refT",
+    "c9b620ae-ca80-433f-8f2d-1281bfbf829d 참조 음성(audio_references) — V19a 0.04–1.47 / V19b 1.57–3.06 / V20a 3.14–7.32(1.05배), 8.0초"
+  ],
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the older Korean vice principal from the reference image (gray hair, glasses, gray suit, dark tie) in a teachers' office, close-up, three-quarter view; in the right foreground, the edge of a standing middle-aged man's profile (graying hair, navy cardigan, eyeglass cord) is partly visible and soft, his mouth closed.\nLip sync: the vice principal is the only speaker; his lip movements match the provided audio reference exactly, syllable by syllable, and his mouth is closed during the silences in the audio.\nAction 1 (0-3.1s): he mutters to himself in disbelief with small mouth movements, a short scoff, then pushes his glasses up the bridge of his nose with one finger while murmuring a quiet, suspicious question.\nAction 2 (3.1-8s): he narrows his eyes, the corner of his mouth lifts slightly, and he leans in and speaks slowly and clearly, mouth moving with natural lip movement.\nLighting: daylight through blinds, side light leaving half of the vice principal's face in soft shadow.\nMood: suspicious, half-joking, the air turning cold.\nCamera: over-the-shoulder close-up, eye level, slow push-in. No one looks at the camera.",
+  "cost_credits_get_cost": 24,
+  "balance_before": 670.98,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 160.79,
+  "week_after": 184.79,
+  "regeneration": "묻기 전에는 하지 않음"
+}

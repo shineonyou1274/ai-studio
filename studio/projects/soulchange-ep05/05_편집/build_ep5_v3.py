@@ -237,13 +237,13 @@ def meas(p):
 # 2단계 음량(실시간 loudnorm 안 씀): 본편을 재고 고정 게인 + 리미터 → 엔딩(-13.8 LUFS, 그대로) 이어 붙임 → 전체 다시 재서 미세 게인
 I0, _ = meas(B / 'mix_raw.wav')
 run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B / 'mix_raw.wav', '-af',
-     f'volume={-14.0 - I0:.2f}dB,alimiter=limit=0.63:level=false:attack=2:release=60', '-ar', '48000', B / 'mix_main.wav'])
+     f'volume={-14.0 - I0:.2f}dB,alimiter=limit=0.58:level=false:attack=2:release=60', '-ar', '48000', B / 'mix_main.wav'])
 run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B1 / 'ending_ep5.mp4', '-vn', '-ar', '48000', '-ac', '2', B / 'ending.wav'])
 run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B / 'mix_main.wav', '-i', B / 'ending.wav', '-filter_complex',
      '[0:a][1:a]concat=n=2:v=0:a=1[a]', '-map', '[a]', '-ar', '48000', B / 'mix_full_raw.wav'])
 I1, _ = meas(B / 'mix_full_raw.wav')
 run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B / 'mix_full_raw.wav', '-af',
-     f'volume={-14.0 - I1:.2f}dB,alimiter=limit=0.63:level=false:attack=2:release=60', '-ar', '48000', B / 'mix.wav'])
+     f'volume={-14.0 - I1:.2f}dB,alimiter=limit=0.58:level=false:attack=2:release=60', '-ar', '48000', B / 'mix.wav'])
 I2, TP2 = meas(B / 'mix.wav')
 print('loudness', I2, 'TP', TP2)
 
