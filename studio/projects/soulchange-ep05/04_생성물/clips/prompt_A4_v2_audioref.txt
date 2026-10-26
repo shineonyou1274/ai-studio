@@ -1,0 +1,8 @@
+Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: the middle-aged Korean male teacher from the reference image (graying hair, navy cardigan, white shirt, striped tie, eyeglass cord) at his desk in a busy teachers' office; he is the only person in sharp focus, and the vice principal he argues with stands off-frame to the left. Several other teachers sit at desks in the blurred background, faces out of focus.
+Lip sync: he is the only speaker; his lip movements match the provided audio reference exactly, syllable by syllable, mouth closed in the silences.
+Action 1 (0-1.6s): he shoves his chair back and springs to his feet, brows knitted, glaring sideways off-frame to the left, and speaks with an indignant jutting jaw.
+Action 2 (1.6-4s): he plants both hands on his hips, lifts his chin, eyes wide and fiery, and shouts with a big open mouth, lively and exaggerated like a sitcom actor, face full of expression.
+Lighting: bright window backlight behind him, a clean rim light on his hair and shoulders, soft fill on his face.
+Mood: righteous, defiant, satisfying, comic.
+Camera: three-quarter side view from a slightly low angle, a quick dolly-in toward his face on the shout. No one looks at the camera.
