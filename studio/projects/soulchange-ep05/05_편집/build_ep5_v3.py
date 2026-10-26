@@ -101,8 +101,8 @@ cut('K3', C / 'C1_K3.mp4', 0, None, 'pip_t', e + 0.08 - c0, zoom=(1.1, 0.5, 0.0)
 c0 = t; e = at('F1a', c0 + 0.06); e = at('F2a', e - 0.05); e = at('F1b', e + 0.02)   # 친구 둘 말이 거의 붙음
 cut('K4', PC / 'K04_C2.mp4', 0, 5.04, 'pip_t', e + 0.06 - c0)
 c0 = t; e = at('F1c', c0 + 0.05); e = at('F2b', e + 0.06)
-cut('K5', PC / 'K05_P1.mp4', 0, 5.04, 'pip_t', e - 0.25 - c0, note='폰 하얀 화면에 "대리 엄마 ☎" 카드')
-cut('K5b', PC / 'K04_C2.mp4', 1.0, 1.45, 'pip_t', 0.45, note='v3: 손 컷 사이 C2(친구 둘 뒷모습 + 지우 몸) 0.45초 다시 보여 주기, F2b 끝이 걸침')
+cut('K5', PC / 'K05_P1.mp4', 0.6, 5.04, 'pip_t', e - 0.25 - c0, note='폰 하얀 화면에 "대리 엄마 ☎" 카드. v3: 팔이 어깨에 감기는 앞 0.6초를 빼고 "가자!"에서 컷')
+cut('K5b', PC / 'K04_C2.mp4', 0.95, 1.60, 'pip_t', 0.65, note='v3: P1→P1b 사이 지우 몸 얼굴 반응(입 다묾, 친구 둘 올려다봄) 0.65초, F2b 끝이 걸침')
 # K6a: v3 — 원본 3.0–3.37초 폰 치우는 손·팔이 뭉개짐 → 첫 쾅(주먹이 책상에 닿은 3.40초)에서 바로 시작. 둘째 쾅 4.00.
 k6a_st = 1.127; c0 = t
 SLAM = [c0 + 0.02, c0 + (4.00 - 3.40) * k6a_st]
@@ -119,7 +119,9 @@ cut('K7', C / 'A2_K7_교감어느집딸.mp4', 0, None, 'pip', e + 0.08 - c0)
 c0 = t; e = at('V14', c0 + 0.06)
 cut('K8', PC / 'K08_P2.mp4', 0, 5.04, 'pip', e + 0.06 - c0)
 c0 = t; e = at('V15', c0 + 0.06); e = at('V16a', e + 0.10)
-cut('K9', C / 'A3_K9_기간제였어요.mp4', 0, 6.04, 'pip', e + 0.06 - c0 + 0.6, note='v2: 끝 0.6초 연장 — "지식이 높은" 첫머리를 담임 몸 정면에서 시작')
+# v3: A3 첫 0.75초는 입을 다문 채 눈 깜빡임 → "아니, 하은이…" 첫머리는 듣는 교감 얼굴(A5a 2.45–3.15, 입 다묾)에 화면 밖으로
+cut('K8b', C / 'A5a_K12a_교감끝훅.mp4', 2.45, 3.15, 'pip', 0.8, note='v3: 지우 영혼 대사 첫머리를 화면 밖으로 — 듣는 교감(A5a 안 쓰는 구간, 입 다묾)')
+cut('K9', C / 'A3_K9_기간제였어요.mp4', 0.75, 6.04, 'pip', e + 0.06 - c0 + 0.6 - 0.8, note='v2: 끝 0.6초 연장 — "지식이 높은" 첫머리를 담임 몸 정면에서 시작. v3: 입 다문 앞 0.75초 뺌')
 c0 = t - 0.6; e = at('V16b', c0 + 0.04)
 cut('K10', PC / 'K10_P3.mp4', 0.4, 2.3, 'pip', 1.9, note='v3: 가장 또렷한 1.9초(검지 위 → 손바닥)만')
 cut('K10b', C / 'A3_K9_기간제였어요.mp4', 3.3, 6.04, 'pip', e + 0.06 - t, zoom=(1.2, 0.5, 0.25), note='v3: A3 뒷부분(말하며 손바닥 손짓)을 1.2배 당겨 다른 크기로')
@@ -127,9 +129,12 @@ c0 = t; CHAIR = c0 + 0.03; e = at('V17', c0 + 0.30); e = at('V18', e + 0.12); HU
 cut('K11', C / 'A4_K11_사이다.mp4', 0, None, 'pip', e + 0.22 - c0, note='끝 정적 약 0.3초')
 k12a_st = 1.15; c0 = t
 e = at('V19a', c0 + 0.04); e = at('V19b', e + 0.10); e = at('V20a', e + 0.08)
-cut('K12a', C / 'A5a_K12a_교감끝훅.mp4', 0, 6.04, 'pip', 6.04 * k12a_st, note='V20 앞부분 끝 약 0.3초가 K12b로 넘어감(화면 밖 교감)')
+# v3 입 맞춤: 교감 입이 움직이는 곳만 얼굴. 원본 2.25–3.35(입 다묾)는 듣는 담임 몸(A3 첫 0.95초, 입 다묾)으로, 원본 5.5~(입 다묾)은 K12b로 일찍 넘김
+cut('K12a', C / 'A5a_K12a_교감끝훅.mp4', 0, 2.4, 'pip', 2.4 * k12a_st, note='고지식?(입 움직임) · 허 · 아니 우리 쌤?(안경)')
+cut('K12r', C / 'A3_K9_기간제였어요.mp4', 0.0, 0.95, 'pip', 0.95 * k12a_st, note='v3: 듣는 담임 몸(입 다묾) — "쌤?" 끝 + "김 선생," 화면 밖')
+cut('K12a2', C / 'A5a_K12a_교감끝훅.mp4', 3.35, 5.5, 'pip', 2.15 * k12a_st, note='v3: 교감 입 움직이는 구간만 — "요새 몸 바뀌는 AI 빙의…"')
 c0 = t; e = at('V20b', e + 0.12); e = at('V21', e + 0.12); DUNG = e + 0.02
-cut('K12b', PC / 'K12b.mp4', 0, None, 'pip', e + 0.25 - c0, zoom=(1.12, 0.65, 0.35), note='Dreamina AI 배지 없애려고 1.12배 확대·오른쪽 아래 기준')
+cut('K12b', PC / 'K12b.mp4', 0, None, 'pip', e + 0.20 - c0, zoom=(1.12, 0.65, 0.35), note='Dreamina AI 배지 없애려고 1.12배 확대·오른쪽 아래 기준')
 MAIN = round(t, 3)
 TOT = round(MAIN + END_LEN, 3)
 print('본편', MAIN, '합계', TOT)
@@ -187,8 +192,16 @@ DUNGX = '0.35*sin(2*PI*(58+8*t)*t)*exp(-1.6*t)'                                 
 THUD = '0.5*sin(2*PI*(90-50*t)*t)*exp(-9*t)'                                            # "쿵"
 k = {c['id']: c for c in CUTS}
 sfx('buzz', BUZZ, 1.0, 0.0, 0.5)
-k5 = k['K5']; PHONE_IN = k5['start'] + 2.85 * k5['stretch']    # 폰이 화면에 들어오는 순간(원본 약 2.85초)
+k5 = k['K5']; PHONE_IN = k5['start'] + (2.85 - k5['ss']) * k5['stretch']    # 폰이 화면에 들어오는 순간(원본 약 2.85초)
 sfx('ding', DING, 0.3, PHONE_IN, 0.6)
+# v3 사장님: C2 지우 몸 주먹 헛기침(원본 약 2.9초)에 "크흠, 흠" — sc_student_body 헛기침 녹음이 없어 임시로 만듦:
+# "크" = 짧은 띠 소음, "흠" = 쓰지 않는 V11(으악, sc_student_body) 앞 '으' 0.22–0.42초를 낮은 통과로 막힌 소리처럼. 【임시 — 사장님 녹음으로 바꿀 자리】
+COUGH_AT = k['K4']['start'] + 2.9 * k['K4']['stretch']
+ins += ['-i', V / 'V11_담임겉_으악_raw.mp3']; ci = len(ins) // 2 - 1
+fc.append(f"anoisesrc=d=0.07:c=pink:a=0.5:r=48000,bandpass=f=1400:w=1200,afade=t=out:st=0.02:d=0.05,volume=0.5,aformat=channel_layouts=stereo,adelay={int(COUGH_AT * 1000)}:all=1[ck1]"); mixl.append('[ck1]')
+for j, dt in enumerate([0.05, 0.42]):
+    fc.append(f"[{ci}:a]atrim=0.22:0.42,asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=mono,lowpass=f=900,afade=t=in:d=0.02,afade=t=out:st=0.1:d=0.1,"
+              f"volume={0.55 if j == 0 else 0.35},aformat=channel_layouts=stereo,adelay={int((COUGH_AT + dt) * 1000)}:all=1[hm{j}]"); mixl.append(f'[hm{j}]')
 for j, x in enumerate(SLAM):
     fc.append(f"anoisesrc=d=0.35:c=brown:a=0.9:r=48000,lowpass=f=900,highpass=f=60,afade=t=out:st=0.02:d=0.3:curve=exp,volume=1.6,"
               f"aformat=channel_layouts=stereo,adelay={int(x * 1000)}:all=1[bang{j}]"); mixl.append(f'[bang{j}]')
@@ -210,7 +223,7 @@ CLASS = {'K2', 'K3', 'K4', 'K5', 'K5b', 'K6a', 'K6b'}
 for c in CUTS:
     a, b = c['start'], c['start'] + c['dur']
     if c['id'] == 'K11': b = HUSH + 0.05            # "갑질이잖아요!" 끝에 웅성 뚝 → 정적
-    if c['id'] == 'K12a': continue                   # 정적
+    if c['id'] in ('K12a', 'K12r', 'K12a2'): continue   # 정적
     if c['id'] in CLASS: amb(f"am_{c['id']}", a, b, 500, 2500, 0.022)
     else: amb(f"am_{c['id']}", a, b, 300, 2800, 0.018)
 # 룸톤(약 30%): 낮은 웅웅거림을 본편 내내
