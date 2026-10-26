@@ -1,0 +1,8 @@
+Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: the older Korean vice principal from the reference image (gray hair, glasses, gray suit, dark tie) in a teachers' office, close-up, three-quarter view; in the right foreground, the edge of a standing middle-aged man's profile (graying hair, navy cardigan, eyeglass cord) is partly visible and soft, his mouth closed.
+Lip sync: the vice principal is the only speaker; his lip movements match the provided audio reference exactly, syllable by syllable, and his mouth is closed during the silences in the audio.
+Action 1 (0-3.1s): he mutters to himself in disbelief with small mouth movements, a short scoff, then pushes his glasses up the bridge of his nose with one finger while murmuring a quiet, suspicious question.
+Action 2 (3.1-8s): he narrows his eyes, the corner of his mouth lifts slightly, and he leans in and speaks slowly and clearly, mouth moving with natural lip movement.
+Lighting: daylight through blinds, side light leaving half of the vice principal's face in soft shadow.
+Mood: suspicious, half-joking, the air turning cold.
+Camera: over-the-shoulder close-up, eye level, slow push-in. No one looks at the camera.
