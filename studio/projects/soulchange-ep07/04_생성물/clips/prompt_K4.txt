@@ -1,0 +1,7 @@
+Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: the Korean high school girl from the reference image (shoulder-length brown hair, ribbon hair pin on the left side, navy blazer school uniform) sits at a desk in the back row of a Korean high school classroom, three-quarter view from the waist up, hunched like a tired middle-aged man with elbows wide on the desk. A few students are blurred in the background.
+Action 1 (0-3s): she holds a smartphone out at arm's length and slowly types with one index finger, squinting at each tap; mouth stays closed, no speaking.
+Action 2 (3-5s): without looking up from the phone, she raises one finger beside her lips in a stern shushing gesture and mutters a few words with a frown like a grumpy old man, mouth moving with natural lip movement.
+Lighting: warm late-afternoon backlight from the classroom windows behind her, a soft golden rim light outlining her hair and shoulders, gentle fill on her face.
+Mood: clumsy, grumpy, comic.
+Camera: slow arc from a slightly high angle behind her shoulder around to a low side angle at desk height, ending close on her frowning face and shushing finger. No one looks at the camera. No hair flipping, no head tilting, no cute or pretty poses.
