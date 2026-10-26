@@ -93,7 +93,7 @@ Camera: handheld over the teacher's shoulder from the doorway, slight dutch tilt
 ```
 Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
 Subject: a Korean school teachers' office in the daytime. In the foreground, a female teacher in her forties with short permed hair and a gray cardigan is seen from behind and slightly to the side, her face turned away from the camera. Beyond her shoulder sits a middle-aged man in a navy cardigan and white shirt, blurred.
-Action 1 (0-2.5s): she half-turns her head toward the man for a moment, then turns it back, her face still turned away from the camera.
+Action 1 (0-2.5s): she half-turns her head toward the man for a moment, then turns it back, her face kept turned away from the camera.
 Action 2 (2.5-6s): she lays her hand on the man's forearm and gives it a small knowing pat.
 Action 3 (6-10s): she tilts her head toward the far corner of the office and slowly pulls her hand back, her shoulders dropping with a sigh.
 Lighting: slanted stripes of daylight through window blinds across her shoulder and the desk, neutral fluorescent fill.
