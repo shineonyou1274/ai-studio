@@ -1,0 +1,26 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "진행해"
+  ],
+  "approved_at_kst": "2026-10-26",
+  "cut": "H2",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false",
+  "aspect_ratio": "9:16",
+  "duration_s": 6,
+  "references": [
+    "906fe198-9bab-40e1-a6f7-11281d52d9a9 담임_refT",
+    "6d183584-a31b-4e0f-a771-f39ed74909f4 담임_클로즈업",
+    "208139aa-d1c3-496b-bbb3-00ec222b68b2 교무실 프레임"
+  ],
+  "prompt_source": "대본_v4.md 5절 H2",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the middle-aged Korean male teacher from the reference image (graying hair, navy cardigan, white shirt, striped tie, eyeglass cord) sits at his desk in a Korean school teachers' office, turned toward a female colleague in a gray cardigan whose shoulder and short permed hair are blurred in the right foreground. Medium close shot from the chest up, three-quarter view.\nAction 1 (0-2s): he gasps and claps both hands over his mouth with his fingertips together, eyes going wide, like an excited teenage girl; a short muffled sound escapes behind his fingers.\nAction 2 (2-6s): he lowers his hands, blinks twice with a stiff, serious face, then leans toward the colleague and speaks slowly and formally, mouth moving clearly with natural lip movement.\nLighting: soft window daylight from the left, neutral fill.\nMood: startled, then hastily dignified.\nCamera: over the colleague's shoulder, eye level, slow push-in. No one looks at the camera.",
+  "cost_credits_get_cost": 18,
+  "balance_before": 778.26,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 53.51,
+  "hard_stop_week_total": 155
+}

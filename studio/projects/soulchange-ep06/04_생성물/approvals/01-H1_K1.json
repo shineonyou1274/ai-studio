@@ -1,0 +1,26 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "진행해"
+  ],
+  "approved_at_kst": "2026-10-26",
+  "cut": "H1",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false",
+  "aspect_ratio": "9:16",
+  "duration_s": 6,
+  "references": [
+    "a8c256d2-0d99-4fef-b385-275b237f4e16 교감_still_vp",
+    "906fe198-9bab-40e1-a6f7-11281d52d9a9 담임_refT",
+    "208139aa-d1c3-496b-bbb3-00ec222b68b2 교무실 프레임"
+  ],
+  "prompt_source": "대본_v4.md 5절 H1",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the older Korean man from the reference image (gray hair, glasses, gray suit), a vice principal, stands beside a desk in a busy Korean school teachers' office, three-quarter view, framed from the chest up. In the left foreground, the graying hair and navy cardigan shoulders of a middle-aged male teacher are blurred, his back to the camera, leaning forward with rounded, eager shoulders. Teachers at desks with monitors are blurred in the background.\nAction 1 (0-3s): the vice principal narrows his eyes at the teacher in the foreground and slowly pushes his glasses up with one finger, lips pressed together; mouth stays closed, no speaking.\nAction 2 (3-6s): his face loosens into a small, pleased smile; he straightens his tie with both hands, chin lifting, and mutters a few words, mouth moving with natural lip movement.\nLighting: soft window daylight from the left, neutral fluorescent fill.\nMood: suspicious, then flattered and smug.\nCamera: over the shoulder of the foreground teacher, eye level, slight handheld drift. No one looks at the camera.",
+  "cost_credits_get_cost": 18,
+  "balance_before": 778.26,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 53.51,
+  "hard_stop_week_total": 155
+}

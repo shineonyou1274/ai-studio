@@ -1,0 +1,25 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "진행해"
+  ],
+  "approved_at_kst": "2026-10-26",
+  "cut": "H3",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false",
+  "aspect_ratio": "9:16",
+  "duration_s": 5,
+  "references": [
+    "de8bc4da-fef6-4e53-9b7d-21d9a9925b55 지우_refS",
+    "e0fa9d43-8ea0-4e71-bd53-4b8b5f2f15d7 교실 프레임"
+  ],
+  "prompt_source": "대본_v4.md 5절 H3",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the Korean high school girl from the reference image (shoulder-length brown hair, ribbon hair pin on the left side, navy blazer school uniform) sits at a desk in the back row of a Korean high school classroom during break time, three-quarter view from the waist up; the desk edge hides her lap. A few students in the same uniform move around blurred in the background. She sits hunched like a tired middle-aged man, shoulders rounded, elbows wide on the desk.\nAction 1 (0-2.5s): the smartphone in her hand buzzes; she holds it out at arm's length and squints at the screen, then pushes up a pair of glasses that are not there with one finger; mouth stays closed.\nAction 2 (2.5-5s): she lowers the phone and rubs the back of her neck like a stiff middle-aged man, muttering a few words with a grumpy frown, mouth moving with natural lip movement.\nLighting: daylight from the classroom windows, soft fill.\nMood: comic, grumpy.\nCamera: side angle at desk height, slow push-in toward her face. No one looks at the camera. No hair flipping, no head tilting, no cute or pretty poses.",
+  "cost_credits_get_cost": 15,
+  "balance_before": 778.26,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 53.51,
+  "hard_stop_week_total": 155
+}

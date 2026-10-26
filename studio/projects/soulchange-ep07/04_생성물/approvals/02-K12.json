@@ -1,0 +1,26 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "진행해"
+  ],
+  "approved_at_kst": "2026-10-26",
+  "cut": "K12",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false",
+  "aspect_ratio": "9:16",
+  "duration_s": 5,
+  "references": [
+    "906fe198-9bab-40e1-a6f7-11281d52d9a9 담임_refT",
+    "6d183584-a31b-4e0f-a771-f39ed74909f4 담임_클로즈업"
+  ],
+  "prompt_source": "대본_v4.md 5절 K12",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the middle-aged Korean male teacher from the reference image (graying hair, navy cardigan, white shirt, striped tie, eyeglass cord) sits alone at a small table in a school counseling room, three-quarter view, chest up; an empty chair across the table is blurred in the left foreground.\nAction 1 (0-2.5s): he clutches a smartphone to his chest with both hands like a frightened teenage girl and looks at the empty chair; mouth stays closed, no speaking.\nAction 2 (2.5-5s): he takes a quick breath and stands up abruptly, then immediately presses one hand to his lower back and winces, muttering a few words, mouth moving with natural lip movement.\nLighting: cool fluorescent light, window light.\nMood: scared, then determined, then comic.\nCamera: side angle at eye level, slight tilt up as he rises. No one looks at the camera.",
+  "cost_credits_get_cost": 15,
+  "balance_before": 703.74,
+  "credit_week": "10/26~11/1",
+  "week_cumulative_before": 128.03,
+  "week_after": 143.03,
+  "hard_stop_week_total": 155
+}

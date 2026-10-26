@@ -1,0 +1,21 @@
+{
+  "status": "held_over_budget",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "진행해"
+  ],
+  "cut": "K4",
+  "reason": "이번 주 누적 143.03 + 15 = 158.03 > 상한 155 → 생성하지 않음. 11/2(월) 새 주에 생성 권장",
+  "model": "seedance_2_5, mode omni_reference",
+  "resolution": "480p",
+  "audio": "generate_audio false",
+  "aspect_ratio": "9:16",
+  "duration_s": 5,
+  "references": [
+    "de8bc4da-fef6-4e53-9b7d-21d9a9925b55 지우_refS",
+    "e0fa9d43-8ea0-4e71-bd53-4b8b5f2f15d7 교실 프레임"
+  ],
+  "prompt_source": "대본_v4.md 5절 K4",
+  "prompt": "Keep the exact face, hair and clothing from the reference image; no identity drift. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.\nSubject: the Korean high school girl from the reference image (shoulder-length brown hair, ribbon hair pin on the left side, navy blazer school uniform) sits at a desk in the back row of a Korean high school classroom, three-quarter view from the waist up, hunched like a tired middle-aged man with elbows wide on the desk. A few students are blurred in the background.\nAction 1 (0-3s): she holds a smartphone out at arm's length and slowly types with one index finger, squinting at each tap; mouth stays closed, no speaking.\nAction 2 (3-5s): without looking up from the phone, she raises one finger beside her lips in a stern shushing gesture and mutters a few words with a frown like a grumpy old man, mouth moving with natural lip movement.\nLighting: daylight from the classroom windows, soft fill.\nMood: clumsy, grumpy, comic.\nCamera: side angle at desk height, slow push-in. No one looks at the camera. No hair flipping, no head tilting, no cute or pretty poses.",
+  "cost_credits_get_cost": 15
+}
