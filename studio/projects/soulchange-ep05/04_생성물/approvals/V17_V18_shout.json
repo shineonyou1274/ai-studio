@@ -1,0 +1,15 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "얼굴 표정은 쎈데 목소리는 차분해"
+  ],
+  "approved_at_kst": "2026-10-27",
+  "item": "V17·V18 화난 고함으로 다시 녹음 (A4 v2 얼굴에 맞춤)",
+  "model": "elevenlabs_v4 dialogue",
+  "voice": "sc_teacher_body 191d2b38-c98b-4950-a1da-84407423dec9",
+  "takes": "줄당 최대 2(4테이크)",
+  "cost_estimate": "약 0.92",
+  "week_before": 197.25,
+  "hard_stop": 200
+}
