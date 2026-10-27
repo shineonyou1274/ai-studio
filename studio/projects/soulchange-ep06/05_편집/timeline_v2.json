@@ -1,0 +1,778 @@
+{
+ "main": 54.906,
+ "ending": 5.7,
+ "total": 60.606,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -3.6,
+ "cuts": [
+  {
+   "id": "K1a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A5a_K12a_교감끝훅.mp4",
+   "ss": 0.7,
+   "se": 2.4,
+   "pip": "pip",
+   "start": 0.0,
+   "dur": 1.955,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "5화 교감 클로즈업(안경 올리며 노려봄) — 지난 화 + \"…또 그 눈빛.\"",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.15
+  },
+  {
+   "id": "K1b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K08.mp4",
+   "ss": 0.8,
+   "se": 3.503,
+   "pip": "pip",
+   "start": 1.955,
+   "dur": 3.108,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸(지우 영혼) 웃으며 말함 — 아부",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.15
+  },
+  {
+   "id": "K1c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A2_K7_교감어느집딸.mp4",
+   "ss": 0.2,
+   "se": 2.113,
+   "pip": "pip",
+   "start": 5.063,
+   "dur": 1.913,
+   "zoom": [
+    1.1,
+    1.0,
+    1.0
+   ],
+   "note": "5화 교감(말하는 입, AI 배지 잘라 냄) — \"흠흠… 그래요?\"",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K02.mp4",
+   "ss": 1.2,
+   "se": 4.95,
+   "pip": "pip",
+   "start": 6.976,
+   "dur": 4.313,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "최 선생님 뒷모습(얼굴 0), 교감 팔이 문을 닫음. 향수병은 왼쪽 아래 1.2–2.0초만",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.15
+  },
+  {
+   "id": "K3",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K03.mp4",
+   "ss": 0,
+   "se": 2.914,
+   "pip": "pip",
+   "start": 11.289,
+   "dur": 2.914,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "인서트: 텀블러 역광 돌리 인(침 뱉는 장면 없음)",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K04.mp4",
+   "ss": 2.2,
+   "se": 4.0,
+   "pip": "pip",
+   "start": 14.203,
+   "dur": 1.8,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "인서트: 손·베이지 소매가 쪽지를 펴 듦",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K4b",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 16.003,
+   "dur": 1.032,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드 인서트: 쪽지 손글씨 \"최○○ 티○년 / 냄새 싫어. 없어져.\" 천천히 다가감 + 형광등 깜빡",
+   "fx": "note",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K05.mp4",
+   "ss": 0,
+   "se": 3.553,
+   "pip": "pip",
+   "start": 17.035,
+   "dur": 3.553,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "회상: 채도 낮춤·가장자리 어둡게. 남학생 컵 시늉 → 최 선생님 손이 출석부 꽉",
+   "fx": "flash",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K6a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H2_K6.mp4",
+   "ss": 0,
+   "se": 1.2,
+   "pip": "pip",
+   "start": 20.588,
+   "dur": 1.38,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "두 손으로 입 막음 — \"헐—\"(여고생 목소리 + 잔향) + 영혼 원 지지직",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.15
+  },
+  {
+   "id": "K7a",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K07.mp4",
+   "ss": 0,
+   "se": 1.4,
+   "pip": "pip",
+   "start": 21.968,
+   "dur": 1.4,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "옆자리 선생님이 고개를 반쯤 돌렸다 돌아감(얼굴 옆선만) — 정적",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K6b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H2_K6.mp4",
+   "ss": 2.0,
+   "se": 2.87,
+   "pip": "pip",
+   "start": 23.368,
+   "dur": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "손을 내림(입 안 맞는 구간을 짧게)",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.149
+  },
+  {
+   "id": "K7x",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K07.mp4",
+   "ss": 2.0,
+   "se": 3.698,
+   "pip": "pip",
+   "start": 24.368,
+   "dur": 1.698,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "듣는 옆자리 선생님 뒷모습 — \"…레벌떡… 놀랐습니다\" 화면 밖",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K6c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H2_K6.mp4",
+   "ss": 4.4,
+   "se": 6.04,
+   "pip": "pip",
+   "start": 26.066,
+   "dur": 1.691,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸 말하는 입 — \"진짜 그런 애가 있다고요?\"",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.031
+  },
+  {
+   "id": "K7b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K07.mp4",
+   "ss": 4.5,
+   "se": 8.174,
+   "pip": "pip",
+   "start": 27.757,
+   "dur": 3.674,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "옆자리 선생님 뒷모습(얼굴 안 보임) — \"알잖아요, 작년에 선생님 반이었던…\" 뒤 정적 0.3",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A3_K9_기간제였어요.mp4",
+   "ss": 2.0,
+   "se": 4.385,
+   "pip": "pip",
+   "start": 31.431,
+   "dur": 2.695,
+   "zoom": [
+    1.15,
+    0.5,
+    0.2
+   ],
+   "note": "5화 A3 담임 몸 말하는 입(1.15배) — 아는 척",
+   "fx": null,
+   "st": 1.13,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.13
+  },
+  {
+   "id": "K8b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K08.mp4",
+   "ss": 3.5026086956521745,
+   "se": 5.04,
+   "pip": "pip",
+   "start": 34.126,
+   "dur": 1.768,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "웃음 빠지고 눈 굴리며 폰 꺼냄(입 다묾) — 속마음",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.15
+  },
+  {
+   "id": "K9",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 35.894,
+   "dur": 4.431,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드 인서트: 담임 폰, 여고생 말투 DM 입력 → 말풍선 두 개 → 읽음",
+   "fx": "dm",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H3_K10.mp4",
+   "ss": 0,
+   "se": 5.125,
+   "pip": "pip_t",
+   "start": 40.325,
+   "dur": 5.791,
+   "zoom": [
+    1.25,
+    0.5,
+    0.0
+   ],
+   "note": "지우 몸 폰 실눈·없는 안경 → \"…요즘 폰 글씨가 작아.\" 치마 안 보이게 1.25배",
+   "fx": null,
+   "st": 1.13,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.13
+  },
+  {
+   "id": "K11",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip_t",
+   "start": 46.116,
+   "dur": 8.79,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "대각선 분할: 아래 왼쪽 지우 몸(5화 C2 → C1), 위 오른쪽 벤치 먼 뒷모습(K11 1.6배). 그 학생 쪽 웃음 장치 없음",
+   "fx": "split",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "stretch": 1.0
+  }
+ ],
+ "lines": {
+  "E01": {
+   "start": 0.9,
+   "end": 2.242,
+   "tempo": 1.05,
+   "file": "E6-01_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0.1,
+     1.5
+    ]
+   ],
+   "inner": true
+  },
+  "E02": {
+   "start": 2.075,
+   "end": 4.963,
+   "tempo": 1.15,
+   "file": "E6-02_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     3.4
+    ]
+   ],
+   "inner": false
+  },
+  "E03": {
+   "start": 5.183,
+   "end": 6.826,
+   "tempo": 1.05,
+   "file": "E6-03_vp_arthur_raw.mp3",
+   "range": [
+    [
+     0,
+     1.8
+    ]
+   ],
+   "inner": false
+  },
+  "E04": {
+   "start": 8.176,
+   "end": 10.153,
+   "tempo": 1.05,
+   "file": "E6-04_vp_arthur_raw.mp3",
+   "range": [
+    [
+     0,
+     2.1
+    ]
+   ],
+   "inner": false
+  },
+  "E05a": {
+   "start": 10.403,
+   "end": 11.169,
+   "tempo": 1.05,
+   "file": "E6-05_t1_helena_raw.mp3",
+   "range": [
+    [
+     0.1,
+     0.92
+    ]
+   ],
+   "inner": false
+  },
+  "E05b": {
+   "start": 11.409,
+   "end": 13.803,
+   "tempo": 1.05,
+   "file": "E6-05_t1_helena_raw.mp3",
+   "range": [
+    [
+     1.25,
+     3.75
+    ]
+   ],
+   "inner": false
+  },
+  "E06": {
+   "start": 14.403,
+   "end": 16.735,
+   "tempo": 1.05,
+   "file": "E6-06_t1_helena_raw.mp3",
+   "range": [
+    [
+     0.15,
+     2.7
+    ]
+   ],
+   "inner": false
+  },
+  "E07": {
+   "start": 17.185,
+   "end": 20.288,
+   "tempo": 1.05,
+   "file": "E6-07_s1_dylan_raw.mp3",
+   "range": [
+    [
+     0,
+     3.4
+    ]
+   ],
+   "inner": false
+  },
+  "E08": {
+   "start": 20.648,
+   "end": 21.248,
+   "tempo": 1.0,
+   "file": "E6-08d_jiu_leak_student_raw.mp3",
+   "range": [
+    [
+     0,
+     0.6
+    ]
+   ],
+   "inner": true
+  },
+  "E09a": {
+   "start": 23.428,
+   "end": 25.966,
+   "tempo": 1.05,
+   "file": "E6-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0.1,
+     2.8
+    ]
+   ],
+   "inner": false
+  },
+  "E09b": {
+   "start": 26.186,
+   "end": 27.657,
+   "tempo": 1.05,
+   "file": "E6-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     3.35,
+     5.1
+    ]
+   ],
+   "inner": false
+  },
+  "E10": {
+   "start": 27.907,
+   "end": 31.131,
+   "tempo": 1.05,
+   "file": "E6-10_t1_helena_raw.mp3",
+   "range": [
+    [
+     0,
+     3.5
+    ]
+   ],
+   "inner": false
+  },
+  "E11": {
+   "start": 31.481,
+   "end": 34.026,
+   "tempo": 1.05,
+   "file": "E6-11_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     2.75
+    ]
+   ],
+   "inner": false
+  },
+  "E12": {
+   "start": 34.276,
+   "end": 36.431,
+   "tempo": 1.05,
+   "file": "E6-12_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0.05,
+     2.4
+    ]
+   ],
+   "inner": true
+  },
+  "E13": {
+   "start": 36.581,
+   "end": 39.875,
+   "tempo": 1.05,
+   "file": "E6-13_jiu_dm_student_raw.mp3",
+   "range": [
+    [
+     0,
+     3.45
+    ]
+   ],
+   "inner": false
+  },
+  "E14a": {
+   "start": 41.225,
+   "end": 42.975,
+   "tempo": 1.05,
+   "file": "E6-14_friend_pixie_raw.mp3",
+   "range": [
+    [
+     1.12,
+     2.98
+    ]
+   ],
+   "inner": false
+  },
+  "E15": {
+   "start": 43.715,
+   "end": 45.866,
+   "tempo": 1.05,
+   "file": "E6-15_teacher_studentbody_raw.mp3",
+   "range": [
+    [
+     0.1,
+     2.36
+    ]
+   ],
+   "inner": false
+  },
+  "E16": {
+   "start": 46.516,
+   "end": 48.389,
+   "tempo": 1.05,
+   "file": "E6-16_teacher_inner_teacher_raw.mp3",
+   "range": [
+    [
+     0.05,
+     2.05
+    ]
+   ],
+   "inner": true
+  },
+  "E14b": {
+   "start": 49.289,
+   "end": 51.686,
+   "tempo": 1.05,
+   "file": "E6-14_friend_pixie_raw.mp3",
+   "range": [
+    [
+     3.38,
+     5.9
+    ]
+   ],
+   "inner": false
+  },
+  "E17": {
+   "start": 51.936,
+   "end": 54.406,
+   "tempo": 1.05,
+   "file": "E6-17_teacher_studentbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.7
+    ],
+    [
+     2.94,
+     4.92
+    ]
+   ],
+   "inner": false
+  }
+ },
+ "subs": [
+  [
+   0.9,
+   2.05,
+   "…또 그 눈빛."
+  ],
+  [
+   2.08,
+   5.11,
+   "교감 선생님, 오늘 완전 교장 포스세요!"
+  ],
+  [
+   5.18,
+   6.98,
+   "흠흠… 그래요?"
+  ],
+  [
+   8.18,
+   10.3,
+   "문, 문부터 닫읍시다!"
+  ],
+  [
+   10.4,
+   11.22,
+   "들었어요?"
+  ],
+  [
+   11.41,
+   13.95,
+   "텀블러에, 누가 침을 뱉었대요."
+  ],
+  [
+   14.4,
+   16.88,
+   "쪽지엔… 담임 욕까지."
+  ],
+  [
+   17.18,
+   20.44,
+   "쌤, 요새는 텀블러 안 들고 다니세요?"
+  ],
+  [
+   20.65,
+   21.5,
+   "헐—"
+  ],
+  [
+   23.43,
+   26.12,
+   "…헐, 헐레벌떡… 놀랐습니다."
+  ],
+  [
+   26.19,
+   27.81,
+   "…진짜 그런 애가 있다고요?"
+  ],
+  [
+   27.91,
+   31.43,
+   "알잖아요, 작년에 선생님 반이었던…"
+  ],
+  [
+   31.48,
+   34.18,
+   "아… 아, 걔. 네, 네."
+  ],
+  [
+   34.28,
+   36.58,
+   "…누군데? 쌤한테 물어봐야지."
+  ],
+  [
+   41.23,
+   43.12,
+   "지우야, 너 노안 왔냐?"
+  ],
+  [
+   43.72,
+   46.02,
+   "…요즘 폰 글씨가 작아."
+  ],
+  [
+   46.52,
+   48.79,
+   "…쟤가 왜 또 혼자…"
+  ],
+  [
+   49.29,
+   51.84,
+   "야, 너 왜 할아버지처럼 창밖 봐?"
+  ],
+  [
+   51.94,
+   54.86,
+   "…에헴. 경치가… 좋구나."
+  ]
+ ],
+ "glitch": [
+  20.648,
+  21.098
+ ],
+ "bgm": [
+  [
+   "class",
+   1.955,
+   6.976
+  ],
+  [
+   "tense",
+   7.276,
+   20.648
+  ],
+  [
+   "class",
+   31.431,
+   46.116
+  ],
+  [
+   "sad",
+   46.116,
+   49.239000000000004
+  ]
+ ]
+}
