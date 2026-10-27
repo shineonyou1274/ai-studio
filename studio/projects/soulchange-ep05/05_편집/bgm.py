@@ -47,13 +47,15 @@ def _section(kind, dur, seed):
             _add(y, _pluck(110 if j % 4 < 2 else 103.8, 0.4, 0.45), at)              # 피치카토
         return y
     if kind == 'tense2':
-        f0 = 73.4 * (1 + 0.06 * t / max(dur, 0.1))                                   # 조금씩 올라감
+        # 낮은 드론을 쓰지 않음(v8: 73Hz 드론이 "헐… 설마"(여학생 속마음)를 남자 목소리처럼 들리게 함) → 높은 현 떨림
+        f0 = 440 * (1 + 0.06 * t / max(dur, 0.1))                                    # 조금씩 올라감
         ph = 2 * np.pi * np.cumsum(f0) / SR
-        y += 0.20 * np.sin(ph) + 0.10 * np.sin(1.5 * ph)
+        trem = 0.6 + 0.4 * np.sin(2 * np.pi * 9 * t)
+        y += 0.10 * trem * (np.sin(ph) + 0.6 * np.sin(1.5 * ph))
         y += 0.06 * np.sin(2 * np.pi * 7 * t) * np.sin(2 * np.pi * 220 * t)         # 떨리는 높은 음
         for j, at in enumerate(np.arange(0, dur, 0.25)):
             _add(y, _tick(2600 if j % 2 == 0 else 2000, 0.30), at)
-            if j % 2 == 0: _add(y, _pluck(146.8, 0.3, 0.4), at)
+            if j % 2 == 0: _add(y, _pluck(587.3, 0.2, 0.25), at)   # v8: 낮은 피치카토(146.8Hz)는 "헐… 설마" 음높이를 낮춰 보이게 해서 높은 음으로
         return y
     raise ValueError(kind)
 

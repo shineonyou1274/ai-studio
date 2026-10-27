@@ -135,9 +135,9 @@ c0 = t; e = at('V13', c0 + 0.08)
 cut('K7', C / 'A2_K7_교감어느집딸.mp4', 0, None, 'pip', e + 0.08 - c0, zoom=(1.1, 1.0, 1.0), note='v8: 왼쪽 위 Dreamina/Higgsfield "AI" 배지 → 1.1배, 오른쪽 아래 기준으로 잘라 냄')
 c0 = t; e = at('V14', c0 + 0.06)
 # v8 Gemini: P2 손가락이 길고 일그러짐 → 짧게, 서류철 쪽(왼쪽 아래)으로 1.45배 잘라 손가락 마디를 화면 가장자리로. 사이에 듣는 담임 몸(A1 앞부분, 입 다묾)
-cut('K8', PC / 'K08_P2.mp4', 1.5, 2.3, 'pip', 0.85, zoom=(1.45, 0.0, 0.85), note='v8: 서류철 톡톡 — 짧게, 서류철 쪽으로 잘라 손가락 마디 덜 보이게')
-cut('K8l', C / 'A1_K1.mp4', 0.2, 2.6, 'pip', 2.5, zoom=(1.3, 0.9, 0.0), note='v8: 듣는 담임 몸(입 다묾, 눈만 굴림) — "기간제 연장" 교감 화면 밖. 교감 손·폰은 잘라 냄')
-cut('K8c', PC / 'K08_P2.mp4', 3.25, 5.04, 'pip', e + 0.06 - t, zoom=(1.3, 0.0, 1.0), note='v8: 서류철을 미는 손 — 서류철 쪽으로 잘라 냄')
+cut('K8', PC / 'K08_P2.mp4', 0.9, 2.3, 'pip', 1.55, zoom=(1.6, 0.0, 1.0), note='v8: 서류철 톡톡 — 짧게, 서류철 쪽으로 잘라 손가락 마디 덜 보이게')
+cut('K8l', C / 'A1_K1.mp4', 0.2, 2.6, 'pip', 2.75, zoom=(1.45, 0.9, 0.0), note='v8: 듣는 담임 몸(입 다묾, 눈만 굴림) — "기간제 연장" 교감 화면 밖. 교감 손·폰은 잘라 냄')
+cut('K8c', C / 'A2_K7_교감어느집딸.mp4', 4.12, 5.04, 'pip', e + 0.06 - t, zoom=(1.1, 1.0, 1.0), note='v8: 교감 고개 숙임(입 거의 안 보임) — "…이해해도 되겠죠?" (P2 손가락 두 번째 컷 대신)')
 # v6 사장님 순서(교차 편집으로 입 모양 가리기):
 #  교감 협박(V14) → 지우 "아니, 하은이 집이 뭐… 왜요? 그리고… 우리 쌤이 기간제였어요?" → 교감 "…아니, 우리 쌤?" → 교감 "김 선생, … 수작인가요?"
 #  → 지우 영혼 속마음 "헐… 설마." → 담임 몸 일어나 "왜 협박을 해요? 이거 갑질이잖아요!"(정지) → "지식이 높은 … 단가요?" → 교감 "고지식? 허…"(끝, 정적) → 엔딩
@@ -171,8 +171,8 @@ cut('K11', C / 'A4_K11_v2_audioref.mp4', K11_SS, K11_SS + K11_DUR, 'pip', K11_DU
 _f = 1.05 / SPEC['V16b']['tempo']                                 # 낱말 시간(1.05배 기준) → 이번 배속
 c0 = t; e = at('V16b', c0 + 0.12)
 cut('K16a', C / 'A5a_K12a_교감끝훅.mp4', 5.9, None, 'pip', 0.12 + 0.80 * _f, zoom=(1.0, 0.55, 0.35), still=5.9, note='v8: 듣는 교감 굳은 얼굴(정지+다가감) — "지식이 높은" 화면 밖')
-cut('K16b', C / 'A4_K11_v2_audioref.mp4', 1.55, None, 'pip', L['V16b'] + 2.50 * _f - 0.10 - t, zoom=(1.15, 0.5, 0.2), note='v8: 선 담임 몸, 허리에 손 — "고지식하신 교감쌤께서,"')
-cut('K16c', C / 'A2_K7_교감어느집딸.mp4', 0.1, None, 'pip', 0.70, zoom=(1.1, 1.0, 1.0), still=0.1, note='v8: 듣는 교감(A2 첫 프레임 정지+다가감, AI 배지 잘라 냄) — "무섭기까지" 첫머리')
+cut('K16b', C / 'A4_K11_v2_audioref.mp4', 1.55, 2.87, 'pip', L['V16b'] + 2.50 * _f - 0.10 - t, zoom=(1.15, 0.5, 0.2), note='v8: 선 담임 몸, 허리에 손 — "고지식하신 교감쌤께서,"')
+cut('K16c', C / 'A5a_K12a_교감끝훅.mp4', 2.75, None, 'pip', 0.70, zoom=(1.0, 0.45, 0.4), still=2.75, push=0.18, note='v8: 듣는 교감(입 다문 프레임 정지, 빠르게 다가감) — "무섭기까지" 첫머리')
 cut('K16d', C / 'A4_K11_사이다.mp4', 2.4, None, 'pip', e + 0.10 - t, zoom=(1.1, 0.5, 0.3), note='v8: 선 담임 몸(옛 A4 낮은 각도, 허리에 손, 말하는 입) — "…하면 단가요?"')
 # 끝: 교감 "고지식? 허…" + 어이없는 얼굴, 짧은 정적 → 엔딩
 c0 = t; e = at('V19a', c0 + 0.25)
@@ -332,7 +332,7 @@ import bgm
 BGM_SECT = [('class', k['K4']['start'], SLAM[0]),
             ('tense', k['K7']['start'], L['V15'] + D['V15'] + 0.05),
             ('tense2', L['V20a'], FREEZE_AT)]
-BGM_I = bgm.make(BGM_SECT, [(VO / f'{lid}.wav', st) for lid, st in L.items()], MAIN, B / 'bgm.wav', target_lufs=-28.0)
+BGM_I = bgm.make(BGM_SECT, [(VO / f'{lid}.wav', st) for lid, st in L.items()], MAIN, B / 'bgm.wav', target_lufs=-28.0, duck_db=-15.0)
 print('bgm 덕킹 뒤 통합 음량', BGM_I)
 ins += ['-i', B / 'bgm.wav']; mixl.append(f'[{len(ins) // 2 - 1}:a]')
 fc.append(''.join(mixl) + f"amix=inputs={len(mixl)}:normalize=0,apad=whole_dur={MAIN},atrim=0:{MAIN}[aout]")
