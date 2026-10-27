@@ -1,0 +1,766 @@
+{
+ "main": 59.616,
+ "ending": 5.7,
+ "total": 65.316,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -4.5,
+ "cuts": [
+  {
+   "id": "K0",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 0.0,
+   "dur": 2.6,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 담임 폰 학교 메신저, 교감 말풍선 셋",
+   "fx": "msg",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K1",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 2.6,
+   "dur": 6.256,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "어머니 손: 탁자 탁, 가방 입구 향수병 — 【임시 화면】 K01.mp4 오면 자동으로 바뀜",
+   "fx": "ph",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": "K1 자리 (어머니 손)\n손바닥 탁 + 가방 속 향수병",
+   "stretch": 1.0
+  },
+  {
+   "id": "K3a",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K03.mp4",
+   "ss": 0.1,
+   "se": 2.711,
+   "pip": "pip",
+   "start": 8.856,
+   "dur": 3.003,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸(지우 영혼) 굽신 웃음 — \"품격... 넘치죠, 그럼요!\"",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K2",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 11.859,
+   "dur": 3.145,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "어머니 손가락 콕 — 【임시 화면】 K02.mp4 오면 자동으로 바뀜",
+   "fx": "ph",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": "K2 자리 (어머니 손)\n검지로 콕, 탁자 톡톡",
+   "stretch": 1.0
+  },
+  {
+   "id": "K3b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K03.mp4",
+   "ss": 2.5,
+   "se": 5.04,
+   "pip": "pip",
+   "start": 15.004,
+   "dur": 2.54,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "눈 커짐 → 탁자 밑 폰 두 엄지(입 다묾) — 속마음",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "se": 4.349,
+   "pip": "pip_t",
+   "start": 17.544,
+   "dur": 4.784,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "지우 몸(담임 영혼) 폰 검지 타자 → \"쉿\"(아크, 역광)",
+   "fx": null,
+   "st": 1.1,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.1
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/05_편집/build_v5/K11_hood.mp4",
+   "ss": 1.0,
+   "se": 4.133,
+   "pip": "pip_t",
+   "start": 22.328,
+   "dur": 3.133,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "6화 K11 재사용(벤치 먼 뒷모습) — 담임 DM",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K6",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K06.mp4",
+   "ss": 0.6,
+   "se": 5.007,
+   "pip": "pip",
+   "start": 25.461,
+   "dur": 5.068,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸: 손으로 입 → 기침 → 굳은 웃음으로 말함(카메라 정면 응시는 원본 약점)",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K7",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 30.529,
+   "dur": 6.352,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "어머니 손: 가방 끈 꽉 → 툭 — 【임시 화면】 K07.mp4 오면 자동으로 바뀜",
+   "fx": "ph",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": "K7 자리 (어머니 손)\n가방 끈 비틀기, 탁자에 툭",
+   "stretch": 1.0
+  },
+  {
+   "id": "K8",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 36.881,
+   "dur": 3.848,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 6화 쪽지 사진 확대 → 욕 줄 빨간 동그라미 → \"냄새 싫어\" 밑줄",
+   "fx": "note",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K10",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 40.729,
+   "dur": 5.192,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "어머니 손: 가방 낚아채고 일어남, 코트 자락 — 【임시 화면】 K10.mp4 오면 자동으로 바뀜",
+   "fx": "ph",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": "K10 자리 (어머니 손)\n가방 낚아채고 일어남",
+   "stretch": 1.0
+  },
+  {
+   "id": "R2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A5a_K12a_교감끝훅.mp4",
+   "ss": 2.45,
+   "se": 3.15,
+   "pip": "pip",
+   "start": 45.921,
+   "dur": 1.51,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "5화 교감(입 다묾) — \"흐흠...\" (6화 E6-03 앞부분)",
+   "fx": null,
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K11",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip_t",
+   "start": 47.431,
+   "dur": 3.226,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 지우 폰(지금은 쌤)에서 담임 폰으로 DM 두 개",
+   "fx": "dm11",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K12",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K12.mp4",
+   "ss": 0,
+   "se": 5.283,
+   "pip": "pip",
+   "start": 50.657,
+   "dur": 6.075,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸: 폰 꼭 쥐고 빈 의자 → 벌떡 → 허리",
+   "fx": null,
+   "st": 1.15,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K13",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 56.731,
+   "dur": 2.884,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 담임 폰(지금은 지우)에 온 DM",
+   "fx": "dm13",
+   "st": null,
+   "still": null,
+   "push": 0.12,
+   "ph": null,
+   "stretch": 1.0
+  }
+ ],
+ "lines": {
+  "E01": {
+   "start": 2.8,
+   "end": 7.933,
+   "tempo": 1.05,
+   "file": "E7-01_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     5.4
+    ]
+   ],
+   "inner": false
+  },
+  "E02a": {
+   "start": 8.033,
+   "end": 8.906,
+   "tempo": 1.1,
+   "file": "E7-02_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.95
+    ]
+   ],
+   "inner": false
+  },
+  "E02b": {
+   "start": 8.936,
+   "end": 11.779,
+   "tempo": 1.15,
+   "file": "E7-02_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     1.3,
+     4.75
+    ]
+   ],
+   "inner": false
+  },
+  "E03": {
+   "start": 11.959,
+   "end": 14.904,
+   "tempo": 1.05,
+   "file": "E7-03_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     3.55
+    ]
+   ],
+   "inner": false
+  },
+  "E04": {
+   "start": 15.154,
+   "end": 16.64,
+   "tempo": 1.05,
+   "file": "E7-04_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0.7,
+     2.55
+    ]
+   ],
+   "inner": true
+  },
+  "E05": {
+   "start": 17.844,
+   "end": 19.895,
+   "tempo": 1.05,
+   "file": "E7-05_friend_pixie_raw.mp3",
+   "range": [
+    [
+     0.95,
+     3.2
+    ]
+   ],
+   "inner": false
+  },
+  "E06": {
+   "start": 20.349,
+   "end": 22.128,
+   "tempo": 1.05,
+   "file": "E7-06_teacher_studentbody_raw.mp3",
+   "range": [
+    [
+     0,
+     2.1
+    ]
+   ],
+   "inner": false
+  },
+  "E07": {
+   "start": 22.528,
+   "end": 25.161,
+   "tempo": 1.05,
+   "file": "E7-07_teacher_dm_teacher_raw.mp3",
+   "range": [
+    [
+     0,
+     3.35
+    ]
+   ],
+   "inner": false
+  },
+  "E08": {
+   "start": 25.711,
+   "end": 27.798,
+   "tempo": 1.1,
+   "file": "E7-08b_jiu_leak_student_raw.mp3",
+   "range": [
+    [
+     0,
+     2.3
+    ]
+   ],
+   "inner": true
+  },
+  "E09c": {
+   "start": 27.933,
+   "end": 28.993,
+   "tempo": 1.0,
+   "file": "E7-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     1.08
+    ]
+   ],
+   "inner": false
+  },
+  "E09": {
+   "start": 29.043,
+   "end": 31.831,
+   "tempo": 1.2,
+   "file": "E7-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     3.02,
+     6.45
+    ]
+   ],
+   "inner": false
+  },
+  "E10a": {
+   "start": 32.231,
+   "end": 33.086,
+   "tempo": 1.05,
+   "file": "E7-10_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     1.15
+    ]
+   ],
+   "inner": false
+  },
+  "E10b": {
+   "start": 33.236,
+   "end": 36.051,
+   "tempo": 1.05,
+   "file": "E7-10_mother_soraya_raw.mp3",
+   "range": [
+    [
+     1.62,
+     4.58
+    ]
+   ],
+   "inner": false
+  },
+  "E11": {
+   "start": 37.181,
+   "end": 40.379,
+   "tempo": 1.1,
+   "file": "E7-11_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0,
+     4.0
+    ]
+   ],
+   "inner": true
+  },
+  "E12": {
+   "start": 40.879,
+   "end": 43.219,
+   "tempo": 1.05,
+   "file": "E7-12_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     2.55
+    ]
+   ],
+   "inner": false
+  },
+  "E13": {
+   "start": 44.069,
+   "end": 45.771,
+   "tempo": 1.05,
+   "file": "E7-13_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     1.8
+    ]
+   ],
+   "inner": false
+  },
+  "HM": {
+   "start": 46.271,
+   "end": 47.131,
+   "tempo": 1.0,
+   "file": "E6-03_vp_arthur_raw.mp3",
+   "range": [
+    [
+     0,
+     1.0
+    ]
+   ],
+   "inner": false
+  },
+  "E14": {
+   "start": 47.881,
+   "end": 50.307,
+   "tempo": 1.05,
+   "file": "E7-14_teacher_dm_teacher_raw.mp3",
+   "range": [
+    [
+     0,
+     2.95
+    ]
+   ],
+   "inner": false
+  },
+  "E15": {
+   "start": 50.857,
+   "end": 52.701,
+   "tempo": 1.05,
+   "file": "E7-15_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0,
+     2.0
+    ]
+   ],
+   "inner": true
+  },
+  "E16a": {
+   "start": 53.359,
+   "end": 54.299,
+   "tempo": 1.0,
+   "file": "E7-16b_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.98
+    ]
+   ],
+   "inner": false
+  },
+  "E16b": {
+   "start": 54.739,
+   "end": 56.631,
+   "tempo": 1.05,
+   "file": "E7-16b_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0.98,
+     3.2
+    ]
+   ],
+   "inner": false
+  },
+  "E17": {
+   "start": 57.081,
+   "end": 59.165,
+   "tempo": 1.05,
+   "file": "E7-17_teacher_dm_teacher_raw.mp3",
+   "range": [
+    [
+     0,
+     2.4
+    ]
+   ],
+   "inner": false
+  }
+ },
+ "subs": [
+  [
+   2.8,
+   8.0,
+   "우리 아이는 아무 문제가 없어요. 순둥이, 타고난 품격이 있는 아이라구요!"
+  ],
+  [
+   8.03,
+   8.91,
+   "네, 네!"
+  ],
+  [
+   8.94,
+   11.93,
+   "품격... 넘치죠, 그럼요!"
+  ],
+  [
+   11.96,
+   15.05,
+   "작년 담임이 한 정서학대, 잊으셨어요?"
+  ],
+  [
+   15.15,
+   16.79,
+   "...작년 담임? 우리 쌤?!"
+  ],
+  [
+   17.84,
+   20.05,
+   "지우야, 독수리 타법 뭐야?"
+  ],
+  [
+   20.35,
+   22.28,
+   "...쉿. 어른 일이다."
+  ],
+  [
+   22.53,
+   25.31,
+   "맞아, 나야. 노래 틀어 줬다 민원."
+  ],
+  [
+   25.71,
+   27.9,
+   "헐.. 최 쌤 향수 냄새"
+  ],
+  [
+   27.93,
+   29.01,
+   "크흠!"
+  ],
+  [
+   29.04,
+   31.98,
+   "향수가... 아주... 고급지시네요..."
+  ],
+  [
+   32.23,
+   33.19,
+   "향수요?!"
+  ],
+  [
+   33.24,
+   36.73,
+   "애 하나 때문에 집안이 곤란한데, 그 담임 티m 0 22 b 0 10 10 0 22 0 b 34 0 44 10 44 22 b 44 34 34 44 22 44 b 10 44 0 34 0 22 m 6 22 b 6 31 13 38 22 38 b 31 38 38 31 38 22 b 38 13 31 6 22 6 b 13 6 6 13 6 22년!"
+  ],
+  [
+   37.18,
+   40.53,
+   "...같은 욕. 걔가 싫었던 건, 엄마였어."
+  ],
+  [
+   40.88,
+   43.37,
+   "애는 엄마가 제일 잘 알아요!"
+  ],
+  [
+   44.07,
+   45.92,
+   "살... 살... 살펴 가세요..."
+  ],
+  [
+   46.27,
+   47.33,
+   "흐흠..."
+  ],
+  [
+   47.88,
+   50.46,
+   "신고는 담임이 해. 지금 담임은 너."
+  ],
+  [
+   50.86,
+   52.85,
+   "...엄마를, 제가요?"
+  ],
+  [
+   53.36,
+   54.35,
+   "...해야죠, 뭐."
+  ],
+  [
+   54.74,
+   56.78,
+   "아이고, 허리야..."
+  ],
+  [
+   57.08,
+   59.57,
+   "...허리 조심해라. 내 몸이다."
+  ]
+ ],
+ "glitch": [
+  25.711,
+  27.798
+ ],
+ "bgm": [
+  [
+   "tense",
+   2.6,
+   15.053999999999998
+  ],
+  [
+   "class",
+   17.544,
+   22.328
+  ],
+  [
+   "sad",
+   22.328,
+   25.461
+  ],
+  [
+   "tense2",
+   25.461,
+   31.881
+  ],
+  [
+   "sad",
+   36.881,
+   40.729
+  ],
+  [
+   "sad",
+   47.431,
+   53.359
+  ]
+ ],
+ "placeholders": [
+  "K1",
+  "K2",
+  "K7",
+  "K10"
+ ]
+}
