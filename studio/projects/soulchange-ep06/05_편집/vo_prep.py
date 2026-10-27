@@ -65,7 +65,7 @@ def prep(spec, src_dir, out_dir):
         subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'f32le', '-ar', str(SR), '-ac', '1', '-i', '-', str(tmp)],
                        input=x.astype(np.float32).tobytes(), check=True)
         g = -18.0 - lufs(tmp)
-        af = f'volume={g:.2f}dB'
+        af = f'volume={g:.2f}dB,alimiter=limit=0.7:level=false:attack=1:release=50,afade=t=in:d=0.012,areverse,afade=t=in:d=0.025,areverse'   # 6화 v5: 잘린 끝 딸깍 소리 막기
         if s.get('tempo', 1.0) != 1.0: af += f",atempo={s['tempo']}"
         out = out_dir / f'{lid}.wav'
         subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(tmp), '-af', af, '-ar', str(SR), '-c:a', 'pcm_s16le', str(out)], check=True)
