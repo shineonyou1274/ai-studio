@@ -101,7 +101,11 @@ def sheet(a, b, name, step=0.125):
         x, y = (i % cols) * tw, (i // cols) * (th + 22)
         sh.paste(Image.frombytes('RGB', (tw, th), raw), (x, y + 22)); dd.text((x + 4, y + 2), f'{t:.3f}', font=ImageFont.truetype(F, 15), fill=(255, 230, 90))
     sh.save(HERE / name)
-sheet(20.5, 24.0, 'frames_v5_K6a-K6b.png')
-sheet(12.9, 14.4, 'frames_v5_cough.png', 0.0625)
-sheet(51.5, 53.1, 'frames_v5_K11.png')
-sheet(44.0, 48.0, 'frames_v5_P3.png')
+_c = {c['id']: c for c in TL['cuts']}
+_w = TL['sfx']['whip_at']
+sheet(_w - 2.5, _w + 1.0, 'frames_v5_K6a-K6b.png')
+sheet(TL['sfx']['cough'] - 0.4, TL['sfx']['cough2'] + 0.7, 'frames_v5_cough.png', 0.0625)
+sheet(_c['K11']['start'] + 1.6, _c['K11']['start'] + _c['K11']['dur'] + 0.1, 'frames_v5_K11.png')
+sheet(_c['K10']['start'] - 0.3, _c['K10b']['start'] + 1.0, 'frames_v5_P3.png')
+sheet(42.0, 56.0, 'frames_v5_42-56.png', 0.25)
+sheet(4.8, 11.2, 'frames_v5_K2-K3b.png', 0.25)
