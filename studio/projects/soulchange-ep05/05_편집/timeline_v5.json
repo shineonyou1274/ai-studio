@@ -201,33 +201,33 @@
    "id": "K10",
    "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K10_P3.mp4",
    "ss": 0.4,
-   "se": 2.3,
+   "se": 1.4,
    "pip": "pip",
    "start": 44.556,
-   "dur": 1.9,
+   "dur": 1.0,
    "zoom": [
     1.0,
     0.5,
     0.5
    ],
-   "note": "v3: 가장 또렷한 1.9초(검지 위 → 손바닥)만",
+   "note": "v5: 검지를 치켜든 1.0초만(\"지식이 높은\"), 화면 왼쪽(뒤 선생님들) 강하게 흐림",
    "stretch": 1.0
   },
   {
    "id": "K10b",
    "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A3_K9_기간제였어요.mp4",
-   "ss": 3.3,
+   "ss": 2.4,
    "se": 6.04,
    "pip": "pip",
-   "start": 46.456,
-   "dur": 2.76,
+   "start": 45.556,
+   "dur": 3.66,
    "zoom": [
     1.2,
     0.5,
     0.25
    ],
-   "note": "v3: A3 뒷부분(말하며 손바닥 손짓)을 1.2배 당겨 다른 크기로",
-   "stretch": 1.007
+   "note": "v5: A3 뒷부분(말하며 손바닥 손짓)을 1.2배 당겨 다른 크기로, P3가 줄어든 만큼 원본 2.4초부터",
+   "stretch": 1.005
   },
   {
    "id": "K11",

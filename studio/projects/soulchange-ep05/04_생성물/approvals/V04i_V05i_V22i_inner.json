@@ -1,0 +1,15 @@
+{
+  "status": "approved",
+  "approved_by": "사장님",
+  "approval_quotes": [
+    "속마음으로 바꾸기 (추천)"
+  ],
+  "approved_at_kst": "2026-10-27",
+  "item": "V04·V05·V22를 담임 영혼 속마음(sc_teacher_body)으로 다시 녹음",
+  "model": "elevenlabs_v4 dialogue",
+  "voice": "sc_teacher_body 191d2b38-c98b-4950-a1da-84407423dec9",
+  "cost_estimate": "약 0.7 (실제 0.92, V04i 다시 1회 포함)",
+  "week_before": 198.17,
+  "week_after": 199.09,
+  "hard_stop": 200
+}
