@@ -7,7 +7,10 @@
 - 자막: 키트 헤더 + 우리 스타일(DlgB/MonoB 80% 상자, 화자 Tag 색 상자), 쇼츠 아래 27%·위 6% 밖.
 - 입이 안 맞는 곳은 교차 편집(H2 ↔ K07 옆자리 선생님 뒷모습), 녹음이 길면 배속.
 - 배경음 = bgm.py(코드 합성), 웃음 박자에서 뚝 끊음. 그 학생·최 선생님 쪽에는 웃음 효과음 없음.
-사용: python3 build_ep6_v3.py → ep6_v3.mp4, timeline_v3.json
+사용: python3 build_ep6_v4.py → ep6_v4.mp4, timeline_v4.json
+
+v4(Gemini v3 검수): DM 상대 이름·입력창·폰 위 자막, 쪽지(○ 직접 그림, 수첩 종이 질감), 벤치 학생 머리 윤곽(bench_hood.py),
+"헐—" 지지직 소리 + 분홍 번쩍 자막, "아… 아, 걔" 1.15배 +2dB, 회상 자막 "…놀리던 학생들".
 
 v2(2026-10-27 사장님 "내용 전달이 거의 안 돼"): 첫 장면 = 5화 실제 교감 얼굴(H1 안 씀)+이름표, 아부는 담임 몸 얼굴(K08),
 최 선생님 울음 먼저 보이고 상황 자막, 해설 자막 5개, "회상 · 작년", DM 받는 사람 표시, 마지막은 대각선 분할(창가 지우 몸 ↔ 벤치).
@@ -26,7 +29,7 @@ EP = HERE.parent
 V = EP / '04_생성물' / 'voices'
 C = EP / '04_생성물' / 'clips'
 PC = KIT / 'episodes/ep6/clips'
-B = HERE / 'build_v3'; B.mkdir(exist_ok=True)
+B = HERE / 'build_v4'; B.mkdir(exist_ok=True)
 E5 = EP.parent / 'soulchange-ep05' / '04_생성물' / 'clips'
 P5 = KIT / 'episodes/ep5/clips'
 VO = B / 'vo'
@@ -58,7 +61,7 @@ SPEC = {
     'E09a': dict(f='E6-09_jiu_teacherbody_raw.mp3', r=[(0.10, 2.80)], gap=0.18),      # "헐.. 헐레벌떡.. 놀랐습니다"
     'E09b': dict(f='E6-09_jiu_teacherbody_raw.mp3', r=[(3.35, 5.10)]),                # "진짜 그런 애가 있다고요?"
     'E10': dict(f='E6-10_t1_helena_raw.mp3', r=[(0, 3.50)], gap=0.22),
-    'E11': dict(f='E6-11_jiu_teacherbody_raw.mp3', r=[(0, 2.75)], gap=0.18),
+    'E11': dict(f='E6-11_jiu_teacherbody_raw.mp3', r=[(0, 2.75)], gap=0.18, tempo=1.15),   # v4: 크게 벌린 입에 맞게 빠르게(+2dB는 GAIN)
     'E12': dict(f='E6-12_jiu_inner_student_raw.mp3', r=[(0.05, 2.40)], gap=0.22),
     'E13': dict(f='E6-13_jiu_dm_student_raw.mp3', r=[(0, 3.45)], gap=0.20),
     'E14a': dict(f='E6-14_friend_pixie_raw.mp3', r=[(1.12, 2.98)]),                   # 앞 웃음(0–1.1) 뺌
@@ -129,7 +132,7 @@ c0 = t; e = at('E12', c0 + 0.15)
 cut('K8b', PC / 'K08.mp4', max(3.2, K8_USED), 5.04, 'pip', (5.04 - max(3.2, K8_USED)) * 1.15, note='웃음 빠지고 눈 굴리며 폰 꺼냄(입 다묾) — 속마음', stretch=1.15)
 # K9: 코드 폰 화면(담임 폰에서 지우가 보내는 DM). 속마음 끝이 걸쳐 넘어옴
 c0 = t
-e = at('E13', max(L['E12'] + D['E12'] + 0.15, c0 + 0.35))
+e = at('E13', max(L['E12'] + D['E12'] + 0.45, c0 + 0.35))   # v4: 폰이 다 올라온 뒤 첫 말풍선
 _w = [w for w in [('대박', 0.56), ('작년', 1.82)]]
 BUB = [L['E13'], L['E13'] + 1.70 / SPEC['E13']['tempo']]
 cut('K9', None, 0, None, 'pip', e + 0.45 - c0, fx='dm', note='코드 인서트: 담임 폰, 여고생 말투 DM 입력 → 말풍선 두 개 → 읽음')
@@ -161,33 +164,57 @@ assert MAIN <= MAIN_MAX + 1e-6, f'본편 {MAIN} > {MAIN_MAX}'
 
 # ---------- 3. 영상 조각 ----------
 def note_frames(n):
-    """쪽지 인서트: 줄 쳐진 종이 + 연필 손글씨(Jua), 천천히 다가감, 형광등 깜빡."""
-    pw, ph = 900, 1250
-    paper = Image.new('RGB', (pw, ph), (244, 240, 228)); d = ImageDraw.Draw(paper)
-    for y in range(140, ph - 60, 86): d.line([(40, y), (pw - 40, y)], fill=(170, 190, 220), width=3)
-    d.line([(120, 0), (120, ph)], fill=(225, 150, 150), width=3)
-    d.text((170, 300), '최○○ 티○년', font=f(118), fill=(55, 55, 70))
-    d.text((170, 500), '냄새 싫어.', font=f(104), fill=(55, 55, 70))
-    d.text((170, 650), '없어져.', font=f(104), fill=(55, 55, 70))
-    for k in range(18):   # 구김 자국
-        x0, y0 = random.Random(k).randint(0, pw), random.Random(k + 50).randint(0, ph)
-        d.line([(x0, y0), (x0 + random.Random(k + 9).randint(-300, 300), y0 + random.Random(k + 7).randint(-200, 200))], fill=(220, 214, 200), width=2)
-    paper = paper.rotate(-4, expand=True, fillcolor=(60, 66, 74))
-    bg = Image.new('RGB', (W, H), (52, 60, 68))
-    bg.paste(paper, ((W - paper.width) // 2, 200))   # v3: 쪽지 글씨가 대사 자막에 가리지 않게 위로
-    bg = bg.filter(ImageFilter.GaussianBlur(0.8))
+    """v4 쪽지 인서트: K04 손에 든 것과 같은 수첩 종이(위쪽 스프링 구멍이 찢긴 가장자리, 연한 파란 줄),
+    종이 결·구김 음영·그림자·기울기·필름 입자. 욕의 ○는 Jua에 없어 원을 직접 그림."""
+    rnd = np.random.default_rng(6)
+    pw, ph = 860, 1080
+    base = np.full((ph, pw, 3), (238, 236, 228), float)
+    base += rnd.normal(0, 3.0, (ph, pw, 1))                                  # 종이 결
+    yy, xx = np.mgrid[0:ph, 0:pw]
+    for k in range(5):                                                        # 구김 음영(접힌 자국)
+        a_, b_, c_ = rnd.normal(size=3); d_ = (a_ * xx + b_ * yy - c_ * 300 - rnd.uniform(200, 700)) / math.hypot(a_, b_)
+        base += (np.exp(-(d_ / 18) ** 2) * -14 + np.exp(-((d_ - 22) / 30) ** 2) * 6)[..., None]
+    base[int(ph * 0.48):int(ph * 0.48) + 3] -= 18                              # 가로로 한 번 접은 자국
+    paper = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8)); d = ImageDraw.Draw(paper)
+    for y in range(150, ph - 40, 72): d.line([(30, y), (pw - 30, y)], fill=(165, 188, 222), width=2)
+    pen = (48, 50, 66)
+    def text_o(x, y, parts, size):                                            # 글자 사이 ○는 원으로
+        for p_ in parts:
+            if p_ == '○':
+                r_ = size * 0.36; cy = y + size * 0.55
+                d.ellipse([x + 4, cy - r_, x + 4 + 2 * r_, cy + r_], outline=pen, width=6); x += 2 * r_ + 14
+            else:
+                d.text((x, y), p_, font=f(size), fill=pen); x += d.textlength(p_, font=f(size))
+    text_o(90, 250, ['최', '○', '○', ' 티', '○', '년'], 112)
+    d.text((90, 470), '냄새 싫어.', font=f(100), fill=pen)
+    d.text((90, 620), '없어져.', font=f(100), fill=pen)
+    # 위쪽 스프링 구멍 찢긴 가장자리(투명으로 오려 냄)
+    mask = Image.new('L', (pw, ph), 255); md = ImageDraw.Draw(mask)
+    edge = [(0, 0)]
+    for x in range(0, pw + 1, 8): edge.append((x, 18 + int(rnd.normal(0, 3))))
+    edge += [(pw, 0)]; md.polygon(edge, fill=0)
+    for x in range(40, pw - 20, 52): md.ellipse([x, 22, x + 22, 44], fill=0)
+    paper = paper.convert('RGBA'); paper.putalpha(mask)
+    paper = paper.rotate(-5, expand=True, resample=Image.BICUBIC)
+    bg = Image.new('RGB', (W, H), (46, 54, 62))
+    gb = np.asarray(bg, float) + rnd.normal(0, 4, (H, W, 1)); bg = Image.fromarray(np.clip(gb, 0, 255).astype(np.uint8))
+    px, py = (W - paper.width) // 2, 230
+    sh = Image.new('RGBA', paper.size, (0, 0, 0, 0)); sh.putalpha(paper.split()[3].point(lambda v: v * 150 // 255))
+    bg.paste(Image.new('RGB', paper.size, (0, 0, 0)), (px + 26, py + 34), sh.split()[3].filter(ImageFilter.GaussianBlur(18)))   # 그림자
+    bg.paste(paper, (px, py), paper)
+    bg = bg.filter(ImageFilter.GaussianBlur(0.9))
     fr = []
     for i in range(n):
         z = 1.0 + 0.10 * i / max(1, n - 1)
         w, h = W / z, H / z
         im = bg.transform((W, H), Image.EXTENT, ((W - w) / 2, (H - h) * 0.40, (W + w) / 2, (H - h) * 0.40 + h), Image.BICUBIC)
-        a = np.asarray(im, float)
-        if i in (3, 4, 11): a *= 0.72   # 형광등 깜빡
+        a = np.asarray(im, float) + rnd.normal(0, 6, (H, W, 1))              # 필름 입자
+        if i in (3, 4, 11): a *= 0.72                                         # 형광등 깜빡
         fr.append(np.clip(a, 0, 255).astype(np.uint8))
     return fr
 
 
-def dm_frames(n, start, bub, src_bg):
+def dm_frames(n, start, bub, src_bg, rise_at=0.0):
     """K9 폰 화면: 담임 폰(지우 영혼이 씀) → '지우'에게 여고생 말투 DM. 말풍선은 녹음 시간에 맞춰 톡 튀어나옴.
     폰이 아래에서 올라오고(0.35초) 손에 든 것처럼 조금씩 흔들림 — 멈춘 화면처럼 보이지 않게."""
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-sseof', '-0.1', '-i', str(src_bg), '-frames:v', '1', '-vf', 'scale=1080:1920', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
@@ -199,7 +226,7 @@ def dm_frames(n, start, bub, src_bg):
     fr = []
     for i in range(n):
         tt = start + i / FPS; lt = i / FPS
-        rise = min(1.0, lt / 0.35); rise = rise * rise * (3 - 2 * rise)
+        rise = min(1.0, max(0.0, lt - rise_at) / 0.35); rise = rise * rise * (3 - 2 * rise)   # v4: 앞 속마음 자막이 끝난 뒤 올라옴
         x0 = (W - pw) // 2 + int(8 * math.sin(2 * math.pi * 0.7 * lt))
         y0 = 470 + int((1 - rise) * 1300) + int(6 * math.sin(2 * math.pi * 1.1 * lt))
         im = bg.copy(); d = ImageDraw.Draw(im)
@@ -207,7 +234,7 @@ def dm_frames(n, start, bub, src_bg):
         sx0, sy0, sx1, sy1 = x0 + 22, y0 + 22, x0 + pw - 22, y0 + ph - 22
         d.rounded_rectangle([sx0, sy0, sx1, sy1], 52, fill=(236, 238, 244))
         d.rectangle([sx0, sy0 + 40, sx1, sy0 + 150], fill=(222, 225, 234))
-        d.text((sx0 + 40, sy0 + 95), '<  지우', font=f(50), fill=(30, 30, 30), anchor='lm')
+        d.text((sx0 + 36, sy0 + 95), '<  지우 폰 (지금은 쌤)', font=f(44), fill=(30, 30, 30), anchor='lm')   # v4: 받는 쪽 = 지우 폰, 안에 담임
         y = sy0 + 220
         for k in range(len(msgs)):
             if tt < bub[k]: continue
@@ -220,7 +247,9 @@ def dm_frames(n, start, bub, src_bg):
             d.text((sx1 - 36, y - 6), '읽음', font=f(34), fill=(120, 120, 130), anchor='ra')
         d.rounded_rectangle([sx0 + 24, sy1 - 130, sx1 - 24, sy1 - 40], 40, fill=(255, 255, 255))
         if tt < bub[-1]:
-            d.text((sx0 + 70, sy1 - 85), '•' * (1 + int(tt * 6) % 3), font=f(56), fill=(150, 150, 160), anchor='lm')
+            d.text((sx0 + 60, sy1 - 85), '입력 중' + '.' * (1 + int(tt * 6) % 3), font=f(40), fill=(150, 150, 160), anchor='lm')   # v4: Jua에 • 없음(□로 깨짐)
+        else:
+            d.text((sx0 + 60, sy1 - 85), '메시지 입력', font=f(40), fill=(175, 175, 185), anchor='lm')
         z = 1.0 + 0.08 * i / max(1, n - 1); w, h = W / z, H / z
         im = im.transform((W, H), Image.EXTENT, ((W - w) / 2, (H - h) / 2, (W + w) / 2, (H - h) / 2 + h), Image.BICUBIC)
         fr.append(np.asarray(im, np.uint8))
@@ -233,12 +262,13 @@ def write_frames(fr, out):
 
 
 seg_list = []
+run(['python3', HERE / 'bench_hood.py', PC / 'K11.mp4', B / 'K11_hood.mp4'])   # v4: 벤치 학생 숙인 머리 윤곽
 for c in CUTS:
     out = B / f"seg_{c['id']}.mp4"; nfr = round(c['dur'] * FPS)
     if c['fx'] == 'note':
         write_frames(note_frames(nfr), out); seg_list.append(out); continue
     if c['fx'] == 'dm':
-        write_frames(dm_frames(nfr, c['start'], BUB, B / 'seg_K8b.mp4'), out); seg_list.append(out); continue
+        write_frames(dm_frames(nfr, c['start'], BUB, B / 'seg_K8b.mp4', rise_at=max(0.0, L['E12'] + D['E12'] + 0.08 - c['start'])), out); seg_list.append(out); continue
     if c['fx'] == 'split':   # v2: 대각선 분할(선 (0,300)–(1080,1500)), 아래 왼쪽 = 얼굴, 위 오른쪽 = 벤치
         dA1 = round(SPLIT_SW - c['start'], 3); dA2 = round(c['dur'] - dA1, 3)
         mk = Image.new('L', (W, H), 0); ImageDraw.Draw(mk).polygon([(0, 300), (W, 1500), (W, H), (0, H)], fill=255)
@@ -253,7 +283,7 @@ for c in CUTS:
               f"[2:v]trim=start=1.0:duration={c['dur']:.3f},setpts=PTS-STARTPTS,fps={FPS},scale=1728:3072[bb];"
               f"color=c=0x2a2620:s={W}x{H}:r={FPS}:d={c['dur']:.3f}[bk];[bk][bb]overlay=x=-248:y=80[bn];"
               f"[3:v]format=gray,scale={W}:{H}[mk];[fa][mk]alphamerge[fm];[bn][fm]overlay=0:0[cm];[cm][4:v]overlay=0:0,format=yuv420p[v]")
-        run(['ffmpeg', '-y', '-loglevel', 'error', '-i', P5 / 'K04_C2.mp4', '-i', E5 / 'C1_K3.mp4', '-i', PC / 'K11.mp4',
+        run(['ffmpeg', '-y', '-loglevel', 'error', '-i', P5 / 'K04_C2.mp4', '-i', E5 / 'C1_K3.mp4', '-i', B / 'K11_hood.mp4',
              '-loop', '1', '-i', B / 'split_mask.png', '-loop', '1', '-i', B / 'split_line.png',
              '-filter_complex', fa, '-map', '[v]', '-frames:v', nfr, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '17', out])
         seg_list.append(out); continue
@@ -289,7 +319,7 @@ for i in range(gn):
 
 # ---------- 4. 소리 ----------
 HALL = 'aecho=0.85:0.6:45:0.12'
-GAIN = {'E01': 2.0, 'E12': 1.0, 'E16': 1.0}   # 속삭임 속마음이 겉말보다 작게 녹음됨
+GAIN = {'E01': 2.0, 'E12': 1.0, 'E16': 1.0, 'E11': 2.0}   # 속삭임 속마음이 겉말보다 작게 녹음됨
 ins, fc, mixl = [], [], []
 for i, (lid, st) in enumerate(sorted(L.items(), key=lambda kv: kv[1])):
     ins += ['-i', VO / f'{lid}.wav']
@@ -313,6 +343,9 @@ BUZZX = '0.18*sin(2*PI*150*t)*(0.5+0.5*sin(2*PI*25*t))*lt(mod(t,0.5),0.35)'
 SEND = '0.18*sin(2*PI*(700+1600*t)*t)*exp(-12*t)'
 DINGX = '0.16*sin(2*PI*1320*t)*lt(t,0.08)+0.16*sin(2*PI*1760*t)*gt(t,0.12)*lt(t,0.24)'
 sfx('chime', CHIMEX, 0.6, CHIME, 0.5)
+# v4: 빙의 풀림 "헐—" — 지지직(짧게 끊기는 전기 잡음) 0.4초, 목소리보다 작게
+fc.append(f"anoisesrc=d=0.42:c=white:a=0.5:r=48000,highpass=f=1800,volume='0.10*lt(mod(t,0.045),0.022)*(0.6+0.4*sin(2*PI*57*t))':eval=frame,"
+          f"afade=t=out:st=0.3:d=0.12,aformat=channel_layouts=stereo,adelay={int(GLITCH[0] * 1000)}:all=1[zap]"); mixl.append('[zap]')
 for k in range(3):   # 최 선생님 흐느낌: 눌린 숨소리(작게, 장난 효과 없음)
     fc.append(f"anoisesrc=d=0.45:c=pink:a=0.5:r=48000,bandpass=f=900:w=700,afade=t=in:d=0.08,afade=t=out:st=0.15:d=0.3,volume=0.10,"
               f"aformat=channel_layouts=stereo,adelay={int((SOB + 0.55 * k) * 1000)}:all=1[sob{k}]"); mixl.append(f'[sob{k}]')
@@ -377,9 +410,11 @@ def say(lid, text, tag, col='', style='Dlg', hold=0.15, delay=0.0, end=None):
     PEND.append(dict(a=a, b=b, text=text, tag=tag, col=col, style=style, grp=lid))
 def emit(x):
     fad = r'\fad(60,100)'
+    if x['grp'] == 'E08':   # v4: 빙의 풀림 자막 — 분홍 상자로 지지직 번쩍(설명 글자 없음)
+        fad = r'\3a&H00&\3c&HB45FFF&\t(0,70,\3c&H000000&)\t(70,140,\3c&HB45FFF&)\t(140,210,\3c&H000000&)\t(210,280,\3c&HB45FFF&)\t(280,400,\3c&H000000&)'
     ev(x['a'], x['b'], x['style'] + 'B', r'{\an2\pos(540,1330)' + fad + '}' + x['text'], 2)
     ty = 1181 if r'\N' in x['text'] else 1243
-    ev(x['a'], x['b'], TAGSTYLE[(x['col'], x['style'] == 'Mono')], rf"{{\an2\pos(540,{ty}){fad}}}{x['tag']}", 3)
+    ev(x['a'], x['b'], TAGSTYLE[(x['col'], x['style'] == 'Mono')], rf"{{\an2\pos(540,{ty})\fad(60,100)}}{x['tag']}", 3)
 
 ev(0.0, k['K1b']['start'] + k['K1b']['dur'], 'Label', r'{\an7\pos(40,140)}담임과 학생, 몸이 바뀌었다', 6)
 ev(0.0, 1.9, 'Label', r'{\an8\pos(540,990)\fad(0,150)}지난 화 · 교감이 "몸 바뀌는 드라마"를 들먹이며\N담임 몸의 지우를 의심했다', 6)
@@ -400,7 +435,7 @@ say('E04', '문, 문부터 닫읍시다!', '교감')
 say('E05a', '들었어요?', '옆자리 선생님', hold=0.05)
 say('E05b', r'텀블러에,\N누가 침을 뱉었대요.', '옆자리 선생님')
 say('E06', '쪽지엔… 담임 욕까지.', '옆자리 선생님')
-ev(k['K5']['start'], k['K5']['start'] + k['K5']['dur'], 'Scene', r'{\an7\pos(40,240)}회상 · 작년, 최 선생님을 놀리던 아이', 6)
+ev(k['K5']['start'], k['K5']['start'] + k['K5']['dur'], 'Scene', r'{\an7\pos(40,240)}회상 · 작년, 최 선생님을 놀리던 학생들', 6)
 say('E07', r'쌤, 요새는\N텀블러 안 들고 다니세요?', '옆 반 학생')
 say('E08', '헐—', '지우 영혼', PINK, hold=0.25)
 say('E09a', '…헐, 헐레벌떡… 놀랐습니다.', '지우 영혼', PINK)
@@ -409,7 +444,7 @@ say('E09b', '…진짜 그런 애가 있다고요?', '지우 영혼', PINK)
 say('E10', r'알잖아요,\N작년에 선생님 반이었던…', '옆자리 선생님', hold=0.3)
 narr(L['E10'] + 1.2, k['K7b']['start'] + k['K7b']['dur'], r'(작년 담임 반\N아이 짓?)')
 say('E11', '아… 아, 걔. 네, 네.', '지우 영혼', PINK)
-say('E12', r'…누군데?\N쌤한테 물어봐야지.', '(속마음) 지우 영혼', PINK, 'Mono')
+say('E12', r'…누군데?\N쌤한테 물어봐야지.', '(속마음) 지우 영혼', PINK, 'Mono', hold=0.05)   # v4: 폰이 올라오기 전에 끝
 ev(k['K9']['start'], k['K9']['start'] + k['K9']['dur'], 'Scene', r'{\an7\pos(40,240)}지우 → 진짜 담임(지우 몸)에게 DM', 6)
 ev(k['K10']['start'], k['K10']['start'] + 2.0, 'Scene', r'{\an7\pos(40,240)}같은 시각 · 교실 · 지우 몸에 담임 영혼', 6)
 narr(L['E15'] + 0.3, k['K10']['start'] + k['K10']['dur'], r'(시력은\N빙의가 안 됐나?)', 40, 880)
@@ -454,7 +489,7 @@ run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B / 'joined.mp4', '-i', KIT / '
 run(['ffmpeg', '-y', '-loglevel', 'error', '-i', B / 'ending_ep6.mp4', '-an', '-vf', f'fps={FPS},format=yuv420p,setsar=1',
      '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', B / 'ending_v.mp4'])
 (B / 'vlist.txt').write_text(f"file '{B / 'main_v.mp4'}'\nfile '{B / 'ending_v.mp4'}'\n")
-out = HERE / 'ep6_v3.mp4'
+out = HERE / 'ep6_v4.mp4'
 run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', B / 'vlist.txt', '-i', B / 'mix.wav',
      '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-t', TOT, '-movflags', '+faststart', out])
 json.dump({'main': MAIN, 'ending': END_LEN, 'total': TOT, 'loudness_LUFS': I2, 'true_peak_dBTP': TP2,
@@ -462,5 +497,5 @@ json.dump({'main': MAIN, 'ending': END_LEN, 'total': TOT, 'loudness_LUFS': I2, '
            'lines': {lid: {'start': L[lid], 'end': round(L[lid] + D[lid], 3), 'tempo': SPEC[lid]['tempo'], 'file': SPEC[lid]['f'],
                            'range': SPEC[lid]['r'], 'inner': lid in INNER} for lid in sorted(L, key=L.get)},
            'subs': SUBS, 'glitch': GLITCH, 'bgm': BGM_SECT},
-          open(HERE / 'timeline_v3.json', 'w'), ensure_ascii=False, indent=1)
+          open(HERE / 'timeline_v4.json', 'w'), ensure_ascii=False, indent=1)
 print('OK', out, TOT)
