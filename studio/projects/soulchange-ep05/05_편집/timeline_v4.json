@@ -1,0 +1,807 @@
+{
+ "main": 64.244,
+ "ending": 5.7,
+ "total": 69.944,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -3.9,
+ "cuts": [
+  {
+   "id": "K1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A1_K1.mp4",
+   "ss": 0,
+   "se": 5.04,
+   "pip": "pip",
+   "start": 0.0,
+   "dur": 4.975,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "",
+   "stretch": 0.987
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K02_P0.mp4",
+   "ss": 1.5,
+   "se": 4.548,
+   "pip": "pip_t",
+   "start": 4.975,
+   "dur": 3.048,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "",
+   "stretch": 1.0
+  },
+  {
+   "id": "K3",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/C1_K3.mp4",
+   "ss": 0,
+   "se": 2.302,
+   "pip": "pip_t",
+   "start": 8.023,
+   "dur": 2.302,
+   "zoom": [
+    1.1,
+    0.5,
+    0.0
+   ],
+   "note": "치마 안 보이게 1.1배 위쪽 기준",
+   "stretch": 1.0
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K04_C2.mp4",
+   "ss": 0,
+   "se": 5.04,
+   "pip": "pip_t",
+   "start": 10.325,
+   "dur": 5.011,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "",
+   "stretch": 0.994
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K05_P1.mp4",
+   "ss": 0.6,
+   "se": 5.04,
+   "pip": "pip_t",
+   "start": 15.336,
+   "dur": 4.996,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "폰 하얀 화면에 \"대리 엄마 ☎\" 카드. v3: 팔이 어깨에 감기는 앞 0.6초를 빼고 \"가자!\"에서 컷",
+   "stretch": 1.125
+  },
+  {
+   "id": "K5b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K04_C2.mp4",
+   "ss": 0.95,
+   "se": 1.6,
+   "pip": "pip_t",
+   "start": 20.332,
+   "dur": 0.65,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: P1→P1b 사이 지우 몸 얼굴 반응(입 다묾, 친구 둘 올려다봄) 0.65초, F2b 끝이 걸침",
+   "stretch": 1.0
+  },
+  {
+   "id": "K6a",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K06a_P1b.mp4",
+   "ss": 3.4,
+   "se": 5.04,
+   "pip": "pip_t",
+   "start": 20.982,
+   "dur": 1.848,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 뭉개진 프레임(3.0–3.37) 뺌",
+   "stretch": 1.127
+  },
+  {
+   "id": "K6b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/C3_K6b.mp4",
+   "ss": 0,
+   "se": 5.04,
+   "pip": "pip_t",
+   "start": 22.83,
+   "dur": 5.342,
+   "zoom": [
+    1.2,
+    0.5,
+    0.0
+   ],
+   "note": "책상 아래 치마 안 보이게 1.2배 위쪽 기준",
+   "stretch": 1.06
+  },
+  {
+   "id": "K7",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A2_K7_교감어느집딸.mp4",
+   "ss": 0,
+   "se": 4.267,
+   "pip": "pip",
+   "start": 28.173,
+   "dur": 4.267,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "",
+   "stretch": 1.0
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K08_P2.mp4",
+   "ss": 0,
+   "se": 5.04,
+   "pip": "pip",
+   "start": 32.44,
+   "dur": 5.35,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "",
+   "stretch": 1.062
+  },
+  {
+   "id": "K8b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A5a_K12a_교감끝훅.mp4",
+   "ss": 2.45,
+   "se": 3.15,
+   "pip": "pip",
+   "start": 37.79,
+   "dur": 0.8,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 지우 영혼 대사 첫머리를 화면 밖으로 — 듣는 교감(A5a 안 쓰는 구간, 입 다묾)",
+   "stretch": 1.143
+  },
+  {
+   "id": "K9",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A3_K9_기간제였어요.mp4",
+   "ss": 0.75,
+   "se": 6.04,
+   "pip": "pip",
+   "start": 38.59,
+   "dur": 5.966,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v2: 끝 0.6초 연장 — \"지식이 높은\" 첫머리를 담임 몸 정면에서 시작. v3: 입 다문 앞 0.75초 뺌",
+   "stretch": 1.128
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K10_P3.mp4",
+   "ss": 0.4,
+   "se": 2.3,
+   "pip": "pip",
+   "start": 44.556,
+   "dur": 1.9,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 가장 또렷한 1.9초(검지 위 → 손바닥)만",
+   "stretch": 1.0
+  },
+  {
+   "id": "K10b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A3_K9_기간제였어요.mp4",
+   "ss": 3.3,
+   "se": 6.04,
+   "pip": "pip",
+   "start": 46.456,
+   "dur": 2.76,
+   "zoom": [
+    1.2,
+    0.5,
+    0.25
+   ],
+   "note": "v3: A3 뒷부분(말하며 손바닥 손짓)을 1.2배 당겨 다른 크기로",
+   "stretch": 1.007
+  },
+  {
+   "id": "K11",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A4_K11_v2_audioref.mp4",
+   "ss": 0.25,
+   "se": 4.045999999999999,
+   "pip": "pip",
+   "start": 49.216,
+   "dur": 3.796,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v4: 새 A4, 원본 3.333초(프레임 80)에서 정지 + 번쩍·펀치 인·흔들림·집중선",
+   "stretch": 1.0
+  },
+  {
+   "id": "K12a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A5a_K12a_교감끝훅.mp4",
+   "ss": 0,
+   "se": 2.4,
+   "pip": "pip",
+   "start": 53.012,
+   "dur": 2.76,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "고지식?(입 움직임) · 허 · 아니 우리 쌤?(안경)",
+   "stretch": 1.15
+  },
+  {
+   "id": "K12r",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A3_K9_기간제였어요.mp4",
+   "ss": 0.0,
+   "se": 0.95,
+   "pip": "pip",
+   "start": 55.772,
+   "dur": 1.092,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 듣는 담임 몸(입 다묾) — \"쌤?\" 끝 + \"김 선생,\" 화면 밖",
+   "stretch": 1.149
+  },
+  {
+   "id": "K12a2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/A5a_K12a_교감끝훅.mp4",
+   "ss": 3.35,
+   "se": 5.5,
+   "pip": "pip",
+   "start": 56.864,
+   "dur": 2.472,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 교감 입 움직이는 구간만 — \"요새 몸 바뀌는 AI 빙의…\"",
+   "stretch": 1.15
+  },
+  {
+   "id": "K12b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep5/clips/K12b.mp4",
+   "ss": 0,
+   "se": 4.907,
+   "pip": "pip",
+   "start": 59.337,
+   "dur": 4.907,
+   "zoom": [
+    1.12,
+    0.65,
+    0.35
+   ],
+   "note": "Dreamina AI 배지 없애려고 1.12배 확대·오른쪽 아래 기준",
+   "stretch": 1.0
+  }
+ ],
+ "lines": {
+  "V01": {
+   "start": 0.08,
+   "end": 3.017,
+   "tempo": 1.05,
+   "file": "V01_교감_전화하셨어요_raw.mp3",
+   "range": [
+    [
+     0,
+     3.3
+    ]
+   ],
+   "inner": false
+  },
+  "V02": {
+   "start": 3.117,
+   "end": 4.895,
+   "tempo": 1.05,
+   "file": "V02_지우_네아니제가_v4_raw.mp3",
+   "range": [
+    [
+     0,
+     2.1
+    ]
+   ],
+   "inner": false
+  },
+  "V03": {
+   "start": 5.035,
+   "end": 6.599,
+   "tempo": 1.05,
+   "file": "V03_담임속_죽었다_v4_raw.mp3",
+   "range": [
+    [
+     0,
+     1.7
+    ]
+   ],
+   "inner": true
+  },
+  "V04": {
+   "start": 6.849,
+   "end": 7.943,
+   "tempo": 1.05,
+   "file": "V04_담임겉_아이씨_raw.mp3",
+   "range": [
+    [
+     0,
+     1.15
+    ]
+   ],
+   "inner": false
+  },
+  "V05": {
+   "start": 8.083,
+   "end": 10.245,
+   "tempo": 1.05,
+   "file": "V05b_담임겉_지우녀석_cut_raw.mp3",
+   "range": [
+    [
+     0,
+     0.7
+    ],
+    [
+     1.4,
+     3.108
+    ]
+   ],
+   "inner": false
+  },
+  "F1a": {
+   "start": 10.385,
+   "end": 11.923,
+   "tempo": 1.05,
+   "file": "F1_후보B_Chloe_raw.mp3",
+   "range": [
+    [
+     0,
+     1.65
+    ]
+   ],
+   "inner": false
+  },
+  "F2a": {
+   "start": 11.873,
+   "end": 13.463,
+   "tempo": 1.05,
+   "file": "F2_후보A_Pixie_raw.mp3",
+   "range": [
+    [
+     0,
+     1.72
+    ]
+   ],
+   "inner": false
+  },
+  "F1b": {
+   "start": 13.483,
+   "end": 15.276,
+   "tempo": 1.05,
+   "file": "F1_후보B_Chloe_raw.mp3",
+   "range": [
+    [
+     1.8,
+     3.72
+    ]
+   ],
+   "inner": false
+  },
+  "F1c": {
+   "start": 15.386,
+   "end": 17.688,
+   "tempo": 1.05,
+   "file": "F1_후보B_Chloe_raw.mp3",
+   "range": [
+    [
+     4.12,
+     6.92
+    ]
+   ],
+   "inner": false
+  },
+  "F2b": {
+   "start": 17.748,
+   "end": 20.582,
+   "tempo": 1.05,
+   "file": "F2_후보A_Pixie_raw.mp3",
+   "range": [
+    [
+     1.85,
+     4.92
+    ]
+   ],
+   "inner": false
+  },
+  "V12": {
+   "start": 21.132,
+   "end": 23.047,
+   "tempo": 1.05,
+   "file": "V12_담임겉_이런짓까지2_raw.mp3",
+   "range": [
+    [
+     0,
+     2.15
+    ]
+   ],
+   "inner": false
+  },
+  "V22": {
+   "start": 23.097,
+   "end": 24.673,
+   "tempo": 1.05,
+   "file": "V22_담임겉_대리부모라니_b_raw.mp3",
+   "range": [
+    [
+     0.15,
+     1.8
+    ]
+   ],
+   "inner": false
+  },
+  "V23": {
+   "start": 25.666,
+   "end": 28.111,
+   "tempo": 1.05,
+   "file": "V23_담임속_내알바아니지_a_raw.mp3",
+   "range": [
+    [
+     0.63,
+     3.6
+    ]
+   ],
+   "inner": true
+  },
+  "V13": {
+   "start": 28.253,
+   "end": 32.36,
+   "tempo": 1.05,
+   "file": "V13_교감_어느집딸_raw.mp3",
+   "range": [
+    [
+     0,
+     5.12
+    ]
+   ],
+   "inner": false
+  },
+  "V14": {
+   "start": 32.5,
+   "end": 37.73,
+   "tempo": 1.05,
+   "file": "V14_교감_인사시즌_raw.mp3",
+   "range": [
+    [
+     0,
+     6.05
+    ]
+   ],
+   "inner": false
+  },
+  "V15": {
+   "start": 37.85,
+   "end": 42.505,
+   "tempo": 1.05,
+   "file": "V15_지우_우리쌤기간제_raw.mp3",
+   "range": [
+    [
+     0,
+     5.8
+    ]
+   ],
+   "inner": false
+  },
+  "V16a": {
+   "start": 42.605,
+   "end": 43.896,
+   "tempo": 1.05,
+   "file": "V16_지우_지식이높은_a_raw.mp3",
+   "range": [
+    [
+     0,
+     1.4
+    ]
+   ],
+   "inner": false
+  },
+  "V16b": {
+   "start": 43.996,
+   "end": 49.156,
+   "tempo": 1.05,
+   "file": "V16_지우_지식이높은_a_raw.mp3",
+   "range": [
+    [
+     2.36,
+     7.8
+    ]
+   ],
+   "inner": false
+  },
+  "V17": {
+   "start": 50.091,
+   "end": 51.169,
+   "tempo": 1.3,
+   "file": "V17_지우_협박_shout_a_raw.mp3",
+   "range": [
+    [
+     0,
+     1.42
+    ]
+   ],
+   "inner": false
+  },
+  "V18": {
+   "start": 51.75,
+   "end": 52.982,
+   "tempo": 1.25,
+   "file": "V18_지우_갑질_shout_a_raw.mp3",
+   "range": [
+    [
+     0.08,
+     1.62
+    ]
+   ],
+   "inner": false
+  },
+  "V19a": {
+   "start": 53.052,
+   "end": 54.484,
+   "tempo": 1.05,
+   "file": "V19a_교감_고지식허_a_raw.mp3",
+   "range": [
+    [
+     0,
+     1.7
+    ]
+   ],
+   "inner": false
+  },
+  "V19b": {
+   "start": 54.584,
+   "end": 56.074,
+   "tempo": 1.05,
+   "file": "V19b_교감_아니우리쌤_a_raw.mp3",
+   "range": [
+    [
+     0.12,
+     1.76
+    ]
+   ],
+   "inner": false
+  },
+  "V20a": {
+   "start": 56.154,
+   "end": 60.143,
+   "tempo": 1.1,
+   "file": "V20_교감_AI빙의수작_b_raw.mp3",
+   "range": [
+    [
+     0.12,
+     4.63
+    ]
+   ],
+   "inner": false
+  },
+  "V20b": {
+   "start": 60.263,
+   "end": 62.275,
+   "tempo": 1.05,
+   "file": "V20_교감_AI빙의수작_b_raw.mp3",
+   "range": [
+    [
+     5.08,
+     7.2
+    ]
+   ],
+   "inner": false
+  },
+  "V21": {
+   "start": 62.395,
+   "end": 64.044,
+   "tempo": 1.05,
+   "file": "V21_지우속_헐설마_raw.mp3",
+   "range": [
+    [
+     0,
+     1.74
+    ]
+   ],
+   "inner": true
+  }
+ },
+ "subs": [
+  [
+   0.08,
+   3.09,
+   "하은이 어머니가 방금 나한테 전화하셨어요."
+  ],
+  [
+   3.12,
+   5.0,
+   "네? 아니… 제가…"
+  ],
+  [
+   5.04,
+   6.75,
+   "난 이제 죽었다…"
+  ],
+  [
+   6.85,
+   8.05,
+   "아이씨…"
+  ],
+  [
+   8.08,
+   10.36,
+   "하… 지우 녀석, 하…"
+  ],
+  [
+   10.38,
+   11.92,
+   "야, 너 왜 그래?"
+  ],
+  [
+   12.22,
+   13.45,
+   "미친 거야?"
+  ],
+  [
+   13.48,
+   15.36,
+   "너 요새 생결 못 써서 심심하지?"
+  ],
+  [
+   15.39,
+   17.72,
+   "가자! 이 언니가 현체 쓰게 도와줄게."
+  ],
+  [
+   17.75,
+   20.73,
+   "대리 부모 해 줄 번호 하나 따 놨다."
+  ],
+  [
+   21.13,
+   21.89,
+   "너네!"
+  ],
+  [
+   21.89,
+   23.07,
+   "이런 짓까지 해?"
+  ],
+  [
+   23.1,
+   24.82,
+   "대리 부모라니…"
+  ],
+  [
+   25.67,
+   28.22,
+   "아… 몰라. 내 알 바 아니지."
+  ],
+  [
+   28.25,
+   31.39,
+   "하은이가 어느 집 딸인지, 그렇게 말했건만…"
+  ],
+  [
+   31.39,
+   32.47,
+   "에이… 쯧쯧."
+  ],
+  [
+   32.5,
+   34.38,
+   "곧 인사 시즌인데…"
+  ],
+  [
+   34.38,
+   37.82,
+   "기간제 연장, 안 하고 싶다는 뜻으로 이해해도 되겠죠?"
+  ],
+  [
+   37.85,
+   40.46,
+   "아니, 하은이 집이 뭐… 왜요?"
+  ],
+  [
+   40.46,
+   42.57,
+   "그리고… 우리 쌤이 기간제였어요?"
+  ],
+  [
+   42.6,
+   43.96,
+   "아니 참…"
+  ],
+  [
+   44.0,
+   46.58,
+   "지식이 높은 고지식하신 교감쌤께서,"
+  ],
+  [
+   46.58,
+   49.31,
+   "무섭기까지 하면 단가요?"
+  ],
+  [
+   50.09,
+   51.27,
+   "왜 협박을 해요?"
+  ],
+  [
+   51.75,
+   53.01,
+   "이거 갑질이잖아요!"
+  ],
+  [
+   53.05,
+   54.55,
+   "고지식? 허…"
+  ],
+  [
+   54.58,
+   56.12,
+   "…아니, 우리 쌤?"
+  ],
+  [
+   56.15,
+   60.23,
+   "김 선생, 요새 몸 바뀌는 AI 빙의 드라마가 유행이더만,"
+  ],
+  [
+   60.26,
+   62.37,
+   "또 그런 걸로 넘어가려는 수작인가요?"
+  ],
+  [
+   62.4,
+   64.19,
+   "헐… 설마."
+  ]
+ ],
+ "sfx": {
+  "slam": [
+   21.002,
+   21.6582
+  ],
+  "flop": 26.11628,
+  "phone_in": 17.86725,
+  "hush": 52.982,
+  "freeze_at": 52.31568000000001,
+  "cough": 13.2076
+ }
+}
