@@ -177,38 +177,40 @@ def note_frames(n):
 
 
 def dm_frames(n, start, bub, src_bg):
-    """K9 폰 화면: 담임 폰(지우 영혼이 씀) → '지우'에게 여고생 말투 DM. 말풍선은 녹음 시간에 맞춰 뜸."""
+    """K9 폰 화면: 담임 폰(지우 영혼이 씀) → '지우'에게 여고생 말투 DM. 말풍선은 녹음 시간에 맞춰 톡 튀어나옴.
+    폰이 아래에서 올라오고(0.35초) 손에 든 것처럼 조금씩 흔들림 — 멈춘 화면처럼 보이지 않게."""
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-sseof', '-0.1', '-i', str(src_bg), '-frames:v', '1', '-vf', 'scale=1080:1920', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                          capture_output=True).stdout
     bg = Image.frombytes('RGB', (W, H), raw[:W * H * 3]).filter(ImageFilter.GaussianBlur(14))
     bg = Image.fromarray((np.asarray(bg, float) * 0.55).astype(np.uint8))
-    pw, ph = 720, 1300; x0, y0 = (W - pw) // 2, 200
+    pw, ph = 660, 1180
     msgs = ['쌤!!! 대박 사건ㅠㅠ', '작년 쌤 반 애래요;;']
     fr = []
     for i in range(n):
-        tt = start + i / FPS
+        tt = start + i / FPS; lt = i / FPS
+        rise = min(1.0, lt / 0.35); rise = rise * rise * (3 - 2 * rise)
+        x0 = (W - pw) // 2 + int(8 * math.sin(2 * math.pi * 0.7 * lt))
+        y0 = 470 + int((1 - rise) * 1300) + int(6 * math.sin(2 * math.pi * 1.1 * lt))
         im = bg.copy(); d = ImageDraw.Draw(im)
         d.rounded_rectangle([x0, y0, x0 + pw, y0 + ph], 70, fill=(22, 22, 26))
         sx0, sy0, sx1, sy1 = x0 + 22, y0 + 22, x0 + pw - 22, y0 + ph - 22
         d.rounded_rectangle([sx0, sy0, sx1, sy1], 52, fill=(236, 238, 244))
         d.rectangle([sx0, sy0 + 40, sx1, sy0 + 150], fill=(222, 225, 234))
-        d.text((sx0 + 40, sy0 + 95), '<  지우', font=f(48), fill=(30, 30, 30), anchor='lm')
-        y = sy0 + 230
-        shown = sum(1 for b in bub if tt >= b)
-        for k in range(shown):
-            tw = d.textlength(msgs[k], font=f(52))
-            d.rounded_rectangle([sx1 - 40 - tw - 50, y, sx1 - 40, y + 100], 34, fill=(255, 140, 190))
-            d.text((sx1 - 40 - 25, y + 50), msgs[k], font=f(52), fill=(255, 255, 255), anchor='rm')
-            y += 130
-        if shown == 2 and tt >= bub[1] + 1.2:
-            d.text((sx1 - 40, y - 10), '읽음', font=f(32), fill=(120, 120, 130), anchor='ra')
-        # 입력창 + 타자 중 점
+        d.text((sx0 + 40, sy0 + 95), '<  지우', font=f(50), fill=(30, 30, 30), anchor='lm')
+        y = sy0 + 220
+        for k in range(len(msgs)):
+            if tt < bub[k]: continue
+            sc = min(1.0, 0.6 + (tt - bub[k]) / 0.12 * 0.4)
+            fs = int(56 * sc); tw = d.textlength(msgs[k], font=f(fs))
+            d.rounded_rectangle([sx1 - 36 - tw - 50, y, sx1 - 36, y + int(108 * sc)], 34, fill=(255, 140, 190))
+            d.text((sx1 - 36 - 25, y + int(54 * sc)), msgs[k], font=f(fs), fill=(255, 255, 255), anchor='rm')
+            y += 136
+        if tt >= bub[-1] + 1.2:
+            d.text((sx1 - 36, y - 6), '읽음', font=f(34), fill=(120, 120, 130), anchor='ra')
         d.rounded_rectangle([sx0 + 24, sy1 - 130, sx1 - 24, sy1 - 40], 40, fill=(255, 255, 255))
-        if shown < 2:
-            dots = '•' * (1 + int(tt * 6) % 3)
-            d.text((sx0 + 70, sy1 - 85), dots, font=f(56), fill=(150, 150, 160), anchor='lm')
-        # 화면 전체 천천히 다가감
-        z = 1.0 + 0.06 * i / max(1, n - 1); w, h = W / z, H / z
+        if tt < bub[-1]:
+            d.text((sx0 + 70, sy1 - 85), '•' * (1 + int(tt * 6) % 3), font=f(56), fill=(150, 150, 160), anchor='lm')
+        z = 1.0 + 0.08 * i / max(1, n - 1); w, h = W / z, H / z
         im = im.transform((W, H), Image.EXTENT, ((W - w) / 2, (H - h) / 2, (W + w) / 2, (H - h) / 2 + h), Image.BICUBIC)
         fr.append(np.asarray(im, np.uint8))
     return fr
