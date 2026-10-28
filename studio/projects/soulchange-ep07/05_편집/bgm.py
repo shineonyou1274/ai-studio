@@ -66,6 +66,23 @@ def _section(kind, dur, seed):
             x = sum(np.sin(2 * np.pi * f * tt) for f in ch) * env * 0.12
             _add(y, x, at)
         return y
+    if kind == 'mystery':   # 7화 v3: 추리 구간 — 낮은 현 떨림(D·A, 7Hz 트레몰로) + 부드러운 초침 + 가끔 낮은 퉁김
+        trem = 0.55 + 0.45 * np.sin(2 * np.pi * 7 * t)
+        # 6화 v8 교훈: 낮은 음(<200Hz)은 여학생 속마음 음높이를 낮춰 보이게 함 → 현 떨림을 한 옥타브 위(D4·A4)에 둠
+        # 두 음이 정수비(3:2 등)면 공통 기본음(146Hz)이 생겨 같은 문제 → 반음 부딪침(A4·A#4)만 씀(공통 기본음 26Hz, 음높이 측정 범위 밖)
+        for fq, a_ in ((440.0, 0.09), (466.2, 0.06), (441.5, 0.04)):
+            y += a_ * trem * np.sin(2 * np.pi * fq * t)
+        y *= np.minimum(1, t / 0.8)
+        for j, at in enumerate(np.arange(0, dur, 0.5)):
+            _add(y, _tick(3000 if j % 2 == 0 else 2200, 0.22), at)
+            if j % 8 == 0: _add(y, _pluck(587.3, 0.6, 0.18), at)
+        return y
+    if kind == 'pulse':     # 7화 v3: 웃음 구간 — 가벼운 스타카토 펄스(펜타토닉) + 통통 튀는 베이스
+        notes = [659.3, 784.0, 880.0, 784.0, 659.3, 587.3, 523.3, 587.3]
+        for k, at in enumerate(np.arange(0, dur, 0.18)):
+            _add(y, _pluck(notes[k % 8], 0.15, 0.28), at)
+            if k % 4 == 0: _add(y, _pluck(261.6 if (k // 4) % 2 == 0 else 329.6, 0.25, 0.40), at)
+        return y
     raise ValueError(kind)
 
 

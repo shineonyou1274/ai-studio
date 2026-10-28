@@ -74,18 +74,18 @@ SPEC = {
     'E01': dict(f='E7-01_mother_soraya_raw.mp3', r=[(0, 2.05)] if 'E01short' in CUT_SET else [(0, 5.40)], gap=0.25, tempo=1.08),
     'E02b': dict(f='E7-02_jiu_teacherbody_raw.mp3', r=[(1.30, 4.75)], tempo=1.15, gap=0.15),   # "품격... 넘치죠, 그럼요!"
     'V02': dict(f='E7v5-02_mother_soraya_raw.mp3', r=[(0, 4.05)], tempo=1.08),              # "작년에 선생님이 우리 애한테 한 정서학대, 잊으셨어요?"
-    'V03': dict(f='E7v5-03_jiu_inner_student_raw.mp3', r=[(0, 2.40)], gap=0.25, tempo=1.08),   # 속마음 "정서학대...? 우리 쌤이?!"
+    'V03': dict(f='E7v5-03_jiu_inner_student_raw.mp3', r=[(0, 2.40)], gap=0.18, tempo=1.08),   # 속마음 "정서학대...? 우리 쌤이?!"
     'V04': dict(f='E7v5-04_friend_pixie_raw.mp3', r=[(0, 2.90)]),                          # "지우야, 누구랑 그렇게 열심히 톡해?"
     'E06': dict(f='E7-06_teacher_studentbody_raw.mp3', r=[(0, 2.10)], gap=0.18, tempo=1.08),   # "...쉿. 어른 일이다."
     'V05': dict(f='E7v5-05_friend_pixie_raw.mp3', r=[(0, 3.70)], gap=0.18),                # "웬 어른? 너 요즘 이상해."
     'V06a': dict(f='E7v5-06_jiu_inner_student_raw.mp3', r=[(0, 3.30)], gap=0.18),          # 속마음 "이 향수 냄새... 어디서 맡아 봤더라?"
-    'V06b': dict(f='E7v5-06_jiu_inner_student_raw.mp3', r=[(3.85, 6.40)], gap=0.28),       # 속마음 "...아. 최 쌤 향수랑 똑같잖아?"
+    'V06b': dict(f='E7v5-06_jiu_inner_student_raw.mp3', r=[(3.85, 6.40)], gap=0.18),       # 속마음 "...아. 최 쌤 향수랑 똑같잖아?"
     'E09c': dict(f='E7-09_jiu_teacherbody_raw.mp3', r=[(0, 1.08)], tempo=1.0),              # 기침
-    'E09': dict(f='E7-09_jiu_teacherbody_raw.mp3', r=[(3.02, 6.45)], tempo=1.20, gap=0.15),   # "향수가... 아주... 고급지시네요..."
+    'E09': dict(f='E7-09_jiu_teacherbody_raw.mp3', r=[(3.02, 6.45)], tempo=1.25, gap=0.12),   # "향수가... 아주... 고급지시네요..."
     'E10a': dict(f='E7-10_mother_soraya_raw.mp3', r=[(0, 1.15)], tempo=1.0),                # "향수요?!"
     'E10c': dict(f='E7v5-14_mother_soraya_raw.mp3', r=[(0, 1.65)], tempo=1.08),             # "...갑자기 웬 향수요?" (v3 새 녹음)
     'E10b': dict(f='E7-10_mother_soraya_raw.mp3', r=[(1.62, 4.58)], tempo=1.05),            # "애 하나 때문에 집안이 곤란한데, 그 담임" (욕은 삐)
-    'V07': dict(f='E7v5-07_jiu_inner_student_raw.mp3', r=[(0, 6.65)], gap=0.25),           # A 속마음
+    'V07': dict(f='E7v5-07_jiu_inner_student_raw.mp3', r=[(0, 6.65)], gap=0.18),           # A 속마음
     'V08a': dict(f='E7v5-08_jiu_dm_student_raw.mp3', r=[(0, 1.92)], gap=0.18),             # B "쌤, 쪽지에 있던 거요."
     'V08b': dict(f='E7v5-08_jiu_dm_student_raw.mp3', r=[(1.98, 5.05)]),                    # B "그거 아무래도 그 애 엄마 이야기 같은데요?"
     'V09': dict(f='E7v5-09_teacher_dm_teacher_raw.mp3', r=[(0, 3.45)], gap=0.22),          # C "엄마? 엄마라니. 그거 무슨 말이야?"
@@ -166,11 +166,11 @@ if has('E02b'):   # K3a 담임 몸 굽신 웃음
     cut('K3a', PC / 'K03.mp4', 0.1, None, 'pip', e + 0.08 - c0, stretch=min(1.15, max(1.0, (e + 0.08 - c0) / 2.5)), note='담임 몸 굽신 웃음 — "품격... 넘치죠, 그럼요!"')
 # K2 어머니 손가락 — "작년에 선생님이 우리 애한테 한 정서학대, 잊으셨어요?"
 c0 = t; e = at('V02', c0 + 0.10)
-hand('K2', [(C / 'K2_elem.mp4', 0, ELEMZ), (PC / 'K02.mp4', 0, NOZ)], e + 0.10 - c0, 'K2 자리 (어머니 손)\n검지로 콕, 탁자 톡톡', '어머니 손가락 콕')
+hand('K2', [(C / 'K2_elem.mp4', 1.95, NOZ), (PC / 'K02.mp4', 0, NOZ)], e + 0.10 - c0, 'K2 자리 (어머니 손)\n검지로 콕, 탁자 톡톡', '어머니 손가락 콕')
 # K3b 웃음 빠짐 → 탁자 밑 폰 두 엄지 — 속마음 "정서학대...? 우리 쌤이?!" → DM 글자 "쌤!!! 정서학대래요??"
 c0 = t; ZOOM_T = c0 + 0.05
 e = at('V03', c0 + 0.12)
-cut('K3b', PC / 'K03.mp4', 2.95, 5.04, 'pip', e + 0.80 - c0, stretch=1.15, hold=True, note='v3: 과장된 눈(2.5–2.9) 뺌, 2.95부터 → 폰 두 엄지 → 끝 프레임 멈춤+다가감 / v2: ' + '눈 커짐 → 탁자 밑 폰 두 엄지(입 다묾) — 속마음 + DM 글자')
+cut('K3b', PC / 'K03.mp4', 2.95, 5.04, 'pip', e + 0.70 - c0, stretch=1.15, hold=True, note='v3: 과장된 눈(2.5–2.9) 뺌, 2.95부터 → 폰 두 엄지 → 끝 프레임 멈춤+다가감 / v2: ' + '눈 커짐 → 탁자 밑 폰 두 엄지(입 다묾) — 속마음 + DM 글자')
 DM1 = end_('V03') + 0.05
 # K4 교실(지우 몸, 담임 영혼): 폰 두드림 → "쉿" — 친구 화면 밖
 k4s = 1.15; c0 = t; TYPE4 = c0 + 0.2
@@ -188,7 +188,7 @@ e = at('V06a', c0 + 0.45)
 if K1E.exists():   # v3: 과장된 입(원본 0.0–0.3) 뺀 짧은 킁킁 0.5초 → 어머니 가방 속 향수병(요소 K1 3.0~)
     cut('K6a', PC / 'K06.mp4', 0.28, 0.70, 'pip', 0.48, stretch=1.15, note='담임 몸 킁킁(짧게)')
     _need = e + 0.10 - t
-    cut('K6s', K1E, 3.0, None, 'pip', _need, zoom=ELEMZ, stretch=min(1.15, max(1.0, _need / (dur_of(K1E) - 3.0))),
+    cut('K6s', K1E, 2.6, None, 'pip', _need, zoom=ELEMZ, stretch=min(1.15, max(1.0, _need / (dur_of(K1E) - 2.6))),
         vfx=f"zoompan=z='1+0.10*on/{round(_need * FPS)}':x='iw*0.62-(iw/zoom*0.62)':y='ih*0.6-(ih/zoom*0.6)':d=1:s=1080x1920:fps={FPS},", note='요소 K1 가방 속 향수병으로 다가감 — 속마음 1')
 else:
     cut('K6a', PC / 'K06.mp4', 0.0, 0.70, 'pip', e + 0.10 - c0, stretch=1.15, hold=True, note='담임 몸 킁킁(0–0.7) → 입 다문 프레임 멈춤 + 다가감')
@@ -205,20 +205,28 @@ e = at('E09', max(e + 0.05, c0 + (3.5 - SS6) * k6s))
 K6END = (dur_of(PC / 'K06.mp4') - SS6) * k6s - 0.04
 cut('K6', PC / 'K06.mp4', SS6, None, 'pip', min(e + 0.20 - c0, K6END), stretch=k6s, vfx="zoompan=z='1+0.07*on/150':x='iw/2-(iw/zoom/2)':y='ih*0.4-(ih/zoom*0.4)':d=1:s=1080x1920:fps=30,", note='담임 몸: 손으로 입 "헐!" → 기침 → 굳은 웃음으로 말함')
 # K7 어머니 손 — "향수요?!" → "애 하나 때문에 집안이 곤란한데, 그 담임 (삐)!"
+K7E, K10E = C / 'K7_elem.mp4', C / 'K10_elem.mp4'
 c0 = t
 if has('E10a'):
-    e = at('E10a', max(c0, end_('E09')) + 0.35)
-    if has('E10c'): e = at('E10c', e + 0.12)
-    e = at('E10b', e + 0.12)
+    e = at('E10a', max(c0, end_('E09')) + 0.28)
+    if has('E10c'): e = at('E10c', e + 0.10)
+    e = at('E10b', e + 0.10)
 else:
     e = at('E10b', max(c0, end_('E09')) + 0.30)
 BEEP = e - 0.02; THUD7 = BEEP + 0.50
-hand('K7', [(C / 'K7_elem.mp4', 0, ELEMZ), (PC / 'K07.mp4', 0, NOZ)], BEEP + 0.62 - c0, 'K7 자리 (어머니 손)\n가방 끈 비틀기, 탁자에 툭', '어머니 손: 가방 끈 꽉 → 툭')
+if K7E.exists() and K10E.exists() and has('E10c'):
+    # v3: 말꼬리 + "향수요?!" = 요소 K10 앞(가방 위 두 손, 0–1.4) → "갑자기 웬 향수요?"부터 요소 K7(끈 비틀기 → 들어 올림 → 탁 내려놓음)
+    _k7a = min(L['E10c'] - 0.08 - c0, 1.40 * 1.15)
+    cut('K7a', K10E, 0.0, 1.40, 'pip', _k7a, stretch=1.15, note='요소 K10 앞: 가방 위 두 손 — "향수요?!"')
+    _k7s = min(1.15, max(1.0, (BEEP + 0.62 - t) / 5.0)); THUD7 = t + 3.0 * _k7s       # 원본 3.0초에 가방을 탁 내려놓음
+    cut('K7', K7E, 0.0, None, 'pip', BEEP + 0.62 - t, stretch=_k7s, note='요소 K7: 끈 비틀기 → 들어 올림 → 탁 — "갑자기 웬 향수요?" → 욕(삐)')
+else:
+  hand('K7', [(K7E, 0, NOZ), (PC / 'K07.mp4', 0, NOZ)], BEEP + 0.62 - c0, 'K7 자리 (어머니 손)\n가방 끈 비틀기, 탁자에 툭', '어머니 손: 가방 끈 꽉 → 툭')
 # K8 A: 쪽지 다시(욕 동그라미, "냄새 싫어" 밑줄) — 속마음
 c0 = t; e = at('V07', c0 + 0.25)
 cut('K8', None, 0, None, 'pip', e + 0.15 - c0, fx='note', note='코드: 6화 쪽지 — A 속마음')
 # K8b B: 상담실 탁자 밑, 지우(담임 몸) 폰에서 보냄
-c0 = t; e = c0 + 0.20
+c0 = t; e = c0 + 0.12
 for lid in ('V08a', 'V08b'):
     if has(lid): e = at(lid, e + 0.10)
 if not has('V09'):   # C를 빼면 B와 D를 한 화면에서 이어 보냄
@@ -237,9 +245,11 @@ if has('V09'):
   cut('KD', None, 0, None, 'pip', e + 0.15 - c0, fx='dmD', note='코드: 상담실 폰, 지우가 보냄')
 # K10 어머니 손 — "애는 엄마가 제일 잘 알아요!" → 의자 끽 → 문 쾅 (→ "살... 살펴 가세요...")
 c0 = t; e = at('E12', c0 + 0.15); CHAIR = e + 0.08; DOOR = e + 0.50
+if (C / 'K10_elem.mp4').exists(): CHAIR = c0 + 0.25; DOOR = c0 + 2.75      # 요소 K10: 원본 1.5초에 가방 들고 일어남, 4.5초쯤 문 쪽으로 나감
 if has('E13'): e = at('E13', DOOR + 0.30)
 else: e = DOOR + 0.25
-hand('K10', [(C / 'K10_elem.mp4', 0, ELEMZ), (PC / 'K10.mp4', 0, NOZ)], e + 0.12 - c0, 'K10 자리 (어머니 손)\n가방 낚아채고 일어남', '어머니 손: 가방 낚아채고 일어남')
+K10SS = 1.4 if 'K7a' in [c_['id'] for c_ in CUTS] else 0.0     # 앞 1.4초는 K7a에서 씀
+hand('K10', [(K10E, K10SS, NOZ), (PC / 'K10.mp4', 0, NOZ)], max(e + 0.12 - c0, 3.0) if K10E.exists() else e + 0.12 - c0, 'K10 자리 (어머니 손)\n가방 낚아채고 일어남', '어머니 손: 가방 낚아채고 일어남')
 if has('HM'):   # R2 그 시각 교무실 "흐흠..."
     c0 = t; e = at('HM', c0 + 0.35)
     cut('R2', E5 / 'A5a_K12a_교감끝훅.mp4', 2.45, 3.15, 'pip', e + 0.30 - c0, note='5화 교감(입 다묾) — "흐흠..."')
@@ -255,13 +265,13 @@ cut('KF', None, 0, None, 'pip_t', e + 0.12 - c0, fx='dmF', note='코드: 지우 
 # G: K12 담임 몸(빈 의자 앞) 폰 꼭 쥠 → "아동학대요?!" → 놀라 벌떡 → 허리
 K12E = C / 'K12_elem.mp4'
 # K12_elem(상담실 탁자, 폰 쥠 → 놀라 일어남 → 허리)이 있으면 그것. 동작 시각(K12E_T)은 클립을 보고 맞춘다 — 지금 값은 가정.
-K12E_T = dict(ss=0.0, shout=1.0, crack=2.6, waist=2.9)
+K12E_T = dict(ss=1.6, shout=2.65, crack=3.75, waist=4.0)   # 0–2.5 폰 봄, 2.6–3.0 놀라 일어남(입 벌림), 4.0~ 고개 젖혀 신음
 k12s = 1.15; c0 = t
 if K12E.exists():
-    T12 = K12E_T; k12s = 1.0
-    e = at('V13', c0 + (T12['shout'] - T12['ss'])); CRACK = c0 + (T12['crack'] - T12['ss'])
-    e = at('E16b', max(e + 0.25, c0 + (T12['waist'] - T12['ss'])))
-    cut('K12', K12E, T12['ss'], None, 'pip', e + 0.10 - c0, stretch=1.0, note='요소 K12(상담실): 폰 쥠 → "아동학대요?!" → 벌떡 → 허리')
+    T12 = K12E_T
+    e = at('V13', c0 + (T12['shout'] - T12['ss']) * k12s); CRACK = c0 + (T12['crack'] - T12['ss']) * k12s
+    e = at('E16b', max(e + 0.25, c0 + (T12['waist'] - T12['ss']) * k12s))
+    cut('K12', K12E, T12['ss'], None, 'pip', e + 0.10 - c0, stretch=k12s, note='요소 K12(상담실): 폰 쥠 → "아동학대요?!" → 벌떡 → 허리')
 else:
     SS12 = 1.3
     e = at('V13', c0 + (2.0 - SS12) * k12s)
@@ -270,7 +280,7 @@ else:
     cut('K12', C / 'K12.mp4', SS12, None, 'pip', e + 0.10 - c0, stretch=k12s, note='옛 K12(배경이 교실) — K12_elem.mp4 오면 자동으로 바뀜')
 # H: 받은 DM(글자만)
 c0 = t; DING = c0 + 0.45
-cut('K13', None, 0, None, 'pip', 2.00, fx='dmH', note='코드: 담임 몸 폰에 온 DM(글자만, 소리 없음)')
+cut('K13', None, 0, None, 'pip', 1.80, fx='dmH', note='코드: 담임 몸 폰에 온 DM(글자만, 소리 없음)')
 MAIN = round(t, 3); TOT = round(MAIN + END_LEN, 3)
 print('본편', MAIN, '합계', TOT, '뺀 것', sorted(CUT_SET))
 for c in CUTS:
@@ -316,20 +326,25 @@ def ph_frames(n, label):
     return push_frames(bg, n, 0.03)
 
 
-def phone(img_bg, header, bubbles, tt, side='R', col=(255, 140, 190), y_top=380, ph_=1200, rise=1.0, hint=''):
+def phone(img_bg, header, bubbles, tt, side='R', col=(255, 140, 190), y_top=380, ph_=1200, rise=1.0, hint='', tag='', tagcol=(200, 60, 140), pw=700, big=False):
     """폰 화면 하나. bubbles = [(나타나는 시각, 글)]; side R = 보낸 쪽(오른쪽), L = 받은 쪽(왼쪽)."""
     im = img_bg.copy(); d = ImageDraw.Draw(im)
-    pw = 700; x0 = (W - pw) // 2; y0 = y_top + int((1 - rise) * 1400)
+    x0 = (W - pw) // 2; y0 = y_top + int((1 - rise) * 1400)
     d.rounded_rectangle([x0, y0, x0 + pw, y0 + ph_], 70, fill=(22, 22, 26))
     sx0, sy0, sx1, sy1 = x0 + 22, y0 + 22, x0 + pw - 22, y0 + ph_ - 22
     d.rounded_rectangle([sx0, sy0, sx1, sy1], 52, fill=(236, 238, 244))
     d.rectangle([sx0, sy0 + 40, sx1, sy0 + 150], fill=(222, 225, 234))
     d.text((sx0 + 34, sy0 + 95), header, font=f(42), fill=(30, 30, 30), anchor='lm')
     y = sy0 + 190
+    F0, LH0 = (62, 78) if big else (46, 58)
+    if tag and bubbles and tt >= bubbles[0][0]:   # v3: 화자 태그는 말풍선 위에 작게
+        if side == 'R': d.text((sx1 - 34, y), tag, font=f(34), fill=tagcol, anchor='ra')
+        else: d.text((sx0 + 34, y), tag, font=f(34), fill=tagcol, anchor='la')
+        y += 50
     for k, (ta, txt) in enumerate(bubbles):
         if tt < ta: continue
-        sc = min(1.0, 0.6 + (tt - ta) / 0.12 * 0.4); fs = int(46 * sc)
-        lines = txt.split('\n'); lh = int(58 * sc)
+        sc = min(1.0, 0.6 + (tt - ta) / 0.12 * 0.4); fs = int(F0 * sc)
+        lines = txt.split('\n'); lh = int(LH0 * sc)
         tw = max(d.textlength(l, font=f(fs)) for l in lines); bh = lh * len(lines) + 32
         if side == 'R':
             d.rounded_rectangle([sx1 - 30 - tw - 44, y, sx1 - 30, y + bh], 30, fill=col)
@@ -409,7 +424,7 @@ def k8_frames(n):
     return fr
 
 
-def dm_seg(c, bg, header, items, side, col, recv=False):
+def dm_seg(c, bg, header, items, side, col, recv=False, tag='', tagcol=(200, 60, 140)):
     """items = [(lid 또는 절대 시각, 말풍선 글)] — 말풍선은 그 녹음이 시작할 때 뜸."""
     nfr = round(c['dur'] * FPS); bubs = []
     for key, txt in items:
@@ -417,7 +432,7 @@ def dm_seg(c, bg, header, items, side, col, recv=False):
         bubs.append((ta, txt))
     last = bubs[-1][0] if bubs else 0
     return [np.asarray(phone(bg, header, bubs, i / FPS, side=side, col=col, rise=min(1, i / FPS / 0.3),
-                             hint=('메시지 입력' if recv or i / FPS >= last + 0.2 else '입력 중...')), np.uint8) for i in range(nfr)]
+                             hint=('메시지 입력' if recv or i / FPS >= last + 0.2 else '입력 중...'), tag=tag, tagcol=tagcol, pw=820, big=True), np.uint8) for i in range(nfr)]
 
 
 CUTS_BY = {c['id']: c for c in CUTS}
@@ -430,11 +445,11 @@ for c in CUTS:
         write_frames(drift(k8_frames(nfr)), out); seg_list.append(out); continue
     if c['fx'] == 'dmB':
         bg = dim_blur(grab(PC / 'K03.mp4', 4.6))
-        items = [(lid, txt) for lid, txt in [('V08a', '쌤, 쪽지에 있던 거요.'), ('V08b', '그거 아무래도\n그 애 엄마 이야기\n같은데요?')] if has(lid)]
+        items = [(lid, txt) for lid, txt in [('V08a', '쌤, 쪽지에\n있던 거요.'), ('V08b', '그거 아무래도\n그 애 엄마 이야기\n같은데요?')] if has(lid)]
         if not has('V09'):
             items += [(lid, txt) for lid, txt in [('V10a', '이건 그냥 제 촉인데요.'), ('V10b', '아니, 확실해요.'),
                                                    ('V10c', '아무래도 자기 엄마에 대한\n불만을 써 둔 것 같아요.')] if has(lid)]
-        write_frames(drift(dm_seg(c, bg, '<  쌤 (지금 지우 몸)', items, 'R', (255, 120, 180))), out)
+        write_frames(drift(dm_seg(c, bg, '<  쌤 (지금 지우 몸)', items, 'R', (255, 120, 180), tag='지우 영혼이 보냄', tagcol=(215, 60, 140))), out)
         seg_list.append(out); continue
     if c['fx'] == 'dmD':
         bg = dim_blur(grab(PC / 'K03.mp4', 4.9), 18, 0.5)
@@ -462,12 +477,12 @@ for c in CUTS:
         write_frames(fr, out); seg_list.append(out); continue
     if c['fx'] == 'dmF':
         bg = dim_blur(grab(C / 'K4.mp4', 1.0))
-        items = [(lid, txt) for lid, txt in [('V12a', '이거 아동학대일 수도\n있겠다.'), ('V12b', '정신 바짝 차려.'),
+        items = [(lid, txt) for lid, txt in [('V12a', '이거 아동학대일\n수도 있겠다.'), ('V12b', '정신 바짝 차려.'),
                                               ('V12c', '아직 직접적인 증거는\n없으니, 좀 더\n알아봐야겠다.')] if has(lid)]
-        write_frames(drift(dm_seg(c, bg, '<  지우 (지금 쌤 몸)', items, 'R', (80, 150, 230))), out); seg_list.append(out); continue
+        write_frames(drift(dm_seg(c, bg, '<  지우 (지금 쌤 몸)', items, 'R', (80, 150, 230), tag='담임 영혼이 보냄', tagcol=(40, 110, 200))), out); seg_list.append(out); continue
     if c['fx'] == 'dmH':
         bg = dim_blur(grab(C / 'K12.mp4', 4.9))
-        write_frames(dm_seg(c, bg, '<  지우 (지금 쌤 몸)', [(DING, '...허리 조심해라.\n내 몸이다.')], 'L', (200, 225, 255), recv=True), out)
+        write_frames(dm_seg(c, bg, '<  지우 (지금 쌤 몸)', [(DING, '...허리 조심해라.\n내 몸이다.')], 'L', (200, 225, 255), recv=True, tag='담임 영혼이 보냄', tagcol=(40, 110, 200)), out)
         seg_list.append(out); continue
     z, ax, ay = c['zoom']; used = c['se'] - c['ss']
     vf = (f"[0:v]trim=start={c['ss']}:duration={used:.3f},setpts=(PTS-STARTPTS)*{c['stretch']},fps={FPS},"
@@ -481,6 +496,21 @@ for c in CUTS:
     if c['id'] == 'K6f':   # 회상: 천천히 다가감
         vf += f"zoompan=z='1+0.10*on/{nfr}':x='iw*0.2-(iw/zoom*0.2)':y='ih*0.6-(ih/zoom*0.6)':d=1:s=1080x1920:fps={FPS},"
     vf += c['vfx']
+    if c.get('flash'):   # v3 플래시백: 채도 낮춤(vfx) + 가장자리 흐림·어둡게 + 처음·끝 흰 번쩍임
+        vf += "setsar=1,format=rgb24,tpad=stop_mode=clone:stop_duration=2.0[v]"
+        r2 = subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', str(c['src']), '-filter_complex', vf, '-map', '[v]', '-frames:v', str(nfr), '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True).stdout
+        mv = np.frombuffer(r2, np.uint8).reshape(-1, H, W, 3)
+        yy, xx = np.mgrid[0:H, 0:W]; rr = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
+        m = np.clip((rr - 0.55) / 0.5, 0, 1)[..., None]                       # 가장자리일수록 1
+        fr = []
+        for i, a_ in enumerate(mv):
+            bl = np.asarray(Image.fromarray(a_).resize((W // 8, H // 8), Image.BILINEAR).filter(ImageFilter.GaussianBlur(3)).resize((W, H), Image.BILINEAR), float)
+            x_ = a_.astype(float) * (1 - m) + bl * m; x_ *= (1 - 0.45 * m)
+            x_ = x_ * 0.92 + np.array([18, 12, 0]) * 1.0                       # 살짝 바랜 색
+            lt = i / FPS; w_ = max(0.0, 1 - lt / 0.22) * 0.95 + max(0.0, 1 - (c['dur'] - lt) / 0.15) * 0.8
+            x_ = x_ * (1 - w_) + 255 * w_
+            fr.append(np.clip(x_, 0, 255).astype(np.uint8))
+        write_frames(fr[:nfr], out); seg_list.append(out); continue
     if c['hold']:   # 움직이는 부분만 만들고, 끝 프레임은 멈춰 천천히 다가감
         nmov = round(used * c['stretch'] * FPS)
         vf += "setsar=1,format=rgb24[v]"
@@ -540,6 +570,7 @@ BOING = '0.20*sin(2*PI*(300+500*t)*t)*exp(-6*t)'
 sfx('tak', TAKX, 0.3, TAK, 0.8)
 for j in range(2): sfx(f'tt{j}', '0.4*sin(2*PI*1100*t)*exp(-90*t)', 0.08, k['K2']['start'] + 1.0 + 0.25 * j, 0.5)   # 손톱 톡톡
 sfx('boing', BOING, 0.4, ZOOM_T, 0.45)
+noise('fbw', 0.45, k['K6f']['start'] - 0.15, 'highpass=f=1200,afade=t=in:d=0.2,afade=t=out:st=0.2:d=0.25', 0.10)   # 회상 들어갈 때 쉭
 for j in range(8): noise(f'th{j}', 0.04, DM1 - 0.9 + 0.11 * j, 'bandpass=f=2500:w=1500', 0.08)        # 엄지 다다닥
 sfx('send1', SEND, 0.35, DM1, 0.5)
 for j in range(5): noise(f'eg{j}', 0.05, TYPE4 + 0.45 * j, 'bandpass=f=2000:w=1200', 0.10)            # 교실 폰 톡톡
@@ -572,13 +603,17 @@ for c in CUTS:
     else: amb(f"am_{c['id']}", a, b, 250, 1200, 0.008)                                        # 상담실
 fc.append(f"anoisesrc=d={MAIN}:c=brown:a=0.5:r=48000,lowpass=f=350,volume=0.0105,afade=t=in:d=0.5,afade=t=out:st={MAIN - 0.4}:d=0.4,aformat=channel_layouts=stereo[room]"); mixl.append('[room]')
 # 배경음: 교무실(가벼운 펄스) → 상담 압박 → "띠용"에서 뚝 → 교실 → 향수(떨림) → "향수요?!" 직전 뚝 → 쪽지·DM(단조) → 벤치·F(단조) → "아동학대요?!"에서 뚝
+# v3 배경음(Gemini 지적): 교무실 가벼움 → 상담 압박 → "띠용" 뚝 → 교실 친구(가벼운 펄스) → 향수 추리(미스터리) → "향수요?!" 직전 뚝
+#   → 욕(압박) → 쪽지·DM·퇴장(미스터리) → "아동학대요?!" 직전 0.4초 정적 → 허리(가벼운 펄스)
+BGM_T = -19.5   # 덕킹 전 소리 있는 곳 기준. 덕킹 뒤 배경음 전체가 -28~-30 LUFS가 되게 맞춤
 BGM_SECT = [('class', 0.0, k['K1']['start']),
             ('tense', k['K1']['start'] + 0.3, ZOOM_T),
-            ('class', k['K4']['start'], k['K6a']['start']),
-            ('tense2', k['K6a']['start'] + 0.2, end_('E09') + 0.05),
-            ('sad', k['K8']['start'], k['K10']['start']),
-            ('sad', k['K5']['start'] if 'K5' in k else k['KF']['start'], L['V13'])]
-BGM_I = bgm.make(BGM_SECT, [(VO / f'{lid}.wav', st) for lid, st in L.items()], MAIN, B / 'bgm.wav', target_lufs=-28.0, duck_db=-15.0)
+            ('pulse', k['K4']['start'], k['K6a']['start']),
+            ('mystery', k['K6a']['start'] + 0.1, end_('E09') + 0.05),
+            ('tense', L['E10b'], BEEP + 0.6),
+            ('mystery', k['K8']['start'], L['V13'] - 0.40),
+            ('pulse', end_('V13') + 0.5, MAIN)]
+BGM_I = bgm.make(BGM_SECT, [(VO / f'{lid}.wav', st) for lid, st in L.items()], MAIN, B / 'bgm.wav', target_lufs=BGM_T, duck_db=-15.0)
 ins += ['-i', B / 'bgm.wav']; mixl.append(f'[{len(ins) // 2 - 1}:a]')
 fc.append(''.join(mixl) + f"amix=inputs={len(mixl)}:normalize=0,apad=whole_dur={MAIN},atrim=0:{MAIN}[aout]")
 run(['ffmpeg', '-y', '-loglevel', 'error', *ins, '-filter_complex', ';'.join(fc), '-map', '[aout]', '-ar', '48000', B / 'mix_raw.wav'])
@@ -657,12 +692,13 @@ say('E09c', '크흠!', '지우 영혼', PINK, hold=0.05)
 say('E09', r'향수가... 아주...\N고급지시네요...', '지우 영혼', PINK)
 narr(L['E09'] + 0.3, ce('K6'), r'(수습 실패)', 640, 430)
 say('E10a', '향수요?!', '그 학생 어머니', hold=0.1)
+say('E10c', '...갑자기 웬 향수요?', '그 학생 어머니', hold=0.1)
 say('E10b', r'애 하나 때문에 집안이 곤란한데,\N그 담임 티' + CIRC + '년!', '그 학생 어머니', end=BEEP + 0.65)
 scene(cs('K8'), ce('K8'), '6화의 쪽지 · 같은 욕')
 say('V07', r'쪽지에 써 있던 거랑 똑같은 욕을 하시네...\N냄새는... 향수를 말하는 건가?', '(속마음) 지우 영혼', PINK, 'Mono')
-scene(cs('KB'), ce('KB'), '탁자 밑 · 지우가 쌤에게 DM')
-say('V08a', '쌤, 쪽지에 있던 거요.', '지우 영혼 · DM', PINK)
-say('V08b', r'그거 아무래도\N그 애 엄마 이야기 같은데요?', '지우 영혼 · DM', PINK)
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — scene
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — say
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — say
 if has('V09'):
     scene(cs('KC'), ce('KC'), '교실 · 쌤이 지우에게 DM')
     say('V09', r'엄마? 엄마라니.\N그거 무슨 말이야?', '담임 영혼 · DM', SKY)
@@ -679,14 +715,14 @@ if has('HM'):
 if 'K5' in k: scene(cs('K5'), ce('K5'), '교실 창밖 · 그 학생')
 say('V11', r'그럴 리가...\N그렇다면 그게 다...', '(속마음) 담임 영혼', SKY, 'Mono')
 if 'K5' in k: narr(L['V11'] + 0.8, ce('K5'), r'(작년 그 일이\N떠오른다)', 40, 700)
-scene(cs('KF'), ce('KF'), '교실 · 쌤이 지우에게 DM')
-say('V12a', '이거 아동학대일 수도 있겠다.', '담임 영혼 · DM', SKY)
-say('V12b', '정신 바짝 차려.', '담임 영혼 · DM', SKY)
-say('V12c', r'아직 직접적인 증거는 없으니,\N좀 더 알아봐야겠다.', '담임 영혼 · DM', SKY)
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — scene
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — say
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — say
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — say
 say('V13', '아동학대요?!', '지우 영혼', PINK, hold=0.1)
 say('E16b', '아이고, 허리야...', '지우 영혼', PINK)
 narr(L['E16b'] + 0.1, ce('K12'), r'(몸은 50대)', 600, 430)
-scene(cs('K13'), MAIN - 0.05, '쌤이 보낸 DM')
+# v3: DM 화면은 말풍선만(아래 자막·위 상황 자막 뺌) — scene
 PEND.sort(key=lambda x: x['a'])
 for i, x in enumerate(PEND):
     nxt = next((y for y in PEND[i + 1:] if y['grp'] != x['grp']), None)
