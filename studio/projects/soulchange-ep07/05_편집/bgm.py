@@ -83,6 +83,17 @@ def _section(kind, dur, seed):
             _add(y, _pluck(notes[k % 8], 0.15, 0.28), at)
             if k % 4 == 0: _add(y, _pluck(261.6 if (k // 4) % 2 == 0 else 329.6, 0.25, 0.40), at)
         return y
+    if kind == 'confront':  # 7화 v4: 어머니와 대치 — 빠른 현 떨림(E4·F4 반음 부딪침, 11Hz) + 낮은 맥박(쿵-쿵, 1초에 1.2번)
+        trem = 0.5 + 0.5 * np.sin(2 * np.pi * 11 * t)
+        swell = 0.75 + 0.25 * np.sin(2 * np.pi * 0.25 * t)
+        for fq, a_ in ((329.6, 0.08), (349.2, 0.06), (659.3, 0.025)):
+            y += a_ * trem * swell * np.sin(2 * np.pi * fq * t)
+        y *= np.minimum(1, t / 0.5)
+        for at in np.arange(0.0, dur, 0.83):
+            for dt, aa in ((0.0, 0.55), (0.16, 0.35)):
+                m = int(0.18 * SR); tt = np.arange(m) / SR
+                _add(y, aa * np.sin(2 * np.pi * (58 - 20 * tt) * tt) * np.exp(-tt * 22) * (1 - np.exp(-tt * 300)), at + dt)
+        return y
     raise ValueError(kind)
 
 
@@ -102,12 +113,12 @@ def _write(x, path):
                    input=st.tobytes(), check=True)
 
 
-def make(sections, voices, total, out_wav, target_lufs=-28.0, duck_db=-10.0, class_db=-4.0):
+def make(sections, voices, total, out_wav, target_lufs=-28.0, duck_db=-10.0, class_db=-4.0, release=0.35):
     n = int(total * SR); bed = np.zeros(n)
     for k, (kind, a, b) in enumerate(sections):
         if b <= a: continue
         y = _section(kind, b - a, k)
-        fin = int(0.3 * SR); y[:fin] *= np.linspace(0, 1, fin)                     # 들어올 때 0.3초 페이드
+        fin = min(int(0.3 * SR), len(y)); y[:fin] *= np.linspace(0, 1, fin)                     # 들어올 때 0.3초 페이드
         fo = int(0.005 * SR); y[-fo:] *= np.linspace(1, 0, fo)                    # 나갈 때는 바로 끊음
         if kind == 'class': y *= 10 ** (class_db / 20)
         _add(bed, y, a)
@@ -125,7 +136,7 @@ def make(sections, voices, total, out_wav, target_lufs=-28.0, duck_db=-10.0, cla
         _add(act, on, at)
     act = np.clip(act, 0, 1)
     g = np.empty(n); cur = 0.0
-    att, rel = 1 - np.exp(-1 / (0.05 * SR)), 1 - np.exp(-1 / (0.35 * SR))
+    att, rel = 1 - np.exp(-1 / (0.05 * SR)), 1 - np.exp(-1 / (release * SR))
     for i in range(0, n, 48):                                                      # 1ms 단위로 계산
         tgt = act[i]
         cur += (tgt - cur) * (1 - (1 - (att if tgt > cur else rel)) ** 48)
