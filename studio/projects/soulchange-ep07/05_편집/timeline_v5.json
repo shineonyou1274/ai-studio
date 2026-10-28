@@ -1,0 +1,1024 @@
+{
+ "main": 63.999,
+ "ending": 5.7,
+ "total": 69.699,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -4.0,
+ "cut_set": [
+  "C_cut",
+  "D_cut",
+  "D_trim",
+  "E01short",
+  "E13",
+  "E_cut",
+  "F_short",
+  "F_trim",
+  "HM"
+ ],
+ "cuts": [
+  {
+   "id": "OP_VPa",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/VP_lipsync_test.mp4",
+   "ss": 0.0,
+   "se": 0.805,
+   "pip": "pip",
+   "start": 0.0,
+   "dur": 0.719,
+   "zoom": [
+    1.35,
+    0.62,
+    0.3
+   ],
+   "note": "교감 립싱크 컷 원본 0.0–0.8초, 녹음 같은 구간",
+   "fx": null,
+   "st": 0.8928571428571428,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "eblur": [
+    0.13,
+    0.95
+   ],
+   "stretch": 0.8928571428571428
+  },
+  {
+   "id": "OP_VPb",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/VP_lipsync_test.mp4",
+   "ss": 1.04,
+   "se": 3.114,
+   "pip": "pip",
+   "start": 0.719,
+   "dur": 1.852,
+   "zoom": [
+    1.5,
+    0.66,
+    0.3
+   ],
+   "note": "교감 립싱크 컷 원본 1.04–3.1초, 녹음 같은 구간",
+   "fx": null,
+   "st": 0.8928571428571428,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "eblur": [
+    0.13,
+    0.95
+   ],
+   "stretch": 0.8928571428571428
+  },
+  {
+   "id": "OP_VPc",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/VP_lipsync_test.mp4",
+   "ss": 3.56,
+   "se": 7.206,
+   "pip": "pip",
+   "start": 2.571,
+   "dur": 3.255,
+   "zoom": [
+    1.35,
+    0.62,
+    0.32
+   ],
+   "note": "교감 립싱크 컷 원본 3.56–7.2초, 녹음 같은 구간",
+   "fx": null,
+   "st": 0.8928571428571428,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "eblur": [
+    0.13,
+    0.95
+   ],
+   "stretch": 0.8928571428571428
+  },
+  {
+   "id": "OP_VPd",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/VP_lipsync_test.mp4",
+   "ss": 7.58,
+   "se": 9.463,
+   "pip": "pip",
+   "start": 5.826,
+   "dur": 1.681,
+   "zoom": [
+    1.42,
+    0.6,
+    0.28
+   ],
+   "note": "교감 립싱크 컷 원본 7.58–9.45초, 녹음 같은 구간",
+   "fx": null,
+   "st": 0.8928571428571428,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "eblur": [
+    0.13,
+    0.95
+   ],
+   "stretch": 0.8928571428571428
+  },
+  {
+   "id": "OPd",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K08.mp4",
+   "ss": 1.55,
+   "se": 2.653,
+   "pip": "pip",
+   "start": 7.507,
+   "dur": 1.103,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "6화 K08 담임 몸 활짝 웃음 — \"네, 네!\"",
+   "fx": null,
+   "st": null,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K1_elem_test.mp4",
+   "ss": 0.45,
+   "se": 2.779,
+   "pip": "pip",
+   "start": 8.61,
+   "dur": 2.329,
+   "zoom": [
+    1.2,
+    0.5,
+    1.0
+   ],
+   "note": "어머니 손: 탁자 탁, 가방 입구 향수병 — K1_elem_test.mp4",
+   "fx": null,
+   "st": 1.0,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K2_elem.mp4",
+   "ss": 2.3,
+   "se": 5.55,
+   "pip": "pip",
+   "start": 10.939,
+   "dur": 3.737,
+   "zoom": [
+    1.6,
+    1.0,
+    0.18
+   ],
+   "note": "어머니 손가락 콕 — K2_elem.mp4",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "focus": [
+    0.7,
+    0.36,
+    0.42
+   ],
+   "stretch": 1.15
+  },
+  {
+   "id": "K3b",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K03.mp4",
+   "ss": 2.95,
+   "se": 5.04,
+   "pip": "pip",
+   "start": 14.676,
+   "dur": 2.736,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "v3: 과장된 눈(2.5–2.9) 뺌, 2.95부터 → 폰 두 엄지 → 끝 프레임 멈춤+다가감 / v2: 눈 커짐 → 탁자 밑 폰 두 엄지(입 다묾) — 속마음 + DM 글자",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": true,
+   "stretch": 1.15
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "se": 5.022,
+   "pip": "pip_t",
+   "start": 17.412,
+   "dur": 5.775,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "지우 몸(담임 영혼) 폰 두드림 → \"쉿\"",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K4b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H3_K10.mp4",
+   "ss": 1.75,
+   "se": 3.79,
+   "pip": "pip_t",
+   "start": 23.187,
+   "dur": 2.346,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "6화 H3 지우 몸 콧등 잡음 — 친구 말꼬리",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K6a",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K06.mp4",
+   "ss": 0.28,
+   "se": 0.697,
+   "pip": "pip",
+   "start": 25.532,
+   "dur": 0.48,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸 킁킁(짧게)",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K6s",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K1_elem_test.mp4",
+   "ss": 2.6,
+   "se": 5.063,
+   "pip": "pip",
+   "start": 26.012,
+   "dur": 2.833,
+   "zoom": [
+    1.2,
+    0.5,
+    1.0
+   ],
+   "note": "요소 K1 가방 속 향수병으로 다가감 — 속마음 1",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "zoompan=z='1+0.10*on/85':x='iw*0.62-(iw/zoom*0.62)':y='ih*0.6-(ih/zoom*0.6)':d=1:s=1080x1920:fps=30,fade=t=out:st=2.733:d=0.10:color=white,",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K6f",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep6/clips/K02.mp4",
+   "ss": 0.3,
+   "se": 2.609,
+   "pip": "pip",
+   "start": 28.845,
+   "dur": 2.309,
+   "zoom": [
+    1.45,
+    0.0,
+    0.62
+   ],
+   "note": "회상: 6화 K02 최 쌤 자리 + 향수병 — v3 플래시백(흰 번쩍임 들고 남, 채도 낮춤, 가장자리 흐림·어둡게)",
+   "fx": null,
+   "st": null,
+   "ph": null,
+   "vfx": "hue=s=0.30,eq=brightness=0.03:contrast=1.05,",
+   "hold": false,
+   "flash": true,
+   "stretch": 1.0
+  },
+  {
+   "id": "K6",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K06.mp4",
+   "ss": 1.05,
+   "se": 3.22,
+   "pip": "pip",
+   "start": 31.154,
+   "dur": 2.495,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "담임 몸: 손으로 입 \"헐!\" → 주먹 기침",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "zoompan=z='1+0.07*on/150':x='iw/2-(iw/zoom/2)':y='ih*0.4-(ih/zoom*0.4)':d=1:s=1080x1920:fps=30,",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K6c",
+   "src": "/home/user/youtube-ops/series/_soulchange_kit/episodes/ep7/clips/K06.mp4",
+   "ss": 3.62,
+   "se": 5.007,
+   "pip": "pip",
+   "start": 33.65,
+   "dur": 1.595,
+   "zoom": [
+    1.12,
+    0.5,
+    0.3
+   ],
+   "note": "담임 몸: 손으로 입 \"헐!\" → 기침 → 굳은 웃음으로 말함",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K7a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K10_elem.mp4",
+   "ss": 0.0,
+   "se": 1.4,
+   "pip": "pip",
+   "start": 35.245,
+   "dur": 1.61,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "요소 K10 앞: 가방 위 두 손 — \"향수요?!\"",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K7",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K7_elem.mp4",
+   "ss": 0.0,
+   "se": 5.113,
+   "pip": "pip",
+   "start": 36.855,
+   "dur": 5.88,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "요소 K7: 끈 비틀기 → 들어 올림 → 탁 — \"갑자기 웬 향수요?\" → 욕(삐)",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K8",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 42.735,
+   "dur": 5.456,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 6화 쪽지 — A 속마음",
+   "fx": "note",
+   "st": null,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "KB",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 48.191,
+   "dur": 4.697,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 상담실 탁자 밑 폰, 지우가 보냄(말풍선 둘)",
+   "fx": "dmB",
+   "st": null,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K10_elem.mp4",
+   "ss": 1.4,
+   "se": 4.52,
+   "pip": "pip",
+   "start": 52.888,
+   "dur": 3.12,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "어머니 손: 가방 낚아채고 일어남 — K10_elem.mp4",
+   "fx": null,
+   "st": 1.0,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "KF",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip_t",
+   "start": 56.008,
+   "dur": 1.96,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 지우 폰(지금은 쌤)에서 보냄",
+   "fx": "dmF",
+   "st": null,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  },
+  {
+   "id": "K12",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K12_elem.mp4",
+   "ss": 1.6,
+   "se": 5.41,
+   "pip": "pip",
+   "start": 57.968,
+   "dur": 4.381,
+   "zoom": [
+    1.25,
+    0.5,
+    0.0
+   ],
+   "note": "요소 K12(상담실): 폰 쥠 → \"아동학대요?!\" → 벌떡 → 허리",
+   "fx": null,
+   "st": 1.15,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.15
+  },
+  {
+   "id": "K13",
+   "src": null,
+   "ss": 0,
+   "se": 0,
+   "pip": "pip",
+   "start": 62.349,
+   "dur": 1.65,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "note": "코드: 담임 몸 폰에 온 DM(글자만, 소리 없음)",
+   "fx": "dmH",
+   "st": null,
+   "ph": null,
+   "vfx": "",
+   "hold": null,
+   "stretch": 1.0
+  }
+ ],
+ "lines": {
+  "VPa": {
+   "start": 0.0,
+   "end": 0.719,
+   "tempo": 1.12,
+   "file": "E7v5-01b_vp_arthur_raw.mp3",
+   "range": [
+    [
+     0.0,
+     0.8
+    ]
+   ],
+   "inner": false
+  },
+  "VPb": {
+   "start": 0.719,
+   "end": 2.571,
+   "tempo": 1.12,
+   "file": "E7v5-01b_vp_arthur_raw.mp3",
+   "range": [
+    [
+     1.04,
+     3.1
+    ]
+   ],
+   "inner": false
+  },
+  "VPc": {
+   "start": 2.571,
+   "end": 5.826,
+   "tempo": 1.12,
+   "file": "E7v5-01b_vp_arthur_raw.mp3",
+   "range": [
+    [
+     3.56,
+     7.2
+    ]
+   ],
+   "inner": false
+  },
+  "VPd": {
+   "start": 5.826,
+   "end": 7.507,
+   "tempo": 1.12,
+   "file": "E7v5-01b_vp_arthur_raw.mp3",
+   "range": [
+    [
+     7.58,
+     9.45
+    ]
+   ],
+   "inner": false
+  },
+  "E02a": {
+   "start": 7.587,
+   "end": 8.46,
+   "tempo": 1.1,
+   "file": "E7-02_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.95
+    ]
+   ],
+   "inner": false
+  },
+  "E01": {
+   "start": 8.81,
+   "end": 10.689,
+   "tempo": 1.08,
+   "file": "E7-01_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     2.05
+    ]
+   ],
+   "inner": false
+  },
+  "V02": {
+   "start": 11.039,
+   "end": 14.576,
+   "tempo": 1.08,
+   "file": "E7v5-02_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     4.05
+    ]
+   ],
+   "inner": false
+  },
+  "V03": {
+   "start": 14.796,
+   "end": 16.962,
+   "tempo": 1.08,
+   "file": "E7v5-03_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0,
+     2.4
+    ]
+   ],
+   "inner": true
+  },
+  "V04": {
+   "start": 17.532,
+   "end": 20.027,
+   "tempo": 1.15,
+   "file": "E7v5-04_friend_pixie_raw.mp3",
+   "range": [
+    [
+     0,
+     2.9
+    ]
+   ],
+   "inner": false
+  },
+  "E06": {
+   "start": 20.344,
+   "end": 22.055,
+   "tempo": 1.08,
+   "file": "E7-06_teacher_studentbody_raw.mp3",
+   "range": [
+    [
+     0,
+     2.1
+    ]
+   ],
+   "inner": false
+  },
+  "V05": {
+   "start": 22.205,
+   "end": 25.382,
+   "tempo": 1.15,
+   "file": "E7v5-05_friend_pixie_raw.mp3",
+   "range": [
+    [
+     0,
+     3.7
+    ]
+   ],
+   "inner": false
+  },
+  "V06a": {
+   "start": 25.982,
+   "end": 28.745,
+   "tempo": 1.15,
+   "file": "E7v5-06_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0,
+     3.3
+    ]
+   ],
+   "inner": true
+  },
+  "V06b": {
+   "start": 28.965,
+   "end": 31.004,
+   "tempo": 1.15,
+   "file": "E7v5-06_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     3.85,
+     6.4
+    ]
+   ],
+   "inner": true
+  },
+  "HUL": {
+   "start": 31.214,
+   "end": 31.814,
+   "tempo": 1.0,
+   "file": "E6-08d_jiu_leak_student_raw.mp3",
+   "range": [
+    [
+     0,
+     0.6
+    ]
+   ],
+   "inner": true
+  },
+  "E09c": {
+   "start": 33.109,
+   "end": 33.889,
+   "tempo": 1.0,
+   "file": "E7-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.82
+    ]
+   ],
+   "inner": false
+  },
+  "E09": {
+   "start": 33.939,
+   "end": 36.58,
+   "tempo": 1.25,
+   "file": "E7-09_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     3.02,
+     6.45
+    ]
+   ],
+   "inner": false
+  },
+  "E10a": {
+   "start": 36.86,
+   "end": 37.72,
+   "tempo": 1.0,
+   "file": "E7-10_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     1.15
+    ]
+   ],
+   "inner": false
+  },
+  "E10c": {
+   "start": 37.82,
+   "end": 39.34,
+   "tempo": 1.08,
+   "file": "E7v5-14_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     1.65
+    ]
+   ],
+   "inner": false
+  },
+  "E10b": {
+   "start": 39.44,
+   "end": 42.255,
+   "tempo": 1.05,
+   "file": "E7-10_mother_soraya_raw.mp3",
+   "range": [
+    [
+     1.62,
+     4.58
+    ]
+   ],
+   "inner": false
+  },
+  "V07": {
+   "start": 42.985,
+   "end": 48.041,
+   "tempo": 1.15,
+   "file": "E7v5-07_jiu_inner_student_raw.mp3",
+   "range": [
+    [
+     0,
+     6.65
+    ]
+   ],
+   "inner": true
+  },
+  "V08a": {
+   "start": 48.411,
+   "end": 49.987,
+   "tempo": 1.15,
+   "file": "E7v5-08_jiu_dm_student_raw.mp3",
+   "range": [
+    [
+     0,
+     1.92
+    ]
+   ],
+   "inner": false
+  },
+  "V08b": {
+   "start": 50.087,
+   "end": 52.768,
+   "tempo": 1.15,
+   "file": "E7v5-08_jiu_dm_student_raw.mp3",
+   "range": [
+    [
+     1.98,
+     5.05
+    ]
+   ],
+   "inner": false
+  },
+  "E12": {
+   "start": 53.038,
+   "end": 55.177,
+   "tempo": 1.15,
+   "file": "E7-12_mother_soraya_raw.mp3",
+   "range": [
+    [
+     0,
+     2.55
+    ]
+   ],
+   "inner": false
+  },
+  "V12a": {
+   "start": 56.258,
+   "end": 57.848,
+   "tempo": 1.15,
+   "file": "E7v5-12_teacher_dm_teacher_raw.mp3",
+   "range": [
+    [
+     0,
+     1.88
+    ]
+   ],
+   "inner": false
+  },
+  "V13": {
+   "start": 59.175,
+   "end": 60.125,
+   "tempo": 1.0,
+   "file": "E7v5-13_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     0,
+     0.95
+    ]
+   ],
+   "inner": false
+  },
+  "E16b": {
+   "start": 60.728,
+   "end": 62.249,
+   "tempo": 1.05,
+   "file": "E7-16b_jiu_teacherbody_raw.mp3",
+   "range": [
+    [
+     1.45,
+     3.2
+    ]
+   ],
+   "inner": false
+  }
+ },
+ "subs": [
+  [
+   0.0,
+   2.54,
+   "김 선생, 텀블러 건 학생 어머님 오셨어요."
+  ],
+  [
+   2.57,
+   5.8,
+   "담임이 병가라, 작년 담임인 김 선생이 좀 맡아요."
+  ],
+  [
+   5.83,
+   7.56,
+   "웃으면서, 조용히."
+  ],
+  [
+   7.59,
+   8.61,
+   "네, 네!"
+  ],
+  [
+   8.81,
+   10.84,
+   "우리 아이는 아무 문제가 없어요."
+  ],
+  [
+   11.04,
+   14.73,
+   "작년에 선생님이 우리 애한테 한 정서학대, 잊으셨어요?"
+  ],
+  [
+   14.8,
+   17.11,
+   "정서학대...? 우리 쌤이?!"
+  ],
+  [
+   17.53,
+   20.18,
+   "지우야, 누구랑 그렇게 열심히 톡해?"
+  ],
+  [
+   20.34,
+   22.17,
+   "...쉿. 어른 일이다."
+  ],
+  [
+   22.2,
+   25.53,
+   "웬 어른? 너 요즘 이상해."
+  ],
+  [
+   25.98,
+   28.89,
+   "이 향수 냄새... 어디서 맡아 봤더라?"
+  ],
+  [
+   28.96,
+   31.15,
+   "...아. 최 쌤 향수랑 똑같잖아?"
+  ],
+  [
+   31.21,
+   32.06,
+   "헐!"
+  ],
+  [
+   33.11,
+   33.91,
+   "크흠!"
+  ],
+  [
+   33.94,
+   36.73,
+   "향수가... 아주... 고급지시네요..."
+  ],
+  [
+   36.86,
+   37.79,
+   "향수요?!"
+  ],
+  [
+   37.82,
+   39.41,
+   "...갑자기 웬 향수요?"
+  ],
+  [
+   39.44,
+   42.88,
+   "애 하나 때문에 집안이 곤란한데, 그 담임 티m 0 22 b 0 10 10 0 22 0 b 34 0 44 10 44 22 b 44 34 34 44 22 44 b 10 44 0 34 0 22 m 6 22 b 6 31 13 38 22 38 b 31 38 38 31 38 22 b 38 13 31 6 22 6 b 13 6 6 13 6 22년!"
+  ],
+  [
+   42.98,
+   48.19,
+   "쪽지에 써 있던 거랑 똑같은 욕을 하시네... 냄새는... 향수를 말하는 건가?"
+  ],
+  [
+   53.04,
+   55.33,
+   "애는 엄마가 제일 잘 알아요!"
+  ],
+  [
+   59.17,
+   60.23,
+   "아동학대요?!"
+  ],
+  [
+   60.73,
+   62.4,
+   "아이고, 허리야..."
+  ]
+ ],
+ "glitch": [
+  31.214,
+  31.863999999999997
+ ],
+ "bgm": [
+  [
+   "class",
+   0.0,
+   8.61
+  ],
+  [
+   "confront",
+   8.76,
+   14.725999999999997
+  ],
+  [
+   "pulse",
+   17.412,
+   25.532
+  ],
+  [
+   "mystery",
+   25.632,
+   36.629999999999995
+  ],
+  [
+   "confront",
+   36.91,
+   56.008
+  ],
+  [
+   "mystery",
+   56.008,
+   58.775
+  ],
+  [
+   "pulse",
+   60.175,
+   60.42049999999998
+  ],
+  [
+   "class",
+   62.299,
+   63.999
+  ]
+ ],
+ "placeholders": []
+}
