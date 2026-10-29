@@ -1,0 +1,709 @@
+{
+ "main": 88.809,
+ "ending": 5.7,
+ "total": 94.509,
+ "loudness_LUFS": -14.1,
+ "true_peak_dBTP": -4.3,
+ "cuts": [
+  {
+   "id": "K1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K1.mp4",
+   "ss": 0,
+   "dur": 5.992,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": false,
+   "start": 0.0,
+   "note": "담임 몸 끄덕끄덕 → \"넵!\"(원본 3.70초, x1.00) → 귀 뒤로 넘김"
+  },
+  {
+   "id": "K2v",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K2.mp4",
+   "ss": 0,
+   "dur": 2.4,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": false,
+   "start": 5.992,
+   "note": "보고서 작성자 칸에 펜으로 씀"
+  },
+  {
+   "id": "K2c",
+   "src": null,
+   "ss": 0,
+   "dur": 2.78,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": "box",
+   "vfx": "",
+   "hold": false,
+   "start": 8.392,
+   "note": "코드: 작성자 칸 지우 → 박박 → 김○○"
+  },
+  {
+   "id": "K3a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K4.mp4",
+   "ss": 0.0,
+   "dur": 2.3,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "hflip,",
+   "hold": false,
+   "start": 11.172,
+   "note": "7화 K4 재사용(좌우 반전) — 지우 몸 검지 타자"
+  },
+  {
+   "id": "K3b",
+   "src": null,
+   "ss": 0,
+   "dur": 5.822,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": "dm5",
+   "vfx": "",
+   "hold": false,
+   "start": 13.472,
+   "note": "코드: 지우 폰에서 담임 영혼이 보냄"
+  },
+  {
+   "id": "K4a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "dur": 7.19,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": true,
+   "start": 19.294,
+   "note": "남학생 셋 뒷모습: 떠밀기 → 종이 내밂"
+  },
+  {
+   "id": "K5a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/H2.mp4",
+   "ss": 0,
+   "dur": 2.85,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": false,
+   "start": 26.484,
+   "note": "담임 몸 종이 받아 가슴에 꼭 → \"너희가, 이걸 다 알아?\""
+  },
+  {
+   "id": "K6",
+   "src": null,
+   "ss": 0,
+   "dur": 4.2,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": "list",
+   "vfx": "",
+   "hold": false,
+   "start": 29.334,
+   "note": "코드: 아이들 목록 — 센 향수 냄새에서 멈춤 → 딸기우유로 줌"
+  },
+  {
+   "id": "K5b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/H2.mp4",
+   "ss": 2.85,
+   "dur": 3.152,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": false,
+   "start": 33.534,
+   "note": "담임 몸 손으로 입 → 굳은 웃음, 눈만 아이들 쪽"
+  },
+  {
+   "id": "K4b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K4.mp4",
+   "ss": 7.5,
+   "dur": 3.906,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": true,
+   "start": 36.685,
+   "note": "셋 서로 쳐다봄 → 맨 뒤 웃음 참기"
+  },
+  {
+   "id": "K7",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K7.mp4",
+   "ss": 0,
+   "dur": 8.857,
+   "pip": "pip",
+   "stretch": 1.1068943508896323,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": true,
+   "start": 40.591,
+   "note": "병가 중 최 쌤 빈 책상 — 목록 붙이고 테이프 꾹꾹"
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K8.mp4",
+   "ss": 0,
+   "dur": 5.06,
+   "pip": "pip_t",
+   "stretch": 1.0116627116519357,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": true,
+   "start": 49.448,
+   "note": "벤치: 지우 몸 아저씨처럼 앉음 → 이어폰 받음"
+  },
+  {
+   "id": "K10",
+   "src": null,
+   "ss": 0,
+   "dur": 18.587,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": "chat",
+   "vfx": "",
+   "hold": false,
+   "start": 54.508,
+   "note": "코드: 반 단톡 — 늙크크 → 삭제 → 하은 오사카 사진"
+  },
+  {
+   "id": "RP",
+   "src": null,
+   "ss": 0,
+   "dur": 2.2,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": "report",
+   "vfx": "",
+   "hold": false,
+   "start": 73.095,
+   "note": "코드: 완성된 상담 보고서(판단하지 않음 밑줄)"
+  },
+  {
+   "id": "K11a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K11a.mp4",
+   "ss": 0,
+   "dur": 4.992,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": false,
+   "start": 75.295,
+   "note": "교감 이마 짚고 한숨 → 수화기 듦"
+  },
+  {
+   "id": "K11b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K11b.mp4",
+   "ss": 0,
+   "dur": 8.522,
+   "pip": "pip",
+   "stretch": 1.0650280747749192,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "fx": null,
+   "vfx": "",
+   "hold": true,
+   "start": 80.287,
+   "note": "문 열림 → 역광 최 쌤 실루엣"
+  }
+ ],
+ "lines": {
+  "A01": {
+   "start": 0.05,
+   "end": 3.083,
+   "file": "E8v5-01_vp_arthur.mp3",
+   "range": [
+    [
+     0,
+     4.21
+    ]
+   ],
+   "inner": false
+  },
+  "NEP": {
+   "start": 3.7,
+   "end": 4.61,
+   "file": "E8v5-02_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0,
+     0.91
+    ]
+   ],
+   "inner": false
+  },
+  "KN": {
+   "start": 9.642,
+   "end": 10.922,
+   "file": "E8v5-03_jiu_inner_student.mp3",
+   "range": [
+    [
+     0,
+     1.41
+    ]
+   ],
+   "inner": true
+  },
+  "DM5": {
+   "start": 13.622,
+   "end": 18.844,
+   "file": "E8v5-05_teacher_dm_teacher.mp3",
+   "range": [
+    [
+     0,
+     7.16
+    ]
+   ],
+   "inner": false
+  },
+  "S1a": {
+   "start": 19.494,
+   "end": 22.444,
+   "file": "E8v5-07_s1_dylan.mp3",
+   "range": [
+    [
+     0,
+     3.6
+    ]
+   ],
+   "inner": false
+  },
+  "S1b": {
+   "start": 22.694,
+   "end": 26.284,
+   "file": "E8v5-07_s1_dylan.mp3",
+   "range": [
+    [
+     3.6,
+     7.48
+    ]
+   ],
+   "inner": false
+  },
+  "NEO": {
+   "start": 26.684,
+   "end": 29.034,
+   "file": "E8v5-04_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0,
+     2.35
+    ]
+   ],
+   "inner": false
+  },
+  "S1c": {
+   "start": 29.534,
+   "end": 31.694,
+   "file": "E8v5-07_s1_dylan.mp3",
+   "range": [
+    [
+     7.48,
+     9.94
+    ]
+   ],
+   "inner": false
+  },
+  "LEAK": {
+   "start": 33.784,
+   "end": 35.974,
+   "file": "E8v5-06a_jiu_leak_student.mp3",
+   "range": [
+    [
+     0,
+     2.19
+    ]
+   ],
+   "inner": true
+  },
+  "S1d": {
+   "start": 36.124,
+   "end": 38.101,
+   "file": "E8v5-07_s1_dylan.mp3",
+   "range": [
+    [
+     9.94,
+     12.28
+    ]
+   ],
+   "inner": false
+  },
+  "BYS": {
+   "start": 38.301,
+   "end": 39.741,
+   "file": "E8v5-08_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0,
+     1.54
+    ]
+   ],
+   "inner": false
+  },
+  "EM": {
+   "start": 40.891,
+   "end": 43.971,
+   "file": "E8v5-09_jiu_inner_student.mp3",
+   "range": [
+    [
+     0,
+     3.47
+    ]
+   ],
+   "inner": true
+  },
+  "VPW": {
+   "start": 44.171,
+   "end": 47.437,
+   "file": "E8v5-10_vp_arthur.mp3",
+   "range": [
+    [
+     0,
+     3.96
+    ]
+   ],
+   "inner": false
+  },
+  "NA": {
+   "start": 47.557,
+   "end": 49.098,
+   "file": "E8v5-08_jiu_teacherbody.mp3",
+   "range": [
+    [
+     1.54,
+     3.5
+    ]
+   ],
+   "inner": false
+  },
+  "JAK": {
+   "start": 51.748,
+   "end": 54.158,
+   "file": "E8v5-11_teacher_inner_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.77
+    ]
+   ],
+   "inner": true
+  },
+  "OLD1": {
+   "start": 54.858,
+   "end": 61.25,
+   "file": "E8v5-12_teacher_studentbody.mp3",
+   "range": [
+    [
+     0,
+     8.28
+    ]
+   ],
+   "inner": false
+  },
+  "OLD2": {
+   "start": 63.3,
+   "end": 66.319,
+   "file": "E8v5-12_teacher_studentbody.mp3",
+   "range": [
+    [
+     8.28,
+     11.92
+    ]
+   ],
+   "inner": false
+  },
+  "OLD3": {
+   "start": 67.719,
+   "end": 72.645,
+   "file": "E8v5-12_teacher_studentbody.mp3",
+   "range": [
+    [
+     11.92,
+     17.87
+    ]
+   ],
+   "inner": false
+  },
+  "YGY": {
+   "start": 73.245,
+   "end": 74.475,
+   "file": "E8v5-08_jiu_teacherbody.mp3",
+   "range": [
+    [
+     3.5,
+     4.99
+    ]
+   ],
+   "inner": false
+  },
+  "VPH": {
+   "start": 75.895,
+   "end": 78.995,
+   "file": "E8v5-10_vp_arthur.mp3",
+   "range": [
+    [
+     3.9,
+     7.0
+    ]
+   ],
+   "inner": false
+  },
+  "CHOI": {
+   "start": 81.587,
+   "end": 88.109,
+   "file": "E8v5-13_choi_celine.mp3",
+   "range": [
+    [
+     0,
+     7.55
+    ]
+   ],
+   "inner": false
+  }
+ },
+ "subs": [
+  [
+   0.05,
+   3.23,
+   "김 선생, 어제 상담 보고서. 오늘 안에 내요. 조용히."
+  ],
+  [
+   3.7,
+   4.91,
+   "넵!"
+  ],
+  [
+   9.64,
+   11.07,
+   "...큰일 날 뻔."
+  ],
+  [
+   19.49,
+   22.59,
+   "아, 밀지 마... 쌤, 이거요."
+  ],
+  [
+   22.69,
+   26.43,
+   "...최 쌤한테, 텀블러로 놀린 거... 죄송하다고요."
+  ],
+  [
+   26.68,
+   29.18,
+   "...너희가, 이걸 다 알아?"
+  ],
+  [
+   29.53,
+   31.84,
+   "다 알죠. 맨날 같이 있는데."
+  ],
+  [
+   33.78,
+   36.07,
+   "꺄, 나도 딸기우유!"
+  ],
+  [
+   36.12,
+   38.25,
+   "...방금, 쌤 목소리 왜 저래?"
+  ],
+  [
+   38.3,
+   39.89,
+   "...벼, 변성기다."
+  ],
+  [
+   40.89,
+   44.12,
+   "엄마도 모르는 걸, 애들은 알았네."
+  ],
+  [
+   44.17,
+   47.53,
+   "거, 벽에 종이 붙이지 맙시다. 이사장님 오시는데."
+  ],
+  [
+   47.56,
+   49.25,
+   "넵! ...안 뗄 거지만."
+  ],
+  [
+   51.75,
+   54.31,
+   "...작년엔, 내가 틀어 줬는데."
+  ],
+  [
+   54.86,
+   61.4,
+   "키읔, 키읔, 키읔... 다들... 영크크하게... 방가방가... 물결..."
+  ],
+  [
+   63.3,
+   66.47,
+   "...웃는 눈인데. ...이거밖에 못 하나, 나."
+  ],
+  [
+   67.72,
+   72.8,
+   "아악, 사건이 끊이질 않네... 하은이네 일본 갔다 오면, 이제 또 어떻게 하냐."
+  ],
+  [
+   73.25,
+   74.63,
+   "여기요오."
+  ],
+  [
+   75.89,
+   79.14,
+   "하... 왜 자꾸 이런 일이..."
+  ],
+  [
+   81.59,
+   85.63,
+   "교감 선생님, 아직 아이 이야기는 하나도 안 들었잖아요."
+  ],
+  [
+   85.66,
+   88.26,
+   "조금만 시간을 주시겠어요?"
+  ]
+ ],
+ "glitch": [
+  33.784,
+  35.384
+ ],
+ "bgm": [
+  [
+   "class",
+   0.0,
+   11.172
+  ],
+  [
+   "mystery",
+   11.172,
+   19.294
+  ],
+  [
+   "pulse",
+   19.394000000000002,
+   33.734
+  ],
+  [
+   "pulse",
+   40.141,
+   40.591
+  ],
+  [
+   "class",
+   40.591,
+   49.448
+  ],
+  [
+   "mystery",
+   49.448,
+   54.508
+  ],
+  [
+   "pulse",
+   54.508,
+   73.095
+  ],
+  [
+   "confront",
+   73.095,
+   80.38666700000002
+  ],
+  [
+   "mystery",
+   81.387,
+   88.809
+  ]
+ ]
+}
