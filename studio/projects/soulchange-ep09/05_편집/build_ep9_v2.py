@@ -125,17 +125,27 @@ cut('K7', K('K7'), 0, max(e + 0.3 - c0, 4.0), pip='pip_t', note='지우 몸(김�
 cut('K8', K('K8'), 0.3, 4.6, pip=None, note='최 쌤 손: 목록 쓸다가 멈춤 → 향수병을 듦')
 # K9 벤치 와이드: 최 쌤 와서 앉음
 cut('K9', K('K9'), 0, 5.2, pip=None, note='벤치 뒤 와이드: 최 쌤 와서 앉음')
-# K10 최 쌤 멘트 앞(립싱크, 원음 0초)
+# K10 최 쌤 멘트 앞(립싱크, 원음 0초) — v2(사장님 "쪽지·과거 영상을 카드로"): 냄새 줄 동안 8화 목록 회상
+FB = "hue=s=0.30,eq=brightness=0.04:contrast=1.05,fade=t=in:d=0.18:color=white,"
+EP8LIST = EP.parent / 'soulchange-ep08/05_편집/build_v4/seg_K6.mp4'
+EP6 = KIT / 'episodes/ep6/clips'
 c0 = t; e = at('C09a', c0 + 0.0)
-cut('K10', K('K10_v2'), 0, max(e + 0.2 - c0, dur_of(K('K10_v2')) - 0.05), pip=None, hold=True, note='최 쌤 옆얼굴 "현석아… 미안해."')
+cut('K10', K('K10_v2'), 0, 6.0, pip=None, note='최 쌤 옆얼굴 "현석아… 오늘은 괜찮아?"')
+cut('FB1', EP8LIST, 0.6, 4.4, pip=None, vfx=FB, hold=True, note='회상 8화: 아이들 목록 — 센 향수 냄새 밑줄 ("힘들어하는 냄새")')
+FB1 = (t - 4.4, t)
+cut('K10e', K('K10_v2'), 10.4, e + 0.2 - t, pip=None, hold=True, note='최 쌤 "미리 알았다면… 미안해."')
 # K11 덤불 몰래 응원단 → 교감 손목시계 "시간은 딱 오늘까지요."
 c0 = t; e = at('VP10', c0 + 3.6); SNIFF = c0 + 0.4
 cut('K11', K('K11'), 0, max(e + 0.3 - c0, 6.0), pip=None, hold=True, note='담임 몸 손수건 훌쩍 → 교감 등장')
-# K10b 멘트 중간 앞(립싱크) — Higgsfield 보충
+# K10b 멘트 중간 앞 — 얼굴 짧게 → 회상 6화 쪽지·텀블러 → 현석 뒷모습
 c0 = t; e = at('C09b1', c0 + 0.0)
-cut('K10b', K('K10b_v2'), 0, max(e + 0.25 - c0, 3.0), pip=None, hold=True, note='최 쌤 "그런데 말이야… 잘못한 거야."')
+cut('K10b', K('K10b_v2'), 0, 2.6, pip=None, note='최 쌤 "그런데 말이야. 그렇다고 해서,"')
+cut('FB2', EP6 / 'K04.mp4', 2.0, 2.0, pip=None, vfx=FB, note='회상 6화: 욕 쪽지를 펼침 ("선생님한테 욕을 쓰고")')
+cut('FB3', EP6 / 'K03.mp4', 0.5, max(2.6, e + 0.1 - t), pip=None, vfx=FB, hold=True, note='회상 6화: 최 쌤 텀블러 ("텀블러에 침을 뱉은 일이…")')
+FB2 = (t - (k_ := CUTS[-1]['dur']) - 2.0, t)
+cut('K12a', K('K12'), 0, 2.0, pip=None, stretch=1.2, note='현석 뒷모습(후드 씀) — 듣는 쪽')
 # K9 와이드 위로 멘트 이어짐(얼굴 안 보임) — 원본 3.5초부터 천천히
-c0 = t; e = at('C09b2', c0 + 0.1)
+c0 = t; e = at('C09b2', max(c0 + 0.1, end_('C09b1') + 0.25))
 cut('K9b', K('K9'), 2.5, e + 0.15 - c0, pip=None, stretch=1.25, hold=True, note='벤치 뒤 와이드(느리게) 위로 "그건 분명히… 혼내려고 여기 있는 게 아니야."')
 # K10c "너희가 좋은 어른이 되도록…" — Higgsfield 보충(오디오 0.3초 뒤 시작)
 c0 = t; e = at('C09b3', c0 + 0.30)
@@ -284,9 +294,12 @@ narr(cs('K8') + 0.8, ce('K8'), r'(센 향수 냄새...)', 600, 430)
 scene(cs('K9'), ce('K9'), '점심시간 · 운동장 벤치')
 CH = '최 선생님 (지금 담임)'
 say('C09a', r'현석아, 선생님이랑 잠깐 얘기할 수 있어?\N...오늘은 괜찮아?', CH, end=L['C09a'] + 6.1)
-say('C09a', r'선생님은 네가 힘들어하는 냄새가\N있는 줄 몰랐어.', CH, start=L['C09a'] + 6.1, end=L['C09a'] + 10.4, grp='C09a2')
+say('C09a', r'선생님은 네가 힘들어하는 냄새가\N있는 줄 몰랐어.', CH, start=L['C09a'] + 6.1, end=L['C09a'] + 10.4, grp='C09a2', y=1790)   # 목록 글씨 안 가리게
 say('C09a', r'미리 알았다면, 절대 그렇게 두지\N않았을 거야. 미안해.', CH, start=L['C09a'] + 10.4, end=end_('C09a') + 0.2, grp='C09a3')
 narr(cs('K11') + 0.2, L['VP10'] - 0.1, r'(몰래 응원단)', 600, 430)
+scene(FB1[0], FB1[1], '8화 · 아이들이 준 목록')
+scene(cs('FB2'), ce('FB2'), '6화 · 쪽지')
+scene(cs('FB3'), ce('FB3'), '6화 · 최 쌤 텀블러')
 say('VP10', '...시간은 딱 오늘까지요.', '교감')
 say('C09b1', r'그런데 말이야. 그렇다고 해서,\N선생님한테 욕을 쓰고', CH, end=L['C09b1'] + 4.6)
 say('C09b1', r'텀블러에 침을 뱉은 일이\N괜찮아지는 건 아니야.', CH, start=L['C09b1'] + 4.6, end=end_('C09b1') + 0.1, grp='C09b1b')
