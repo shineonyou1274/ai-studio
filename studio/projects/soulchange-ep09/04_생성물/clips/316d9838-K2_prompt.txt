@@ -1,0 +1,9 @@
+@Image1 is the high-school girl (face, hair, ribbon hair clip and uniform reference). @Image2 is the same classroom (location and lighting continuity reference). @Audio1 is her voice and the exact spoken line.
+Keep the exact face, hair and clothing from @Image1; no identity drift. Vertical 9:16 realistic Korean high school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: the Korean high school girl from @Image1 (shoulder-length black hair, small ribbon hair clip, navy blazer, striped tie) sits at her desk in the back row of the bright morning classroom from @Image2, arms folded across her chest, sitting upright and stiff like a strict middle-aged man. In the blurred foreground, the shoulders and backs of the heads of two chatting classmates in the row behind her.
+Action 1 (0-1.0s): she turns her head from the front of the room toward the noisy classmates behind her, ending in a three-quarter view of her face, eyebrows lowered, a serious adult look.
+Action 2 (1.0-5.0s): she speaks this exact Korean line in a low, firm, calm voice: "얘들아, 샘 이야기하시잖아. 조용히 해."
+Lip sync: she is the only speaker. Her lips and jaw move clearly and visibly on every syllable for the whole line, matching @Audio1 syllable by syllable, with natural short pauses after "얘들아," and after "하시잖아."
+Lighting: the same morning classroom as the previous shot; warm low sunlight from the large windows on the camera-right side, a bright rim light along her hair and cheek, the far side of her face in soft shadow, faint dust in the sunbeam, gentle bounce fill from the desks.
+Mood: unexpectedly adult, deadpan, comic authority.
+Camera: low angle from desk height, past the blurred classmates' shoulders, looking slightly up at her; medium close-up framed from the chest up so her mouth is clearly visible; steady camera with a very slow, gentle push-in. She does not look into the lens.

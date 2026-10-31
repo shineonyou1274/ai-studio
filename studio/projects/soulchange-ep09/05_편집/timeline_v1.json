@@ -1,0 +1,674 @@
+{
+ "main": 104.665,
+ "total": 110.365,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -4.1,
+ "cuts": [
+  {
+   "id": "K0",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K5.mp4",
+   "ss": 7.0,
+   "dur": 1.0,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 0.0,
+   "note": "첫 1초: 담임 몸 폰을 귀에 대고 씩 웃음"
+  },
+  {
+   "id": "K1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K1.mp4",
+   "ss": 0,
+   "dur": 6.07,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 1.0,
+   "note": "담임 몸 뻘쭘한 조례 → 손으로 귀 쪽"
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K2.mp4",
+   "ss": 0,
+   "dur": 7.48,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 7.07,
+   "note": "지우 몸 돌아보며 \"조용히 해\" → 친구2 화면 밖"
+  },
+  {
+   "id": "K3",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K3.mp4",
+   "ss": 0,
+   "dur": 5.08,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.15,
+    0.5,
+    0.3
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 14.55,
+   "note": "친구1 배를 감싸며 \"생조 쓸래요\" (명찰 글자는 1.15배로 일부 뺌)"
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "dur": 8.14,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "crop=iw:ih*0.82:0:0,scale=1080:1920,",
+   "hold": true,
+   "start": 19.63,
+   "note": "담임 몸 끄덕 → 폰 귀에(손가락 뭉개짐은 아래를 잘라 덜어 냄)"
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K5.mp4",
+   "ss": 0,
+   "dur": 8.0,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 27.77,
+   "note": "담임 몸 통화 → 듣고 씩 웃음"
+  },
+  {
+   "id": "K5h",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K5.mp4",
+   "ss": 7.8,
+   "dur": 1.381,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 35.77,
+   "note": "끝 프레임 멈춤"
+  },
+  {
+   "id": "K6",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K6.mp4",
+   "ss": 0.4,
+   "dur": 3.03,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.12,
+    0.5,
+    0.25
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 37.151,
+   "note": "친구1 굳음 + 뒤 친구 웃음 참기 (명찰은 1.12배·위쪽 기준으로 일부 뺌)"
+  },
+  {
+   "id": "K7",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K7.mp4",
+   "ss": 0,
+   "dur": 4.0,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 40.181,
+   "note": "지우 몸(김병만 영혼) 박수, 입 다묾"
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K8.mp4",
+   "ss": 0.3,
+   "dur": 4.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 44.181,
+   "note": "최 쌤 손: 목록 쓸다가 멈춤 → 향수병을 듦"
+  },
+  {
+   "id": "K9",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K9.mp4",
+   "ss": 0,
+   "dur": 5.2,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "start": 48.781,
+   "note": "벤치 뒤 와이드: 최 쌤 와서 앉음"
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K10.mp4",
+   "ss": 0,
+   "dur": 15.508,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 53.981,
+   "note": "최 쌤 옆얼굴 \"현석아… 미안해.\""
+  },
+  {
+   "id": "K11",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K11.mp4",
+   "ss": 0,
+   "dur": 6.0,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 69.489,
+   "note": "담임 몸 손수건 훌쩍 → 교감 등장"
+  },
+  {
+   "id": "K10b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K10b.mp4",
+   "ss": 0,
+   "dur": 8.4,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 75.489,
+   "note": "최 쌤 \"그런데 말이야… 잘못한 거야.\""
+  },
+  {
+   "id": "K9b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K9.mp4",
+   "ss": 2.5,
+   "dur": 10.1,
+   "pip": null,
+   "stretch": 1.25,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 83.889,
+   "note": "벤치 뒤 와이드(느리게) 위로 \"그건 분명히… 혼내려고 여기 있는 게 아니야.\""
+  },
+  {
+   "id": "K10c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K10c.mp4",
+   "ss": 0,
+   "dur": 4.726,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 93.989,
+   "note": "최 쌤 미소 \"너희가 좋은 어른이 되도록…\""
+  },
+  {
+   "id": "K12",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep09/04_생성물/clips/K12.mp4",
+   "ss": 0,
+   "dur": 5.95,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "start": 98.715,
+   "note": "현석 후드 벗고 고개 듦"
+  }
+ ],
+ "lines": {
+  "J01": {
+   "start": 1.15,
+   "end": 6.87,
+   "file": "E9-01_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0.0,
+     5.72
+    ]
+   ]
+  },
+  "W12": {
+   "start": 4.9,
+   "end": 6.43,
+   "file": "E9-12_friend2_pixie_whisper.mp3",
+   "range": [
+    [
+     0,
+     1.8
+    ]
+   ]
+  },
+  "W13": {
+   "start": 6.48,
+   "end": 9.107,
+   "file": "E9-13_friend1_chloe_whisper.mp3",
+   "range": [
+    [
+     0,
+     3.08
+    ]
+   ]
+  },
+  "T02a": {
+   "start": 8.4,
+   "end": 8.94,
+   "file": "E9-02_teacher_studentbody.mp3",
+   "range": [
+    [
+     0.1,
+     0.64
+    ]
+   ]
+  },
+  "T02b": {
+   "start": 9.47,
+   "end": 10.99,
+   "file": "E9-02_teacher_studentbody.mp3",
+   "range": [
+    [
+     0.84,
+     2.36
+    ]
+   ]
+  },
+  "T02c": {
+   "start": 11.1,
+   "end": 11.82,
+   "file": "E9-02_teacher_studentbody.mp3",
+   "range": [
+    [
+     2.58,
+     3.3
+    ]
+   ]
+  },
+  "F03": {
+   "start": 11.97,
+   "end": 14.4,
+   "file": "E9-03_friend2_pixie.mp3",
+   "range": [
+    [
+     0,
+     2.93
+    ]
+   ]
+  },
+  "F04a": {
+   "start": 16.15,
+   "end": 17.1,
+   "file": "E9-04_friend1_chloe.mp3",
+   "range": [
+    [
+     0.1,
+     1.05
+    ]
+   ]
+  },
+  "F04b": {
+   "start": 17.67,
+   "end": 19.43,
+   "file": "E9-04_friend1_chloe.mp3",
+   "range": [
+    [
+     1.36,
+     3.12
+    ]
+   ]
+  },
+  "J05": {
+   "start": 19.68,
+   "end": 24.43,
+   "file": "E9-05_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0.0,
+     4.75
+    ]
+   ]
+  },
+  "M06a": {
+   "start": 25.38,
+   "end": 27.57,
+   "file": "E9-06_fakemom_petra.mp3",
+   "range": [
+    [
+     0,
+     2.4
+    ]
+   ]
+  },
+  "J07a": {
+   "start": 27.89,
+   "end": 31.49,
+   "file": "E9-07_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0.0,
+     3.6
+    ]
+   ]
+  },
+  "M06b": {
+   "start": 32.37,
+   "end": 36.801,
+   "file": "E9-06_fakemom_petra.mp3",
+   "range": [
+    [
+     2.4,
+     8.12
+    ]
+   ]
+  },
+  "J07b": {
+   "start": 37.401,
+   "end": 39.881,
+   "file": "E9-07_jiu_teacherbody.mp3",
+   "range": [
+    [
+     4.25,
+     7.16
+    ]
+   ]
+  },
+  "T08": {
+   "start": 41.781,
+   "end": 43.611,
+   "file": "E9-08_teacher_inner_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.19
+    ]
+   ]
+  },
+  "C09a": {
+   "start": 53.981,
+   "end": 69.289,
+   "file": "E9-09a_choi_celine.mp3",
+   "range": [
+    [
+     0.0,
+     15.31
+    ]
+   ]
+  },
+  "VP10": {
+   "start": 73.089,
+   "end": 75.039,
+   "file": "E9-10_vp_arthur.mp3",
+   "range": [
+    [
+     0,
+     2.43
+    ]
+   ]
+  },
+  "C09b1": {
+   "start": 75.489,
+   "end": 83.639,
+   "file": "E9-09b_choi_celine.mp3",
+   "range": [
+    [
+     0.0,
+     8.15
+    ]
+   ]
+  },
+  "C09b2": {
+   "start": 83.989,
+   "end": 93.839,
+   "file": "E9-09b_choi_celine.mp3",
+   "range": [
+    [
+     8.15,
+     18.0
+    ]
+   ]
+  },
+  "C09b3": {
+   "start": 94.289,
+   "end": 98.415,
+   "file": "E9-09b_choi_celine.mp3",
+   "range": [
+    [
+     18.0,
+     22.13
+    ]
+   ]
+  },
+  "H11": {
+   "start": 101.615,
+   "end": 104.065,
+   "file": "E9-11_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     2.77
+    ]
+   ]
+  }
+ },
+ "subs": [
+  [
+   1.15,
+   7.02,
+   "자, 오늘 모의고사고... 그래서... 아무튼... 파이팅..."
+  ],
+  [
+   4.9,
+   6.45,
+   "...담임 왜 저러냐?"
+  ],
+  [
+   6.48,
+   9.26,
+   "...말투 완전 우리 같아."
+  ],
+  [
+   8.4,
+   11.94,
+   "얘들아, 샘 이야기하시잖아. 조용히 해."
+  ],
+  [
+   11.97,
+   14.55,
+   "...너 요즘 진짜 이상해."
+  ],
+  [
+   16.15,
+   19.63,
+   "쌤... 저 생조 쓸래요."
+  ],
+  [
+   19.68,
+   24.58,
+   "그래? 흠... 어머니한테 확인 전화할 거야."
+  ],
+  [
+   25.38,
+   27.72,
+   "네~ 엄마예요~"
+  ],
+  [
+   27.89,
+   31.64,
+   "어머니, 지난번에 다리 다치신 건 다 나으셨어요?"
+  ],
+  [
+   32.37,
+   36.95,
+   "네? 아... 네. 덕분에 나았습니다. 그럼 바빠서 이만 끊습니다."
+  ],
+  [
+   37.4,
+   40.03,
+   "...어머님, 다리 다치신 적 없으시지?"
+  ],
+  [
+   41.78,
+   43.76,
+   "...저걸 저렇게 잡네."
+  ],
+  [
+   53.98,
+   60.05,
+   "현석아, 선생님이랑 잠깐 얘기할 수 있어? ...오늘은 괜찮아?"
+  ],
+  [
+   60.08,
+   64.35,
+   "선생님은 네가 힘들어하는 냄새가 있는 줄 몰랐어."
+  ],
+  [
+   64.38,
+   69.49,
+   "미리 알았다면, 절대 그렇게 두지 않았을 거야. 미안해."
+  ],
+  [
+   73.09,
+   75.19,
+   "...시간은 딱 오늘까지요."
+  ],
+  [
+   75.49,
+   80.06,
+   "그런데 말이야. 그렇다고 해서, 선생님한테 욕을 쓰고"
+  ],
+  [
+   80.09,
+   83.74,
+   "텀블러에 침을 뱉은 일이 괜찮아지는 건 아니야."
+  ],
+  [
+   83.99,
+   88.96,
+   "그건 분명히 잘못한 거야. 그래도 선생님은 너한테 기회를 주고 싶어."
+  ],
+  [
+   88.99,
+   93.94,
+   "선생님은 너희를 혼내려고 여기 있는 게 아니야."
+  ],
+  [
+   94.29,
+   98.57,
+   "너희가 좋은 어른이 되도록, 옆에서 도우려고 있는 거야."
+  ],
+  [
+   101.61,
+   104.22,
+   "...엄마한테, 말해 볼게요."
+  ]
+ ],
+ "bgm": [
+  [
+   "pulse",
+   0.0,
+   19.63
+  ],
+  [
+   "mystery",
+   19.63,
+   37.131
+  ],
+  [
+   "class",
+   39.981,
+   44.181
+  ],
+  [
+   "mystery",
+   44.181,
+   69.489
+  ],
+  [
+   "pulse",
+   69.589,
+   75.489
+  ],
+  [
+   "mystery",
+   75.489,
+   101.015
+  ]
+ ]
+}

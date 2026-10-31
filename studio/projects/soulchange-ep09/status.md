@@ -1,1 +1,2 @@
 - (2026-10-31) 대본 v3.1, 녹음 12줄 완료. 컷은 zcre(맥 쪽 AI) — 지시서 `studio/위임/pc_지시서_9화_zcre.md`. 요소 그림 사본을 `series/요소_이미지/`에 추가(sc_teacher·sc_jiu·sc_office·sc_bench·sc_vp_full·sc_teacher_cu).
+- (2026-10-31) **편집 v1**: `05_편집/ep9_v1.mp4` (110.4초). 사장님 확인 + Gemini 검수 기다림.

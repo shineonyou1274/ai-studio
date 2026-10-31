@@ -1,0 +1,10 @@
+@Image1 is the middle-aged male teacher (only the back of his head and shoulder are seen). @Image2 is the same classroom (location and lighting continuity reference). @Audio1 is the girl's voice and her exact spoken line.
+Keep the teacher's hair and navy cardigan consistent with @Image1. Vertical 9:16 realistic Korean high school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: over the shoulder of the middle-aged male teacher (graying hair, navy cardigan; the back of his head soft and blurred in the left foreground), a different schoolgirl stands in front of the teacher's desk: low ponytail, no hair clip, navy blazer uniform, round face. She is not the girl with the ribbon clip.
+Action 1 (0-1.2s): she holds one hand over her lower belly and fidgets with the fingers of the other hand, putting on a weak, pained face.
+Action 2 (1.2-5.0s): she speaks this exact Korean line softly and hesitantly: "쌤… 저 생조 쓸래요."
+Lip sync: she is the only speaker. Her lips and jaw move visibly on every syllable while she speaks, matching @Audio1 syllable by syllable, with a small hesitation after "쌤…".
+Eyeline: she looks up at the teacher's face at the left edge of the frame, never into the lens.
+Lighting: the same bright morning classroom; soft window light from the camera-right side lighting her face, gentle shadow on the left side of her face, cool-neutral morning tone.
+Mood: a not-very-convincing act of being sick, comic.
+Camera: slightly high angle from the teacher's standing eye height looking down at her, medium close-up from the waist up, locked-off steady frame.

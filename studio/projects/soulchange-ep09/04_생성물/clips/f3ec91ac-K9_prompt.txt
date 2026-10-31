@@ -1,0 +1,9 @@
+@Image1 is the weathered wooden bench at the far end of the school sports field (location reference). @Image2 is the boy in the light gray hoodie, seen only from behind. @Image3 is the woman teacher (low ponytail, beige striped cardigan) for clothing and hair reference, seen from behind.
+Keep the boy's hoodie and the teacher's cardigan and hair consistent with the references. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: lunchtime at the far end of the school sports field, wide shot from behind the bench. The boy from @Image2 in a light gray hoodie with the hood up sits alone on the right end of the bench, seen only from behind.
+Action 1 (0-4s): the woman teacher from @Image3 walks in from the left of the frame and sits down carefully on the left end of the bench, leaving one seat of space, seen from behind.
+Action 2 (4-8s): the boy slowly takes one white earphone out of his ear.
+No faces are visible; both are seen from behind the whole time.
+Lighting: overcast noon, soft diffuse light with a gentle backlight glow over the field ahead of them, muted colors.
+Mood: careful, quiet, heavy.
+Camera: wide shot from behind at standing eye level, slow dolly-in toward their backs.

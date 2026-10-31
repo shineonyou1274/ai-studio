@@ -1,0 +1,10 @@
+@Image1 is the middle-aged male teacher (face, hair, clothing reference). @Image2 is a close-up of the same teacher (face reference). @Image3 is the same classroom (location and lighting continuity reference). @Audio1 is his voice and his exact spoken line.
+Keep the exact face, hair, glasses cord and clothing from the reference images; no identity drift. Vertical 9:16 realistic Korean high school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: close-up of the middle-aged Korean male teacher from @Image1 (short graying hair, glasses hanging on a cord, navy cardigan, striped tie) standing at the teacher's desk in the morning classroom. Inside, he is a sharp teenage schoolgirl who instantly sees through the lie, so his expression is a sly, knowing teen smirk.
+Action 1 (0-4.8s): he narrows his eyes knowingly, gives a slow nod, and speaks this exact Korean line with a sly little smile: "그래? 흠… 어머니한테 확인 전화할 거야."
+Lip sync: he is the only speaker. His lips and jaw move clearly and visibly on every syllable whenever he speaks, matching @Audio1 syllable by syllable, with the short pauses after "그래?" and "흠…".
+Action 2 (4.8-6.0s): he picks up a smartphone from the desk and raises it to his ear.
+Eyeline: he looks down toward the schoolgirl standing just off-screen to the right, below his eye line, never into the lens.
+Lighting: same morning classroom; strong window side light from the camera-left side, the right half of his face falling into deeper shadow, a warm edge on his gray hair.
+Mood: sly, playful, the hunter has found the lie.
+Camera: low angle from the student's chest height, three-quarter side close-up from the chest up, slow dolly-in.

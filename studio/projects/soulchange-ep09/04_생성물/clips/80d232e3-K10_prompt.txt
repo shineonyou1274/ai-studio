@@ -1,0 +1,10 @@
+@Image1 is the Korean woman teacher (face, hair and clothing reference): late thirties, low ponytail, beige striped cardigan, natural makeup. @Audio1 is her voice and her exact spoken lines.
+Keep the exact face, hair and clothing from @Image1; no identity drift for the whole shot. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: side close-up of the woman teacher from @Image1 sitting on a weathered wooden bench at the far end of the school sports field, facing right toward a boy who is out of frame.
+Action 1 (0-10s): she speaks gently and calmly, sometimes lowering her eyes, then looking back at him with kind but firm eyes, saying this exact Korean text: "현석아, 선생님이랑 잠깐 얘기할 수 있어? …오늘은 괜찮아? 선생님은 네가 힘들어하는 냄새가 있는 줄 몰랐어. 미리 알았다면, 절대 그렇게 두지 않았을 거야."
+Action 2 (10-15s): she bows her head slightly and says softly: "미안해."
+Lip sync: she is the only speaker. Her lips and jaw move clearly and visibly on every syllable whenever she speaks, matching @Audio1 syllable by syllable, and follow the pauses in @Audio1.
+Eyeline: toward the boy sitting just off-screen to the right at her eye level, never into the lens.
+Lighting: soft overcast noon light, a warm rim light on her hair from the bright sky behind her on the left, gentle shadow on the right side of her face; the sports field and fence softly blurred behind her.
+Mood: sincere, gentle, a real apology.
+Camera: side profile close-up at seated eye level, very slow push-in; no other camera move.

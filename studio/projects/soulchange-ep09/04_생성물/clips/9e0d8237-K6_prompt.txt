@@ -1,0 +1,9 @@
+@Image1 is the schoolgirl with a low ponytail from the previous shot (face, hair and uniform reference). @Image2 is the same classroom (location and lighting continuity reference).
+Keep the exact face, hair and uniform from @Image1; no identity drift. Vertical 9:16 realistic Korean high school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: close shot of the schoolgirl from @Image1 standing at the teacher's desk in the morning classroom; she has just heard the teacher's phone call and realizes her lie has been caught. She does not speak.
+Action 1 (0-2.5s): her eyes go wide, her lips part slightly in shock, and her whole body tenses and freezes mid-fidget.
+Action 2 (2.5-5s): in the blurred background, a girl in the back row covers her mouth with both hands, her shoulders shaking with held-back laughter.
+Eyeline: the standing girl stares at the teacher just off-screen to the left of the frame, never into the lens.
+Lighting: same morning classroom; window light from the camera-right side on her face, the background a little brighter, cool-neutral tone.
+Mood: busted, comic.
+Camera: eye level, one fast crash zoom-in on her face at the moment her eyes go wide, then holds.

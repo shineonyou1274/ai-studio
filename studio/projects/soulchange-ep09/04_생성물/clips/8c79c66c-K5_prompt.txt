@@ -1,0 +1,10 @@
+@Image1 is the middle-aged male teacher (face, hair, clothing reference). @Image2 is a close-up of the same teacher (face reference). @Image3 is the same classroom (location and lighting continuity reference). @Audio1 is his voice and his exact spoken line.
+Keep the exact face, hair, glasses cord and clothing from the reference images; no identity drift. Vertical 9:16 realistic Korean high school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: medium close-up of the middle-aged Korean male teacher from @Image1 (short graying hair, glasses on a cord, navy cardigan, striped tie) standing by the teacher's desk, holding a smartphone to his right ear. Inside, he is a playful teenage schoolgirl setting a trap.
+Action 1 (0-3.8s): he speaks into the phone in an overly polite, sweet voice, smiling, saying this exact Korean line: "어머니, 지난번에 다리 다치신 건 다 나으셨어요?"
+Lip sync: he is the only speaker in this part. His lips and jaw move clearly and visibly on every syllable while he speaks, matching @Audio1 syllable by syllable.
+Action 2 (3.8-8.0s): he stops talking and listens to the reply with his lips together, slowly tilting his head with a knowing grin, then lowers the phone from his ear.
+Eyeline: while on the phone he gazes down and slightly to the right of the frame, toward the student standing off-screen right, never into the lens.
+Lighting: same morning classroom, now facing toward the windows: bright window backlight behind him on the camera-left, a clean warm rim light outlining his hair and shoulders, soft fill on his face.
+Mood: sweet trap, then quiet triumph.
+Camera: eye level, one slow, short arc of about 20 degrees around him from his front-left toward his profile, motivated by his head tilt; no other camera move.

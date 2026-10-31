@@ -1,0 +1,8 @@
+@Image1 is the boy in the light gray hoodie, seen only from behind. @Image2 is the weathered wooden bench at the far end of the sports field (location reference).
+Keep the boy's hoodie consistent with @Image1. Vertical 9:16 realistic Korean school drama. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: close shot from behind of the boy in the light gray hoodie sitting on the bench, the sports field ahead of him. His face is never visible.
+Action 1 (0-2s): his fingers, fidgeting with the white earphone cord, slowly stop.
+Action 2 (2-5s): he slowly pulls his hood down and lifts his head toward the field.
+Lighting: overcast noon, the sky brightening slightly ahead of him, soft backlight; wind gently moving his hair once the hood is down.
+Mood: a small decision, quiet hope.
+Camera: close shot from behind at his shoulder height, steady, very slight push-in.

@@ -1,0 +1,9 @@
+@Image1 is the middle-aged male teacher (face, hair, clothing reference). @Image2 is the high-school girl with the ribbon hair clip (face, hair, uniform reference). @Image3 is the vice principal: the man in the center of the image, gray suit, metal-rimmed glasses (face and clothing reference).
+Keep the exact faces, hair and clothing from the references; no identity drift. Vertical 9:16 realistic Korean school comedy. No background music, no music, no score. No text, no captions, no on-screen UI.
+Subject: behind a hedge near the sports field, the middle-aged male teacher from @Image1 (navy cardigan, graying hair) and the schoolgirl from @Image2 (ribbon hair clip, navy blazer) crouch side by side, peeking over the hedge at something off-screen to the left. Inside, the teacher's body holds an emotional teenage girl, and the girl's body holds a stern middle-aged man.
+Action 1 (0-3s): the teacher dabs his teary eyes with a handkerchief, moved; the girl puts a finger to her lips, "shh", her lips closed.
+Action 2 (3-6s): the vice principal from @Image3 is revealed standing right behind them and taps his wristwatch with one finger, unsmiling; the two have not noticed him yet.
+Eyeline: the two crouching people look over the hedge toward the left of the frame; the vice principal looks down at them; no one looks into the lens.
+Lighting: overcast midday daylight, soft and even, with green hedge leaves casting light shadows; same weather as the bench scene.
+Mood: secret cheering squad caught in the act, comic.
+Camera: low angle from in front of the hedge, slightly below their eye level, peeking through blurred leaves in the foreground, light handheld.
