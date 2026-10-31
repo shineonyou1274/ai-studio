@@ -26,6 +26,9 @@ EP = {
     8: {'A': dict(src=E8 / 'K1.mp4', t=5.75, z=1.35, cx=0.50, top=0.06, strip='상담 보고서를 써야 하는데', hook=['50대 담임이', '머리를 귀 뒤로?!']),
         'B': dict(src=E8 / 'H2_v2.mp4', t=5.6, z=1.30, cx=0.50, top=0.04, strip='딸기우유를 보자마자', hook=['쌤 목소리', '왜 저래?']),
         'C': dict(src=E8 / 'K11b_v2.mp4', t=6.6, z=1.25, cx=0.50, top=0.02, strip='교감이 수화기를 든 순간', hook=['병가 중이던 담임이', '돌아왔다'])},
+    9: {'A': dict(src=P / 'soulchange-ep09/04_생성물/clips/K5.mp4', t=1.2, z=1.15, cx=0.50, top=0.04, strip='모의고사 날 아침, 생조 전화', hook=['어머니, 다리는', '괜찮으세요?']),
+        'B': dict(src=P / 'soulchange-ep09/04_생성물/clips/K6.mp4', t=1.6, z=1.25, cx=0.50, top=0.0, strip='엄마인 척 받은 전화', hook=['다리 다치신 적', '없으시지?']),
+        'C': dict(src=P / 'soulchange-ep09/04_생성물/clips/K10c.mp4', t=3.2, z=1.15, cx=0.45, top=0.03, strip='텀블러에 침 뱉은 아이에게', hook=['선생님은 너한테', '기회를 주고 싶어'])},
 }
 VARIANTS = EP[N]
 
