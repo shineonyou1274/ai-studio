@@ -1,0 +1,532 @@
+{
+ "main": 83.591,
+ "total": 89.291,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -3.9,
+ "cuts": [
+  {
+   "id": "K0",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K3.mp4",
+   "ss": 0.2,
+   "dur": 1.0,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 0.0,
+   "note": "첫 1초: 엄마 손이 향수병을 꽉 쥠"
+  },
+  {
+   "id": "K1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K1.mp4",
+   "ss": 0,
+   "dur": 4.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 1.0,
+   "note": "밤 거실, 현석 어깨 너머 + 엄마 손"
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K2.mp4",
+   "ss": 0,
+   "dur": 10.98,
+   "pip": null,
+   "stretch": 1.15,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 5.6,
+   "note": "현석 소매를 당겨 쥠(한여름 긴팔)"
+  },
+  {
+   "id": "K3",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K3.mp4",
+   "ss": 0,
+   "dur": 7.89,
+   "pip": null,
+   "stretch": 1.15,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 16.58,
+   "note": "엄마 손이 향수병을 내려놓고 손을 뗌"
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "dur": 4.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 24.47,
+   "note": "엄마 창가 뒷모습, 손으로 입 — 말없이 생각"
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K8.mp4",
+   "ss": 0,
+   "dur": 6.01,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 29.07,
+   "note": "8화 K8 재사용: 벤치 이어폰"
+  },
+  {
+   "id": "K6",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K6.mp4",
+   "ss": 0,
+   "dur": 4.0,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 35.08,
+   "note": "지우 몸 눈시울 끄덕"
+  },
+  {
+   "id": "K7",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K7.mp4",
+   "ss": 0,
+   "dur": 5.174,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 39.08,
+   "note": "어깨 토닥 → 움찔 → 손 거둠"
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K8.mp4",
+   "ss": 0,
+   "dur": 3.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 44.254,
+   "note": "엄마·현석 손잡고 교무실로"
+  },
+  {
+   "id": "K9",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K9.mp4",
+   "ss": 0,
+   "dur": 7.83,
+   "pip": null,
+   "stretch": 3.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 47.854,
+   "note": "엄마 뒷모습 + 최 쌤 끄덕"
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K10.mp4",
+   "ss": 0,
+   "dur": 5.992,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 55.684,
+   "note": "교감 도움 전화(립싱크)"
+  },
+  {
+   "id": "K11",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K11.mp4",
+   "ss": 0,
+   "dur": 9.61,
+   "pip": null,
+   "stretch": 1.15,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 61.676,
+   "note": "섬유유연제 봉투 + 향수병 슬쩍"
+  },
+  {
+   "id": "K12",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H3_K10.mp4",
+   "ss": 0.2,
+   "dur": 8.795,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": "chat",
+   "start": 71.286,
+   "note": "코드: 단톡 하은 귀국 → 김병만 DM"
+  },
+  {
+   "id": "K13",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K12_elem.mp4",
+   "ss": 2.3,
+   "dur": 2.11,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.25,
+    0.5,
+    0.0
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 80.081,
+   "note": "7화 K12 재사용: 담임 몸 폰 보고 굳음"
+  },
+  {
+   "id": "FB1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep01/05_편집/ep1_공개본_720p.mp4",
+   "ss": 1.2,
+   "dur": 1.4,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.30,eq=brightness=0.04:contrast=1.05,fade=t=in:d=0.12:color=white,",
+   "hold": true,
+   "fx": null,
+   "start": 82.191,
+   "note": "회상 1화: 생결 내고 PC방 게시물 + 담임 좋아요"
+  }
+ ],
+ "lines": {
+  "H01": {
+   "start": 2.0,
+   "end": 4.67,
+   "file": "E10-01_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     3.08
+    ]
+   ]
+  },
+  "H02": {
+   "start": 5.8,
+   "end": 16.18,
+   "file": "E10-02_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     11.08
+    ]
+   ]
+  },
+  "H03": {
+   "start": 16.78,
+   "end": 23.97,
+   "file": "E10-03_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     8.05
+    ]
+   ]
+  },
+  "H05": {
+   "start": 32.37,
+   "end": 34.78,
+   "file": "E10-05_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     2.85
+    ]
+   ]
+  },
+  "T06": {
+   "start": 36.08,
+   "end": 38.05,
+   "file": "E10-06_teacher_inner_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.27
+    ]
+   ]
+  },
+  "T07": {
+   "start": 41.68,
+   "end": 43.954,
+   "file": "E10-07_teacher_studentbody.mp3",
+   "range": [
+    [
+     0,
+     2.69
+    ]
+   ]
+  },
+  "M08": {
+   "start": 48.154,
+   "end": 55.284,
+   "file": "E10-08_mother_soraya.mp3",
+   "range": [
+    [
+     0,
+     8.2
+    ]
+   ]
+  },
+  "VP09": {
+   "start": 55.684,
+   "end": 60.83,
+   "file": "E10-09_vp_arthur.mp3",
+   "range": [
+    [
+     0.0,
+     5.15
+    ]
+   ]
+  },
+  "C10": {
+   "start": 63.276,
+   "end": 66.216,
+   "file": "E10-10_choi_celine.mp3",
+   "range": [
+    [
+     0,
+     3.24
+    ]
+   ]
+  },
+  "M11": {
+   "start": 66.516,
+   "end": 68.436,
+   "file": "E10-11_mother_soraya.mp3",
+   "range": [
+    [
+     0,
+     2.27
+    ]
+   ]
+  },
+  "J12": {
+   "start": 68.786,
+   "end": 70.886,
+   "file": "E10-12_jiu_inner_student.mp3",
+   "range": [
+    [
+     0,
+     2.43
+    ]
+   ]
+  },
+  "T13": {
+   "start": 73.686,
+   "end": 79.581,
+   "file": "E10-13_teacher_dm_teacher.mp3",
+   "range": [
+    [
+     0,
+     7.47
+    ]
+   ]
+  },
+  "J14": {
+   "start": 80.431,
+   "end": 81.991,
+   "file": "E10-14_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0,
+     2.43
+    ]
+   ]
+  }
+ },
+ "subs": [
+  [
+   2.0,
+   4.82,
+   "엄마. 나한테 왜 그랬어."
+  ],
+  [
+   5.8,
+   10.13,
+   "나, 많이 힘들었어. 나도 노력했어."
+  ],
+  [
+   10.16,
+   16.33,
+   "엄마 냄새가 나면 숨이 막혔는데... 그래도 엄마 사랑해."
+  ],
+  [
+   16.78,
+   20.34,
+   "근데 가끔은, 그냥 훨훨 날아가고 싶었어."
+  ],
+  [
+   20.38,
+   24.12,
+   "...이제 버틸 힘이 없어. 도와줘요."
+  ],
+  [
+   32.37,
+   34.93,
+   "...어제, 엄마한테 말했어."
+  ],
+  [
+   36.08,
+   38.2,
+   "...잘했다, 현석아."
+  ],
+  [
+   41.68,
+   44.1,
+   "아, 미안. ...어깨."
+  ],
+  [
+   48.15,
+   50.98,
+   "어제 애가... 저한테 그러더라고요."
+  ],
+  [
+   51.01,
+   55.43,
+   "저도 어떻게 해야 할지 모르겠어요. 도와주세요."
+  ],
+  [
+   55.68,
+   60.98,
+   "...네, 학교입니다. 아이랑 어머님이 같이 도움을 받고 싶어 하셔서요."
+  ],
+  [
+   63.28,
+   66.37,
+   "...저도 바꿀게요, 향수."
+  ],
+  [
+   66.52,
+   68.59,
+   "...같은 거 쓰셨구나."
+  ],
+  [
+   68.79,
+   71.04,
+   "...다행이다."
+  ],
+  [
+   80.43,
+   82.14,
+   "...헐."
+  ]
+ ],
+ "bgm": [
+  [
+   "warm",
+   1.0,
+   28.97
+  ],
+  [
+   "warm",
+   29.27,
+   41.28
+  ],
+  [
+   "class",
+   44.054,
+   44.254
+  ],
+  [
+   "warm",
+   44.354,
+   61.676
+  ],
+  [
+   "class",
+   61.776,
+   71.286
+  ],
+  [
+   "pulse",
+   71.286,
+   80.131
+  ]
+ ]
+}
