@@ -1,0 +1,1 @@
+- (2026-10-31) 대본 v3.1, 녹음 12줄 완료. 컷은 zcre(맥 쪽 AI) — 지시서 `studio/위임/pc_지시서_9화_zcre.md`. 요소 그림 사본을 `series/요소_이미지/`에 추가(sc_teacher·sc_jiu·sc_office·sc_bench·sc_vp_full·sc_teacher_cu).
