@@ -94,6 +94,17 @@ def _section(kind, dur, seed):
                 m = int(0.18 * SR); tt = np.arange(m) / SR
                 _add(y, aa * np.sin(2 * np.pi * (58 - 20 * tt) * tt) * np.exp(-tt * 22) * (1 - np.exp(-tt * 300)), at + dt)
         return y
+    if kind == 'warm':     # 9화 v4: 감동 구간 — 느린 피아노풍 분산화음(C·G·Am·F, 60bpm), 낮은 음 없음
+        prog = [(261.6, 329.6, 392.0, 523.3), (246.9, 293.7, 392.0, 493.9), (220.0, 261.6, 329.6, 440.0), (261.6, 349.2, 440.0, 523.3)]
+        def piano(f, d=2.4, a=1.0):
+            tt = np.arange(int(d * SR)) / SR
+            return a * (np.sin(2 * np.pi * f * tt) + 0.45 * np.sin(4 * np.pi * f * tt) + 0.2 * np.sin(6 * np.pi * f * tt)) * np.exp(-tt * 1.8) * (1 - np.exp(-tt * 250))
+        for k, at in enumerate(np.arange(0, dur, 0.75)):
+            ch = prog[(k // 4) % 4]
+            _add(y, piano(ch[[0, 1, 2, 3][k % 4]], 2.4, 0.16), at)
+            if k % 4 == 0: _add(y, piano(ch[0] / 1.0, 3.0, 0.10), at)
+        y *= np.minimum(1, t / 1.0)
+        return y
     raise ValueError(kind)
 
 
