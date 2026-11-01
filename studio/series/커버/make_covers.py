@@ -30,7 +30,9 @@ EP = {
         'B': dict(src=P / 'soulchange-ep09/04_생성물/clips/K6.mp4', t=1.6, z=1.25, cx=0.50, top=0.0, strip='엄마인 척 받은 전화', hook=['다리 다치신 적', '없으시지?']),
         'C': dict(src=P / 'soulchange-ep09/04_생성물/clips/K10c.mp4', t=3.2, z=1.15, cx=0.45, top=0.03, strip='텀블러에 침 뱉은 아이에게', hook=['선생님은 너한테', '기회를 주고 싶어'])},    10: {'A': dict(src=P / 'soulchange-ep10/04_생성물/clips/N2.mp4', t=2.8, z=1.15, cx=0.50, top=0.08, strip='한여름에도 긴팔을 입던 이유', hook=['엄마, 나한테', '왜 그랬어']),
          'B': dict(src=P / 'soulchange-ep10/04_생성물/clips/N3.mp4', t=4.6, z=1.2, cx=0.50, top=0.38, strip='그날 밤, 현석이네', hook=['이제 버틸 힘이 없어', '도와줘요']),
-         'C': dict(src=P / 'soulchange-ep07/04_생성물/clips/K12_elem.mp4', t=3.9, z=1.6, cx=0.50, top=0.02, strip='내일 하은이 온다, 네가 상담해', hook=['헐... 나보고 또?', '내 몸 언제 돌아와'])},
+         'C': dict(src=P / 'soulchange-ep07/04_생성물/clips/K12_elem.mp4', t=3.9, z=1.6, cx=0.50, top=0.02, strip='내일 하은이 온다, 네가 상담해', hook=['헐... 나보고 또?', '내 몸 언제 돌아와'])},    11: {'A': dict(src=P / 'soulchange-ep11/04_생성물/clips/K3.mp4', t=0.9, z=1.15, cx=0.50, top=0.04, strip='하은이 오는 날, 담임의 하루', hook=['이런 걸 하루에', '다 하라고?']),
+         'B': dict(src=P / 'soulchange-ep11/04_생성물/clips/K6.mp4', t=2.2, z=1.15, cx=0.55, top=0.02, strip='체험학습 신청 없이 가족 여행', hook=['너 이렇게 될 줄', '몰랐어?']),
+         'C': dict(src=P / 'soulchange-ep11/04_생성물/clips/K14.mp4', t=2.3, z=1.2, cx=0.50, top=0.05, strip='내일 16:00 상담 신청: 지우 어머니', hook=['...엄마가,', '온다고?'])},
 }
 VARIANTS = EP[N]
 
