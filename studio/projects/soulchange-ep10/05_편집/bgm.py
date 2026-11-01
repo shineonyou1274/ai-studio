@@ -96,11 +96,12 @@ def _section(kind, dur, seed):
         return y
     if kind == 'warm':     # 9화 v4: 감동 구간 — 느린 피아노풍 분산화음(C·G·Am·F, 60bpm), 낮은 음 없음
         prog = [(261.6, 329.6, 392.0, 523.3), (246.9, 293.7, 392.0, 493.9), (220.0, 261.6, 329.6, 440.0), (261.6, 349.2, 440.0, 523.3)]
+        prog += [(293.7, 349.2, 440.0, 587.3), (246.9, 293.7, 392.0, 493.9), (261.6, 329.6, 392.0, 523.3), (220.0, 261.6, 329.6, 440.0)]   # 10화 v7: 8마디로 늘려 '처음부터 다시' 느낌 줄임
         def piano(f, d=2.4, a=1.0):
             tt = np.arange(int(d * SR)) / SR
             return a * (np.sin(2 * np.pi * f * tt) + 0.45 * np.sin(4 * np.pi * f * tt) + 0.2 * np.sin(6 * np.pi * f * tt)) * np.exp(-tt * 1.8) * (1 - np.exp(-tt * 250))
         for k, at in enumerate(np.arange(0, dur, 0.75)):
-            ch = prog[(k // 4) % 4]
+            ch = prog[(k // 4) % len(prog)]
             _add(y, piano(ch[[0, 1, 2, 3][k % 4]], 2.4, 0.16), at)
             if k % 4 == 0: _add(y, piano(ch[0] / 1.0, 3.0, 0.10), at)
         y *= np.minimum(1, t / 1.0)
