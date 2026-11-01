@@ -1,0 +1,534 @@
+{
+ "main": 72.798,
+ "total": 78.498,
+ "loudness_LUFS": -14.1,
+ "true_peak_dBTP": -3.9,
+ "cuts": [
+  {
+   "id": "K0",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/N2.mp4",
+   "ss": 2.6,
+   "dur": 1.0,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.30,eq=brightness=0.04:contrast=1.05,fade=t=in:d=0.12:color=white,",
+   "hold": false,
+   "fx": null,
+   "start": 0.0,
+   "note": "첫 1초: 회상 — 엄마 손이 손목을 낚아챔"
+  },
+  {
+   "id": "N1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/N1.mp4",
+   "ss": 0,
+   "dur": 4.8,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 1.0,
+   "note": "소매 아래 손목 옅은 멍 → 소매를 내림"
+  },
+  {
+   "id": "K2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K2.mp4",
+   "ss": 0,
+   "dur": 4.51,
+   "pip": null,
+   "stretch": 1.1,
+   "zoom": [
+    1.3,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 5.8,
+   "note": "현석 옆 뒷모습(조명 빼려고 아래로 확대)"
+  },
+  {
+   "id": "N2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/N2.mp4",
+   "ss": 0,
+   "dur": 6.65,
+   "pip": null,
+   "stretch": 1.15,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.30,eq=brightness=0.04:contrast=1.05,fade=t=in:d=0.12:color=white,",
+   "hold": true,
+   "fx": null,
+   "start": 10.31,
+   "note": "회상: 엄마 손이 손목을 낚아챔 + 고함, 그 위로 \"엄마 목소리만 들려도…\""
+  },
+  {
+   "id": "K4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K4.mp4",
+   "ss": 0,
+   "dur": 6.93,
+   "pip": null,
+   "stretch": 10.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 16.96,
+   "note": "창가 엄마 실루엣 — 말없이 듣는 중"
+  },
+  {
+   "id": "N3",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/N3.mp4",
+   "ss": 0,
+   "dur": 5.2,
+   "pip": null,
+   "stretch": 1.1,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 23.89,
+   "note": "\"도와줘요\" → 엄마 손이 소매 대신 손을 덮어 잡음"
+  },
+  {
+   "id": "K5",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K8.mp4",
+   "ss": 0,
+   "dur": 2.4,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 29.09,
+   "note": "8화 K8 재사용: 지우 몸이 벤치에 앉는 데까지만(이어폰 건네는 부분 뺌)"
+  },
+  {
+   "id": "K6",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K6.mp4",
+   "ss": 0,
+   "dur": 5.98,
+   "pip": "pip_t",
+   "stretch": 1.1,
+   "zoom": [
+    1.45,
+    0.42,
+    0.12
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 31.49,
+   "note": "지우 몸 눈시울 — 목 아래 이어폰 줄은 확대로 뺌"
+  },
+  {
+   "id": "K8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K8.mp4",
+   "ss": 0,
+   "dur": 3.2,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 37.47,
+   "note": "엄마·현석 손잡고 교무실로"
+  },
+  {
+   "id": "K9",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K9.mp4",
+   "ss": 0,
+   "dur": 7.83,
+   "pip": null,
+   "stretch": 3.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 40.67,
+   "note": "엄마 뒷모습 + 최 쌤 끄덕"
+  },
+  {
+   "id": "K10",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K10.mp4",
+   "ss": 0,
+   "dur": 5.346,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 48.5,
+   "note": "교감 도움 전화(립싱크)"
+  },
+  {
+   "id": "K10b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep10/04_생성물/clips/K10.mp4",
+   "ss": 5.35,
+   "dur": 2.7,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 53.846,
+   "note": "교감 전화 끝 + 지우 영혼 속마음 \"…다행이다.\"(지우 아이콘)"
+  },
+  {
+   "id": "K12",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep06/04_생성물/clips/H3_K10.mp4",
+   "ss": 0.2,
+   "dur": 12.142,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": "chat",
+   "start": 56.546,
+   "note": "코드: 단톡 하은 미인정결 → 김병만 DM"
+  },
+  {
+   "id": "K13",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep07/04_생성물/clips/K12_elem.mp4",
+   "ss": 2.3,
+   "dur": 2.11,
+   "pip": "pip",
+   "stretch": 1.0,
+   "zoom": [
+    1.25,
+    0.5,
+    0.0
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 68.688,
+   "note": "7화 K12 재사용: 담임 몸 폰 보고 굳음"
+  },
+  {
+   "id": "FB1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep01/05_편집/ep1_공개본_720p.mp4",
+   "ss": 1.0,
+   "dur": 2.0,
+   "pip": null,
+   "stretch": 1.7,
+   "zoom": [
+    1.12,
+    0.5,
+    0.45
+   ],
+   "vfx": "hue=s=0.30,eq=brightness=0.04:contrast=1.05,fade=t=in:d=0.12:color=white,",
+   "hold": true,
+   "fx": null,
+   "start": 70.798,
+   "note": "회상 1화: 생결 내고 PC방 게시물 + 담임 좋아요"
+  }
+ ],
+ "lines": {
+  "H01": {
+   "start": 2.5,
+   "end": 5.17,
+   "file": "E10-01_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     3.08
+    ]
+   ]
+  },
+  "H02": {
+   "start": 6.0,
+   "end": 9.91,
+   "file": "E10-02b_hyeonseok_evan.mp3",
+   "range": [
+    [
+     1.0,
+     5.25
+    ]
+   ]
+  },
+  "M15": {
+   "start": 10.46,
+   "end": 13.43,
+   "file": "E10-15_mother_yell_soraya.mp3",
+   "range": [
+    [
+     0,
+     3.02
+    ]
+   ]
+  },
+  "H2B": {
+   "start": 13.78,
+   "end": 16.56,
+   "file": "E10-02b_hyeonseok_evan.mp3",
+   "range": [
+    [
+     5.55,
+     8.45
+    ]
+   ]
+  },
+  "H2C": {
+   "start": 17.26,
+   "end": 19.2,
+   "file": "E10-02b_hyeonseok_evan.mp3",
+   "range": [
+    [
+     9.05,
+     11.05
+    ]
+   ]
+  },
+  "H03": {
+   "start": 19.7,
+   "end": 23.59,
+   "file": "E10-03_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     4.2
+    ]
+   ]
+  },
+  "H3B": {
+   "start": 23.99,
+   "end": 26.55,
+   "file": "E10-03_hyeonseok_evan.mp3",
+   "range": [
+    [
+     4.6,
+     7.7
+    ]
+   ]
+  },
+  "H05": {
+   "start": 31.79,
+   "end": 34.2,
+   "file": "E10-05_hyeonseok_evan.mp3",
+   "range": [
+    [
+     0,
+     2.85
+    ]
+   ]
+  },
+  "T06": {
+   "start": 34.8,
+   "end": 36.77,
+   "file": "E10-06_teacher_inner_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.27
+    ]
+   ]
+  },
+  "M08": {
+   "start": 40.97,
+   "end": 48.1,
+   "file": "E10-08_mother_soraya.mp3",
+   "range": [
+    [
+     0,
+     8.2
+    ]
+   ]
+  },
+  "VP09": {
+   "start": 48.5,
+   "end": 53.646,
+   "file": "E10-09_vp_arthur.mp3",
+   "range": [
+    [
+     0.0,
+     5.15
+    ]
+   ]
+  },
+  "J12": {
+   "start": 54.046,
+   "end": 56.146,
+   "file": "E10-12_jiu_inner_student.mp3",
+   "range": [
+    [
+     0,
+     2.43
+    ]
+   ]
+  },
+  "T13": {
+   "start": 60.446,
+   "end": 68.188,
+   "file": "E10-13b_teacher_dm_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.0
+    ],
+    [
+     2.95,
+     5.15
+    ],
+    [
+     5.55,
+     9.6
+    ]
+   ]
+  },
+  "J14": {
+   "start": 69.038,
+   "end": 70.598,
+   "file": "E10-14_jiu_teacherbody.mp3",
+   "range": [
+    [
+     0,
+     2.43
+    ]
+   ]
+  }
+ },
+ "subs": [
+  [
+   2.5,
+   5.32,
+   "엄마. 나한테 왜 그랬어."
+  ],
+  [
+   6.0,
+   10.06,
+   "나, 많이 힘들었어. 나도 노력했어."
+  ],
+  [
+   10.46,
+   13.58,
+   "너 때문에 내가 진짜! 이 ○○...!"
+  ],
+  [
+   13.78,
+   16.71,
+   "엄마 목소리만 들려도 숨이 막혔는데..."
+  ],
+  [
+   17.26,
+   19.35,
+   "그래도 엄마 사랑해."
+  ],
+  [
+   19.7,
+   23.74,
+   "근데 가끔은, 그냥 훨훨 날아가고 싶었어."
+  ],
+  [
+   23.99,
+   26.7,
+   "...이제 버틸 힘이 없어. 도와줘요."
+  ],
+  [
+   31.79,
+   34.35,
+   "...어제, 엄마한테 말했어."
+  ],
+  [
+   34.8,
+   36.92,
+   "...잘했다, 현석아."
+  ],
+  [
+   40.97,
+   43.79,
+   "어제 애가... 저한테 그러더라고요."
+  ],
+  [
+   43.82,
+   48.25,
+   "저도 어떻게 해야 할지 모르겠어요. 도와주세요."
+  ],
+  [
+   48.5,
+   53.8,
+   "...네, 학교입니다. 아이랑 어머님이 같이 도움을 받고 싶어 하셔서요."
+  ],
+  [
+   54.05,
+   56.3,
+   "...다행이다."
+  ],
+  [
+   69.04,
+   70.75,
+   "...헐."
+  ]
+ ],
+ "bgm": [
+  [
+   "sad",
+   1.5,
+   11.01,
+   0.9
+  ],
+  [
+   "warm",
+   13.58,
+   56.246,
+   0.8,
+   1.6
+  ],
+  [
+   "pulse",
+   56.546,
+   68.738
+  ]
+ ]
+}

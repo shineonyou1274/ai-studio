@@ -126,11 +126,12 @@ def _write(x, path):
 
 def make(sections, voices, total, out_wav, target_lufs=-28.0, duck_db=-10.0, class_db=-4.0, release=0.35):
     n = int(total * SR); bed = np.zeros(n)
-    for k, (kind, a, b) in enumerate(sections):
+    for k, sec in enumerate(sections):
+        kind, a, b = sec[:3]; fo_s = sec[3] if len(sec) > 3 else 0.005; fi_s = sec[4] if len(sec) > 4 else 0.3
         if b <= a: continue
         y = _section(kind, b - a, k)
-        fin = min(int(0.3 * SR), len(y)); y[:fin] *= np.linspace(0, 1, fin)                     # 들어올 때 0.3초 페이드
-        fo = int(0.005 * SR); y[-fo:] *= np.linspace(1, 0, fo)                    # 나갈 때는 바로 끊음
+        fin = min(int(fi_s * SR), len(y)); y[:fin] *= np.linspace(0, 1, fin)                     # 들어올 때 페이드(기본 0.3초)
+        fo = min(int(fo_s * SR), len(y)); y[-fo:] *= np.linspace(1, 0, fo)       # 나갈 때(기본 바로 끊음, 10화 v4부터 지정 가능)
         if kind == 'class': y *= 10 ** (class_db / 20)
         _add(bed, y, a)
     # 크기 맞추기(덕킹 전, 소리 있는 곳 기준 통합 음량)
