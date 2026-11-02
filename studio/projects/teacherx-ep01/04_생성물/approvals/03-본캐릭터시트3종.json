@@ -1,0 +1,17 @@
+{
+  "id": "03-본캐릭터시트3종",
+  "date": "2026-11-02",
+  "purpose": "S19 본 캐릭터 시트 (독고다해·안정우·교감) — 요소 등록·영상 참조용",
+  "model": "gpt_image_2_5 (Higgsfield)",
+  "resolution": "quality high, 2k (get_cost 1장 2.75 확인)",
+  "audio": "해당 없음",
+  "aspect_ratio": "16:9",
+  "refs": "미리 보기 때 만든 저화질 시트를 얼굴 기준으로 넣음 (다해 0ff8146d, 안정우 2815dd4a, 교감 b938264c)",
+  "count": 3,
+  "cost_total": 8.25,
+  "balance_before": 319.23,
+  "weekly_note": "11/2~11/8 누적 31.25 → 39.50 (주 상한 200)",
+  "prompt_summary": "저화질 시트와 같은 인물·같은 옷을 웹툰풍 고화질로. 정면 큰 얼굴, 3/4, 옆, 전신 앞·뒤, 표정 3개. 단색 배경, 고른 조명, 얼굴 가림 없음, 머리글 이름만.",
+  "status": "approved",
+  "approved_by": "사장님 2026-11-02 \"좋아 캐릭터 시트 진행해\""
+}
