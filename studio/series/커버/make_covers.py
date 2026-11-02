@@ -9,6 +9,7 @@ import sys
 P = pathlib.Path('/home/user/ai-studio/studio/projects')
 KE = pathlib.Path('/home/user/youtube-ops/series/_soulchange_kit/episodes')
 N = int(sys.argv[1])
+SUF = sys.argv[2] if len(sys.argv) > 2 else ''   # 11/2: '_띠고침'이면 상황 띠를 "교사와 학생, 몸이 바뀌었다"로, 파일 이름 뒤에 붙임
 HERE = P / f'soulchange-ep{N:02d}' / '05_편집'
 F = '/home/user/youtube-ops/series/_soulchange_kit/fonts/Jua-Regular.ttf'
 f = lambda s: ImageFont.truetype(F, s)
@@ -63,7 +64,7 @@ def cover(v):
     d.line([(60, 196), (430, 196), (452, 232), (430, 268), (60, 268), (60, 196)], fill=OUTL, width=5)
     d.text((245, 232), f'소울체인지 {N}화', font=f(50), fill=CREAM, stroke_width=5, stroke_fill=OUTL, anchor='mm')
     # 상황 고정 띠(처음 보는 사람도 한눈에)
-    tag = v.get('tag', '담임 몸에 여고생 영혼')
+    tag = v.get('tag', '교사와 학생, 몸이 바뀌었다' if SUF else '담임 몸에 여고생 영혼')
     tw = d.textlength(tag, font=f(46))
     d.rounded_rectangle([60, 292, 60 + tw + 48, 362], radius=34, fill=(255, 255, 255), outline=OUTL, width=4)
     d.text((84, 327), tag, font=f(46), fill=OUTL, anchor='lm')
@@ -80,9 +81,9 @@ def cover(v):
 
 ims = []
 for k, v in VARIANTS.items():
-    im = cover(v); im.save(HERE / f'cover_ep{N}_{k}.png'); ims.append(im)
+    im = cover(v); im.save(HERE / f'cover_ep{N}_{k}{SUF}.png'); ims.append(im)
 sheet = Image.new('RGB', (W * 3 + 80, H + 140), (240, 240, 240)); d = ImageDraw.Draw(sheet)
 for i, (k, im) in enumerate(zip(VARIANTS, ims)):
     sheet.paste(im, (20 + i * (W + 20), 120)); d.text((20 + i * (W + 20) + W // 2, 60), k, font=f(80), fill=(30, 30, 30), anchor='mm')
-sheet.resize((sheet.width // 3, sheet.height // 3)).save(HERE / f'cover_ep{N}_비교.png')
+sheet.resize((sheet.width // 3, sheet.height // 3)).save(HERE / f'cover_ep{N}_비교{SUF}.png')
 print('OK')
