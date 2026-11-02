@@ -1,0 +1,1274 @@
+{
+ "main": 132.769,
+ "total": 138.469,
+ "loudness_LUFS": -14.0,
+ "true_peak_dBTP": -2.5,
+ "cuts": [
+  {
+   "id": "K0",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/H1.mp4",
+   "ss": 3.0,
+   "dur": 1.0,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 0.0,
+   "note": "첫 1초: 복도 아이들(제목 띠)",
+   "fstart": 0.0,
+   "fend": 1.0
+  },
+  {
+   "id": "C1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C1.mp4",
+   "ss": 4.6,
+   "dur": 4.6,
+   "pip": "pip",
+   "stretch": 3.3,
+   "zoom": [
+    1.15,
+    0.0,
+    0.3
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 1.0,
+   "note": "상담실 넓게: 담임 몸·엄마 뒷모습",
+   "fstart": 1.0,
+   "fend": 5.6
+  },
+  {
+   "id": "C2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C2.mp4",
+   "ss": 0,
+   "dur": 3.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.5,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 5.6,
+   "note": "엄마 손수건",
+   "fstart": 5.6,
+   "fend": 9.2
+  },
+  {
+   "id": "C1w",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C1.mp4",
+   "ss": 4.6,
+   "dur": 2.9,
+   "pip": "pip",
+   "stretch": 2.0,
+   "zoom": [
+    1.15,
+    0.0,
+    0.3
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 9.2,
+   "note": "상담실 넓게(담임 몸·엄마)",
+   "fstart": 9.2,
+   "fend": 12.1
+  },
+  {
+   "id": "C12e",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C12.mp4",
+   "ss": 0.0,
+   "dur": 2.6,
+   "pip": "pip",
+   "stretch": 1.3,
+   "zoom": [
+    1.15,
+    0.3,
+    0.2
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 12.1,
+   "note": "담임 몸(지우) 머리를 귀 뒤로 넘김 — 지우 버릇",
+   "fstart": 12.1,
+   "fend": 14.7
+  },
+  {
+   "id": "C4h",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C7.mp4",
+   "ss": 0.0,
+   "dur": 3.5,
+   "pip": "pip",
+   "stretch": 12.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 14.7,
+   "note": "담임 몸 얼굴 — 엄마 말 듣는 중",
+   "fstart": 14.7,
+   "fend": 18.2
+  },
+  {
+   "id": "C1x",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C1.mp4",
+   "ss": 4.4,
+   "dur": 2.5,
+   "pip": "pip",
+   "stretch": 2.0,
+   "zoom": [
+    1.5,
+    0.15,
+    0.25
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 18.2,
+   "note": "담임 몸 굳은 채 듣기",
+   "fstart": 18.2,
+   "fend": 20.7
+  },
+  {
+   "id": "C2b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C2.mp4",
+   "ss": 0.2,
+   "dur": 6.566,
+   "pip": null,
+   "stretch": 1.4,
+   "zoom": [
+    1.5,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 20.7,
+   "note": "엄마 손 — 말 끝까지",
+   "fstart": 20.7,
+   "fend": 27.266666666666666
+  },
+  {
+   "id": "C4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C4.mp4",
+   "ss": 0,
+   "dur": 6.5,
+   "pip": null,
+   "stretch": 1.3,
+   "zoom": [
+    1.7,
+    0.0,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 27.266,
+   "note": "(손·종이만) 생결 확인서",
+   "fstart": 27.266666666666666,
+   "fend": 33.766666666666666
+  },
+  {
+   "id": "C1c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C1.mp4",
+   "ss": 5.0,
+   "dur": 2.6,
+   "pip": "pip",
+   "stretch": 4.5,
+   "zoom": [
+    1.15,
+    0.0,
+    0.3
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 33.766,
+   "note": "담임 몸 안절부절(넥타이)",
+   "fstart": 33.766666666666666,
+   "fend": 36.36666666666667
+  },
+  {
+   "id": "C12f",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C12.mp4",
+   "ss": 0.2,
+   "dur": 2.2,
+   "pip": "pip",
+   "stretch": 1.3,
+   "zoom": [
+    1.3,
+    0.3,
+    0.2
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 36.366,
+   "note": "또 귀 뒤로 넘김",
+   "fstart": 36.36666666666667,
+   "fend": 38.56666666666667
+  },
+  {
+   "id": "C2c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C2.mp4",
+   "ss": 0.3,
+   "dur": 5.544,
+   "pip": null,
+   "stretch": 1.2,
+   "zoom": [
+    1.5,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 38.566,
+   "note": "엄마 손 꽉 쥠 — \"죄…\"",
+   "fstart": 38.56666666666667,
+   "fend": 44.1
+  },
+  {
+   "id": "C1j",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C1.mp4",
+   "ss": 4.8,
+   "dur": 3.33,
+   "pip": "pip",
+   "stretch": 3.0,
+   "zoom": [
+    1.5,
+    0.15,
+    0.25
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 44.11,
+   "note": "\"엄마, 그만…\" 바로 — 담임 몸만",
+   "fstart": 44.1,
+   "fend": 47.43333333333334
+  },
+  {
+   "id": "FB1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/C1_K3.mp4",
+   "ss": 0.3,
+   "dur": 2.7,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.45,eq=brightness=0.03:contrast=1.03,",
+   "hold": true,
+   "fx": null,
+   "start": 47.44,
+   "note": "회상: 5화 교실, 지우 몸(김병만 영혼) 씩씩대며 머리 긁기",
+   "fstart": 47.43333333333333,
+   "fend": 50.13333333333333
+  },
+  {
+   "id": "JF1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C6.mp4",
+   "ss": 3.4,
+   "dur": 1.3,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    2.3,
+    0.68,
+    0.1
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 50.14,
+   "note": "지우 얼굴(김병만 영혼) 놀람",
+   "fstart": 50.13333333333333,
+   "fend": 51.43333333333333
+  },
+  {
+   "id": "FB2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep08/04_생성물/clips/K8.mp4",
+   "ss": 0.8,
+   "dur": 1.154,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.45,eq=brightness=0.03:contrast=1.03,",
+   "hold": true,
+   "fx": null,
+   "start": 51.44,
+   "note": "회상: 8화 벤치",
+   "fstart": 51.43333333333333,
+   "fend": 52.599999999999994
+  },
+  {
+   "id": "PC0",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/P1.mp4",
+   "ss": 0.3,
+   "dur": 3.186,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 52.594,
+   "note": "회상: \"나 그날 학교 째고 PC방도 갔어\" — PC방",
+   "fstart": 52.6,
+   "fend": 55.800000000000004
+  },
+  {
+   "id": "C6b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C2.mp4",
+   "ss": 3.0,
+   "dur": 1.7,
+   "pip": null,
+   "stretch": 1.5,
+   "zoom": [
+    1.6,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 55.78,
+   "note": "엄마 손 멈춤 \"…지우…니?\" (이름표 안 보이게)",
+   "fstart": 55.8,
+   "fend": 57.5
+  },
+  {
+   "id": "FB3",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep05/04_생성물/clips/C3_K6b.mp4",
+   "ss": 0.3,
+   "dur": 2.6,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.45,eq=brightness=0.03:contrast=1.03,",
+   "hold": true,
+   "fx": null,
+   "start": 57.48,
+   "note": "회상: 5화 교실, 머리 감싸기",
+   "fstart": 57.5,
+   "fend": 60.1
+  },
+  {
+   "id": "JF2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C8.mp4",
+   "ss": 1.2,
+   "dur": 1.4,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 60.08,
+   "note": "지우 얼굴(김병만 영혼) 고개 숙임",
+   "fstart": 60.1,
+   "fend": 61.5
+  },
+  {
+   "id": "PC1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/P1.mp4",
+   "ss": 1.4,
+   "dur": 3.632,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 61.48,
+   "note": "회상: 지우가 PC방에서 게임 — \"게임하면 잊혀서\"",
+   "fstart": 61.5,
+   "fend": 65.13333333333334
+  },
+  {
+   "id": "FB4",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep11/04_생성물/clips/K5.mp4",
+   "ss": 0.3,
+   "dur": 2.808,
+   "pip": "pip_t",
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "hue=s=0.45,eq=brightness=0.03:contrast=1.03,",
+   "hold": true,
+   "fx": null,
+   "start": 65.112,
+   "note": "회상: 11화 딸기우유 툭",
+   "fstart": 65.13333333333334,
+   "fend": 67.93333333333334
+  },
+  {
+   "id": "C7c",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C7.mp4",
+   "ss": 8.6,
+   "dur": 2.6,
+   "pip": "pip",
+   "stretch": 3.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 67.92,
+   "note": "담임 몸 우는 얼굴",
+   "fstart": 67.93333333333334,
+   "fend": 70.53333333333333
+  },
+  {
+   "id": "C8",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C2.mp4",
+   "ss": 0.5,
+   "dur": 5.035,
+   "pip": null,
+   "stretch": 2.2,
+   "zoom": [
+    1.5,
+    0.5,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 70.52,
+   "note": "엄마 손 — \"미안해, 엄마.\"",
+   "fstart": 70.53333333333333,
+   "fend": 75.56666666666666
+  },
+  {
+   "id": "CATa",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep01/05_편집/ep1_공개본_720p.mp4",
+   "ss": 39.52,
+   "dur": 2.6,
+   "pip": null,
+   "stretch": 4.2,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "delogo=x=250:y=118:w=225:h=70,delogo=x=110:y=958:w=440:h=95,",
+   "hold": true,
+   "fx": null,
+   "start": 75.555,
+   "note": "1화 고양이(입 다문 0.6초만 느리게): 노트북 \"복귀 승인\" + 야옹",
+   "fstart": 75.56666666666666,
+   "fend": 78.16666666666666
+  },
+  {
+   "id": "FL1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep01/05_편집/ep1_공개본_720p.mp4",
+   "ss": 39.9,
+   "dur": 0.5,
+   "pip": null,
+   "stretch": 4.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "delogo=x=250:y=118:w=225:h=70,delogo=x=110:y=958:w=440:h=95,",
+   "hold": false,
+   "fx": null,
+   "start": 78.155,
+   "note": "번쩍(흰 화면은 자막에서) — 고양이 화면 위",
+   "fstart": 78.16666666666667,
+   "fend": 78.66666666666667
+  },
+  {
+   "id": "C11",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C11.mp4",
+   "ss": 0,
+   "dur": 6.944,
+   "pip": null,
+   "stretch": 1.4,
+   "zoom": [
+    1.9,
+    0.0,
+    1.0
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 78.655,
+   "note": "(엄마 등·손만) 지우가 엄마를 안음",
+   "fstart": 78.66666666666667,
+   "fend": 85.60000000000001
+  },
+  {
+   "id": "HW",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/H1.mp4",
+   "ss": 0.5,
+   "dur": 2.6,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 85.599,
+   "note": "다음 날 복도: 아이들 지나감",
+   "fstart": 85.6,
+   "fend": 88.19999999999999
+  },
+  {
+   "id": "BS",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/B1.mp4",
+   "ss": 0.3,
+   "dur": 2.4,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 88.199,
+   "note": "남학생 \"참 내… 하.\" 비웃음",
+   "fstart": 88.2,
+   "fend": 90.60000000000001
+  },
+  {
+   "id": "C13",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C13.mp4",
+   "ss": 0,
+   "dur": 3.4,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 90.599,
+   "note": "남학생 \"샘이 뭔데 그러세요?\"",
+   "fstart": 90.6,
+   "fend": 94.0
+  },
+  {
+   "id": "C14a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C14.mp4",
+   "ss": 0,
+   "dur": 3.183,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.7,
+    0.5,
+    0.05
+   ],
+   "vfx": "deshake=rx=32:ry=48,",
+   "hold": true,
+   "fx": null,
+   "start": 93.999,
+   "note": "김병만 \"그래. 나 암것도…\"",
+   "fstart": 94.0,
+   "fend": 97.16666666666667
+  },
+  {
+   "id": "BR1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/B2.mp4",
+   "ss": 0.0,
+   "dur": 1.804,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 97.182,
+   "note": "남학생 듣는 얼굴(비웃음 사라짐)",
+   "fstart": 97.16666666666667,
+   "fend": 98.96666666666667
+  },
+  {
+   "id": "C14b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C14.mp4",
+   "ss": 4.986700000000013,
+   "dur": 1.379,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.7,
+    0.5,
+    0.05
+   ],
+   "vfx": "deshake=rx=32:ry=48,",
+   "hold": true,
+   "fx": null,
+   "start": 98.986,
+   "note": "김병만 \"너 지금 나 아니면\"",
+   "fstart": 98.96666666666667,
+   "fend": 100.33333333333333
+  },
+  {
+   "id": "RC1",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/R1.mp4",
+   "ss": 0.5,
+   "dur": 4.544,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.4,
+    1.0,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 100.365,
+   "note": "반 아이들 폰 내려놓고 듣기 — \"말해 줄 사람을 못 만날까 봐\"",
+   "fstart": 100.33333333333333,
+   "fend": 104.86666666666666
+  },
+  {
+   "id": "C15a",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C15.mp4",
+   "ss": 0,
+   "dur": 5.665,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.55,
+    0.3,
+    0.2
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 104.909,
+   "note": "김병만 \"한 번쯤…\" \"원하지 않으면…\"",
+   "fstart": 104.86666666666666,
+   "fend": 110.53333333333333
+  },
+  {
+   "id": "RC2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/R1.mp4",
+   "ss": 2.6,
+   "dur": 2.518,
+   "pip": null,
+   "stretch": 1.2,
+   "zoom": [
+    1.4,
+    1.0,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 110.575,
+   "note": "반 아이들 — \"잔소리는 아주 귀해서\"",
+   "fstart": 110.53333333333333,
+   "fend": 113.06666666666666
+  },
+  {
+   "id": "C15b",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C15.mp4",
+   "ss": 8.183499999999995,
+   "dur": 1.637,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.55,
+    0.3,
+    0.2
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 113.093,
+   "note": "김병만 \"아무에게나 나눠 주는 건 아니거든\"",
+   "fstart": 113.06666666666666,
+   "fend": 114.7
+  },
+  {
+   "id": "BR2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/B2.mp4",
+   "ss": 1.8,
+   "dur": 3.37,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 114.729,
+   "note": "남학생 의자 내리고 바로 앉음 — \"자. 선택해라. 어떻게 할래?\"",
+   "fstart": 114.7,
+   "fend": 118.06666666666666
+  },
+  {
+   "id": "C18",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C18.mp4",
+   "ss": 0,
+   "dur": 5.57,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.3,
+    0.2,
+    0.55
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 118.099,
+   "note": "복도 교감과 이마 빡 + \"아얏! 거 똑바로 좀 보고 다녀요!\"",
+   "fstart": 118.06666666666666,
+   "fend": 123.63333333333333
+  },
+  {
+   "id": "C19",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C19.mp4",
+   "ss": 2.3,
+   "dur": 3.65,
+   "pip": null,
+   "stretch": 1.4,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": true,
+   "fx": null,
+   "start": 123.669,
+   "note": "\"교감샘도 저처럼 살아 봐라\" — 말하는 구간(2.8~4.3초)을 1.4배 느리게 해서 입 맞춤",
+   "fstart": 123.63333333333334,
+   "fend": 127.30000000000001
+  },
+  {
+   "id": "FL2",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep12/04_생성물/clips/C19.mp4",
+   "ss": 4.5,
+   "dur": 0.5,
+   "pip": null,
+   "stretch": 1.0,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "",
+   "hold": false,
+   "fx": null,
+   "start": 127.319,
+   "note": "번쩍",
+   "fstart": 127.3,
+   "fend": 127.8
+  },
+  {
+   "id": "CATb",
+   "src": "/home/user/ai-studio/studio/projects/soulchange-ep01/05_편집/ep1_공개본_720p.mp4",
+   "ss": 16.7,
+   "dur": 4.95,
+   "pip": null,
+   "stretch": 2.605263157894746,
+   "zoom": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "vfx": "delogo=x=175:y=122:w=380:h=62,delogo=x=100:y=945:w=460:h=110,",
+   "hold": true,
+   "fx": null,
+   "start": 127.819,
+   "note": "1화 고양이 재사용: \"소원 접수: 교감 ↔ 김병만\" + \"접수했어.\"",
+   "fstart": 127.8,
+   "fend": 132.73333333333332
+  }
+ ],
+ "lines": {
+  "J01": {
+   "start": 2.0,
+   "end": 4.55,
+   "file": "E12-01_jiu_inner_student.mp3",
+   "range": [
+    [
+     0,
+     2.9
+    ]
+   ]
+  },
+  "M02": {
+   "start": 5.9,
+   "end": 26.866,
+   "file": "E12-02_mom_helena.mp3",
+   "range": [
+    [
+     0,
+     24.5
+    ]
+   ]
+  },
+  "M04": {
+   "start": 27.566,
+   "end": 44.06,
+   "file": "E12-04_mom_helena.mp3",
+   "range": [
+    [
+     0,
+     19.0
+    ]
+   ]
+  },
+  "J05": {
+   "start": 44.06,
+   "end": 47.24,
+   "file": "E12-05_jiu_slip_student.mp3",
+   "range": [
+    [
+     0,
+     3.4
+    ]
+   ]
+  },
+  "J06": {
+   "start": 47.44,
+   "end": 55.48,
+   "file": "ls/E12-06_jiu_student_x1.1.mp3",
+   "range": [
+    [
+     0,
+     8.55
+    ]
+   ]
+  },
+  "M07": {
+   "start": 55.98,
+   "end": 56.98,
+   "file": "E12-07_mom_helena.mp3",
+   "range": [
+    [
+     0,
+     1.25
+    ]
+   ]
+  },
+  "J08": {
+   "start": 57.53,
+   "end": 67.62,
+   "file": "ls/E12-08_jiu_student_x1.1.mp3",
+   "range": [
+    [
+     0,
+     11.35
+    ]
+   ]
+  },
+  "J09": {
+   "start": 68.22,
+   "end": 75.155,
+   "file": "E12-09_jiu_student.mp3",
+   "range": [
+    [
+     0,
+     9.6
+    ]
+   ]
+  },
+  "MEOW": {
+   "start": 76.555,
+   "end": 77.235,
+   "file": "SFX_meow_bigsoundbank0390.wav",
+   "range": [
+    [
+     0,
+     0.78
+    ]
+   ]
+  },
+  "J12": {
+   "start": 79.055,
+   "end": 85.199,
+   "file": "E12-12b_jiu_student.mp3",
+   "range": [
+    [
+     0,
+     7.15
+    ]
+   ]
+  },
+  "B13": {
+   "start": 88.799,
+   "end": 89.989,
+   "file": "E12-13s_boy_benji.mp3",
+   "range": [
+    [
+     0,
+     1.6
+    ]
+   ]
+  },
+  "B14": {
+   "start": 91.699,
+   "end": 93.509,
+   "file": "E12-14_boy_benji.mp3",
+   "range": [
+    [
+     0,
+     2.1
+    ]
+   ]
+  },
+  "T15": {
+   "start": 93.999,
+   "end": 104.609,
+   "file": "ls/E12-15_teacher_teacher_x1.1.mp3",
+   "range": [
+    [
+     0,
+     11.9
+    ]
+   ]
+  },
+  "T16": {
+   "start": 104.909,
+   "end": 117.499,
+   "file": "ls/E12-16_teacher_teacher_x1.1.mp3",
+   "range": [
+    [
+     0,
+     15.0
+    ]
+   ]
+  },
+  "CHIK": {
+   "start": 120.399,
+   "end": 120.929,
+   "file": "SFX_chik_bigsoundbank0044.wav",
+   "range": [
+    [
+     0,
+     0.55
+    ]
+   ]
+  },
+  "V18": {
+   "start": 120.699,
+   "end": 123.469,
+   "file": "E12-18c_vp_arthur.mp3",
+   "range": [
+    [
+     0,
+     2.95
+    ]
+   ]
+  },
+  "T18": {
+   "start": 124.369,
+   "end": 126.819,
+   "file": "E12-18b_teacher_teacher.mp3",
+   "range": [
+    [
+     0,
+     2.8
+    ]
+   ]
+  },
+  "CAT": {
+   "start": 128.119,
+   "end": 131.469,
+   "file": "CAT_ep1_접수했어_v2.wav",
+   "range": [
+    [
+     0,
+     3.35
+    ]
+   ]
+  }
+ },
+ "subs": [
+  [
+   2.0,
+   4.7,
+   "...엄마 앞에서 담임인 척이라니."
+  ],
+  [
+   5.9,
+   9.76,
+   "선생님, 요즘 애가 방에서 잘 나오지도 않고요,"
+  ],
+  [
+   9.76,
+   12.23,
+   "제가 옆에 가기만 해도 질색을 하질 않나..."
+  ],
+  [
+   12.23,
+   16.89,
+   "계속 눈을 찡그리고 머리를 긁으면서 한숨 쉬고 씩씩거리고,"
+  ],
+  [
+   16.89,
+   20.26,
+   "다리를 쩍쩍 아무 데서나 막 벌리고 있길래 한 소리 했더니,"
+  ],
+  [
+   20.26,
+   23.2,
+   "그 뒤로 밥도 같이 안 먹으려고 하더라고요."
+  ],
+  [
+   23.2,
+   26.87,
+   "학교는 또 새벽같이 나가서 얼굴 보기도 힘들고요."
+  ],
+  [
+   27.57,
+   31.69,
+   "사실 애가 너무 힘들어하길래, 제가 하루 학교 쉬라며"
+  ],
+  [
+   31.69,
+   33.34,
+   "생결 확인서를 써 줬거든요."
+  ],
+  [
+   33.34,
+   34.67,
+   "죄송합니다, 선생님."
+  ],
+  [
+   34.67,
+   38.9,
+   "그러면 안 된다는 걸 알면서 딱 한 번만... 하면서 써 줬는데,"
+  ],
+  [
+   38.9,
+   42.53,
+   "저도 그렇고 우리 지우도 그게 너무 죄책감이 들어서"
+  ],
+  [
+   42.53,
+   44.03,
+   "마음이 계속 힘드네요."
+  ],
+  [
+   44.06,
+   47.44,
+   "엄마, 그만... 내가 잘못했어."
+  ],
+  [
+   47.44,
+   50.94,
+   "엄마, 내가... 내가 부탁한 거잖아."
+  ],
+  [
+   50.94,
+   52.59,
+   "다 내가 잘못한 거야."
+  ],
+  [
+   52.59,
+   55.48,
+   "나 그날 학교 째고 PC방도 갔어."
+  ],
+  [
+   55.98,
+   57.13,
+   "...지우...?"
+  ],
+  [
+   57.53,
+   61.67,
+   "그냥 나도 몰라, 왜 그랬는지... 아프고 싶었어."
+  ],
+  [
+   61.67,
+   65.32,
+   "뭘 정해야 할 때마다 무서워서, 게임하면 잊혀서."
+  ],
+  [
+   65.32,
+   67.77,
+   "다들 그러니까 괜찮은 줄 알았어."
+  ],
+  [
+   68.22,
+   71.22,
+   "마약도 도박도 아닌데 이 정도면 정상이라고..."
+  ],
+  [
+   71.22,
+   75.31,
+   "근데 그냥, 비겁했던 거야. 미안해, 엄마."
+  ],
+  [
+   79.06,
+   82.57,
+   "...엄마, 나 이제 힘들면 힘들다고 말하고,"
+  ],
+  [
+   82.57,
+   85.35,
+   "뭐든 피하지 않고 씩씩하게 해 볼게."
+  ],
+  [
+   88.8,
+   90.14,
+   "참 내... 하."
+  ],
+  [
+   91.7,
+   93.66,
+   "샘이 뭔데 그러세요?"
+  ],
+  [
+   94.0,
+   97.05,
+   "그래. 나 암것도 아니야. 아무 힘도 없어."
+  ],
+  [
+   97.05,
+   99.2,
+   "그런데 너가 가여워서 그래."
+  ],
+  [
+   99.2,
+   100.42,
+   "너 지금 나 아니면,"
+  ],
+  [
+   100.42,
+   104.61,
+   "너한테 그렇게 살지 말라고 말해 줄 사람을 앞으로 못 만날까 봐 그래."
+  ],
+  [
+   104.91,
+   109.06,
+   "한 번쯤 제대로 네 삶에 참견하는 사람이 있어도 괜찮지 않을까."
+  ],
+  [
+   109.06,
+   111.51,
+   "하지만 너가 원하지 않으면, 하지 않을 거야."
+  ],
+  [
+   111.51,
+   115.53,
+   "내가 하는 잔소리들은 아주 귀해서, 아무에게나 나눠 주는 건 아니거든."
+  ],
+  [
+   115.53,
+   117.5,
+   "...자. 선택해라. 어떻게 할래?"
+  ],
+  [
+   120.7,
+   123.62,
+   "아얏! 거, 똑바로 좀 보고 다녀요!"
+  ],
+  [
+   124.37,
+   126.97,
+   "교감샘도 저처럼 살아 봐라."
+  ],
+  [
+   128.12,
+   131.62,
+   "서로 돼 보는 게 소원이야? ...접수했어."
+  ]
+ ],
+ "bgm": [
+  [
+   "class",
+   0.0,
+   5.8,
+   0.5
+  ],
+  [
+   "warm",
+   26.766,
+   75.555,
+   1.2,
+   1.5
+  ],
+  [
+   "class",
+   80.655,
+   88.199,
+   0.5
+  ],
+  [
+   "tense2",
+   88.199,
+   93.999,
+   0.3
+  ],
+  [
+   "warm",
+   93.999,
+   120.399,
+   1.2,
+   1.0
+  ]
+ ]
+}
