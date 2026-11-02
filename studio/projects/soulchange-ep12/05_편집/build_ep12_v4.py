@@ -121,7 +121,8 @@ cut('C19', K('C19'), 0, max(e + 0.5 - c0, 3.6), note='"교감샘도 저처럼 �
 cut('FL2', K('C19'), 4.5, 0.5, note='번쩍')
 c0 = t; e = at('CAT', c0 + 0.3)
 CATV2 = "delogo=x=175:y=122:w=380:h=62,delogo=x=100:y=945:w=460:h=110,"
-cut('CATb', EP1, 16.0, max(e + 1.3 - c0, 3.4), vfx=CATV2, hold=True, note='1화 고양이 재사용: "소원 접수: 교감 ↔ 김병만" + "접수했어."')
+_d = max(e + 1.3 - c0, 3.4)
+cut('CATb', EP1, 16.0, _d, stretch=_d / 2.4, vfx=CATV2, hold=True, note='1화 고양이 재사용: "소원 접수: 교감 ↔ 김병만" + "접수했어."')
 MAIN = round(t, 3); TOT = round(MAIN + END_LEN, 3)
 print('본편', MAIN, '합계', TOT)
 for c in CUTS:
