@@ -9,6 +9,7 @@ import sys
 P = pathlib.Path('/home/user/ai-studio/studio/projects')
 KE = pathlib.Path('/home/user/youtube-ops/series/_soulchange_kit/episodes')
 N = int(sys.argv[1])
+SUF = sys.argv[2] if len(sys.argv) > 2 else ''   # 11/2: '_띠고침'이면 상황 띠를 "교사와 학생, 몸이 바뀌었다"로, 파일 이름 뒤에 붙임
 HERE = P / f'soulchange-ep{N:02d}' / '05_편집'
 F = '/home/user/youtube-ops/series/_soulchange_kit/fonts/Jua-Regular.ttf'
 f = lambda s: ImageFont.truetype(F, s)
@@ -33,6 +34,9 @@ EP = {
          'C': dict(src=P / 'soulchange-ep07/04_생성물/clips/K12_elem.mp4', t=3.9, z=1.6, cx=0.50, top=0.02, strip='내일 하은이 온다, 네가 상담해', hook=['헐... 나보고 또?', '내 몸 언제 돌아와'])},    11: {'A': dict(src=P / 'soulchange-ep11/04_생성물/clips/K3.mp4', t=0.9, z=1.15, cx=0.50, top=0.04, strip='하은이 오는 날, 담임의 하루', hook=['이런 걸 하루에', '다 하라고?']),
          'B': dict(src=P / 'soulchange-ep11/04_생성물/clips/K6.mp4', t=2.2, z=1.15, cx=0.55, top=0.02, strip='체험학습 신청 없이 가족 여행', hook=['너 이렇게 될 줄', '몰랐어?']),
          'C': dict(src=P / 'soulchange-ep11/04_생성물/clips/K14.mp4', t=2.3, z=1.2, cx=0.50, top=0.05, strip='내일 16:00 상담 신청: 지우 어머니', hook=['...엄마가,', '온다고?'])},
+    12: {'A': dict(src=P / 'soulchange-ep12/04_생성물/clips/C19.mp4', t=3.7, z=1.15, cx=0.45, top=0.03, strip='복도에서 교감과 이마 충돌', hook=['교감샘도', '저처럼 살아 봐라'], tag='교사와 학생, 몸이 바뀌었다'),
+         'B': dict(src=P / 'soulchange-ep12/04_생성물/clips/C7.mp4', t=8.8, z=1.10, cx=0.50, top=0.02, strip='담임 몸으로 우리 엄마를 상담했다', hook=['엄마, 그만...', '내가 잘못했어'], tag='교사와 학생, 몸이 바뀌었다'),
+         'C': dict(src=P / 'soulchange-ep12/04_생성물/clips/C15.mp4', t=12.0, z=1.25, cx=0.50, top=0.05, strip='"샘이 뭔데 그러세요?"', hook=['자. 선택해라.', '어떻게 할래?'], tag='교사와 학생, 몸이 바뀌었다')},
 }
 VARIANTS = EP[N]
 
@@ -60,7 +64,7 @@ def cover(v):
     d.line([(60, 196), (430, 196), (452, 232), (430, 268), (60, 268), (60, 196)], fill=OUTL, width=5)
     d.text((245, 232), f'소울체인지 {N}화', font=f(50), fill=CREAM, stroke_width=5, stroke_fill=OUTL, anchor='mm')
     # 상황 고정 띠(처음 보는 사람도 한눈에)
-    tag = '담임 몸에 여고생 영혼'
+    tag = v.get('tag', '교사와 학생, 몸이 바뀌었다' if SUF else '담임 몸에 여고생 영혼')
     tw = d.textlength(tag, font=f(46))
     d.rounded_rectangle([60, 292, 60 + tw + 48, 362], radius=34, fill=(255, 255, 255), outline=OUTL, width=4)
     d.text((84, 327), tag, font=f(46), fill=OUTL, anchor='lm')
@@ -77,9 +81,9 @@ def cover(v):
 
 ims = []
 for k, v in VARIANTS.items():
-    im = cover(v); im.save(HERE / f'cover_ep{N}_{k}.png'); ims.append(im)
+    im = cover(v); im.save(HERE / f'cover_ep{N}_{k}{SUF}.png'); ims.append(im)
 sheet = Image.new('RGB', (W * 3 + 80, H + 140), (240, 240, 240)); d = ImageDraw.Draw(sheet)
 for i, (k, im) in enumerate(zip(VARIANTS, ims)):
     sheet.paste(im, (20 + i * (W + 20), 120)); d.text((20 + i * (W + 20) + W // 2, 60), k, font=f(80), fill=(30, 30, 30), anchor='mm')
-sheet.resize((sheet.width // 3, sheet.height // 3)).save(HERE / f'cover_ep{N}_비교.png')
+sheet.resize((sheet.width // 3, sheet.height // 3)).save(HERE / f'cover_ep{N}_비교{SUF}.png')
 print('OK')
