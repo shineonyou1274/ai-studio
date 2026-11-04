@@ -33,3 +33,9 @@
 | 폴더 | 회차 | 상태 |
 |---|---|---|
 | `teacherx-ep01/` | 교사X 1화 (5분 파일럿) | STAGE 1 시나리오 진행 중 — 바이블 `../series/teacher-x/` |
+
+## 가상 아이돌: Yellow Card
+
+| 폴더 | 작업 | 상태 |
+|---|---|---|
+| `yellowcard-idol/` | 「Yellow Card」 남녀 2인조 버추얼 아이돌 + 쇼츠 뮤직비디오(v4) | 캐릭터 시트 프롬프트 완료, 사용자가 외부 사이트에서 생성 예정 (11/4) — `yellowcard-idol/status.md` |
