@@ -1,0 +1,15 @@
+{
+  "id": "05-대사컷영상_견적",
+  "date": "2026-11-08",
+  "purpose": "1화 대사 컷(영상) 22개 견적 — 녹음 audio_references + 요소/미리보기 그림 참조, Seedance 2.0, 소리 끔",
+  "model": "seedance_2_0",
+  "audio": "generate_audio false (편집에서 녹음 사용)",
+  "aspect_ratio": "9:16",
+  "get_cost": "5초 기준 480p std 15 / 480p fast 5 / 720p std 22.5 (초당 3 / 1 / 4.5)",
+  "cuts_seconds": {"02":4,"03":5,"05":5,"06":4,"08":8,"09":4,"10":5,"12":7,"14":4,"16":4,"17":11,"19":4,"20":4,"22":4,"23":9,"24":4,"25":4,"28":4,"29":4,"30":13,"31":11,"35":4},
+  "total_seconds": 126,
+  "total_seconds_without_silent_cuts": 109,
+  "estimate": {"480p_std_all": 378, "480p_std_no_silent": 327, "480p_fast_all": 126, "480p_fast_no_silent": 109, "720p_std_all": 567},
+  "balance_at_quote": 6.78,
+  "status": "quote_only"
+}
