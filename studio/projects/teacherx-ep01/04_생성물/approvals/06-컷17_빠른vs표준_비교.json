@@ -1,0 +1,9 @@
+{
+  "id": "06-컷17_빠른vs표준_비교",
+  "date": "2026-11-10",
+  "purpose": "대사 컷 방식 결정용: 컷17(지적도 대사) Seedance 2.0 480p 11초, fast vs std",
+  "model": "seedance_2_0", "resolution": "480p", "audio": "generate_audio false, audio_references = 17a+17b 다해 v2(1.08배, 쉼 줄임) media f7389148 10.7초",
+  "aspect_ratio": "9:16", "refs": "start_image = 미리보기 v2 컷17(620dae25), 요소 tx_dahae·tx_flowerbed",
+  "cost_total": 44, "balance_before": 10006.78,
+  "status": "approved", "approved_by": "사장님 2026-11-10 \"아니야 충전했으요^^\" (앞 보고의 추천 1번 '컷17 비교부터'에 대한 진행)"
+}
