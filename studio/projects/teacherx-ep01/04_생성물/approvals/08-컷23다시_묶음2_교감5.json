@@ -1,0 +1,17 @@
+{
+  "id": "08-컷23다시_묶음2_교감5",
+  "date": "2026-11-10",
+  "purpose": "컷23 다시 찍기(녹음 겹침 고침 + 어깨 길이 생머리) + 묶음2 교감 02·03·10·12·16",
+  "model": "seedance_2_0", "mode": "std", "resolution": "480p", "aspect_ratio": "9:16", "audio": "generate_audio false",
+  "rule": "영상 길이 = 녹음+0.3초 올림(최소 4초), 대사 끝난 뒤 입 다묾 + 남는 시간 동작 지정, 녹음은 gentle.py(0.4초 넘는 쉼만 0.3초)",
+  "cuts": {
+    "23": {"sec": 10, "audio": "64216abc (9.17초)", "start_image": "da1c48a0", "image_ref": "8efc4def", "cost": 30},
+    "02": {"sec": 4, "audio": "43145a02 (한숨 1.70초)", "start_image": "31c005ad", "cost": 12},
+    "03": {"sec": 5, "audio": "0913fc3f (4.88초)", "start_image": "fa363122", "cost": 15},
+    "10": {"sec": 4, "audio": "f739a8e2 (11d71470 10.6~15초, 3.84초)", "start_image": "a39bf715", "cost": 12},
+    "12": {"sec": 7, "audio": "15a014be (6.56초)", "start_image": "7498676f", "cost": 21},
+    "16": {"sec": 4, "audio": "9d6aa4ad (R16, 3.06초)", "start_image": "2b44012a", "cost": 12}
+  },
+  "cost_total": 102, "balance_before": 9902.78,
+  "status": "approved", "approved_by": "사장님 2026-11-10 \"응 23 다시 찍고 묶음2 진행해\""
+}
