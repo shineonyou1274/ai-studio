@@ -1,0 +1,13 @@
+{
+  "id": "07-묶음1_교감08_정우06_다해23",
+  "date": "2026-11-10",
+  "purpose": "대사 컷 묶음 1 — 얼굴이 걸리는 세 인물 먼저(계획 v2)",
+  "model": "seedance_2_0", "mode": "std", "resolution": "480p", "aspect_ratio": "9:16", "audio": "generate_audio false",
+  "cuts": {
+    "08": {"sec": 7, "start_image": "ef7a24bc(미리보기 v2)", "audio": "86ca8bbd (11d71470 0~7.6초, 쉼 줄임 6.27초)", "cost": 21},
+    "06": {"sec": 4, "start_image": "31cd6554", "audio": "cb027edc (R06 e05272fc, 1.52초)", "cost": 12},
+    "23": {"sec": 9, "start_image": "da1c48a0", "image_ref": "8efc4def (컷17 표준 9.8초 화면 = 다해 기준 얼굴)", "audio": "c63db4c8 (23a+23b v2, 쉼 줄임, 속도 그대로 8.41초)", "cost": 27}
+  },
+  "cost_total": 60, "max_with_retake_30pct": 78, "balance_before": "약 9962.8",
+  "status": "approved", "approved_by": "사장님 2026-11-10 \"표준으로 하고 쉼만 줄여서 묶음1 시작해\""
+}
