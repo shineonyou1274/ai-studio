@@ -1,0 +1,13 @@
+{
+  "id": "09-묶음3_아이19_정우20",
+  "date": "2026-11-10",
+  "purpose": "묶음3 중 꽃밭 장면 19·20 (컷09는 사장님 대본 질문 확인 뒤로 보류)",
+  "model": "seedance_2_0", "mode": "std", "resolution": "480p", "aspect_ratio": "9:16", "audio": "generate_audio false",
+  "cuts": {
+    "19": {"sec": 4, "start_image": "b82deb2c(아이 시점)", "audio": "d04e6a0c 아이 3.87초 — 아이는 화면 밖(손만), 입 맞춤 없음, 정우 입 다묾", "cost": 12},
+    "20": {"sec": 5, "start_image": "b82deb2c", "audio": "dfc90b3d 정우 3.92초", "cost": 15}
+  },
+  "held": {"09": "c09 db8d25de 2.43초 준비됨, 보류"},
+  "cost_total": 27, "balance_before": 9799.86,
+  "status": "approved", "approved_by": "사장님 2026-11-10 \"23은 이대로 가고 묶음3 진행해\""
+}
