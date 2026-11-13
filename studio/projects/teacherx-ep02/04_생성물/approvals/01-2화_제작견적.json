@@ -1,0 +1,148 @@
+{
+ "id": "01-2화_제작견적",
+ "date": "2026-11-13",
+ "episode": "교사X 2화",
+ "basis": "샷계획_v3.md, 길이는 1화 실측 말 속도 추정(녹음 뒤 확정)",
+ "stages": {
+  "1_그림·녹음": {
+   "images": {
+    "시작 그림(대사 영상용, 같은 앵글 공유 포함)": 16,
+    "듣는 반응 그림": 16,
+    "소품·인서트 그림": 10,
+    "교감실 빈 방(요소)": 1
+   },
+   "image_model": "gpt_image_2_5 high 2k 9:16",
+   "image_cost_each": 2.75,
+   "image_cost": 118.25,
+   "recording": "elevenlabs_v4 24줄(대사22+속마음2), 줄당 약 0.23~0.46",
+   "recording_cost": 7.199999999999999
+  },
+  "2_대사영상": {
+   "model": "seedance_2_0",
+   "mode": "std",
+   "resolution": "480p",
+   "aspect": "9:16",
+   "audio": "generate_audio false, 녹음 audio_references",
+   "clips": {
+    "02": {
+     "who": "교감",
+     "line_s": 4.5,
+     "video_s": 5
+    },
+    "03": {
+     "who": "정우",
+     "line_s": 5.9,
+     "video_s": 7
+    },
+    "04": {
+     "who": "교감",
+     "line_s": 7.0,
+     "video_s": 8
+    },
+    "06": {
+     "who": "교감",
+     "line_s": 5.0,
+     "video_s": 6
+    },
+    "07": {
+     "who": "정우",
+     "line_s": 3.2,
+     "video_s": 4
+    },
+    "08": {
+     "who": "교감",
+     "line_s": 4.1,
+     "video_s": 5
+    },
+    "09": {
+     "who": "다해",
+     "line_s": 3.1,
+     "video_s": 4
+    },
+    "10": {
+     "who": "교감",
+     "line_s": 1.3,
+     "video_s": 4
+    },
+    "11": {
+     "who": "정우",
+     "line_s": 3.7,
+     "video_s": 4
+    },
+    "12": {
+     "who": "다해",
+     "line_s": 3.3,
+     "video_s": 4
+    },
+    "15": {
+     "who": "다해",
+     "line_s": 3.0,
+     "video_s": 4
+    },
+    "16": {
+     "who": "다해",
+     "line_s": 4.8,
+     "video_s": 6
+    },
+    "17": {
+     "who": "다해",
+     "line_s": 8.1,
+     "video_s": 9
+    },
+    "18": {
+     "who": "교감",
+     "line_s": 1.4,
+     "video_s": 4
+    },
+    "19": {
+     "who": "다해",
+     "line_s": 10.3,
+     "video_s": 11
+    },
+    "21": {
+     "who": "다해",
+     "line_s": 10.9,
+     "video_s": 12
+    },
+    "22": {
+     "who": "교감",
+     "line_s": 1.2,
+     "video_s": 4
+    },
+    "23": {
+     "who": "다해",
+     "line_s": 4.6,
+     "video_s": 5
+    },
+    "24": {
+     "who": "교감",
+     "line_s": 1.3,
+     "video_s": 4
+    },
+    "26": {
+     "who": "정우",
+     "line_s": 3.0,
+     "video_s": 4
+    },
+    "27": {
+     "who": "다해",
+     "line_s": 1.5,
+     "video_s": 4
+    },
+    "28": {
+     "who": "다해",
+     "line_s": 5.2,
+     "video_s": 6
+    }
+   },
+   "total_seconds": 124,
+   "cost": 372,
+   "retake_budget_30pct": 111.6
+  }
+ },
+ "total_base": 497.45,
+ "total_with_retake": 609.05,
+ "balance_before": 9541.91,
+ "week_11_9_15_used": 464.91,
+ "status": "pending"
+}
