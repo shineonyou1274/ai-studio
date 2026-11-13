@@ -144,5 +144,7 @@
  "total_with_retake": 609.05,
  "balance_before": 9541.91,
  "week_11_9_15_used": 464.91,
- "status": "pending"
+ "status": "stage1_approved_done",
+ "stage1_actual": 140.74,
+ "approved_by": "사장님 2026-11-13 \"추천대로 할게\" (나눠서: 1단계 먼저)"
 }
