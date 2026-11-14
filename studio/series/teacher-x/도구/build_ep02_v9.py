@@ -126,7 +126,7 @@ def wt(words,key,default):
     return default
 t5=wt(w17,'5',wt(w17,'오',3.8)); t2=wt(w17,'2',wt(w17,'이',6.5))
 zoomrow('t3',t5,0.435,LC+'z3.mp4'); zoomrow('t5',t2-t5,0.66,LC+'z5.mp4')
-segs=[(img('table',0.8,'in'),0,0.8),(img('c3',round(t5-0.8,3),'in'),0,round(t5-0.8,3)),(img('c5',round((t2-t5)*0.55,3),'in'),0,round((t2-t5)*0.55,3)),(img('c35',round((t2-t5)*0.45,3),'crash'),0,round((t2-t5)*0.45,3)),(img('c26',1.0,'in'),0,1.0),(V+'v17.mp4',t2+1.0,round(v1('17')+0.12-t2-1.0,3))]
+segs=[(img('table',0.8,'in'),0,0.8),(img('c3',round(t5-0.8,3),'in'),0,round(t5-0.8,3)),(img('c5',round((t2-t5)*0.55,3),'in'),0,round((t2-t5)*0.55,3)),(img('c35',round((t2-t5)*0.45,3),'in'),0,round((t2-t5)*0.45,3)),(img('c26',1.0,'in'),0,1.0),(V+'v17.mp4',t2+1.0,round(v1('17')+0.12-t2-1.0,3))]
 add(segs,[(AW('17'),0,1.0,'d',None)],chunks('3차엔 강사료를|운영비로 옮기라 하셨고,|5차엔 왜 옮겼냐며|반려하셨어요.|2차와 6차도,|서로 반대입니다.','17'),[(E+'sfx2/pen.mp3',0.15,0.7,'s',None),(E+'sfx2/pen.mp3',t5+0.05,0.7,'s',None)])
 speak('18',V+'v18.mp4',[(0,'v')],'그, 그건 문맥이…',tail=0.2)
 # 19 climax
@@ -207,5 +207,5 @@ SH='+'.join(f"between(t,{x:.2f},{x+0.25:.2f})" for x in HIT) or '0'
 shake=f"crop=w=696:h=1256:x='12+11*sin(2*PI*t*26)*({SH})':y='12+11*cos(2*PI*t*21)*({SH})',scale=720:1280"
 print('WARN long lines',WARN); print('HIT',HIT)
 outn=E+('ed/ep2_v9A.mp4' if WITH28 else 'ed/ep2_v9B.mp4')
-run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/pic.mp4','-i',E+'ed/aud.m4a','-vf',f"{flash},{shake},ass={E}ed/sub.ass:fontsdir={H}/fonts,fade=t=out:st={total-1.5:.2f}:d=1.5",'-c:v','libx264','-preset','veryfast','-crf','20','-c:a','copy','-shortest',outn])
+run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/pic.mp4','-i',E+'ed/aud.m4a','-vf',f"setpts=N/(24*TB),{flash},{shake},ass={E}ed/sub.ass:fontsdir={H}/fonts,fade=t=out:st={total-1.5:.2f}:d=1.5",'-c:v','libx264','-preset','veryfast','-crf','20','-c:a','copy','-shortest',outn])
 print('ok',outn)

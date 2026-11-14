@@ -18,7 +18,7 @@ R("EV.append((E+'sfx3/B1.mp3',MK['s1'],1.0,'s',('cut',MK['t09']-MK['s1'])))","EV
 # 5) 교감 "내가 언제 옮기랬어?" 흔들림 조금 더(3번)
 R("HIT.extend([T+0.1,T+0.45])","HIT.extend([T+0.1,T+0.4,T+0.75])")
 # 6) 반려 사유: 5차 카드 뒤에 3차↔5차 '정반대' 카드
-R("(img('c5',round(t2-t5,3),'in'),0,round(t2-t5,3))","(img('c5',round((t2-t5)*0.55,3),'in'),0,round((t2-t5)*0.55,3)),(img('c35',round((t2-t5)*0.45,3),'crash'),0,round((t2-t5)*0.45,3))")
+R("(img('c5',round(t2-t5,3),'in'),0,round(t2-t5,3))","(img('c5',round((t2-t5)*0.55,3),'in'),0,round((t2-t5)*0.55,3)),(img('c35',round((t2-t5)*0.45,3),'in'),0,round((t2-t5)*0.45,3))")
 # 7) 화면이 소리보다 점점 늦어지던 문제(채점 v8A 상): 조각마다 1/24초씩 올려 쌓이던 것을 누적 프레임 경계로 자름
 R("""    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,s)),'-i',f,'-t',str(dd),'-vf',"scale=720:1280,fps=24"+cf+",format=yuv420p",'-an','-c:v','libx264','-preset','veryfast','-crf','19',o]); F.append(o)""",
   """    n0=round(CUM*24); CUM+=dd; nf=max(1,round(CUM*24)-n0)
@@ -32,5 +32,7 @@ R("(E+'sfx3/B2.mp3',0,0.9,'s',('seek',50.0,L12))","(E+'sfx3/B2.mp3',0,0.45,'s',(
 R("sidechaincompress=threshold=0.03:ratio=6:attack=30:release=400","sidechaincompress=threshold=0.015:ratio=10:attack=20:release=350")
 # 9) 그래프 타격 셋째가 "공무원" 첫소리와 겹침 → 간격 0.45초
 R("T+4.2+k*0.55,0.25,'s',None) for k in range(3)","T+4.1+k*0.45,0.25,'s',None) for k in range(3)")
+# 10) 진짜 밀림 원인: 조각 이어 붙이기(concat copy)에서 시간 표시가 벌어져 영상이 0.8초 늘어남 → 마지막 단계에서 프레임 번호로 시간을 다시 매김
+R('f"{flash},{shake},ass=','f"setpts=N/(24*TB),{flash},{shake},ass=')
 R("outn=E+('ed/ep2_v8A.mp4' if WITH28 else 'ed/ep2_v8B.mp4')","outn=E+('ed/ep2_v9A.mp4' if WITH28 else 'ed/ep2_v9B.mp4')")
 open(sys.argv[2],'w').write(s); print('ok')
