@@ -86,7 +86,7 @@ run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,hs-0.05)),'-to',str(v
 hd=v1('19')+0.15-hs
 # ================= HOOK =================
 L12=round(v1('12')+0.12,3)
-add([(V+'v12.mp4',0,1.5),(img('212',0.9),0,0.9),(V+'v12.mp4',2.4,round(L12-2.4,3))],[(AW('12'),0,1.0,'d',None),(E+'sfx3/B2.mp3',0,0.9,'s',('seek',50.0,L12))],
+add([(V+'v12.mp4',0,1.5),(img('212',0.9),0,0.9),(V+'v12.mp4',2.4,round(L12-2.4,3))],[(AW('12'),0,1.0,'d',None),(E+'sfx3/B2.mp3',0,0.45,'s',('seek',50.0,L12))],
     [(0,L12,"{\\an8\\pos(360,28)\\fad(300,0)\\fs32}'고쳐 오라면서 길을 6번 바꾸면?'\\N3주 끌던 결재, 40분 만에 뚫린 이유",'Cap')]+chunks('커피 한 잔 드시고 오세요.|'+K('40분')+'이면 됩니다.','12'))
 FL.append(T-0.08)
 # ================= S1 15:00 =================
@@ -140,7 +140,7 @@ FL.append(T-0.05); MK['after19']=T; EV.append((E+'sfx3/s22.mp3',T-0.05,0.8,'s',N
 add([(E+'x/r508.mp4',2.2,1.8)])
 # 21
 w21=TJ['21']['words']; tc=wt(w21,'공무원',5.0)
-MK['t21']=T; EV.extend([(E+'sfx3/s21.mp3',T+4.2+k*0.55,0.25,'s',None) for k in range(3)])
+MK['t21']=T; EV.extend([(E+'sfx3/s21.mp3',T+4.1+k*0.45,0.25,'s',None) for k in range(3)])
 speak('21',V+'v21.mp4',[(0,'v'),(0.9,'clip:n603'),(2.4,'clip:n604'),(3.9,'bars','slow'),(tc,'v'),(tc+1.4,'clip:r510'),(tc+2.6,'222'),(tc+3.4,'v')],'안 선생님 3주|초과근무 기록이,|반려 시각이랑|딱 겹치더라고요.|공무원 행동강령에|직무권한을 이용한|부당한 행위를|금지하는 조항이 있던데요.')
 speak('22',V+'v22.mp4',[(0,'v')],'도, 독고 선생…',tail=0.2)
 speak('23',V+'v23.mp4',[(0,'323'),(1.3,'v')],'5시 전에 결재해 주시면,|이 자료는 바로|파쇄하겠습니다.',tail=0.3)
@@ -163,16 +163,18 @@ MK['end']=T
 add([(img('poster2',3.0,'crash'),0,3.0)],[(E+'sfx3/s19.mp3',0.0,0.6,'s',None)])
 total=T
 SUB+=[(MK['t02']+0.1,MK['t02']+1.7,'교감','Tag'),(MK['t03']+0.1,MK['t03']+1.7,'안정우 · 생물 교사','Tag'),(MK['tag_dh'],MK['tag_dh']+2.2,'{\\fs46}독고다해 · 최저가 계약교사\\N{\\fs24}(극 중 설정)','Tag'),(MK['s3']+0.05,MK['s3']+1.4,'오후 3시 40분','Cap')]
-EV.append((E+'sfx3/B1.mp3',MK['s1'],1.0,'s',('cut',MK['t08']+0.1-MK['s1'])))
-EV.append((E+'sfx3/B2.mp3',MK['t09'],1.0,'s',('seek',0.0,MK['t19']+tk-0.8-MK['t09'])))
-EV.append((E+'sfx3/B2.mp3',MK['after19']+1.8,1.0,'s',('seek',50.0,MK['drone_end']-MK['after19']-1.8)))
+EV.append((E+'sfx3/B1.mp3',MK['s1'],0.45,'s',('cut',MK['t08']+0.1-MK['s1'])))
+EV.append((E+'sfx3/B2.mp3',MK['t09'],0.45,'s',('seek',0.0,MK['t19']+tk-0.8-MK['t09'])))
+EV.append((E+'sfx3/B2.mp3',MK['after19']+1.8,0.45,'s',('seek',50.0,MK['drone_end']-MK['after19']-1.8)))
 EV.append((M+'Orange_on_the_Floor.mp3',MK['song'],0.7,'s',('end',total-MK['song'])))
 print('total',round(total,2),MK)
 os.makedirs(E+'ed/seg',exist_ok=True); F=[]
+CUM=0.0
 for i,(f,s,dd) in enumerate(P):
     o=E+f'ed/seg/s{i:03d}.mp4'
     cf=",colorbalance=rs=-0.12:gs=-0.02:bs=0.1:rm=-0.08:bm=0.06,eq=saturation=0.88" if I3a<=i<I3b else ""
-    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,s)),'-i',f,'-t',str(dd),'-vf',"scale=720:1280,fps=24"+cf+",format=yuv420p",'-an','-c:v','libx264','-preset','veryfast','-crf','19',o]); F.append(o)
+    n0=round(CUM*24); CUM+=dd; nf=max(1,round(CUM*24)-n0)
+    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,s)),'-i',f,'-vf',"scale=720:1280,fps=24"+cf+",tpad=stop_mode=clone:stop_duration=1,format=yuv420p",'-frames:v',str(nf),'-an','-c:v','libx264','-preset','veryfast','-crf','19',o]); F.append(o)
 open(E+'ed/seg/l.txt','w').write(''.join(f"file '{x}'\n" for x in F))
 run(['ffmpeg','-nostdin','-v','error','-y','-f','concat','-safe','0','-i',E+'ed/seg/l.txt','-c','copy',E+'ed/pic.mp4'])
 cmd=['ffmpeg','-nostdin','-v','error','-y']
@@ -189,7 +191,7 @@ for i,(f,at,v,k,tr) in enumerate(EV):
     fl+=f"[{i}:a]aformat=sample_rates=44100:channel_layouts=stereo{ex},volume={v},adelay={ms}|{ms},apad=whole_dur={total}[a{i}];"
     (dl if k=='d' else sl).append(f'[a{i}]')
 fl+=''.join(dl)+f"amix=inputs={len(dl)}:normalize=0,asplit=2[D1][D2];"
-fl+=''.join(sl)+f"amix=inputs={len(sl)}:normalize=0[SX];[SX][D2]sidechaincompress=threshold=0.03:ratio=6:attack=30:release=400[SD];"
+fl+=''.join(sl)+f"amix=inputs={len(sl)}:normalize=0[SX];[SX][D2]sidechaincompress=threshold=0.015:ratio=10:attack=20:release=350[SD];"
 fl+=f"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total}[out]"
 cmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le',E+'ed/aud_pre.wav']; run(cmd)
 import re as _re
