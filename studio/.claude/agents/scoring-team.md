@@ -22,7 +22,7 @@ tools: Read, Write, Glob, Grep, Bash, mcp__Higgsfield__sandbox_exec
   - `ebur128`, `silencedetect`, faster-whisper 받아쓰기.
   - 그림은 `image_paths`로 직접 본다(한 번에 512KB 이하).
 - 순서
-  1. 관문 G1~G7
+  1. 관문 G1~G6
   2. 지난 지적이 고쳐졌는지 확인
   3. 블라인드 이해(B)
   4. 나머지 영역 A~H

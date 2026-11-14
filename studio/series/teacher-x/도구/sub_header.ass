@@ -1,0 +1,16 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: D,NanumGothic,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,1,0,0,0,100,100,0,0,1,4,1,2,50,50,250,1
+Style: Cap,NanumGothic,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,3,10,0,8,60,60,180,1
+Style: Tag,NanumGothic,32,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0141E3C,1,0,0,0,100,100,0,0,3,10,0,7,40,40,150,1
+Style: Diary,Gaegu,46,&H00F0F0F0,&H00F0F0F0,&H00000000,&HB0000000,0,0,0,0,100,100,0,0,3,14,0,2,50,50,200,1
+Style: In,NanumGothic,38,&H0080E6FF,&H0080E6FF,&H00000000,&H64000000,1,1,0,0,100,100,0,0,1,4,1,2,50,50,250,1
+Style: Poem,Gaegu,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0000000,0,0,0,0,100,100,0,0,3,14,0,2,60,60,160,1
+
+[Events]
