@@ -23,7 +23,7 @@ R("        if tr[0]=='end':","        if tr[0]=='seek': ex=f',atrim={tr[1]:.3f}:
 # 4) 대사 때 배경음악 더 세게 줄이기
 R("sidechaincompress=threshold=0.03:ratio=8:attack=30:release=400[BD]","sidechaincompress=threshold=0.015:ratio=10:attack=20:release=350[BD]")
 # 5) 음량: 전체 한 비율 + 리미터(2화와 같음)
-R("loudnorm=I=-14:TP=-1.5[out]\"\ncmd+=['-filter_complex',fl,'-map','[out]','-c:a','aac','-b:a','192k','aud_v9.m4a']; run(cmd)",
+R(",loudnorm=I=-14:TP=-1.5[out]\"\ncmd+=['-filter_complex',fl,'-map','[out]','-c:a','aac','-b:a','192k','aud_v9.m4a']; run(cmd)",
   "[out]\"\ncmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le','aud_v10_pre.wav']; run(cmd)\nimport re as _re\n_m=subprocess.run(['ffmpeg','-nostdin','-i','aud_v10_pre.wav','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr\n_I=float(_re.findall(r'I:\\s+(-?[0-9.]+) LUFS',_m)[-1]); _g=-14.0-_I; print('pre I',_I,'gain',round(_g,2))\nrun(['ffmpeg','-nostdin','-v','error','-y','-i','aud_v10_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.6:level=false:attack=1:release=50','-c:a','aac','-b:a','192k','aud_v10.m4a'])")
 # 6) 자막 스타일 추가(HookT, Note), 파일 이름 v10
 R("Style: Poem,Gaegu,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0000000,0,0,0,0,100,100,0,0,3,14,0,2,60,60,160,1\\n\\n[Events]","Style: Poem,Gaegu,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0000000,0,0,0,0,100,100,0,0,3,14,0,2,60,60,160,1\\nStyle: HookT,Black Han Sans,36,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,4,3,8,24,24,26,1\\nStyle: Note,NanumGothic,30,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0000000,1,0,0,0,100,100,0,0,3,8,0,8,40,40,150,1\\n\\n[Events]")

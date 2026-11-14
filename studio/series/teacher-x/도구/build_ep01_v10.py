@@ -126,7 +126,7 @@ for i,(f,at,v,k,tr) in enumerate(E):
 fl+=''.join(dl)+f"amix=inputs={len(dl)}:normalize=0,asplit=2[D1][D2];"
 fl+=''.join(sl)+f"amix=inputs={len(sl)}:normalize=0[SX];"
 fl+=''.join(bl)+f"amix=inputs={len(bl)}:normalize=0[B];[B][D2]sidechaincompress=threshold=0.015:ratio=10:attack=20:release=350[BD];"
-fl+=f"[D1][SX][BD]amix=inputs=3:normalize=0,atrim=0:{total},[out]"
+fl+=f"[D1][SX][BD]amix=inputs=3:normalize=0,atrim=0:{total}[out]"
 cmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le','aud_v10_pre.wav']; run(cmd)
 import re as _re
 _m=subprocess.run(['ffmpeg','-nostdin','-i','aud_v10_pre.wav','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr
