@@ -12,7 +12,8 @@
 5. 공개 뒤: 고정 댓글 달고 고정, 1화 고정 댓글이나 설명란에 2화 링크 추가
 
 ## 파일
-- 영상 후보 **v9A** (채점·제미나이 반영: 훅 자막 위로·화면 밀림 고침·음악 낮춤) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/51f1f285-5fa6-47ce-ac51-d745307dbb1e.mp4 (2분 7초)
+- 영상 후보 **v10A** (훅 자막 새 디자인·비네팅) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a3820b5b-3dfd-471b-b54c-66ac636f3468.mp4 (2분 6초)
+- 이전 v9A (채점·제미나이 반영: 훅 자막 위로·화면 밀림 고침·음악 낮춤) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/51f1f285-5fa6-47ce-ac51-d745307dbb1e.mp4 (2분 7초)
 - 이전 v8A (외부 검수 반영: 효과음·배경음악·훅 교체·목소리 보정) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/0e8c6665-c9be-479c-9242-208f8a0af60f.mp4 (2분 7초)
 - 이전 v7A (컷19 입 다시 찍기·쯧쯧·마지막 자막) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/2f7b7f1e-2626-4add-8889-e7bd4e060262.mp4 (2분 9초)
 - 이전 v6A — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/676d87e8-d3b6-41d2-837b-111ca99e9530.mp4 (2분 9초)
