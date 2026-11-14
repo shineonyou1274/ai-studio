@@ -12,7 +12,8 @@
 5. 공개 뒤: 고정 댓글 달고 고정, 1화 고정 댓글이나 설명란에 2화 링크 추가
 
 ## 파일
-- 영상 후보 **v7A** (컷19 입 다시 찍기·쯧쯧·마지막 자막) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/2f7b7f1e-2626-4add-8889-e7bd4e060262.mp4 (2분 9초)
+- 영상 후보 **v8A** (외부 검수 반영: 효과음·배경음악·훅 교체·목소리 보정) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/0e8c6665-c9be-479c-9242-208f8a0af60f.mp4 (2분 7초)
+- 이전 v7A (컷19 입 다시 찍기·쯧쯧·마지막 자막) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/2f7b7f1e-2626-4add-8889-e7bd4e060262.mp4 (2분 9초)
 - 이전 v6A — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/676d87e8-d3b6-41d2-837b-111ca99e9530.mp4 (2분 9초)
 - 이전 v5A — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/e3ab2ab9-9d32-4595-8ede-d794d7f7c957.mp4 (2분 9초)
 - 이전 v4A — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/265314d9-2d0d-44d3-99d8-b5c1c3890c12.mp4 (2분 9초, 제미나이 v3A 지적 9개 반영)
