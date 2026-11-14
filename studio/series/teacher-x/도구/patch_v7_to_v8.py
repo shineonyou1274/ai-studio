@@ -49,5 +49,10 @@ R("add([(img('poster2',3.0,'slow'),0,3.0)])","add([(img('poster2',3.0,'crash'),0
 # 14) 배경음악: B1 답답(반려~09 직전, 뚝 끊음) → B2 반격(09~결정타 0.8초 전) → 정적 → B2 뒷부분(미로 뒤~승인) — 드론 대신
 R("EV.append((S+'drone40.wav',MK['drone'],0.6,'s',('trim',MK['drone_end']-MK['drone'])))",
   "EV.append(("+X+"B1.mp3',MK['s1'],1.0,'s',('cut',MK['t09']-MK['s1'])))\nEV.append(("+X+"B2.mp3',MK['t09'],1.0,'s',('seek',0.0,MK['t19']+tk-0.8-MK['t09'])))\nEV.append(("+X+"B2.mp3',MK['after19'],1.0,'s',('seek',50.0,MK['drone_end']-MK['after19'])))")
+# 15) 음량 맞추기를 '구간마다 자동'(loudnorm 동적)에서 '전체 한 비율'로: 섞은 소리를 재고 → 같은 비율로 −14 LUFS → 리미터. 효과음 크기 조절이 그대로 남고 최고점도 지킴
+R("fl+=f\"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total},loudnorm=I=-14:TP=-1.5,alimiter=limit=0.84:level=false[out]\"",
+  "fl+=f\"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total}[out]\"")
+R("cmd+=['-filter_complex',fl,'-map','[out]','-c:a','aac','-b:a','192k',E+'ed/aud.m4a']; run(cmd)",
+  "cmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le',E+'ed/aud_pre.wav']; run(cmd)\nimport re as _re\n_m=subprocess.run(['ffmpeg','-nostdin','-i',E+'ed/aud_pre.wav','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr\n_I=float(_re.findall(r'I:\\s+(-?[0-9.]+) LUFS',_m)[-1]); _g=-14.0-_I; print('pre I',_I,'gain',round(_g,2))\nrun(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/aud_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.8:level=false:attack=1:release=50','-c:a','aac','-b:a','192k',E+'ed/aud.m4a'])")
 R("outn=E+('ed/ep2_v7A.mp4' if WITH28 else 'ed/ep2_v7B.mp4')","outn=E+('ed/ep2_v8A.mp4' if WITH28 else 'ed/ep2_v8B.mp4')")
 open(sys.argv[2],'w').write(s); print('ok')

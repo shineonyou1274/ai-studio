@@ -190,8 +190,12 @@ for i,(f,at,v,k,tr) in enumerate(EV):
     (dl if k=='d' else sl).append(f'[a{i}]')
 fl+=''.join(dl)+f"amix=inputs={len(dl)}:normalize=0,asplit=2[D1][D2];"
 fl+=''.join(sl)+f"amix=inputs={len(sl)}:normalize=0[SX];[SX][D2]sidechaincompress=threshold=0.03:ratio=6:attack=30:release=400[SD];"
-fl+=f"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total},loudnorm=I=-14:TP=-1.5,alimiter=limit=0.84:level=false[out]"
-cmd+=['-filter_complex',fl,'-map','[out]','-c:a','aac','-b:a','192k',E+'ed/aud.m4a']; run(cmd)
+fl+=f"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total}[out]"
+cmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le',E+'ed/aud_pre.wav']; run(cmd)
+import re as _re
+_m=subprocess.run(['ffmpeg','-nostdin','-i',E+'ed/aud_pre.wav','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr
+_I=float(_re.findall(r'I:\s+(-?[0-9.]+) LUFS',_m)[-1]); _g=-14.0-_I; print('pre I',_I,'gain',round(_g,2))
+run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/aud_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.8:level=false:attack=1:release=50','-c:a','aac','-b:a','192k',E+'ed/aud.m4a'])
 def ts(x): x=max(0,x); h=int(x//3600); m=int(x%3600//60); s=x%60; return f"{h}:{m:02d}:{s:05.2f}"
 head=open(H+'/ep2/sub_v2_header.ass').read()
 for a,b,txt,st in SUB: head+=f"Dialogue: 0,{ts(a)},{ts(b)},{st},,0,0,0,,{txt}\n"
