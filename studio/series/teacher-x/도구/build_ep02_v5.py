@@ -103,7 +103,7 @@ speak('11',V+'v11.mp4',[(0,'v')],'다해쌤, 그거 절대|통과 안 시켜 줘
 speak('12',V+'v12.mp4',[(0,'v'),(1.5,'212'),(2.4,'v')],'커피 한 잔 드시고 오세요.|'+K('40분')+'이면 됩니다.',tail=0.3)
 # ================= S3 15:40 =================
 MK['s3']=T; I3a=len(P)
-add([(img('313',1.4,'in'),0,1.4),(img('o13',1.6,'crash'),0,1.6)],ev=[(E+'sfx2/arrive.mp3',1.4,0.5,'s',None)],subs=[(1.4,2.0,'{\\pos(470,560)\\frz-8}'+POP+'띵—','Ono')])
+add([(img('313',1.4,'in'),0,1.4),(img('o13',1.6,'crash'),0,1.6)],ev=[(E+'sfx2/arrive.mp3',1.4,0.5,'s',None)],subs=[(1.4,2.0,'{\\pos(540,700)\\frz-8}'+POP+'띵—','Ono')])
 inner('14',[(E+'x/r507.mp4',0.6,2.0)],'벌써?',off=0.3)
 MK['drone']=T
 speak('15',V+'v15.mp4',[(0,'v'),(v0('15')+1.2,'215'),(v0('15')+2.2,'v')],'기안 올렸습니다.|직접 설명도|같이 드리겠습니다.')
@@ -174,7 +174,7 @@ for i,(f,at,v,k,tr) in enumerate(EV):
     (dl if k=='d' else sl).append(f'[a{i}]')
 fl+=''.join(dl)+f"amix=inputs={len(dl)}:normalize=0,asplit=2[D1][D2];"
 fl+=''.join(sl)+f"amix=inputs={len(sl)}:normalize=0[SX];[SX][D2]sidechaincompress=threshold=0.03:ratio=6:attack=30:release=400[SD];"
-fl+=f"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total},loudnorm=I=-14:TP=-1.5,alimiter=limit=0.89[out]"
+fl+=f"[D1][SD]amix=inputs=2:normalize=0,atrim=0:{total},loudnorm=I=-14:TP=-1.5,alimiter=limit=0.84:level=false[out]"
 cmd+=['-filter_complex',fl,'-map','[out]','-c:a','aac','-b:a','192k',E+'ed/aud.m4a']; run(cmd)
 def ts(x): x=max(0,x); h=int(x//3600); m=int(x%3600//60); s=x%60; return f"{h}:{m:02d}:{s:05.2f}"
 head=open(H+'/ep2/sub_v2_header.ass').read()
