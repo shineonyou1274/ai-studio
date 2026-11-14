@@ -91,7 +91,7 @@ add([(V+'v12.mp4',0,1.5),(img('212',0.9),0,0.9),(V+'v12.mp4',2.4,round(L12-2.4,3
 FL.append(T-0.08)
 # ================= S1 15:00 =================
 MK['s1']=T
-add([(img('o01',1.5,'crash'),0,1.5)],ev=[(E+'sfx3/s15.mp3',0.1,0.6,'s',None)],subs=[(0.05,1.4,'그날 오후 3시','Cap'),(0.3,1.5,'{\\fs30}에듀파인 = 학교 전자 결재 시스템','N')])
+add([(img('o01',1.5,'crash'),0,1.5)],ev=[(E+'sfx3/s15.mp3',0.1,0.45,'s',None)],subs=[(0.05,1.4,'그날 오후 3시','Cap'),(0.3,1.5,'{\\fs30}에듀파인 = 학교 전자 결재 시스템','N')])
 MK['t02']=T
 speak('02',V+'v02.mp4',[(0,'v'),(1.6,'clip:r501'),(2.7,'clip:n601'),(4.3,'v')],'안 선생, 이번에도 '+K('반려')+'야.|기획서 하나를 3주째|붙들고 있으면 어떡해.')
 MK['t03']=T
@@ -140,7 +140,7 @@ FL.append(T-0.05); MK['after19']=T; EV.append((E+'sfx3/s22.mp3',T-0.05,0.8,'s',N
 add([(E+'x/r508.mp4',2.2,1.8)],subs=[(0.3,1.8,'[정적]','Act')])
 # 21
 w21=TJ['21']['words']; tc=wt(w21,'공무원',5.0)
-MK['t21']=T; EV.extend([(E+'sfx3/s21.mp3',T+4.2+k*0.55,0.4,'s',None) for k in range(3)])
+MK['t21']=T; EV.extend([(E+'sfx3/s21.mp3',T+4.2+k*0.55,0.25,'s',None) for k in range(3)])
 speak('21',V+'v21.mp4',[(0,'v'),(0.9,'clip:n603'),(2.4,'clip:n604'),(3.9,'bars','slow'),(tc,'v'),(tc+1.4,'clip:r510'),(tc+2.6,'222'),(tc+3.4,'v')],'안 선생님 3주|초과근무 기록이,|반려 시각이랑|딱 겹치더라고요.|공무원 행동강령에|직무권한을 이용한|부당한 행위를|금지하는 조항이 있던데요.')
 speak('22',V+'v22.mp4',[(0,'v')],'도, 독고 선생…',tail=0.2)
 speak('23',V+'v23.mp4',[(0,'323'),(1.3,'v')],'5시 전에 결재해 주시면,|이 자료는 바로|파쇄하겠습니다.',tail=0.3)
@@ -195,7 +195,7 @@ cmd+=['-filter_complex',fl,'-map','[out]','-c:a','pcm_s16le',E+'ed/aud_pre.wav']
 import re as _re
 _m=subprocess.run(['ffmpeg','-nostdin','-i',E+'ed/aud_pre.wav','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr
 _I=float(_re.findall(r'I:\s+(-?[0-9.]+) LUFS',_m)[-1]); _g=-14.0-_I; print('pre I',_I,'gain',round(_g,2))
-run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/aud_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.8:level=false:attack=1:release=50','-c:a','aac','-b:a','192k',E+'ed/aud.m4a'])
+run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/aud_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.7:level=false:attack=1:release=50','-c:a','aac','-b:a','192k',E+'ed/aud.m4a'])
 def ts(x): x=max(0,x); h=int(x//3600); m=int(x%3600//60); s=x%60; return f"{h}:{m:02d}:{s:05.2f}"
 head=open(H+'/ep2/sub_v2_header.ass').read()
 for a,b,txt,st in SUB: head+=f"Dialogue: 0,{ts(a)},{ts(b)},{st},,0,0,0,,{txt}\n"
