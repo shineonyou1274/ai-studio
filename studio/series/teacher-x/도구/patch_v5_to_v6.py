@@ -20,4 +20,7 @@ R("inner('05',[(img('305',2.0,'out'),0,2.0),(img('307',1.2,'in'),0,1.2)]","inner
 R("add([(img('320',1.8,'slow'),0,1.8)],subs=[(0.3,1.8,'[정적]','Act')])","add([(E+'x/r508.mp4',2.2,1.8)],subs=[(0.3,1.8,'[정적]','Act')])")
 R("outn=E+('ed/ep2_v5A.mp4' if WITH28 else 'ed/ep2_v5B.mp4')","outn=E+('ed/ep2_v6A.mp4' if WITH28 else 'ed/ep2_v6B.mp4')")
 R("# 교사X 2화 편집 스크립트 v5","# 교사X 2화 편집 스크립트 v6 (v5 + 채점 지적 고침: 효과음 누락 버그·극 중 설정·기안 풀이·알림 잘림·인서트 중복)\n# (아래는 v5 설명)")
+# 6) 기안 도착·최종 승인 알림음이 대사보다 7~8 dB 큼(측정) → 낮춤
+R("(E+'sfx2/arrive.mp3',1.4,0.5,'s',None)","(E+'sfx2/arrive.mp3',1.4,0.2,'s',None)")
+R("(E+'sfx2/arrive.mp3',0.1,0.45,'s',None)","(E+'sfx2/arrive.mp3',0.1,0.18,'s',None)")
 open(sys.argv[2],'w').write(s); print('ok')
