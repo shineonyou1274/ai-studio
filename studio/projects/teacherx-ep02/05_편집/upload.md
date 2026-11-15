@@ -12,9 +12,9 @@
 5. 공개 뒤: 고정 댓글 달고 고정, 1화 고정 댓글이나 설명란에 2화 링크 추가
 
 ## 파일
-- 🆕 훅 제목 새 안(사장님 11/15 "반려의 뜻을 참교육하는 신규교사") — 사장님 선택 대기
-  - **v14K '계약교사'**(설정과 맞음, 추천) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/9ec34a10-997d-4d22-af40-a587ab227c47.mp4
-  - v14S '신규교사'(원문 그대로) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/812de4cb-5975-49a8-afb8-ad70f97edcd7.mp4
+- 🆕 **최종 후보 v14S** — 훅 "반려의 뜻을 / 참교육하는 신규교사" (사장님 11/15: "아직 사정을 모르는 사람들은 계약교사에 반감이 있을 수 있어.. 신규로 해")
+  - (안 쓰는 안) v14K '계약교사' — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/9ec34a10-997d-4d22-af40-a587ab227c47.mp4
+  - **v14S '신규교사' (선택)** — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/812de4cb-5975-49a8-afb8-ad70f97edcd7.mp4
 - 영상 후보 **v13A** (교감 자리 배경 차이는 다시 찍지 않고 그대로 감, 사장님 11/15) (훅 제목 크게·가슴 높이, 훅 동안 대사 자막 없음. 사장님 11/15 "나머진 통과") — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/73515dbd-3088-45c9-b6b7-3f3b6f5b1efc.mp4 (2분 6초)
 - 이전 v12A (훅 자막을 대사 자막 바로 위로) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/60a62f09-7308-4a1e-b8d6-835f7c4da987.mp4 (2분 6초)
 - 이전 v11A (이름표 위치·키보드 소리) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4a1705f7-e14a-47e8-9a67-0d92836c5efb.mp4 (2분 6초)
