@@ -62,5 +62,8 @@ for k,l in enumerate(lines):
     if l.startswith("head=open('sub1.ass')"):
         lines[k]="head=open(H+'/ep2/sub_v2_header.ass').read().replace('\\n\\n[Events]','\\n'+EXTRA+'\\n\\n[Events]',1)"
 s='\n'.join(lines)
+# 8) 화면 밀림 막기(2화 v9와 같음): 조각을 누적 프레임 경계로 자르고, 짧은 원본은 마지막 프레임으로 채움
+R("""for i,(f,s,dd) in enumerate(P):\n    o=f'segv9/s{i:03d}.mp4'\n    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(s),'-i',f,'-t',str(dd),'-vf',"crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale=720:1280,fps=24,format=yuv420p",""",
+  """CUM=0.0\nimport shutil; shutil.rmtree('segv9',ignore_errors=True); os.makedirs('segv9',exist_ok=True)\nfor i,(f,s,dd) in enumerate(P):\n    o=f'segv9/s{i:03d}.mp4'\n    n0=round(CUM*24); CUM+=dd; nf=max(1,round(CUM*24)-n0)\n    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,s)),'-i',f,'-vf',"crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale=720:1280,fps=24,tpad=stop_mode=clone:stop_duration=1,format=yuv420p",'-frames:v',str(nf),""")
 s=s.replace('full_v12.mp4','full_v13.mp4').replace('sub_v12.ass','sub_v13.ass').replace('aud_v12_pre.wav','aud_v13_pre.wav').replace('aud_v12.m4a','aud_v13.m4a')
 open(sys.argv[2],'w').write(s); print('ok')

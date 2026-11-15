@@ -104,9 +104,12 @@ E.append((S+'birds2.wav',MARK['birds'],0.25,'b',('trim',MARK['t16']+1.5-MARK['bi
 E.append((M+'Orange_on_the_Floor.mp3',MARK['orange'],0.7,'s',('end',total-MARK['orange'])))
 # picture
 os.makedirs('segv9',exist_ok=True); F=[]
+CUM=0.0
+import shutil; shutil.rmtree('segv9',ignore_errors=True); os.makedirs('segv9',exist_ok=True)
 for i,(f,s,dd) in enumerate(P):
     o=f'segv9/s{i:03d}.mp4'
-    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(s),'-i',f,'-t',str(dd),'-vf',"crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale=720:1280,fps=24,format=yuv420p",'-an','-c:v','libx264','-preset','veryfast','-crf','19',o]); F.append(o)
+    n0=round(CUM*24); CUM+=dd; nf=max(1,round(CUM*24)-n0)
+    run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,s)),'-i',f,'-vf',"crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale=720:1280,fps=24,tpad=stop_mode=clone:stop_duration=1,format=yuv420p",'-frames:v',str(nf),'-an','-c:v','libx264','-preset','veryfast','-crf','19',o]); F.append(o)
 open('segv9/l.txt','w').write(''.join(f"file '{os.path.basename(x)}'\n" for x in F))
 run(['ffmpeg','-nostdin','-v','error','-y','-f','concat','-safe','0','-i','segv9/l.txt','-c','copy','pic_v9.mp4'])
 # audio with ducking for birds
