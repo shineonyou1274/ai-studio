@@ -12,7 +12,7 @@
 5. 공개 뒤: 고정 댓글 달고 고정, 1화 고정 댓글이나 설명란에 2화 링크 추가
 
 ## 파일
-- 영상 후보 **v13A** (훅 제목 크게·가슴 높이, 훅 동안 대사 자막 없음. 사장님 11/15 "나머진 통과") — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/73515dbd-3088-45c9-b6b7-3f3b6f5b1efc.mp4 (2분 6초)
+- 영상 후보 **v13A** (교감 자리 배경 차이는 다시 찍지 않고 그대로 감, 사장님 11/15) (훅 제목 크게·가슴 높이, 훅 동안 대사 자막 없음. 사장님 11/15 "나머진 통과") — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/73515dbd-3088-45c9-b6b7-3f3b6f5b1efc.mp4 (2분 6초)
 - 이전 v12A (훅 자막을 대사 자막 바로 위로) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/60a62f09-7308-4a1e-b8d6-835f7c4da987.mp4 (2분 6초)
 - 이전 v11A (이름표 위치·키보드 소리) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4a1705f7-e14a-47e8-9a67-0d92836c5efb.mp4 (2분 6초)
 - 이전 v10A (훅 자막 새 디자인·비네팅) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a3820b5b-3dfd-471b-b54c-66ac636f3468.mp4 (2분 6초)
