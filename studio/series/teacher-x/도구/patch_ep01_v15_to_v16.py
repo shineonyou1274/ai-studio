@@ -11,7 +11,7 @@ fs=min(52,int(660*100/max(F.getlength(x) for x in L)))
 print('hook font',fs)
 R(",(0.1,3.4,'교감 선생님의 결재 대상이 아닙니다.','D')])","])")
 R("Style: HookT,Black Han Sans,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,4,3,2,24,24,352,1",
-  "Style: HookT,Black Han Sans,%d,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,5,3,2,24,24,540,1"%fs)
+  "Style: HookT,Black Han Sans,%d,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,5,3,2,24,24,330,1"%fs)   # 1화 첫 컷은 얼굴 클로즈업이라 위로 올리면 입을 가림 → 대사 자리였던 턱·옷깃 높이 유지
 for a,b in [('full_v15.mp4','full_v16.mp4'),('sub_v15.ass','sub_v16.ass'),('aud_v15_pre.wav','aud_v16_pre.wav'),('aud_v15.m4a','aud_v16.m4a')]:
     s=s.replace(a,b)
 open(sys.argv[2],'w').write(s); print('ok')
