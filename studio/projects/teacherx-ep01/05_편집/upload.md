@@ -1,8 +1,8 @@
 # 교사X 1화 업로드 묶음 (최종 2026-11-12)
 
-> 🆕 **2026-11-14: v11(배경음악 + 새 훅 자막 + 서랍 장면 교감 시점) — 사장님 확인 대기.** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/69412e9e-6fdc-4e98-aada-2524e85a0275.mp4 (2분 34초) / 이전 v10: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/9822b4ad-a4b8-4cf4-af75-2f3bddbe3523.mp4 (2분 34초)
+> 🆕 **2026-11-15: v12(새소리 줄임·장면 카드 위로) — 사장님 확인 대기.** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f922c0a5-195b-41d6-95ac-913b67fbf37b.mp4 (2분 34초) / 이전 v11: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/69412e9e-6fdc-4e98-aada-2524e85a0275.mp4 (2분 34초) / 이전 v10: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/9822b4ad-a4b8-4cf4-af75-2f3bddbe3523.mp4 (2분 34초)
 > - 훅 자막 "되로 주려다 말로 받는다 (아직 조금만)"(사장님 안), 배경음악 B1 답답·B2 반격·B3 통쾌(2화와 같은 곡), 서랍 장면에 "다해가 올린 「야외 수업」 결재판" 표시, 음량·화면 밀림 고침
-> - **지니: 사장님이 v11을 확인하고 "확정" 하시면 예약 영상을 v11로 바꿔 주세요.** 그 전까지는 지금 예약 그대로.
+> - **지니: 사장님이 v12를 확인하고 "확정" 하시면 예약 영상을 v12로 바꿔 주세요.** 그 전까지는 지금 예약 그대로.
 
 > ⚠️ **2026-11-13: v9(맨 앞 훅 + 엔딩 3초, 2분 34초) 나옴 — 단, 훅 자막은 사장님 '보류(다시 볼게)'.** 지니: v9 검수는 해도 되지만 **예약 영상 교체는 사장님이 훅 자막을 확정한 뒤에**. 자막이 바뀌면 v10 링크를 이 자리에 올림. 설명란·제목·커버는 그대로.
 
