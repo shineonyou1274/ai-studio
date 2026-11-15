@@ -3,10 +3,33 @@
  "date": "2026-11-15",
  "episode": "교사X 3화",
  "basis": "03_스토리보드/샷계획_v1.md",
- "checks": {"image_model": "gpt_image_2_5 high 2k", "aspect": "9:16", "audio": "elevenlabs_v4 (다해 0.45, 교감·정우 0.35)", "video": "2단계에서 따로 승인"},
- "items": {"요소용 그림(감독관실·시험실·폐기함·감독관 의자)": 4, "대사 시작 그림": 14, "반응 시작 그림": 15, "인서트·카드 그림": 8, "녹음 줄": 18},
- "cost_estimate": {"images": 112.75, "recording": 6.5, "total": 119.25},
- "stage2_estimate": {"dialogue_video": 300, "reaction_video": 180, "total": 480, "note": "녹음 뒤 실측으로 다시 견적"},
+ "checks": {
+  "image_model": "gpt_image_2_5 high 2k",
+  "aspect": "9:16",
+  "audio": "elevenlabs_v4 (다해 0.45, 교감·정우 0.35)",
+  "video": "2단계에서 따로 승인"
+ },
+ "items": {
+  "요소용 그림(감독관실·시험실·폐기함·감독관 의자)": 4,
+  "대사 시작 그림": 14,
+  "반응 시작 그림": 15,
+  "인서트·카드 그림": 8,
+  "녹음 줄": 18
+ },
+ "cost_estimate": {
+  "images": 112.75,
+  "recording": 6.5,
+  "total": 119.25
+ },
+ "stage2_estimate": {
+  "dialogue_video": 300,
+  "reaction_video": 180,
+  "total": 480,
+  "note": "녹음 뒤 실측으로 다시 견적"
+ },
  "balance_before": 8808.47,
- "status": "pending"
+ "status": "approved",
+ "approved_by": "사장님 11/15 \"1단계 진행해\"",
+ "actual": 138.45,
+ "balance_after": 8670.02
 }
