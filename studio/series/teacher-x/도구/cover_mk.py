@@ -3,7 +3,7 @@
 from PIL import Image,ImageDraw,ImageFont
 F='/home/user/fonts/NanumGothicBold.ttf'
 W,H=1080,1920
-def cover(src,lines,out,focus=0.5,ep='교사X 2화',band='반려만 6번 한 교감 vs 40분 만에 뚫은 계약교사'):
+def cover(src,lines,out,focus=0.5,ep='교사X 2화',band='반려만 6번 한 교감 vs 40분 만에 뚫은 신규교사'):
     im=Image.open(src).convert('RGB')
     r=max(W/im.width,H/im.height); im=im.resize((int(im.width*r)+1,int(im.height*r)+1),Image.LANCZOS)
     x=int((im.width-W)*focus); im=im.crop((x,0,x+W,H))
@@ -22,6 +22,6 @@ def cover(src,lines,out,focus=0.5,ep='교사X 2화',band='반려만 6번 한 교
     im.save(out)
 if __name__=='__main__':
     I='/home/user/ep2/img/'
-    cover(I+'i320.png',['"그건 반려가 아니라,','미로입니다"'],'/home/user/cov2/cover_A.png')
+    cover(I+'i320.png',['"그건 반려가 아니라,','미로입니다"'],'/home/user/cov2/cover_A2.png')
     cover(I+'i204.png',['같은 기획서,','반려만 6번째'],'/home/user/cov2/cover_B.png',0.6)
     cover(I+'i116.png',['커피 한 잔 할 시간,','"40분이면 됩니다"'],'/home/user/cov2/cover_C.png',0.5)
