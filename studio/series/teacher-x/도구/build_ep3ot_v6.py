@@ -1,4 +1,4 @@
-# 교사X 3화(야근 강요) 편집 v6 (v5 + 사장님 11/16 '시작 대사가 씹혀서 뭐라는지 모르겠어': 훅 소리를 '이 결재,'부터 온전한 문장으로, 앞에 0.35초 빈 소리, 휙 소리는 말 앞 빈 곳으로, 음악 줄임. 이전 v5: v4 + 사장님 11/16: 신청서 글자를 기운 칸에 맞춤, 결정타 자막이 13번 자막과 겹치던 것 고침, 17 '네!'를 입 벌린 프레임에 맞춤, 다해 반응 r409 뒷부분(순해 보이는 얼굴) 뺌. 이전 v4: v3b + 사장님 11/16 승인: 04·407·603 그림을 시트에 맞게 다시 그려 영상 새로 만듦 → 04 말하는 얼굴, 12의 407 땀 반응, 밤 603 문가 되살림. 이전 v3: v2 + 사장님 11/16: 젊어 보이는 교감 컷 04·407·603 빼거나 덮음, 훅 첫 소리 잘림, Gemini 효과음 일부. v2: 12번 자막 나눔. 수능 특별편 build_sn_v3.py 틀)
+# 교사X 3화(야근 강요) 편집 v6 (v5 + 사장님 11/16 '시작 대사가 씹혀서 뭐라는지 모르겠어': 훅 소리를 '이 결재,'부터 온전한 문장으로, 앞 단어 꼬리를 소리 크기로 찾아 빼고 앞에 0.3초 빈 소리, 휙 소리는 말 앞 빈 곳으로, 음악 줄임. 이전 v5: v4 + 사장님 11/16: 신청서 글자를 기운 칸에 맞춤, 결정타 자막이 13번 자막과 겹치던 것 고침, 17 '네!'를 입 벌린 프레임에 맞춤, 다해 반응 r409 뒷부분(순해 보이는 얼굴) 뺌. 이전 v4: v3b + 사장님 11/16 승인: 04·407·603 그림을 시트에 맞게 다시 그려 영상 새로 만듦 → 04 말하는 얼굴, 12의 407 땀 반응, 밤 603 문가 되살림. 이전 v3: v2 + 사장님 11/16: 젊어 보이는 교감 컷 04·407·603 빼거나 덮음, 훅 첫 소리 잘림, Gemini 효과음 일부. v2: 12번 자막 나눔. 수능 특별편 build_sn_v3.py 틀)
 # 샌드박스: ~/ep4/{v(vNN·rNNN), img, ov, ed(aNN.wav), lc, timing.json}, ~/ep2/sfx3, ~/ed/usfx, ~/music, ~/fonts
 import subprocess, os, json, re
 from PIL import ImageFont
@@ -75,7 +75,20 @@ for c in DH:
 def AW(c): return A+(f'e{c}.wav' if c in DH else f'a{c}.wav')
 # 훅 소리: 12번 '이 결재,'부터 끝까지 (v6: 문장 처음부터, 앞에 0.35초 빈 소리)
 _w=W('12'); _i=[k for k,(w,st,en) in enumerate(_w) if '결' in w][0]-1  # '이'
-hcut=_w[_i][1]; LEAD=0.35
+LEAD=0.3
+def onset(wav,t0,t1):
+    # 받아쓰기 경계는 앞 단어 꼬리를 포함할 때가 있음 → 소리 크기로 '조용한 0.15초 뒤 처음 커지는 곳'을 찾음
+    import numpy as np
+    r=subprocess.run(['ffmpeg','-v','error','-ss',str(t0),'-to',str(t1),'-i',wav,'-ac','1','-ar','16000','-f','s16le','-'],capture_output=True).stdout
+    x=np.frombuffer(r,np.int16).astype(float); n=400  # 25ms
+    rms=[float(np.sqrt((x[i:i+n]**2).mean())) for i in range(0,len(x)-n,n)]; pk=max(rms); quiet=0
+    for k,v in enumerate(rms):
+        if v<0.03*pk: quiet+=1
+        elif quiet>=6 and v>0.15*pk: return t0+k*0.025
+        else: quiet=0
+    return t0
+hcut=max(0,onset(AW('12'),_w[_i][1]-0.1,_w[_i][2]+0.3)-0.06)
+print('hook cut',round(hcut,3))
 run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,hcut)),'-to',str(v1('12')+0.15),'-i',AW('12'),'-af',f'afade=t=in:d=0.03,adelay={int(LEAD*1000)}:all=1',A+'h12.wav'])
 hd=round(v1('12')+0.25-hcut+LEAD,3)
 # ================= 훅: 밤 9시 혼자 문단속 (대사 자막 없음, 제목만) =================
