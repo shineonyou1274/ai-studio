@@ -44,7 +44,7 @@ description: Review our channel's vertical short-form drama (한입극장 · 교
 ## 3. Part B — Viral Benchmark (table: 기준 / 내 영상 / 격차 / 고치는 법)
 1. **0–3초 스와이프 방어** — the strongest action + sound at frame 0 (tearing, slamming, stamping, shouting), plus a provocative hook title.
 2. **컷 밀도 & 15초 반전** — visual change every 1.8–2.5 s; a new turn every 12–15 s. Point to the exact section where talking-head explanation drags.
-3. **길이 & 꼬리** — main body ≤ 75 s; after the last spoken line, ≤ 5 s of non-dialogue (end card 2–3 s included). Flag slow walk-outs, long outro cards, long stat cards.
+3. **길이 & 꼬리** — main body about 2 minutes or less (series decision; do not flag 60–120 s as too long by itself, flag only slow sections); after the last spoken line, ≤ 5 s of non-dialogue (end card 2–3 s included). Flag slow walk-outs, long outro cards, long stat cards.
 4. **사이다 타점** — counter-punch within 3 s of the villain's peak, with close-up + SFX + BGM drop/silence. Flag lectures that dilute it; suggest moving legal detail to an on-screen one-line pop-up + description/pinned comment.
 5. **댓글 트리거** — the single strongest line/frame for debate; draft one pinned-comment vote question (①/②) that stays fair to both sides.
 6. **제목 · 커버 · 첫 프레임 (클릭)** — evaluate the current title and first frame. Propose 3 bolder titles that (a) put conflict + payoff first, (b) keep the episode tag short (`[3화]`), (c) contain nothing that doesn't happen in the video and no unverified legal claim.
