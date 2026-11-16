@@ -1,7 +1,11 @@
 {
-  "status": "pending",
+  "status": "approved",
   "what": "교사X 3화(야근 강요) 1단계: 그림 35장 + 녹음 약 20줄",
-  "models": {"image": "gpt_image_2_5 high 2k 9:16, 인물 시트·tx_office를 image_references로", "audio": "elevenlabs_v4 (다해 412a7d55 st0.45 / 교감 b3ba5e40 st0.35 / 정우 1d3868ed st0.35)"},
+  "models": {
+    "image": "gpt_image_2_5 high 2k 9:16, 인물 시트·tx_office를 image_references로",
+    "audio": "elevenlabs_v4 (다해 412a7d55 st0.45 / 교감 b3ba5e40 st0.35 / 정우 1d3868ed st0.35)"
+  },
   "estimate_credits": 103,
-  "plan": "03_스토리보드/샷계획_v1.md"
+  "plan": "03_스토리보드/샷계획_v1.md",
+  "approved_note": "사장님 11/16 \"1단계 진행해\""
 }
