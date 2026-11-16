@@ -46,9 +46,9 @@ im.save(O+'o504.png')
 
 # o506 폐기함 앞면 글자 (비스듬한 이름표에 맞춰 돌림)
 im=Image.open(I+'i506.png').convert('RGBA')
-t=Image.new('RGBA',(520,170),(0,0,0,0)); dt=ImageDraw.Draw(t); ctext(dt,(0,0,520,170),'폐기함',f(120,BH),(40,40,40,255))
-t=t.rotate(-33,expand=True,resample=Image.BICUBIC)
-im.alpha_composite(t,(990-t.size[0]//2,2350-t.size[1]//2)); im.convert('RGB').save(O+'o506.png')
+t=Image.new('RGBA',(520,170),(0,0,0,0)); dt=ImageDraw.Draw(t); ctext(dt,(0,0,520,170),'폐기함',f(84,BH),(40,40,40,255))
+t=t.rotate(-38,expand=True,resample=Image.BICUBIC)
+im.alpha_composite(t,(628-t.size[0]//2,2405-t.size[1]//2)); im.convert('RGB').save(O+'o506.png')
 
 # 사실 카드 A
 im=Image.new('RGB',(W,HH),(18,22,34)); d=ImageDraw.Draw(im)
