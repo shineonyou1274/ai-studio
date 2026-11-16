@@ -1,5 +1,5 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "4화 1단계: 그림 37(gpt_image_2_5 high 2k 9:16) + 녹음 18줄(elevenlabs_v4, 다시 녹음 여유 포함 약 20)",
  "model": {
   "image": "gpt_image_2_5",
@@ -20,5 +20,6 @@
  },
  "estimate": 110,
  "balance_before": 8026.01,
- "week_used_before": 357.05
+ "week_used_before": 357.05,
+ "approved_by": "사장님 11/16 \"1단계 진행해\""
 }
