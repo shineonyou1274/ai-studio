@@ -92,7 +92,7 @@ print('hook cut',round(hcut,3))
 run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,hcut)),'-to',str(v1('12')+0.15),'-i',AW('12'),'-af',f'afade=t=in:d=0.03,adelay={int(LEAD*1000)}:all=1',A+'h12.wav'])
 hd=round(v1('12')+0.25-hcut+LEAD,3)
 # ================= 훅: 밤 9시 혼자 문단속 (대사 자막 없음, 제목만) =================
-add([(img('o503',1.5,'crash'),0,1.5),(V+'r407.mp4',0.3,1.3),(V+'r601.mp4',0.6,round(hd-2.8,3))],  # v7: 0초 결재선+도장 → 땀 흘리는 교감 → 밤에 혼자 문단속
+add([(img('o503',1.5,'in'),0,1.5),(V+'r407.mp4',0.3,1.3),(V+'r601.mp4',0.6,round(hd-2.8,3))],  # v7: 0초 결재선+도장 → 땀 흘리는 교감 → 밤에 혼자 문단속
     [(A+'h12.wav',0,1.0,'d',None),(X+'B2.mp3',0,0.22,'s',('seek',50.0,hd))],
     [(0,hd,"{\\fad(200,0)}야근시키려면\\N{\\alpha&HFF&\\t(430,440,\\alpha&H00&)\\fscx160\\fscy160\\t(430,600,\\fscx100\\fscy100)}"+YN+"사유부터{\\c&HFFFFFF&} 쓰시죠!",'HookT')],
     [(X+'s23.mp3',0.0,0.9,'s',None),(X+'s21.mp3',1.45,0.4,'s',None)])
