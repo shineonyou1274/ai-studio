@@ -1,4 +1,4 @@
-# 교사X 3화(야근 강요) 편집 v7 (v6 + 사장님 11/16 바이럴 검수 기준: 0초에 결재선 도장 장면, 마지막 대사 뒤 말 없는 구간 5초 안팎으로, '극 중 설정' 표시를 왼쪽 위로, 렌더 끝에 편집장 측정값 출력. 이전 v6: v5 + 사장님 11/16 '시작 대사가 씹혀서 뭐라는지 모르겠어': 훅 소리를 '이 결재,'부터 온전한 문장으로, 앞 단어 꼬리를 소리 크기로 찾아 빼고 앞에 0.3초 빈 소리, 휙 소리는 말 앞 빈 곳으로, 음악 줄임. 이전 v5: v4 + 사장님 11/16: 신청서 글자를 기운 칸에 맞춤, 결정타 자막이 13번 자막과 겹치던 것 고침, 17 '네!'를 입 벌린 프레임에 맞춤, 다해 반응 r409 뒷부분(순해 보이는 얼굴) 뺌. 이전 v4: v3b + 사장님 11/16 승인: 04·407·603 그림을 시트에 맞게 다시 그려 영상 새로 만듦 → 04 말하는 얼굴, 12의 407 땀 반응, 밤 603 문가 되살림. 이전 v3: v2 + 사장님 11/16: 젊어 보이는 교감 컷 04·407·603 빼거나 덮음, 훅 첫 소리 잘림, Gemini 효과음 일부. v2: 12번 자막 나눔. 수능 특별편 build_sn_v3.py 틀)
+# 교사X 3화(야근 강요) 편집 v7 (훅 제목은 결재선 칸을 가리지 않게 아래로[MarginV 540→330]. v6 + 사장님 11/16 바이럴 검수 기준: 0초에 결재선 도장 장면, 마지막 대사 뒤 말 없는 구간 5초 안팎으로, '극 중 설정' 표시를 왼쪽 위로, 렌더 끝에 편집장 측정값 출력. 이전 v6: v5 + 사장님 11/16 '시작 대사가 씹혀서 뭐라는지 모르겠어': 훅 소리를 '이 결재,'부터 온전한 문장으로, 앞 단어 꼬리를 소리 크기로 찾아 빼고 앞에 0.3초 빈 소리, 휙 소리는 말 앞 빈 곳으로, 음악 줄임. 이전 v5: v4 + 사장님 11/16: 신청서 글자를 기운 칸에 맞춤, 결정타 자막이 13번 자막과 겹치던 것 고침, 17 '네!'를 입 벌린 프레임에 맞춤, 다해 반응 r409 뒷부분(순해 보이는 얼굴) 뺌. 이전 v4: v3b + 사장님 11/16 승인: 04·407·603 그림을 시트에 맞게 다시 그려 영상 새로 만듦 → 04 말하는 얼굴, 12의 407 땀 반응, 밤 603 문가 되살림. 이전 v3: v2 + 사장님 11/16: 젊어 보이는 교감 컷 04·407·603 빼거나 덮음, 훅 첫 소리 잘림, Gemini 효과음 일부. v2: 12번 자막 나눔. 수능 특별편 build_sn_v3.py 틀)
 # 샌드박스: ~/ep4/{v(vNN·rNNN), img, ov, ed(aNN.wav), lc, timing.json}, ~/ep2/sfx3, ~/ed/usfx, ~/music, ~/fonts
 import subprocess, os, json, re
 from PIL import ImageFont
@@ -180,7 +180,7 @@ _m=subprocess.run(['ffmpeg','-nostdin','-i',E+'ed/aud_pre.wav','-af','ebur128','
 _I=float(re.findall(r'I:\s+(-?[0-9.]+) LUFS',_m)[-1]); _g=-14.0-_I; print('pre I',_I,'gain',round(_g,2))
 run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/aud_pre.wav','-af',f'volume={_g:.2f}dB,alimiter=limit=0.6:level=false:attack=1:release=50','-c:a','aac','-b:a','192k',E+'ed/aud.m4a'])
 def ts(x): x=max(0,x); h=int(x//3600); m=int(x%3600//60); s=x%60; return f"{h}:{m:02d}:{s:05.2f}"
-head=open(H+'/ep2/sub_v2_header.ass').read().replace('\n\n[Events]','\nStyle: HookT,Black Han Sans,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,5,3,2,24,24,540,1\n\n[Events]',1)
+head=open(H+'/ep2/sub_v2_header.ass').read().replace('\n\n[Events]','\nStyle: HookT,Black Han Sans,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,5,3,2,24,24,330,1\n\n[Events]',1)
 for a,b,txt,st in SUB: head+=f"Dialogue: 0,{ts(a)},{ts(b)},{st},,0,0,0,,{txt}\n"
 open(E+'ed/sub.ass','w').write(head)
 flash=','.join(f"drawbox=c=white@0.85:t=fill:enable='between(t,{x:.2f},{x+0.08:.2f})'" for x in FL)
