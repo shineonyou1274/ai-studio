@@ -3,7 +3,8 @@
 > 공개: **2026-11-23(월) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **편집 v5 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/2a10221b-2109-4745-9d96-745d840983ae.mp4 (1분 21초) — 신청서 글자를 기운 칸에 맞춤(사유 칸은 "사유를 입력하세요" 자리표시), 결정타 자막과 "그, 그건…" 겹침 없앰, 정우 "네!" 입 맞춤, 다해 반응 컷의 순해 보이는 뒷부분 뺌
+- **편집 v6 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/c1380ea6-8b22-4dd2-9648-4a54d3db6f2b.mp4 (1분 22초) — 훅 소리를 "이 결재, 교장 선생님까지 올라갑니다. 교감 선생님 이름으로요." 온전한 문장으로, 앞 단어 꼬리 제거
+- 이전 편집 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/2a10221b-2109-4745-9d96-745d840983ae.mp4 (1분 21초) — 신청서 글자를 기운 칸에 맞춤(사유 칸은 "사유를 입력하세요" 자리표시), 결정타 자막과 "그, 그건…" 겹침 없앰, 정우 "네!" 입 맞춤, 다해 반응 컷의 순해 보이는 뒷부분 뺌
 - 이전 편집 v4: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/b5808a35-3d6f-4e3e-a8a3-47cff324e384.mp4 (1분 21초) — 04·407·603 교감 그림을 시트에 맞게 다시 그려 영상 새로 만듦(27.75크레딧, 사장님 승인). 04 말하는 얼굴, 12번 땀 반응, 밤 문가 장면 되살림
 - 이전 편집 v3b: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a14fd8fa-0350-464e-85e8-82d45d9f17d6.mp4 (1분 18초) — 젊어 보이는 교감 컷 빼기, 화면 글자 위치, 훅 첫 소리, 타자·도장 소리, 결정타 2 앞 쉼
 - 이전 v2: 139b3a45-b70a-42c8-84c9-ead89e1e7ecd
