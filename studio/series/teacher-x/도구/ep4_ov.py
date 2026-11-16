@@ -18,22 +18,22 @@ def bubble(d,x0,y0,lines,me,size=34,pad=22,maxw=520,x1=None):
 # 602 낮: 정우가 보낸 문자, '읽음', 답 없음
 im=Image.open(I+'i602.png').convert('RGB'); d=ImageDraw.Draw(im)
 d.rectangle((470,640,1070,1590),fill=(250,250,252))
-d.text((760,600),'한결',font=f(30),fill=(40,40,40),anchor='mm')
-bx0,bx1,yb=bubble(d,0,1180,['한결아, 오늘 4시 반','보충이야. 꼭 와.'],True,x1=1050)
-d.text((bx0-12,yb),'읽음',font=f(24),fill=(150,150,150),anchor='rd')
+d.text((760,600),'한결',font=f(34),fill=(40,40,40),anchor='mm')
+bx0,bx1,yb=bubble(d,0,1150,['한결아, 오늘 4시 반','보충이야. 꼭 와.'],True,size=46,x1=1055)
+d.text((bx0-12,yb),'읽음',font=f(32),fill=(150,150,150),anchor='rd')
 tag(d); im.save(O+'o602.png')
 # 607 밤: 한결의 답장
 im=Image.open(I+'i607.png').convert('RGB'); d=ImageDraw.Draw(im)
 d.rectangle((530,900,1070,1720),fill=(250,250,252))
-d.text((780,862),'한결',font=f(28),fill=(40,40,40),anchor='mm')
-bubble(d,555,1240,['쌤 죄송해요.','학원 가야 해서요.'],False,size=34)
+d.text((780,862),'한결',font=f(32),fill=(40,40,40),anchor='mm')
+bubble(d,550,1200,['쌤 죄송해요.','학원 가야 해서요.'],False,size=46)
 tag(d); im.save(O+'o607.png')
 # 605 모니터: 시험지와 7번 문항
 def doc(del_=False):
     im=Image.open(I+'i605.png').convert('RGBA'); d=ImageDraw.Draw(im)
     d.text((760,764),'통합과학 기말고사 (1학년)',font=f(46),fill=(40,50,80),anchor='mm')
     d.rectangle((268,925,1300,985),fill=(238,242,250,255))
-    d.text((290,955),'7. 그래프를 해석한 것으로 옳은 것은?',font=f(36),fill=(30,30,30),anchor='lm')
+    d.text((290,955),'7. 그래프를 해석한 것으로 옳은 것은?',font=f(40),fill=(30,30,30),anchor='lm')
     if del_:
         ov=Image.new('RGBA',im.size,(0,0,0,0)); do=ImageDraw.Draw(ov)
         do.rectangle((184,888,1336,1752),fill=(220,30,40,90),outline=(220,30,40,255),width=10)
