@@ -1,5 +1,5 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "4화 2단계 영상: 대사 18(MiniMax H3 Max 480p, 녹음 길이+0.1초, 최소 5초) + 반응·인서트 11(Kling 3.0 std 소리 끔 4초: 반응 501~509, 교실 와이드 601, 훅 손가락 606)",
  "model": {
   "dialogue": "minimax_h3_max",
@@ -37,5 +37,6 @@
   "08": "08"
  },
  "balance_before": 7916.44,
- "week_used_before": 466.62
+ "week_used_before": 466.62,
+ "approved_by": "사장님 11/16 \"2단계 진행해\""
 }
