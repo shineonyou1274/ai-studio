@@ -75,8 +75,9 @@ for c in DH:
 def AW(c): return A+(f'e{c}.wav' if c in DH else f'a{c}.wav')
 # 훅 소리: 12번 '교장'부터 끝까지
 hs=wt('12','교장',v1('12')-3.4)
-run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,hs-0.3)),'-to',str(v1('12')+0.15),'-i',AW('12'),'-af','afade=t=in:d=0.04',A+'h12.wav'])
-hd=round(v1('12')+0.5-hs,3)
+_w=W('12'); _i=[k for k,(w,st,en) in enumerate(_w) if '교장' in w][0]; _pe=_w[_i-1][2] if _i>0 else hs-0.3; hcut=(_pe+hs)/2
+run(['ffmpeg','-nostdin','-v','error','-y','-ss',str(max(0,hcut)),'-to',str(v1('12')+0.15),'-i',AW('12'),'-af','afade=t=in:d=0.04',A+'h12.wav'])
+hd=round(v1('12')+0.25-hcut,3)
 # ================= 훅: 밤 9시 혼자 문단속 (대사 자막 없음, 제목만) =================
 add([(img('505',0.9,'crash'),0,0.9),(V+'r601.mp4',0.6,round(hd-0.9,3))],
     [(A+'h12.wav',0,1.0,'d',None),(X+'B2.mp3',0,0.4,'s',('seek',50.0,hd))],
@@ -170,6 +171,6 @@ flash=','.join(f"drawbox=c=white@0.85:t=fill:enable='between(t,{x:.2f},{x+0.08:.
 SH='+'.join(f"between(t,{x:.2f},{x+0.25:.2f})" for x in HIT) or '0'
 shake=f"crop=w=696:h=1256:x='12+11*sin(2*PI*t*26)*({SH})':y='12+11*cos(2*PI*t*21)*({SH})',scale=720:1280"
 print('WARN long lines',WARN); print('HIT',[round(h,2) for h in HIT])
-outn=E+'ed/ep3ot_v3.mp4'
+outn=E+'ed/ep3ot_v3b.mp4'
 run(['ffmpeg','-nostdin','-v','error','-y','-i',E+'ed/pic.mp4','-i',E+'ed/aud.m4a','-vf',f"setpts=N/(24*TB),{flash},{shake},ass={E}ed/sub.ass:fontsdir={H}/fonts,fade=t=out:st={total-1.5:.2f}:d=1.5",'-c:v','libx264','-preset','veryfast','-crf','20','-c:a','copy','-shortest',outn])
 print('ok',outn)
