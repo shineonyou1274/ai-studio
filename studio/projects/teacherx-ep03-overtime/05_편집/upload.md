@@ -3,7 +3,8 @@
 > 공개: **2026-11-23(월) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- 편집 v2: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/139b3a45-b70a-42c8-84c9-ead89e1e7ecd.mp4 (1분 20초)
+- **편집 v3b**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a14fd8fa-0350-464e-85e8-82d45d9f17d6.mp4 (1분 18초) — 젊어 보이는 교감 컷 빼기, 화면 글자 위치, 훅 첫 소리, 타자·도장 소리, 결정타 2 앞 쉼
+- 이전 v2: 139b3a45-b70a-42c8-84c9-ead89e1e7ecd
 - [ ] 사장님 청취 · [ ] Gemini 검수
 
 ## 제목 (안)
