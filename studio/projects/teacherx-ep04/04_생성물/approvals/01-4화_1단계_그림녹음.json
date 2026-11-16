@@ -1,0 +1,24 @@
+{
+ "status": "pending",
+ "what": "4화 1단계: 그림 37(gpt_image_2_5 high 2k 9:16) + 녹음 18줄(elevenlabs_v4, 다시 녹음 여유 포함 약 20)",
+ "model": {
+  "image": "gpt_image_2_5",
+  "audio": "elevenlabs_v4"
+ },
+ "resolution": "2k",
+ "audio": "녹음만(영상 소리 없음)",
+ "aspect": "9:16",
+ "images": {
+  "대사 시작 그림": 18,
+  "반응 그림": 10,
+  "소품·인서트": 8,
+  "보충교실 장소 참고": 1
+ },
+ "unit_cost": {
+  "image": 2.75,
+  "audio_line_approx": 0.37
+ },
+ "estimate": 110,
+ "balance_before": 8026.01,
+ "week_used_before": 357.05
+}
