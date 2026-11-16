@@ -7,7 +7,8 @@ def ctext(d,box,t,font,fill):
     x0,y0,x1,y1=box; w=d.textlength(t,font=font); bb=font.getbbox(t); h=bb[3]-bb[1]
     d.text(((x0+x1-w)/2,(y0+y1-h)/2-bb[1]),t,font=font,fill=fill)
 def tag(d,y):
-    d.rounded_rectangle((1060,y,1440,y+80),radius=16,fill=(0,0,0)); ctext(d,(1060,y,1440,y+80),'극 중 설정',f(40),'white')
+    # v7: 쇼츠 오른쪽 아래(버튼 자리)를 피해 왼쪽 위로 (y는 무시하고 300에 둠)
+    y=300; d.rounded_rectangle((80,y,460,y+80),radius=16,fill=(0,0,0)); ctext(d,(80,y,460,y+80),'극 중 설정',f(40),'white')
 W,HH=1520,2688
 # o502 초과근무 신청서 화면: 사유 칸만 비어 있음
 # 화면이 기울어 있음(오른쪽이 위, 기울기 -0.0606 ≈ 3.47도). 칸 테두리를 픽셀로 재서 칸 가운데에 같은 각도로 돌려 넣음 (11/16 v5)
