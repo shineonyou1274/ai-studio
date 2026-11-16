@@ -3,7 +3,8 @@
 > 공개: **2026-11-23(월) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **편집 v3b**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a14fd8fa-0350-464e-85e8-82d45d9f17d6.mp4 (1분 18초) — 젊어 보이는 교감 컷 빼기, 화면 글자 위치, 훅 첫 소리, 타자·도장 소리, 결정타 2 앞 쉼
+- **편집 v4 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/b5808a35-3d6f-4e3e-a8a3-47cff324e384.mp4 (1분 21초) — 04·407·603 교감 그림을 시트에 맞게 다시 그려 영상 새로 만듦(27.75크레딧, 사장님 승인). 04 말하는 얼굴, 12번 땀 반응, 밤 문가 장면 되살림
+- 이전 편집 v3b: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a14fd8fa-0350-464e-85e8-82d45d9f17d6.mp4 (1분 18초) — 젊어 보이는 교감 컷 빼기, 화면 글자 위치, 훅 첫 소리, 타자·도장 소리, 결정타 2 앞 쉼
 - 이전 v2: 139b3a45-b70a-42c8-84c9-ead89e1e7ecd
 - [ ] 사장님 청취 · [ ] Gemini 검수
 
