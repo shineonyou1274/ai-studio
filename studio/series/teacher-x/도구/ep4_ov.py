@@ -44,7 +44,7 @@ def doc(del_=False):
 doc().save(O+'o605.png'); doc(True).save(O+'o605d.png')
 # 604 서류 더미: 서류 이름표
 im=Image.open(I+'i604.png').convert('RGB'); d=ImageDraw.Draw(im)
-for (x,y,t) in [(330,560,'출석 독려 기록'),(760,1130,'보충지도 계획서'),(260,2160,'결과 보고서')  # v4: 자막(y≈2016)과 겹쳐 왼쪽 아래 초록 파일로 옮김]:
+for (x,y,t) in [(330,560,'출석 독려 기록'),(760,1130,'보충지도 계획서'),(260,2160,'결과 보고서')]:  # v4: 자막(y≈2016)과 겹쳐 왼쪽 아래 초록 파일로 옮김
     w=d.textlength(t,font=f(44))+50
     d.rounded_rectangle((x-w/2,y-42,x+w/2,y+42),radius=14,fill=(255,236,150),outline=(120,100,40),width=3)
     d.text((x,y),t,font=f(44),fill=(40,40,40),anchor='mm')
