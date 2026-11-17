@@ -1,11 +1,19 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "5화 2단계 영상: 대사 24(MiniMax H3 Max 480p, 녹음 길이+0.5초, 최소 5초 → 합 132초) + 반응·인서트 13(Kling 3.0 std 4초, 소리 끔: 501~510, 603 전화벨, 604 훅, 605 문 열림)",
- "model": {"dialogue": "MiniMax H3 Max 480p (1.5/초)", "reaction": "Kling 3.0 std 4초 (6)"},
+ "model": {
+  "dialogue": "MiniMax H3 Max 480p (1.5/초)",
+  "reaction": "Kling 3.0 std 4초 (6)"
+ },
  "resolution": "480p",
  "audio": "녹음을 오디오 참조로, 영상 소리는 편집에서 원래 녹음",
  "aspect": "9:16",
- "estimate": {"dialogue": 198, "reaction": 78, "total": 276},
+ "estimate": {
+  "dialogue": 198,
+  "reaction": 78,
+  "total": 276
+ },
  "stills_no_cost": "601 성적 화면·602 결재판·606 복사기·은색 시계(4화 608)는 정지 그림+글자 편집",
- "week_used_before": "약 467.6 (4화 332.1 + 5화 1단계 약 135.5)"
+ "week_used_before": "약 467.6 (4화 332.1 + 5화 1단계 약 135.5)",
+ "approved_by": "사장님 11/17 \"이 사진이 우리가 지킬 구조란 거야 잘 기록해 줘 계속해\" (2단계 진행 질문 뒤 \"계속해\")"
 }
