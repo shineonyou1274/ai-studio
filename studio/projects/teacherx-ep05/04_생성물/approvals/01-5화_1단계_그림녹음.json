@@ -1,15 +1,31 @@
 {
- "status": "pending",
- "what": "5화 1단계: 이사장 캐릭터 시트 2 + 그림 37(gpt_image_2_5 high 2k 9:16) + 이사장 목소리 오디션 3 + 녹음 21줄(다시 녹음 여유 5)",
- "model": {"image": "gpt_image_2_5", "audio": "elevenlabs_v4"},
+ "status": "approved",
+ "what": "5화 1단계: 이사장 캐릭터 시트 2 + 그림 40(대사 24·반응 10·인서트 6) + 이사장 목소리 오디션 3 + 녹음 24줄(다시 녹음 여유 5)",
+ "model": {
+  "image": "gpt_image_2_5",
+  "audio": "elevenlabs_v4"
+ },
  "resolution": "2k",
  "audio": "녹음만(영상 소리 없음)",
  "aspect": "9:16",
- "images": {"이사장 캐릭터 시트(후보 2)": 2, "대사 시작 그림": 21, "반응 그림": 10, "소품·인서트(성적 화면·결재판·전화기·훅 교감 수화기·교무실 문·다해 모니터)": 6},
+ "images": {
+  "이사장 캐릭터 시트(후보 2)": 2,
+  "대사 시작 그림": 24,
+  "반응 그림": 10,
+  "소품·인서트": 6
+ },
  "reuse": "은색 시계 클로즈업은 4화 그림(608) 다시 씀 → 반짝임은 편집(크레딧 0)",
- "unit_cost": {"image": 2.75, "audio_line_approx": 0.37},
- "estimate": {"images": 107.25, "audio": 10.73, "total": 118},
+ "unit_cost": {
+  "image": 2.75,
+  "audio_line_approx": 0.37
+ },
+ "estimate": {
+  "images": 115.5,
+  "audio": 11.8,
+  "total": 127
+ },
  "balance_before": 10768.77,
  "week_used_before": 332.12,
- "next": "2단계 영상(대사 21 MiniMax 480p 약 5.5초 + 반응·인서트 약 10 Kling std 4초) 예상 약 235"
+ "next": "2단계 영상(대사 21 MiniMax 480p 약 5.5초 + 반응·인서트 약 10 Kling std 4초) 예상 약 235",
+ "approved_by": "사장님 11/17 \"세게 바꾸고 새 줄도 넣어, 1단계 진행해\" (새 줄 3개로 118→약 127)"
 }
