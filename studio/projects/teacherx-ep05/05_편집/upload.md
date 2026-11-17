@@ -3,7 +3,9 @@
 > 공개: **2026-11-27(금) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **편집 v8 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d4537ee3-1421-4b5f-b186-5f995725c5e1.mp4 (2분 4초) — 사장님 효과음: 전화벨 = classic 90's ring(phone_ring3, 훅 -13.9 LUFS = 대사 크기) 네 곳, 다해 번호 누르는 소리(0:58), 이사장 들어올 때 문 소리(sfx_b, 추정), 나갈 때 문 닫히는 '쿵'(sfx_a). v7의 벨(phone_ring2)은 사장님 "오리 소리"라 뺌. sfx_c(삑 소리)는 용도 확인 중
+- **편집 v9 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/eda2e907-3daf-4c44-835a-14cae62b66ee.mp4 (2분 4초) — 사장님 캡처 11/17: 0:04 위쪽 글자 겹침(성적 화면 줌 약하게 + 5등급 설명을 화면 안 글자로), 교사들 인사를 이사장 들어온 직후로(0:20), 다해 이름표를 다해 얼굴 컷으로(0:34), 1:05 교감 입 안 움직임 → 정우 반응으로 시작하고 입 움직이는 부분부터. 대사 34구간 입 모양 프레임 점검함
+  - [편집장 측정값] 전체 123.9초 / 컷 65 / 평균 1.9초 / 꼬리 4.5초 / 첫 대사 1.20초 / 자막 겹침 0건
+- 편집 v8: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d4537ee3-1421-4b5f-b186-5f995725c5e1.mp4 (2분 4초) — 사장님 효과음: 전화벨 = classic 90's ring(phone_ring3, 훅 -13.9 LUFS = 대사 크기) 네 곳, 다해 번호 누르는 소리(0:58), 이사장 들어올 때 문 소리(sfx_b, 추정), 나갈 때 문 닫히는 '쿵'(sfx_a). v7의 벨(phone_ring2)은 사장님 "오리 소리"라 뺌. sfx_c(삑 소리)는 용도 확인 중
 - 편집 v7: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a77d6b91-50bc-4dd1-a655-f198acfdfc0e.mp4 (2분 4초) — 사장님 새 전화벨(18초 연속벨 파일, ~/ed/usfx/phone_ring2.mp3) 네 곳, 소리 키움(훅 0~1.1초 -14.2 LUFS = 대사와 같은 크기). 번호 누르는 소리는 파일 기다림
 - 편집 v6: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/47cfd797-2c00-4ab7-a240-c9f7103c9332.mp4 (2분 4초) — 사장님 11/17: 이사장 나갈 때 교감 "살펴 가세요, 이사장님!"(0:48). 전화벨은 아직 이전 파일(사장님 새 파일 오면 바꿈), 번호 누르는 소리 파일 기다림
   - [편집장 측정값] v5와 같음: 123.9초 / 컷 66 / 평균 1.8초 / 꼬리 4.5초 / 첫 대사 1.20초 / 자막 겹침 0건
