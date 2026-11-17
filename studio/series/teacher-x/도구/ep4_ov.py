@@ -49,6 +49,14 @@ for (x,y,t) in [(330,560,'출석 독려 기록'),(760,1130,'보충지도 계획�
     d.rounded_rectangle((x-w/2,y-42,x+w/2,y+42),radius=14,fill=(255,236,150),outline=(120,100,40),width=3)
     d.text((x,y),t,font=f(44),fill=(40,40,40),anchor='mm')
 tag(d); im.save(O+'o604.png')
+# 608 은색 시계 반짝임(만화 효과, 사장님 11/17): 작은 별 → 큰 별 두 장을 번갈아
+def star(d,cx,cy,r,w):
+    d.polygon([(cx,cy-r),(cx+w,cy-w),(cx+r,cy),(cx+w,cy+w),(cx,cy+r),(cx-w,cy+w),(cx-r,cy),(cx-w,cy-w)],fill=(255,255,255,240))
+for nm,(r1,r2) in {'o608a':(70,35),'o608b':(150,70)}.items():
+    im=Image.open(I+'i608.png').convert('RGBA'); ov=Image.new('RGBA',im.size,(0,0,0,0)); do=ImageDraw.Draw(ov)
+    do.ellipse((792-260,1200-260,792+260,1200+260),fill=(255,255,255,40 if nm=='o608a' else 80))
+    star(do,905,1085,r1,r1//7); star(do,690,1310,r2,r2//7)
+    im=Image.alpha_composite(im,ov).convert('RGB'); im.save(O+nm+'.png')
 # 엔딩 포스터
 im=Image.open(I+'i418.png').convert('RGBA'); ov=Image.new('RGBA',im.size,(0,0,0,0)); do=ImageDraw.Draw(ov)
 do.rectangle((0,1800,W,HH),fill=(0,0,0,150)); im=Image.alpha_composite(im,ov).convert('RGB'); d=ImageDraw.Draw(im)
