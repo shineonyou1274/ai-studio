@@ -16,6 +16,7 @@ d.text((760,925),'만점자 28명',font=f(46),fill=(60,60,60),anchor='mm')
 d.text((760,995),'1등급 0명',font=f(72),fill=(220,30,40),anchor='mm')
 for k,(g,n) in enumerate([('1등급','0'),('2등급','35'),('3등급','49')]):
     y=1130+k*90; d.text((300,y),g,font=f(40),fill=(50,50,50),anchor='lm'); d.text((700,y),n+'명',font=f(40),fill=(220,30,40) if n=='0' else (50,50,50),anchor='lm')
+d.text((260,1560),'※ 고1 5등급제: 1등급 = 상위 10%',font=f(40),fill=(200,30,40),anchor='lm')  # v9: 위쪽 자막과 겹쳐서 화면 안으로 옮김
 tag(d); im.save(O+'o601.png')
 # 602 결재판: 출제 원안 검토, 결재란 3칸(담당 안정우 / 교감 서명 / 교장)
 im=Image.open(I+'i602.png').convert('RGB'); d=ImageDraw.Draw(im)
