@@ -68,9 +68,9 @@ def series(src, ep, title, lines, out, face_frac=0.42, face_y=0.36, dx=0.0):
     fn = ImageFont.truetype(F, 80); n = f'{ep}화'; nw = fn.getlength(n)
     d.rounded_rectangle((x, 56, x + nw + 40, 176), 18, fill=YEL); d.text((x + 20, 70), n, font=fn, fill=NAVY)
     x += nw + 40 + 30
-    ft = 64
-    while ImageFont.truetype(F, ft).getlength(f'「{title}」') > W - x - 40: ft -= 2
-    d.text((x, 116), f'「{title}」', font=ImageFont.truetype(F, ft), fill='white', anchor='lm')
+    ft = 84  # 「」는 Black Han Sans에 없어 빈칸으로 나옴 → 괄호 없이
+    while ImageFont.truetype(F, ft).getlength(title) > W - x - 40: ft -= 2
+    d.text((x, 116), title, font=ImageFont.truetype(F, ft), fill='white', anchor='lm')
     y = 1200
     for segs in lines:
         txt = ''.join(t for t, c in segs); size = 140
