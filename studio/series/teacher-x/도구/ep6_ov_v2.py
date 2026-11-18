@@ -41,24 +41,24 @@ tag(ImageDraw.Draw(im),60,120); im.save(O+'o602.png')
 # 604 설립자 액자 명판: 읽히지 않는 새김 글씨(이름은 다음 화에, 사장님 11/17)
 im=Image.open(I+'i604.png').convert('RGB')
 L=Image.new('RGBA',im.size,(0,0,0,0)); d=ImageDraw.Draw(L); random.seed(6)
-for y0,x0,x1,amp in [(1676,672,890,7),(1706,700,860,5)]:
+for y0,x0,x1,amp in [(1678,690,880,4),(1703,720,850,3)]:
     x=x0
     while x<x1:
         n=random.randint(3,6); pts=[]
-        for k in range(n*2): pts.append((x+k*5,y0+(amp if k%2 else -amp)*random.uniform(0.5,1.0)))
-        d.line(pts,fill=(70,52,28,200),width=3); x+=n*10+random.randint(8,16)
-L=L.filter(ImageFilter.GaussianBlur(0.8)); im.paste(L,(0,0),L); im.save(O+'o604.png')
+        for k in range(n*3): pts.append((x+k*3,y0+(amp if k%2 else -amp)*random.uniform(0.3,1.0)))
+        d.line(pts,fill=(60,44,22,170),width=2); x+=n*9+random.randint(7,13)
+L=L.filter(ImageFilter.GaussianBlur(1.0)); im.paste(L,(0,0),L); im.save(O+'o604.png')
 # 605 교직원 친목회 회칙(종이 약 5.7° 기울어짐: 제목 줄 (412,725)→(1062,657), 형광펜 (350,887)→(1125,800))
 A5=5.7
 im=Image.open(I+'i605.png').convert('RGB'); d=ImageDraw.Draw(im)
-paper=tuple(im.getpixel((700,1010)))
+paper=tuple(im.getpixel((318,930)))
 tilted(im,(737,640),['교직원 친목회 회칙'],60,A5,fill=(25,25,30))
-d.rectangle((292,860,348,925),fill=paper)  # '1.' 번호 지움
-tilted(im,(770,875),['제2조(회원) 본교 교직원은','누구나 회원이 될 수 있다.'],50,A5,fill=(20,20,25),bg=paper+(235,),pad=8,gap=1.35,align='lm',width=800)
+Mk=Image.new('L',im.size,0); ImageDraw.Draw(Mk).rectangle((294,862,346,922),fill=255); Mk=Mk.filter(ImageFilter.GaussianBlur(6)); im.paste(Image.new('RGB',im.size,paper),(0,0),Mk)  # '1.' 번호를 가장자리 흐리게 지움
+tilted(im,(770,875),['제2조(회원) 본교 교직원은','누구나 회원이 될 수 있다.'],50,A5,fill=(20,20,25),bg=None,pad=8,gap=1.35,align='lm',width=800)
 # 형광펜은 첫 줄 아래에 다시(글자 판이 덮지 않게 반투명 노랑)
 L=Image.new('RGBA',im.size,(0,0,0,0)); ImageDraw.Draw(L).polygon([(372,872),(1150,795),(1152,822),(374,899)],fill=(255,236,60,110)); im.paste(L,(0,0),L)
 tag(ImageDraw.Draw(im),1100,60); im.save(O+'o605.png')
 # 508 마지막 프레임: 2K 원본에서 다해 얼굴 쪽을 9:16으로 잘라 냄(영상 확대로 뭉개지던 것 대신)
 im=Image.open(I+'i508.png').convert('RGB'); W,Hh=im.size
-cw=int(W*0.55); ch=int(cw*16/9); x0=int(W*0.38); im.crop((x0,0,x0+cw,ch)).resize((1520,2688),Image.LANCZOS).save(O+'o508f.png')
+cw=int(W*0.55); ch=int(cw*16/9); x0=300; y0=120; im.crop((x0,y0,x0+cw,y0+ch))  # 얼굴 x 480~880, y 400~800.resize((1520,2688),Image.LANCZOS).save(O+'o508f.png')
 print('ok')
