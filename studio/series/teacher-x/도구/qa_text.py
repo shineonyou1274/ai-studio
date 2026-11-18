@@ -97,7 +97,7 @@ if a.tl:
 items.sort(key=lambda x: x['st'])
 for it in items:
     d = it['en'] - it['st']
-    it['fr'] = [int(round(min(DUR - 0.15, it['st'] + x) * FPS)) for x in (min(0.06, d / 3), d / 2, max(d - 0.06, d * 2 / 3))]
+    it['fr'] = [int(round(min(DUR - 0.15, it['st'] + x) * FPS)) for x in (min(0.08, d / 3), d / 2, max(d - 0.15, d * 2 / 3))]  # 끝은 0.15초 안쪽(사라지는 순간 피함)
 need = sorted({n for it in items for n in it['fr']})
 fdir = os.path.join(tmp, 'f'); os.makedirs(fdir)
 FR = {}
