@@ -1,0 +1,63 @@
+# 교사X 커버 v2 — 썸네일_판단기준_v1.md(사장님 11/18 "클릭하고 싶게, 궁금해서")에 맞춘 틀
+#  - 얼굴을 찾아 화면 폭의 약 45%로 키워 위쪽에 둠(감정이 큰 얼굴 하나)
+#  - 큰 글씨 2줄(한 줄 9자 안), 강조 낱말 1개만 노랑, 나머지 흰색. 빨간 띠 없음. 회차 표시는 작게
+#  - feed(): 폭 180px(쇼츠 피드 크기) 비교판
+# 샌드박스 실행. 얼굴 찾기 모델은 qa_text/qa_faces와 같은 YuNet(~/.cache/qa/face_yunet.onnx)
+import os, subprocess
+import numpy as np, cv2
+from PIL import Image, ImageDraw, ImageFont
+F = '/home/user/fonts/BlackHanSans-Regular.ttf'
+if not os.path.exists(F): F = '/home/user/fonts/NanumGothicBold.ttf'
+FS = '/home/user/fonts/NanumGothicBold.ttf'
+W, H = 1080, 1920
+MP = os.path.expanduser('~/.cache/qa/face_yunet.onnx')
+
+def face_box(im):
+    if not os.path.exists(MP):
+        os.makedirs(os.path.dirname(MP), exist_ok=True)
+        subprocess.run(['curl', '-sfL', '-o', MP, 'https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'], check=True)
+    s = 1280 / max(im.size); sm = im.resize((int(im.width * s), int(im.height * s)))
+    det = cv2.FaceDetectorYN.create(MP, '', (sm.width, sm.height), 0.6)
+    _, r = det.detect(cv2.cvtColor(np.asarray(sm), cv2.COLOR_RGB2BGR))
+    if r is None: return None
+    x, y, w, h = max(r, key=lambda q: q[2] * q[3])[:4] / s
+    return x, y, w, h
+
+def cover(src, lines, out, key=None, face_frac=0.45, face_y=0.30, ep='교사X 4화', dx=0.0):
+    """lines: 2줄 문자열, key: 노랑으로 칠할 낱말(줄 안에 그대로 있어야 함)"""
+    im = Image.open(src).convert('RGB'); fb = face_box(im)
+    if fb:
+        x, y, w, h = fb; sc = W * face_frac / w
+        sc = max(sc, W / im.width, H / im.height)  # 화면을 다 채우게
+        big = im.resize((int(im.width * sc), int(im.height * sc)), Image.LANCZOS)
+        cx = (x + w / 2) * sc + dx * W; cy = (y + h / 2) * sc
+        x0 = int(min(max(0, cx - W / 2), big.width - W)); y0 = int(min(max(0, cy - H * face_y), big.height - H))
+        im = big.crop((x0, y0, x0 + W, y0 + H))
+    else:
+        r = max(W / im.width, H / im.height); im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1)).crop((0, 0, W, H))
+    # 아래쪽 어둡게(글자 자리)
+    g = Image.new('L', (1, H))
+    for yy in range(H): g.putpixel((0, yy), int(max(0, (yy - H * 0.50) / (H * 0.50)) ** 1.2 * 225))
+    im.paste(Image.new('RGB', (W, H), (5, 6, 12)), (0, 0), g.resize((W, H)))
+    d = ImageDraw.Draw(im)
+    fe = ImageFont.truetype(FS, 38); d.rounded_rectangle((44, 56, 270, 124), 12, fill=(0, 0, 0)); d.text((64, 66), ep, font=fe, fill=(235, 235, 235))
+    y = 1250
+    for t in lines:
+        size = 150
+        while ImageFont.truetype(F, size).getlength(t) > W - 90: size -= 4
+        f = ImageFont.truetype(F, size); x = (W - f.getlength(t)) / 2
+        parts = t.split(key) if key and key in t else [t]
+        for i, p in enumerate(parts):
+            d.text((x, y), p, font=f, fill='white', stroke_width=8, stroke_fill='black'); x += f.getlength(p)
+            if i < len(parts) - 1:
+                d.text((x, y), key, font=f, fill=(255, 214, 0), stroke_width=8, stroke_fill='black'); x += f.getlength(key)
+        y += int(size * 1.18)
+    im.save(out); return out
+
+def feed(paths, labels, out):
+    """쇼츠 피드 크기(폭 180px)로 나란히 — 판단기준 7"""
+    tw, th = 180, 320; fl = ImageFont.truetype(FS, 15)
+    S = Image.new('RGB', (len(paths) * (tw + 12) + 12, th + 40), (255, 255, 255)); d = ImageDraw.Draw(S)
+    for i, (p, l) in enumerate(zip(paths, labels)):
+        S.paste(Image.open(p).convert('RGB').resize((tw, th), Image.LANCZOS), (12 + i * (tw + 12), 8)); d.text((12 + i * (tw + 12), th + 14), l, font=fl, fill=(0, 0, 0))
+    S.save(out, quality=88); return out
