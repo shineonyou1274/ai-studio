@@ -15,7 +15,13 @@
   - [편집장 측정값] 전체 84.3초 / 컷 52 / 평균 컷 1.6초 / 마지막 대사 끝 82.1초, 그 뒤 말 없는 구간 2.2초 / 첫 대사 0.50초 / 훅 첫 화면: 키 누름(딸깍)→[삭제] 모니터 / 표시 왼쪽 위 / 자막 겹침 0건
 - [ ] 사장님 청취 · [ ] Gemini 검수(스킬 v2 + 측정값)
 
-## 커버 3종 (사장님 11/18 "4화 썸네일 바꾸고 싶네. 클릭하고 싶지가 않아") — 크레딧 0, `도구/cover_ep4.py`
+## 커버 v2 (사장님 11/18 "궁금하지도 않고 시청자층도 없어지게" → `series/teacher-x/썸네일_판단기준_v1.md`로 다시, `도구/cover_ep4_v2.py`)
+- **D "시험이 쉬우면 손해 보는 건?"(정우) 추천** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4dae497c-8baf-49cb-a63f-254becdaf902.png
+- E "교감이 몰래 한 부탁" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6d305d2d-7e17-4a4f-bc51-df4b1b0b3f1e.png
+- F "시험 쉽게 내라는 진짜 이유" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/0a9db4d2-957e-4e53-bbcf-2fa7c621cd66.png
+- 아래 A·B·C는 기준에서 모두 탈락
+
+## (탈락) 커버 3종 (사장님 11/18 "4화 썸네일 바꾸고 싶네. 클릭하고 싶지가 않아") — 크레딧 0, `도구/cover_ep4.py`
 - 지금 첫 화면(키보드 위 손 + '미이수 막으려고'): 얼굴·감정이 없고, 갈등 상대가 안 보이고, '미이수'는 처음 보는 사람에게 낯선 말
 - A 긴장: 정우 어깨를 잡은 교감 + "시험, 너무 / 어렵게 내지 마요" / 띠 "미이수 나오면 소문난다는 교감" — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/beb13ac9-dd61-4efb-980b-071111f5bb76.png
 - B 반전·숫자: 팔짱 낀 다해 + "쉽게 내면 / 1등급이 0명?" / 띠 "시험 쉽게 내라는 교감 vs 신규교사" — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/0a6a9bba-9b20-4d36-b375-ebd8cd04c8be.png **추천**
