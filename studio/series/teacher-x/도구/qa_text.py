@@ -97,13 +97,15 @@ if a.tl:
 items.sort(key=lambda x: x['st'])
 for it in items:
     d = it['en'] - it['st']
-    it['fr'] = [int(round(min(DUR - 0.05, it['st'] + x) * FPS)) for x in (min(0.06, d / 3), d / 2, max(d - 0.06, d * 2 / 3))]
+    it['fr'] = [int(round(min(DUR - 0.15, it['st'] + x) * FPS)) for x in (min(0.06, d / 3), d / 2, max(d - 0.06, d * 2 / 3))]
 need = sorted({n for it in items for n in it['fr']})
 fdir = os.path.join(tmp, 'f'); os.makedirs(fdir)
 FR = {}
 for n in need:  # 프레임마다 따로 찾아감(긴 select 식은 ffmpeg가 못 읽음)
     FR[n] = os.path.join(fdir, f'{n:05d}.jpg')
-    run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{n / FPS + 0.5 / FPS:.4f}', '-i', a.video, '-frames:v', '1', '-q:v', '3', FR[n]])
+    run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{min(n / FPS + 0.5 / FPS, DUR - 0.12):.4f}', '-i', a.video, '-frames:v', '1', '-q:v', '3', FR[n]])
+    if not os.path.exists(FR[n]):  # 끝 프레임은 뒤에서 찾음
+        run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-sseof', '-0.3', '-i', a.video, '-frames:v', '1', '-q:v', '3', FR[n]])
 
 # ---- 검사
 WARN = []
