@@ -1,8 +1,8 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "7화 2단계: 대사 19(MiniMax minimax_h3_max 480p, 그림+시트+녹음 참조) 약 103초 + 반응·인서트 움직임 10(Kling std 4초, 소리 끔): 731·732·733·734·735·736·741·742·744·745",
  "estimate": {"dialogue_seconds": 103, "minimax": 154.5, "kling": 60, "total": 214.5},
  "camera_plan": "03_스토리보드/7화_카메라계획_v1.md",
  "note": "743·746(신청서·공문)은 글자를 얹는 정지 인서트 + 편집 줌",
- "approved_by": null
+ "approved_by": "사장님 11/18 \"좋아좋아\""
 }
