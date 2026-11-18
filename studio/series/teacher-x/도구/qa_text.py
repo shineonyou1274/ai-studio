@@ -50,8 +50,8 @@ def measure(ev, i):
     p = list(ev['raw']); p[1] = s2t(0); p[2] = s2t(d)
     f = os.path.join(tmp, f'e{i}.ass')
     open(f, 'w', encoding='utf-8').write(head + '[Events]\n' + '\n'.join(fmt_line) + '\nDialogue:' + ','.join(p) + '\n')
-    ts = [min(d - 0.05, x) for x in (0.08, d * 0.5, d - 0.06)]
-    sel = '+'.join(f'eq(n,{int(round(t * FPS))})' for t in sorted(set(ts)))
+    ts = [max(0, min(d - 0.05, x)) for x in (0.08, d * 0.5, d - 0.06)]
+    sel = '+'.join(f'eq(n,{n})' for n in sorted({int(round(t * FPS)) for t in ts}))
     o = os.path.join(tmp, f'e{i}_%d.png')
     run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-f', 'lavfi', '-i', f'color=c=0xFF00FF:s={W}x{H}:r={FPS}:d={d + 0.1:.3f}',
          '-vf', f"ass={f}:fontsdir={a.fonts},select='{sel}'", '-vsync', '0', o])
@@ -100,10 +100,10 @@ for it in items:
     it['fr'] = [int(round(min(DUR - 0.05, it['st'] + x) * FPS)) for x in (min(0.06, d / 3), d / 2, max(d - 0.06, d * 2 / 3))]
 need = sorted({n for it in items for n in it['fr']})
 fdir = os.path.join(tmp, 'f'); os.makedirs(fdir)
-sel = '+'.join(f'eq(n,{n})' for n in need)
-open(os.path.join(tmp, 'sel.txt'), 'w').write(f"select='{sel}',scale={W}:{H}")
-run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', a.video, '-filter_script:v', os.path.join(tmp, 'sel.txt'), '-vsync', '0', '-q:v', '3', os.path.join(fdir, '%05d.jpg')])
-FR = {n: os.path.join(fdir, f'{k + 1:05d}.jpg') for k, n in enumerate(need)}
+FR = {}
+for n in need:  # 프레임마다 따로 찾아감(긴 select 식은 ffmpeg가 못 읽음)
+    FR[n] = os.path.join(fdir, f'{n:05d}.jpg')
+    run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{n / FPS + 0.5 / FPS:.4f}', '-i', a.video, '-frames:v', '1', '-q:v', '3', FR[n]])
 
 # ---- 검사
 WARN = []
