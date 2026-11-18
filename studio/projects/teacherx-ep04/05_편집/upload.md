@@ -16,7 +16,8 @@
 - [ ] 사장님 청취 · [ ] Gemini 검수(스킬 v2 + 측정값)
 
 ## 커버 v3 — 통일 틀 + 댓글 질문 (사장님 11/18)
-- **G 정우 "쉬운 시험 vs 어려운 시험 / 더 유리한 건?" 추천** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/8c610952-2ca7-43c7-8307-afc908d3109f.png
+- **확정: G** (사장님 11/18 "그래 추천대로") — 맞춤 미리보기로 올림
+- G 정우 "쉬운 시험 vs 어려운 시험 / 더 유리한 건?" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/8c610952-2ca7-43c7-8307-afc908d3109f.png
 - H 다해 https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/433adea0-f0c6-4d57-b585-3beaedefbf09.png / I 교감 "우리 아이에겐" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/09e9aa3b-86e0-4967-85e5-6b406d2eeb8c.png
 - 고정 댓글도 같은 질문으로 바꿀 안: "📌 쉬운 시험 vs 어려운 시험, 우리 아이에게 더 유리한 건? ① 쉬운 시험 ② 어려운 시험"
 
@@ -58,12 +59,12 @@ AI로 만든 가상 인물과 허구의 이야기입니다. 화면 속 문자·�
 ```
 - 업로드 설정: AI 사용(변경되거나 합성된 콘텐츠) = 예, 아동용 아님, 유료 프로모션 없음.
 
-## 고정 댓글 (투표형)
+## 고정 댓글 (투표형) — 커버 질문과 같게(사장님 11/18 확정)
 ```
-📌 시험, 여러분이라면?
-① 기준대로 낸다 — 미이수가 나와도
-② 조금 쉽게 낸다 — 다 같이 넘어가게
-(현장 선생님·학생 경험도 댓글로 들려주세요)
+📌 쉬운 시험 vs 어려운 시험, 우리 아이에게 더 유리한 건?
+① 쉬운 시험
+② 어려운 시험
+(현장 선생님·학생·학부모 경험도 댓글로 들려주세요)
 ```
 
 ## 메모 (사실 확인)
