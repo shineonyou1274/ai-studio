@@ -15,6 +15,11 @@
   - [편집장 측정값] 전체 84.3초 / 컷 52 / 평균 컷 1.6초 / 마지막 대사 끝 82.1초, 그 뒤 말 없는 구간 2.2초 / 첫 대사 0.50초 / 훅 첫 화면: 키 누름(딸깍)→[삭제] 모니터 / 표시 왼쪽 위 / 자막 겹침 0건
 - [ ] 사장님 청취 · [ ] Gemini 검수(스킬 v2 + 측정값)
 
+## 커버 v3 — 통일 틀 + 댓글 질문 (사장님 11/18)
+- **G 정우 "쉬운 시험 vs 어려운 시험 / 더 유리한 건?" 추천** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/8c610952-2ca7-43c7-8307-afc908d3109f.png
+- H 다해 https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/433adea0-f0c6-4d57-b585-3beaedefbf09.png / I 교감 "우리 아이에겐" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/09e9aa3b-86e0-4967-85e5-6b406d2eeb8c.png
+- 고정 댓글도 같은 질문으로 바꿀 안: "📌 쉬운 시험 vs 어려운 시험, 우리 아이에게 더 유리한 건? ① 쉬운 시험 ② 어려운 시험"
+
 ## 커버 v2 (사장님 11/18 "궁금하지도 않고 시청자층도 없어지게" → `series/teacher-x/썸네일_판단기준_v1.md`로 다시, `도구/cover_ep4_v2.py`)
 - **D "시험이 쉬우면 손해 보는 건?"(정우) 추천** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4dae497c-8baf-49cb-a63f-254becdaf902.png
 - E "교감이 몰래 한 부탁" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6d305d2d-7e17-4a4f-bc51-df4b1b0b3f1e.png
