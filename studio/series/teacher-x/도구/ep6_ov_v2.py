@@ -60,5 +60,5 @@ L=Image.new('RGBA',im.size,(0,0,0,0)); ImageDraw.Draw(L).polygon([(372,872),(115
 tag(ImageDraw.Draw(im),1100,60); im.save(O+'o605.png')
 # 508 마지막 프레임: 2K 원본에서 다해 얼굴 쪽을 9:16으로 잘라 냄(영상 확대로 뭉개지던 것 대신)
 im=Image.open(I+'i508.png').convert('RGB'); W,Hh=im.size
-cw=int(W*0.55); ch=int(cw*16/9); x0=300; y0=120; im.crop((x0,y0,x0+cw,y0+ch))  # 얼굴 x 480~880, y 400~800.resize((1520,2688),Image.LANCZOS).save(O+'o508f.png')
+cw=int(W*0.55); ch=int(cw*16/9); x0=200; y0=120; im.crop((x0,y0,x0+cw,y0+ch))  # 얼굴 가운데·빨간 만년필 보이게(x0 100·200 견줘 봄).resize((1520,2688),Image.LANCZOS).save(O+'o508f.png')
 print('ok')
