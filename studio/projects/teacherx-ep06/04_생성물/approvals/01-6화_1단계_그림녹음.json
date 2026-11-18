@@ -1,7 +1,12 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "6화 1단계: 그림 약 30(대사 15 + 반응 8 + 인서트 6 + 동료 교사 A 기준 1) gpt_image_2_5 high 2k 9:16 + 녹음 15줄(다시 4) + 동료 교사 A 목소리 seed_audio",
- "estimate": {"images": 82.5, "audio": 7.5, "total": 90},
+ "estimate": {
+  "images": 82.5,
+  "audio": 7.5,
+  "total": 90
+ },
  "reuse": "은색 시계·반짝임(4화), 교무실 배경",
- "next": "2단계 영상(대사 15 MiniMax 480p + 반응·인서트 약 10 Kling) 약 185"
+ "next": "2단계 영상(대사 15 MiniMax 480p + 반응·인서트 약 10 Kling) 약 185",
+ "approved_by": "사장님 11/18 \"응 좋아\""
 }
