@@ -1,5 +1,5 @@
 {
- "status": "pending",
+ "status": "approved",
  "what": "7화 1단계: 그림 약 31(대사 19 + 반응 6 + 인서트 6) gpt_image_2_5 high 2k 9:16 + 녹음 19줄(다시 몇 줄 포함 약 23)",
  "images_detail": {
   "dialogue": "01~19 말하는 사람 얼굴이 보이는 시작 그림 19",
@@ -10,5 +10,5 @@
  "estimate": {"images": 85.25, "audio": 8.5, "total": 94},
  "this_week": "11/16~11/22 이미 약 710 사용(5화·6화) — 주 200 상한 넘음",
  "next": "2단계 영상(대사 19 MiniMax 480p 약 100초 + 반응 6 Kling) 약 190",
- "approved_by": null
+ "approved_by": "사장님 11/18 \"지금 해도 돼, 힉스필드 넉넉. 결재해서\""
 }
