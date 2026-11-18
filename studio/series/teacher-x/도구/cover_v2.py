@@ -54,6 +54,33 @@ def cover(src, lines, out, key=None, face_frac=0.45, face_y=0.30, ep='교사X 4�
         y += int(size * 1.18)
     im.save(out); return out
 
+NAVY = (16, 28, 58); YEL = (255, 214, 0)
+def series(src, ep, title, lines, out, face_frac=0.42, face_y=0.36, dx=0.0):
+    """시리즈 통일 틀(사장님 11/18 "썸네일만 봐도 제목과 회차 알 수 있게 통일감"):
+    위 = 남색 띠 [교사X] + 노란 칸 [N화] + 「회차 제목」 (모든 화 같은 자리·색·크기)
+    아래 = 댓글을 부르는 질문(A vs B / 더 ○○한 건?). lines = [[(글자, 색), ...], ...] 줄마다 조각"""
+    tmp = out + '.base.png'
+    cover(src, [], tmp, face_frac=face_frac, face_y=face_y, ep='', dx=dx)
+    im = Image.open(tmp).convert('RGB'); os.remove(tmp); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, W, 230), fill=NAVY)                       # 위 띠(앞의 회차 칸을 덮음)
+    fl = ImageFont.truetype(F, 92); d.text((50, 62), '교사X', font=fl, fill='white')
+    x = 50 + fl.getlength('교사X') + 26
+    fn = ImageFont.truetype(F, 80); n = f'{ep}화'; nw = fn.getlength(n)
+    d.rounded_rectangle((x, 56, x + nw + 40, 176), 18, fill=YEL); d.text((x + 20, 70), n, font=fn, fill=NAVY)
+    x += nw + 40 + 30
+    ft = 64
+    while ImageFont.truetype(F, ft).getlength(f'「{title}」') > W - x - 40: ft -= 2
+    d.text((x, 116), f'「{title}」', font=ImageFont.truetype(F, ft), fill='white', anchor='lm')
+    y = 1200
+    for segs in lines:
+        txt = ''.join(t for t, c in segs); size = 140
+        while ImageFont.truetype(F, size).getlength(txt) > W - 80: size -= 4
+        f = ImageFont.truetype(F, size); x = (W - f.getlength(txt)) / 2
+        for t, c in segs:
+            d.text((x, y), t, font=f, fill=c, stroke_width=8, stroke_fill='black'); x += f.getlength(t)
+        y += int(size * 1.2)
+    im.save(out); return out
+
 def feed(paths, labels, out):
     """쇼츠 피드 크기(폭 180px)로 나란히 — 판단기준 7"""
     tw, th = 180, 320; fl = ImageFont.truetype(FS, 15)
