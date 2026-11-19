@@ -72,6 +72,10 @@ def series(src, ep, title, lines, out, face_frac=0.42, face_y=0.36, dx=0.0):
     while ImageFont.truetype(F, ft).getlength(title) > W - x - 40: ft -= 2
     d.text((x, 116), title, font=ImageFont.truetype(F, ft), fill='white', anchor='lm')
     y = 1200
+    # 글자 뒤 어두운 띠(흰 셔츠 위 흰 글자가 사라지던 문제, 11/19 3화 '야'·6화 '약')
+    ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
+    od.rounded_rectangle((24, y - 40, W - 24, y + int(140 * 1.2) * len(lines) + 20), 36, fill=(0, 0, 0, 165))
+    im = Image.alpha_composite(im.convert('RGBA'), ov).convert('RGB'); d = ImageDraw.Draw(im)
     for segs in lines:
         txt = ''.join(t for t, c in segs); size = 140
         while ImageFont.truetype(F, size).getlength(txt) > W - 80: size -= 4
