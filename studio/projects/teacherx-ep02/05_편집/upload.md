@@ -1,5 +1,7 @@
 # 교사X 2화 업로드 묶음 (초안 2026-11-14)
 
+> **커버 확정 (사장님 11/19 "좋아 이대로 가자")**: 통일 틀(남색 띠 교사X·N화·제목 + 댓글 질문) — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/aa1901b2-2459-4dbb-b69c-77b24c4a7ef7.png 맞춤 미리보기로 올림. 고정 댓글도 커버 질문과 같게.
+
 > **2026-11-16 일정 변경**: 2화 공개를 **11/20(금) 18:00**으로 당김. 영상은 엔딩 카드만 "3화 11월 23일(월)"로 고친 **v15S** — https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/ccb73006-ec1b-499b-804f-f1f391eb9de0.mp4 (v14S와 나머지 같음). 아래의 11/25·12/2 표기는 이 줄이 우선.
 
 
