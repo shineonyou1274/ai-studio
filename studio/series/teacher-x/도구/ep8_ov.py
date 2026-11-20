@@ -40,7 +40,7 @@ im = Image.open(I + 'i844.png').convert('RGB')
 tilted(im, (1080, 712), ['세부능력 및 특기사항'], 44, -3.6, fill=(20, 40, 90))
 tilted(im, (585, 690), ['이름'], 38, -3.6, fill=(20, 40, 90))
 tilted(im, (720, 548), ['통합과학 · 학생 312명'], 34, -3.6, fill=(240, 245, 255))
-tag(im, 60, 120); im.save(O + 'o844.png')
+tag(im, 1100, 60)  # v2: 왼쪽 위 시간·설명 글자와 닿아 오른쪽 위로; im.save(O + 'o844.png')
 
 # 846 빨간 만년필 손글씨
 im = Image.open(I + 'i846.png').convert('RGB')
