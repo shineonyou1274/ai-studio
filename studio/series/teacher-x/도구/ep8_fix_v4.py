@@ -23,3 +23,7 @@ out.release()
 subprocess.run(['ffmpeg','-v','error','-y','-i','/tmp/v10p_noa.mp4','-i','v/v10.mp4','-map','0:v','-map','1:a?','-c:v','libx264','-crf','17','-preset','veryfast','-c:a','copy','v/v10p.mp4'], check=True)
 subprocess.run(['ffmpeg','-v','error','-y','-i','v/v09b.mp4','-vf','crop=iw*0.85:ih*0.85:iw*0.075:ih*0.06,scale=480:832,setsar=1','-c:v','libx264','-crf','17','-preset','veryfast','-c:a','copy','v/v09bz.mp4'], check=True)
 print('ok')
+
+# v5 (11/20 엔딩 보강) 준비 — 녹음 코드는 두 글자(tim9.py 규칙): 10a→1a, 10b→1b, 10c→1c, 11b→1d, 14·15·16 그대로
+#   ed/rNN.wav → ed/aNN.wav(44.1k 모노), 11b는 -29.1 LUFS라 +3.5dB. v10c→v1c, v11b→v1d 복사, off.json(상호상관): 1c 0.35, 1d 0, 14 0.02, 15 0, 16 0
+#   v14c = v14를 1.5배 얼굴 쪽으로 자름: crop=iw/1.5:ih/1.5:(iw-iw/1.5)/2:ih*0.08,scale=480:832
