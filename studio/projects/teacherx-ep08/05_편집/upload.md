@@ -15,3 +15,9 @@
 - C. `[8화] "자리 없으면 변두리 학교로" 교사에게 과목을 떠넘긴 교감`
 
 ## 커버 (통일 틀) — 썸네일 판단기준으로 따로 만들어 보냄
+| 커버 | 얼굴 | 질문 | 점수(판단기준 v1) | 링크 |
+|---|---|---|---|---|
+| **A 추천** | 놀란 정우 | 과목 많은 학교 vs 좋은 수업 / 학생에게 더 좋은 건? | 필수 3 통과(답: 11번 "손해는 학생이 집니다"), 얼굴·반대·글자·피드·댓글 5/5 | https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/5302d365-71cc-43ea-ad9b-1616d65b0064.png |
+| B | 담담한 다해(역광) | 같은 질문 | 얼굴 감정이 약함 → 4/5 | https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/fa4b2c2c-0d65-445c-97fd-41e914d9beea.png |
+- 피드 크기 비교판(7화와 나란히): https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/80d818a2-c672-436b-be16-55e5d724cc27.jpg
+- 고정 댓글(안): `📌 과목 많은 학교 vs 좋은 수업, 학생에게 더 좋은 건? ① 과목 많은 학교 ② 좋은 수업`
