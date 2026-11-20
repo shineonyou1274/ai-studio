@@ -33,14 +33,14 @@ for k, r in enumerate(rows):
     for c, t in zip(cx, r): d.text((c, y), t, font=f(34), fill=(35, 40, 55), anchor='mm')
 for c, t, col in zip(cx, ['세포와 물질대사', '2', '3명', '안정우', '폐강'], [(120, 10, 20)] * 4 + [(200, 0, 0)]):
     d.text((c, 1054), t, font=f(36 if t != '세포와 물질대사' else 30), fill=col, anchor='mm')
-tag(im, 1100, 60); im.save(O + 'o841.png')
+tag(im, 1040, 240); im.save(O + 'o841.png')  # v2: 확대(최대 1.145배)에 위가 잘림 → 안쪽으로
 
 # 844 세특 화면
 im = Image.open(I + 'i844.png').convert('RGB')
 tilted(im, (1080, 712), ['세부능력 및 특기사항'], 44, -3.6, fill=(20, 40, 90))
 tilted(im, (585, 690), ['이름'], 38, -3.6, fill=(20, 40, 90))
 tilted(im, (720, 548), ['통합과학 · 학생 312명'], 34, -3.6, fill=(240, 245, 255))
-tag(im, 1100, 60); im.save(O + 'o844.png')  # v2: 왼쪽 위 시간·설명 글자와 닿아 오른쪽 위로
+tag(im, 1040, 240); im.save(O + 'o844.png')  # v3: 확대에 위가 잘림(Gemini 11/20) → 안쪽으로
 
 # 846 빨간 만년필 손글씨
 im = Image.open(I + 'i846.png').convert('RGB')
