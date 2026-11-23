@@ -88,8 +88,8 @@ tag(im, 1100, 260); im.save(O + 'o920.png')
 im = Image.open(I + 'i924.png').convert('RGB'); d = ImageDraw.Draw(im)
 for x, y in [(620, 880), (1332, 888)]:
     d.text((x, y), '18', font=f(96, PEN), fill=(200, 20, 30), anchor='mm')
-d.text((380, 1840), 'AI가 쓴 보고서', font=f(46), fill=(255, 255, 255), anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))
-d.text((1140, 1840), '밤새 손으로 쓴 보고서', font=f(46), fill=(255, 255, 255), anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))
+d.text((390, 740), 'AI가 쓴 보고서', font=f(46), fill=(255, 255, 255), anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))  # v2: 아래(1840)는 자막과 겹쳐 종이 위로
+d.text((1140, 740), '밤새 손으로 쓴 보고서', font=f(46), fill=(255, 255, 255), anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0))
 im.save(O + 'o924.png')
 
 # 927 인사 발령 화면
