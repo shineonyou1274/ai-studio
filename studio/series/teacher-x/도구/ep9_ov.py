@@ -72,9 +72,9 @@ im.save(O + 'o907.png')
 
 # 908 민원 접수 화면(위쪽 국기·건물은 확대로 화면 밖)
 im = Image.open(I + 'i908.png').convert('RGB'); d = ImageDraw.Draw(im)
-d.text((130, 736), '[민원] 수행평가 감점 이의 — 통합과학', font=f(42), fill=(30, 40, 70), anchor='lm')
+d.text((230, 736), '[민원] 수행평가 감점 이의 — 통합과학', font=f(42), fill=(30, 40, 70), anchor='lm')
 d.text((850, 1836), '국민신문고 · 접수 완료', font=f(40), fill=(200, 30, 30), anchor='mm')
-tag(im, 1060, 1990); im.save(O + 'o908.png')  # v2: 위쪽 국기·건물은 'form' 확대(가운데 y 0.6, 1.45배)로 화면 밖 → 머리글 글자 빼고 접수칸에
+tag(im, 1075, 1780); im.save(O + 'o908.png')  # v3: 1.2배 확대 안쪽(제목 x 130→230, 표시는 접수칸 오른쪽)  # v2: 위쪽 국기·건물은 'form' 확대(가운데 y 0.6, 1.45배)로 화면 밖 → 머리글 글자 빼고 접수칸에
 
 # 920 민원대응팀 조직도
 im = Image.open(I + 'i920.png').convert('RGB'); d = ImageDraw.Draw(im)
@@ -98,5 +98,5 @@ d.text((720, 905), '학교법인 ○○학원 인사 발령', font=f(50), fill=(
 for x, t in zip([326, 706, 1106], ['직위', '성명', '발령일']): d.text((x, 1120), t, font=f(38), fill=(40, 50, 80), anchor='mm')
 for x, t in zip([326, 706, 1106], ['교장', '독고다해', '2027. 3. 1.']): d.text((x, 1192), t, font=f(44), fill=(160, 0, 0), anchor='mm')
 for x, t in zip([326, 706, 1106], ['교감', '○○○', '유임']): d.text((x, 1280), t, font=f(36, FR), fill=(60, 60, 70), anchor='mm')
-tag(im, 1120, 60); im.save(O + 'o927.png')
+tag(im, 980, 140); im.save(O + 'o927.png')  # v3: 1.25배 확대에 오른쪽 위가 잘림 → 안쪽
 print('ok')
