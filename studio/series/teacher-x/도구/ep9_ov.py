@@ -72,10 +72,9 @@ im.save(O + 'o907.png')
 
 # 908 민원 접수 화면(위쪽 국기·건물은 확대로 화면 밖)
 im = Image.open(I + 'i908.png').convert('RGB'); d = ImageDraw.Draw(im)
-d.text((900, 548), '국민신문고 · 민원 접수', font=f(34), fill='white', anchor='lm')
 d.text((130, 736), '[민원] 수행평가 감점 이의 — 통합과학', font=f(42), fill=(30, 40, 70), anchor='lm')
-d.text((1110, 1840), '접수 완료', font=f(58), fill=(200, 30, 30), anchor='lm')
-tag(im, 1080, 900); im.save(O + 'o908.png')
+d.text((850, 1836), '국민신문고 · 접수 완료', font=f(40), fill=(200, 30, 30), anchor='mm')
+tag(im, 1060, 1990); im.save(O + 'o908.png')  # v2: 위쪽 국기·건물은 'form' 확대(가운데 y 0.6, 1.45배)로 화면 밖 → 머리글 글자 빼고 접수칸에
 
 # 920 민원대응팀 조직도
 im = Image.open(I + 'i920.png').convert('RGB'); d = ImageDraw.Draw(im)
