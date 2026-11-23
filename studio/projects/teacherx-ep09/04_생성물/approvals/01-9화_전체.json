@@ -1,0 +1,11 @@
+{
+  "episode": "교사X 9화",
+  "request": "9화 전체(1단계 그림 약 29 + 녹음 24, 2단계 대사 영상 MiniMax 480p 약 19클립·약 114초 + 반응·인서트 Kling std 4초 약 9)",
+  "check4": {"MODEL": "gpt_image_2_5 high 2k / elevenlabs_v4·seed_audio / minimax_h3_max 480p / kling3_0 std 소리 끔", "resolution": "그림 2k, 영상 480p", "audio": "영상 소리 끔(녹음은 편집에서)", "ratio": "9:16"},
+  "estimate_credits": 316,
+  "balance_before": 4484.79,
+  "weekly_note": "주 200 한도 넘음 — 사장님 11/23 '그냥 9화 전체하도록 하고'",
+  "status": "approved",
+  "approved_by_user": "2026-11-23 \"그냥 9화 전체하도록 하고 학생이랑 정우화면이랑 구분안갈까봐 걱정\"",
+  "distinction_rule": "정우 화면 = 교무실 낮(차가운 흰 형광등), 남색 조끼·하늘색 셔츠 소매·목걸이 사원증, 학교 PC 문서 편집기 / 학생 화면 = 집 밤(따뜻한 주황 스탠드), 교복 재킷 소매, 스티커 붙은 노트북, AI 대화창. 자막 칸에 '금요일 오후 · 교무실' / '그날 밤 · 학생 방'"
+}
