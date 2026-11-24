@@ -74,7 +74,7 @@ im.save(O + 'o907.png')
 im = Image.open(I + 'i908.png').convert('RGB'); d = ImageDraw.Draw(im)
 d.text((230, 736), '[민원] 수행평가 감점 이의 — 통합과학', font=f(42), fill=(30, 40, 70), anchor='lm')
 d.text((850, 1836), '국민신문고 · 접수 완료', font=f(40), fill=(200, 30, 30), anchor='mm')
-tag(im, 1075, 1780); im.save(O + 'o908.png')  # v3: 1.2배 확대 안쪽(제목 x 130→230, 표시는 접수칸 오른쪽)  # v2: 위쪽 국기·건물은 'form' 확대(가운데 y 0.6, 1.45배)로 화면 밖 → 머리글 글자 빼고 접수칸에
+tag(im, 1000, 1990); im.save(O + 'o908.png')  # v4(9화 v7): 1.2배 확대 오른쪽 끝(1393) 안으로  # v3: 1.2배 확대 안쪽(제목 x 130→230, 표시는 접수칸 오른쪽)  # v2: 위쪽 국기·건물은 'form' 확대(가운데 y 0.6, 1.45배)로 화면 밖 → 머리글 글자 빼고 접수칸에
 
 # 920 민원대응팀 조직도
 im = Image.open(I + 'i920.png').convert('RGB'); d = ImageDraw.Draw(im)
@@ -82,7 +82,7 @@ d.text((760, 700), '학교 민원대응팀', font=f(58), fill=(30, 50, 110), anc
 d.text((758, 870), '팀장', font=f(52), fill=(180, 20, 20), anchor='mm'); d.text((758, 950), '교감', font=f(78), fill=(20, 20, 30), anchor='mm')
 for x, t in zip([384, 636, 884, 1132], ['행정\n실장', '교무\n부장', '학년\n부장', '상담\n교사']):
     d.multiline_text((x, 1420), t, font=f(46), fill=(30, 40, 70), anchor='mm', align='center', spacing=14)
-tag(im, 1100, 260); im.save(O + 'o920.png')
+tag(im, 900, 260); im.save(O + 'o920.png')  # 9화 v7: 1.25배 확대 오른쪽 끝(1368) 안으로
 
 # 924 같은 점수 두 장
 im = Image.open(I + 'i924.png').convert('RGB'); d = ImageDraw.Draw(im)
