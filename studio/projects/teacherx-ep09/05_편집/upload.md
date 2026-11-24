@@ -3,7 +3,8 @@
 > 공개: **2026-12-07(월) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **편집 v5 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/263d5a63-baf2-441c-a6b3-b95403801aac.mp4 (2분 1초)
+- **편집 v6 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/9172c27b-f9f9-455c-a0f9-2fee5e6acc45.mp4 — v5에서 '7초 전후 똑딱'(강조음이 시계 째깍 s18이었음 → 짧은 '띡'), 키보드 소리가 다음 컷까지 이어지던 것(정우 1.3초·학생 0.5초로)만 고침. 120.9초, 꼬리 4.9초
+- 편집 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/263d5a63-baf2-441c-a6b3-b95403801aac.mp4 (2분 1초)
   - v3 사장님 지적 8개 + 동료 교사 듣는 화면 + 다른 AI 분석 중 맞는 것 반영(06_검수/v3_지적_판정_v4계획.md). 화분 장면 뺌, 학부모 전화 목소리 2개, 교감 현실 톤, 다해 17~21 차갑게, 22·11 새 영상, 정면 화면 그림, 가운데 큰 자막, 키워드 쾅, 발령 2초+형광펜
   - [편집장 측정값] 120.9초 / 컷 60 / 꼬리 4.9초 / -14.6 LUFS / 글자 자동 경고 0건 / 자막 겹침 0건 / 소리 경고 1건(29.9초 정우 04가 학부모 전화 뒤 +2.4dB)
   - 다해 17~21 A/B 들어 보기(삐마다 17A,17B,18A,18B…21B): https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/e787aed2-0464-435d-ab2e-5112d3c0d2cb.mp3 — 영상은 A(18~20은 입 영상 없어 B로 바꿔도 크레딧 0)
