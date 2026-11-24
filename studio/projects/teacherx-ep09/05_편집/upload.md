@@ -15,12 +15,17 @@
 - 들어 보기(02·15 테이크 비교, 삐 소리마다 한 테이크: 02 t1~t4 → 15 t1~t4): https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/7496c943-fc96-4dfa-9bb7-fb3a3b7efd5a.mp3 — 지금 영상에는 02 t4, 15 t4
 - [ ] 사장님 청취 · [ ] Gemini 검수
 
-## 제목 (안) — 회차 맨 앞, 훅 앞으로
+## 제목 — **확정(사장님 11/24 "제목은 c")**: `[9화] "공부는 바보나 하는 거구나" 학교가 가르치면 안 되는 것`
+
+### 지난 안
 - A. `[9화] AI가 쓴 숙제, 점수 그냥 주라는 교감`
 - B. `[9화] 숙제 일곱 장에 '초록 고양이'… AI 함정에 걸린 숙제`
 - C. `[9화] "공부는 바보나 하는 거구나" 학교가 가르치면 안 되는 것`
 
-## 커버 (통일 틀)
+## 커버 — **확정 D(사장님 11/24)**: 식은땀 교감 + "초록 고양이 / AI 대필 증거??" https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6a89b0ba-5b2c-40f2-99b9-eac79e2315a1.png
+- 고정 댓글(커버 질문과 같게): `📌 초록 고양이, AI 대필 증거일까? 그래도 점수 준다 vs 안 준다? ① 준다 ② 안 준다`
+
+## 커버 (지난 안)
 - 사장님 문구 v2: [C 공부는 바보나 하는 거 아닌가요?](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/69e67695-3a6b-48a3-bfeb-57586a4131f3.png) / [D 초록 고양이 AI 대필 증거??](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6a89b0ba-5b2c-40f2-99b9-eac79e2315a1.png) / [피드 비교](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/45a4c690-1639-4bc1-981e-94abbbc9df87.jpg)
 | 커버 | 얼굴 | 질문 | 링크 |
 |---|---|---|---|
