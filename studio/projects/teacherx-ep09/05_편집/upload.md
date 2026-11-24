@@ -3,7 +3,11 @@
 > 공개: **2026-12-07(월) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **편집 v3 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/b6d4e033-2765-415b-8b84-f45aa1278957.mp4 (1분 59초)
+- **편집 v5 (최신)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/263d5a63-baf2-441c-a6b3-b95403801aac.mp4 (2분 1초)
+  - v3 사장님 지적 8개 + 동료 교사 듣는 화면 + 다른 AI 분석 중 맞는 것 반영(06_검수/v3_지적_판정_v4계획.md). 화분 장면 뺌, 학부모 전화 목소리 2개, 교감 현실 톤, 다해 17~21 차갑게, 22·11 새 영상, 정면 화면 그림, 가운데 큰 자막, 키워드 쾅, 발령 2초+형광펜
+  - [편집장 측정값] 120.9초 / 컷 60 / 꼬리 4.9초 / -14.6 LUFS / 글자 자동 경고 0건 / 자막 겹침 0건 / 소리 경고 1건(29.9초 정우 04가 학부모 전화 뒤 +2.4dB)
+  - 다해 17~21 A/B 들어 보기(삐마다 17A,17B,18A,18B…21B): https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/e787aed2-0464-435d-ab2e-5112d3c0d2cb.mp3 — 영상은 A(18~20은 입 영상 없어 B로 바꿔도 크레딧 0)
+- 편집 v3: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/b6d4e033-2765-415b-8b84-f45aa1278957.mp4 (1분 59초)
   - [편집장 측정값] 118.8초 / 컷 57 / 평균 2.0초 / 마지막 대사 끝 113.8초, 꼬리 5.0초 / 전체 -14.6 LUFS / 글자 자동 경고 0건 + 그림 글자 확인판 눈 확인 / 자막 겹침 0건
   - v1→v3 고친 것: 908 민원 화면 확대가 커 제목·표시 잘림, 927 발령 화면 날짜·표시 잘림, 924 글자가 자막과 겹침, 02 속마음 -7dB·03 -3.3dB 작음, 긴 자막 3줄
   - 소리(qa_audio) 남은 경고 1건: 27.2초 정우 04가 앞(속마음)보다 +2.7dB — 속마음 → 소리 내 말하는 곳이라 자연스러울 수 있음, 사장님 청취로
@@ -16,6 +20,7 @@
 - C. `[9화] "공부는 바보나 하는 거구나" 학교가 가르치면 안 되는 것`
 
 ## 커버 (통일 틀)
+- 사장님 문구 v2: [C 공부는 바보나 하는 거 아닌가요?](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/69e67695-3a6b-48a3-bfeb-57586a4131f3.png) / [D 초록 고양이 AI 대필 증거??](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6a89b0ba-5b2c-40f2-99b9-eac79e2315a1.png) / [피드 비교](https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/45a4c690-1639-4bc1-981e-94abbbc9df87.jpg)
 | 커버 | 얼굴 | 질문 | 링크 |
 |---|---|---|---|
 | **A 추천** | 식은땀 교감(감정 큼) | AI가 쓴 숙제 / 점수 준다 vs 안 준다? | https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/20763dc1-89c3-4f11-b76e-93346a5f0982.png |
