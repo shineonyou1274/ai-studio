@@ -6,4 +6,5 @@
 - 편집 v3: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4bd88525-98d0-4613-b18e-4098b06e9ab3.mp4 (효과음)
 - 커버 3안·업로드 묶음: 05_편집/upload.md
 - 편집 v4: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a69eb317-2dd2-4754-a823-54599a4465ab.mp4 · 커버 A2 · 대본 v10
+- 편집 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d137aaf3-b3e1-461f-9bd7-39e98ceb83d5.mp4 (서론만)
 - 다음: 사장님 청취 → 확정·예약(12/9 수 18:00)
