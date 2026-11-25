@@ -90,6 +90,19 @@ box(im,(60,640,1460,1560),24,(20,20,24,255),20); d=ImageDraw.Draw(im)
 g=Image.new('RGB',(1340,860),(60,70,90)); gd=ImageDraw.Draw(g)
 for yy in range(860): gd.line((0,yy,1340,yy),fill=(40+yy//30,55+yy//40,80+yy//25))
 im.paste(g,(90,670)); d=ImageDraw.Draw(im)
+# v4: 위쪽 빈 남색 → 뉴스 스튜디오(빌딩 띠·앵커 실루엣·책상·화면 그래픽), 실존 방송사 표시 없음
+for k in range(14):
+    x=110+k*95; hgt=[120,190,150,230,170,210,140,260,180,150,220,160,200,130][k]
+    d.rectangle((x,1010-hgt,x+80,1010),fill=(70,90,125))
+    for wy in range(1010-hgt+15,1000,30):
+        for wx in (x+12,x+44): d.rectangle((wx,wy,wx+18,wy+12),fill=(150,170,205))
+d.rectangle((90,1010,1430,1240),fill=(28,36,56))
+d.ellipse((610,760,790,950),fill=(18,20,28)); d.rounded_rectangle((510,920,890,1180),90,fill=(18,20,28))
+d.polygon([(690,935),(710,935),(705,1060),(700,1070),(695,1060)],fill=(180,30,30))
+d.rectangle((380,1110,1140,1240),fill=(55,65,95)); d.rectangle((380,1110,1140,1125),fill=(120,140,180))
+d.rounded_rectangle((930,720,1380,960),16,fill=(240,240,245)); d.text((1155,790),'AI 부정행위',font=f(46),fill=(30,30,40),anchor='mm')
+d.text((1155,870),'대응 방안',font=f(46),fill=(200,20,20),anchor='mm')
+d.rounded_rectangle((120,700,300,770),12,fill=(200,20,20)); d.text((210,735),'LIVE',font=f(44),fill='white',anchor='mm')
 d.rectangle((90,1240,1430,1530),fill=(250,250,250)); d.rectangle((90,1240,330,1530),fill=(200,20,20))
 d.text((210,1385),'뉴스',font=f(70),fill='white',anchor='mm')
 d.text((370,1330),'AI 부정행위 적발 시',font=f(66),fill=(20,20,30),anchor='lm'); d.text((370,1440),'당일 전 과목 0점 권고',font=f(66),fill=(200,20,20),anchor='lm')
