@@ -1,10 +1,5 @@
-# 교사X 10화 상태 (2026-11-25)
-- 대본: 02_기획/10화_대본_v9_확정.md (제목 `[10화] 형식적인 보고서가 없어진다면? No More Paperwork`)
-- 생성: 1단계(그림·녹음) 87.11 + 2단계(영상) 246.9
-- 편집 v1: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f30d3658-6abb-486d-b0b9-3cf99a9e82e3.mp4
-- 편집 v2: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/eeedb1a3-76c2-4515-aefd-0f0aa3f7adf3.mp4 (검수 반영)
-- 편집 v3: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4bd88525-98d0-4613-b18e-4098b06e9ab3.mp4 (효과음)
-- 커버 3안·업로드 묶음: 05_편집/upload.md
-- 편집 v4: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a69eb317-2dd2-4754-a823-54599a4465ab.mp4 · 커버 A2 · 대본 v10
-- 편집 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d137aaf3-b3e1-461f-9bd7-39e98ceb83d5.mp4 (서론만)
-- 다음: 사장님 청취 → 확정·예약(12/9 수 18:00)
+# 교사X 10화 상태 (2026-11-25) — **완성**
+- 최종 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d137aaf3-b3e1-461f-9bd7-39e98ceb83d5.mp4 (104.2초)
+- 제목 `[10화] 형식적인 보고서가 없어진다면? No More Paperwork` · 커버 A2 · 업로드 묶음 05_편집/upload.md
+- 공개 12/9(수) 18:00 예약은 사장님이. 설명란의 9화 링크는 9화 공개 뒤 채움
+- 크레딧: 87.11 + 246.9 + 8 + 26.5 = 약 368.5

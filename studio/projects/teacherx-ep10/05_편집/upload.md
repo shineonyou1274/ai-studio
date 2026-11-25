@@ -1,9 +1,9 @@
-# 교사X 10화(형식적인 보고서가 없어진다면?) 업로드 묶음 (안, 2026-11-25)
+# 교사X 10화(형식적인 보고서가 없어진다면?) 업로드 묶음 (**최종 2026-11-25**, 사장님 "굿 가자")
 
 > 공개: **2026-12-09(수) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
-- **v5 (올릴 후보)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d137aaf3-b3e1-461f-9bd7-39e98ceb83d5.mp4 — v4에서 밤샘 장면 큰 자막만 "보고서 서론만 / 세 시간째"로(사장님 11/25)
+- **최종 v5 (올릴 파일)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d137aaf3-b3e1-461f-9bd7-39e98ceb83d5.mp4 — v4에서 밤샘 장면 큰 자막만 "보고서 서론만 / 세 시간째"로(사장님 11/25)
 - **v4 (올릴 후보)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a69eb317-2dd2-4754-a823-54599a4465ab.mp4 — 9번 "모든 책임은, 교장인 제가 지겠습니다", 16·18 입 영상 다시(18 조끼 없앰), TV 화면 채움, 지난주 캡션 끊음, 18 앞 정적 0.5초. 104.2초, 꼬리 3.5초, -14.6 LUFS, 자막 겹침 0
 - **v3 (올릴 후보)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4bd88525-98d0-4613-b18e-4098b06e9ab3.mp4 — v2 + 사장님이 고른 효과음(박수·환호, 파쇄기, 웃음). 102.5초, 꼬리 3.5초, 자막 겹침 0
 - v2: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/eeedb1a3-76c2-4515-aefd-0f0aa3f7adf3.mp4 (검수 반영, 06_검수/v1_검수_판정_v2.md)
