@@ -3,14 +3,17 @@
 > 공개: **2026-12-09(수) 18:00 KST**, 재생목록 `교사X`. 스튜디오는 올리지 않습니다.
 
 ## 영상
+- **v4 (올릴 후보)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/a69eb317-2dd2-4754-a823-54599a4465ab.mp4 — 9번 "모든 책임은, 교장인 제가 지겠습니다", 16·18 입 영상 다시(18 조끼 없앰), TV 화면 채움, 지난주 캡션 끊음, 18 앞 정적 0.5초. 104.2초, 꼬리 3.5초, -14.6 LUFS, 자막 겹침 0
 - **v3 (올릴 후보)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4bd88525-98d0-4613-b18e-4098b06e9ab3.mp4 — v2 + 사장님이 고른 효과음(박수·환호, 파쇄기, 웃음). 102.5초, 꼬리 3.5초, 자막 겹침 0
 - v2: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/eeedb1a3-76c2-4515-aefd-0f0aa3f7adf3.mp4 (검수 반영, 06_검수/v1_검수_판정_v2.md)
 - v1: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f30d3658-6abb-486d-b0b9-3cf99a9e82e3.mp4
-- [ ] 사장님 청취 · [ ] 은색 시계(L09) 다시 뽑을지
+- [ ] 사장님 청취 · 은색 시계(L09)는 그대로(사장님 11/25)
 
 ## 제목 — 확정(사장님 11/25): `[10화] 형식적인 보고서가 없어진다면? No More Paperwork`
 
-## 커버 3안 (위 띠 = 시리즈 통일 틀)
+## 커버 — **A로(사장님 11/25)**, 문구 바꿈: 감사 나오면? / 책임은 교장인 **제가!** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f0428471-a05c-4ae3-83df-39cee7fa02f5.png
+
+## 커버 3안(지난 안) (위 띠 = 시리즈 통일 틀)
 | 커버 | 얼굴 | 문구 | 링크 |
 |---|---|---|---|
 | A 사이다 | 다해 팔짱·역광 | 감사 나오면? / 교장이 **집니다** | https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/ca945d41-43e9-4d6d-8110-220e87e7a1fb.png |
@@ -23,7 +26,7 @@
 
 ## 설명란 (안)
 ```
-"감사 나오면 누가 책임져요?" "교장이 집니다."
+"감사 나오면 누가 책임져요?" "모든 책임은, 교장인 제가 지겠습니다."
 읽는 사람 없는 보고서 대신, 아이들 이야기를 하는 학교.
 
 ← 9화: (9화 링크)
