@@ -144,7 +144,7 @@ add([(img('o_one',1.4,'in'),0,1.4)],ev=[(PING,0.2,0.45,'s',None)],subs=[(0.1,1.4
 MK['t08']=T
 speak('08',[(0,'v')],'감사 나오면,|누가 책임져요?',tail=0.2)
 MK['t09']=T
-speakw('09',[(0,'v'),(2.15,'o_safety_b','stampS'),(3.0,'o_duty_a','dutyH'),(3.45,'o_duty_b','dutyH'),(4.3,'clip:k208@0.3')],
+speakw('09',[(0,'v'),(2.15,'o_safety_b','stampS'),(3.0,'o_duty_a','in'),(3.45,'o_duty_b','in'),(4.3,'clip:k208@0.3')],
     [(POP+'교장이 집니다.',None,0),('학맞통은,|교감 선생님이.','통은',2.33)],tail=0.15,ev=[(A+'thud.wav',2.15,0.8,'s',None),(PING,3.45,0.5,'s',None)])
 HIT.append(MK['t09']+v0('09')); HIT.append(MK['t09']+2.15)
 MK['t11']=T
