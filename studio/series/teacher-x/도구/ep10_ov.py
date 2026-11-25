@@ -77,9 +77,10 @@ def duty(b):
         d.rectangle((160,y,1360,y+190),outline=(140,140,150),width=4); d.line((680,y,680,y+190),fill=(140,140,150),width=4)
         hl=(k==1)
         if hl and not b: d.rectangle((684,y+4,1356,y+186),fill=(255,243,190))
-        d.text((420,y+95),a,font=f(58 if hl else 52,F if hl else FR),fill=(30,30,40),anchor='mm'); d.text((1020,y+95),c,font=f(56 if hl else 50,F if hl else FR),fill=(30,30,40),anchor='mm')
+        cy=y+130 if (hl and b) else y+95
+        d.text((420,y+95),a,font=f(58 if hl else 52,F if hl else FR),fill=(30,30,40),anchor='mm'); d.text((1020,cy),c,font=f(56 if hl else 50,F if hl else FR),fill=(30,30,40),anchor='mm')
         if hl and b:
-            strike(im,760,1280,y+95,w=14); d=ImageDraw.Draw(im); d.text((1020,y+28),'교감',font=f(120,PEN),fill=(210,20,20),anchor='mm')
+            strike(im,780,1260,cy,w=12); d=ImageDraw.Draw(im); d.text((1020,y+52),'교감',font=f(104,PEN),fill=(210,20,20),anchor='mm')
         y+=190
     tag(im,1060,250); return im.convert('RGB')
 duty(False).save(O+'o_duty_a.png'); duty(True).save(O+'o_duty_b.png')
