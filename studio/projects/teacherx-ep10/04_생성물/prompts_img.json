@@ -1,0 +1,302 @@
+[
+{
+"index": 101,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<470494c7-6fbe-412e-aaa5-33c7a8ae77c0>>> seated at her desk in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: she leans sideways toward the next desk and whispers gossip, one hand half raised beside her mouth, mouth open mid-word, eyes wide. LIGHTING: cool early morning daylight through the blinds plus ceiling fluorescent lights. MOOD: curious gossip. CAMERA: medium side shot, a colleague's shoulder soft in the foreground, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 103,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses sitting at the head of a long dark wood conference table set up in the office in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>, other teachers seated along both sides seen from behind. ACTION: he leans back lazily and talks mid-yawn, mouth open, one hand loosely waving. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: bored complacency. CAMERA: medium shot from the far end of the table, slightly high, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 104,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile entering <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> through the open sliding door. ACTION: she walks in with long steady strides, eyes forward, mouth slightly open as if starting to speak. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: sudden authority. CAMERA: low-angle wide shot from behind seated teachers at the long dark wood conference table, their heads and shoulders dark in the foreground, she stands tall in the doorway, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 106,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> at the long dark wood conference table. ACTION: he pushes himself up from his chair, both palms pressing on the table, alarmed and defensive, mouth open speaking. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: panic hidden as authority. CAMERA: low-angle medium shot from table height, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 107,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile standing in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: she turns her head slightly toward someone off-screen left and speaks two short cold words, lips parted, chin level. LIGHTING: strong window light behind her through the blinds, rim light on her hair, face in soft shade. MOOD: final and calm. CAMERA: low-angle close-up, the red pen visible at the bottom edge, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 108,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses seated at the long dark wood conference table in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: shocked, he points at his own chest with one finger, glasses slipping down his nose, mouth open stammering. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: comic disbelief. CAMERA: close-up, slight dutch angle, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 109,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile seated in a loose circle of chairs with other teachers in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>, coffee mugs and a scattered pile of printed class photos on a low table. ACTION: she speaks calmly while looking down at the table, hands resting on her knees. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: honest, quiet. CAMERA: medium shot, eye level, side three-quarter view, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 110,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<7ce04525-6a2a-4741-8189-f27858642e84>>> in a navy vest over a light blue shirt with a blue lanyard seated in the teachers' circle in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: he looks up from a printed report in his hands and speaks hesitantly for the first time, mouth open, eyebrows lifting with a small hope. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: timid courage. CAMERA: close-up, three-quarter angle, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 111,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile seated in the teachers' circle in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>, facing <<<7ce04525-6a2a-4741-8189-f27858642e84>>> who is in the foreground. ACTION: she speaks to him steadily, mouth open mid-sentence. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: quiet support. CAMERA: over-the-shoulder shot past his blurred shoulder and navy vest, her face sharp, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 112,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses in the teachers' circle in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: he rises halfway from his chair, indignant, one hand raised, mouth open protesting. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: outraged. CAMERA: low-angle medium shot, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 113,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile seated in the teachers' circle in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: she answers without raising her voice, lips parted mid-word, eyes steady toward someone off-screen right. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: cool certainty. CAMERA: close-up, side three-quarter view, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 114,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses in the teachers' circle in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: he sinks back down into his chair, shoulders slumping, mouth open with a weak whine. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: deflated. CAMERA: medium shot, slightly high angle, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 115,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<ea997844-73ab-4258-8dd0-8940d0076093>>> in a black suit, red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in her breast pocket, silver watch <<<f4311bd5-c6a7-405b-8563-6b99d83e7151>>>, flat expressionless face, no smile standing in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: she speaks the final line looking down at someone off-screen, lips parted, perfectly calm. LIGHTING: strong warm afternoon backlight from the window, bright rim light around her hair and shoulders. MOOD: decisive victory. CAMERA: low-angle close-up, red pen catching light, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 116,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses hiding in the corner by the fire extinguisher in <<<f646c2c7-45e5-40be-8427-d764ce0dd422>>> in the evening. ACTION: he hunches over a phone pressed to his ear, the other hand cupped beside his mouth but not covering it, whispering, eyes darting toward the corridor. LIGHTING: dusk orange light from the corridor windows, half-lit fluorescent ceiling. MOOD: sneaky scheme. CAMERA: high-angle medium shot, handheld feel, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 117,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<bf7aa7d0-ac76-4b27-9022-01373b87ba93>>> seated at his large desk in <<<31a0d225-f8ae-4d63-adba-95cf0df2dd4a>>> at sunset, a red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in his breast pocket. ACTION: he holds a desk phone receiver loosely at his ear, ignoring it, and speaks slowly while staring at something on the desk, mouth open. LIGHTING: deep orange sunset through the window, desk lamp glow. MOOD: dawning suspicion. CAMERA: low-angle close-up, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 118,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<7ce04525-6a2a-4741-8189-f27858642e84>>> in a navy vest over a light blue shirt with a blue lanyard alone at his desk in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> late at night. ACTION: tired, he clicks to change the font color and border of a report cover page on the monitor, chin on his other hand, mouth closed. LIGHTING: dark office, only his desk lamp and the cold monitor glow, black windows, the wall clock at 11:40. MOOD: pointless exhaustion. CAMERA: over-the-shoulder medium shot, the monitor screen facing the camera directly and blank white. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 119,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: teachers seated around a long dark wood conference table in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>, including <<<470494c7-6fbe-412e-aaa5-33c7a8ae77c0>>> and <<<7ce04525-6a2a-4741-8189-f27858642e84>>>. ACTION: they exchange stunned glances with each other, mouths closed. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: shock. CAMERA: high-angle over-the-shoulder group shot, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 120,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses at the long dark wood conference table in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: his jaw drops slightly then his lips press shut, eyes widening behind his glasses. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: stunned. CAMERA: close-up, eye level, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 121,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: the red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in the breast pocket of a black suit jacket worn by <<<ea997844-73ab-4258-8dd0-8940d0076093>>>. ACTION: she breathes, the fabric moves slightly. LIGHTING: soft window light, shallow depth of field. MOOD: mysterious heirloom. CAMERA: extreme close-up of the chest pocket and pen, face out of frame. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 122,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: the vice principal's desk drawer in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> pulled fully open. ACTION: inside, a tall stack of unopened sealed envelopes and bound reports, a navy approval folder <<<65cc0f39-da64-469b-992b-ad9839ad7850>>> on top, a layer of dust. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: exposed hypocrisy. CAMERA: top-down insert shot into the drawer. All papers blank. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 123,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: the paper shredder <<<d46c40b6-f7cf-45c7-8ac2-500e37bf6156>>> in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: several teachers' hands from different sleeves feed stacks of forms into the top slot, shredded strips filling the bin window. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: liberating. CAMERA: high-angle insert close shot on the slot and hands. All papers blank. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 124,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<7ce04525-6a2a-4741-8189-f27858642e84>>> in a navy vest over a light blue shirt with a blue lanyard standing next to the paper shredder <<<d46c40b6-f7cf-45c7-8ac2-500e37bf6156>>> in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: he hesitates, holding a thick report with a colorful decorated cover above the slot, then his grip loosens. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: letting go. CAMERA: medium side shot, no one looks at the camera. Cover design abstract shapes only. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 125,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<e314203d-6f17-44da-a6c3-0638abbbf0af>>> in a dark grey suit with a red necktie and glasses in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: a bead of sweat runs down his temple, lips pressed tightly shut, eyes fixed on a paper chart off-screen. LIGHTING: 8 a.m. staff meeting, bright ceiling fluorescent light, pale daylight from the blinds. MOOD: cornered. CAMERA: extreme close-up on his face, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 126,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: teachers sitting in a loose circle of chairs in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> with coffee mugs, including <<<ea997844-73ab-4258-8dd0-8940d0076093>>>, <<<7ce04525-6a2a-4741-8189-f27858642e84>>> and <<<470494c7-6fbe-412e-aaa5-33c7a8ae77c0>>>. ACTION: they pass a smartphone around showing class photos and laugh together, leaning in. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: warm, joyful. CAMERA: wide high-angle shot, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 127,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: a low table in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> covered with printed class photos and coffee mugs. ACTION: a printed report with one yellow highlighter stripe slides out from under the photos, teachers' hands pause above it. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: sudden quiet. CAMERA: top-down insert shot. Photos show only blurred abstract shapes; papers blank except the yellow stripe. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 128,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: a high school student's hand in a dark green school blazer sleeve on a classroom desk, no face. ACTION: the hand circles one line on a printed sheet with a red pen; beside it a leaf in a small petri dish and a handwritten notebook. LIGHTING: bright classroom daylight. MOOD: discovery, learning. CAMERA: top-down insert shot. Printed lines are grey bars, no readable text. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 129,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: teachers in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>> including <<<470494c7-6fbe-412e-aaa5-33c7a8ae77c0>>> and <<<7ce04525-6a2a-4741-8189-f27858642e84>>>. ACTION: they rise from their chairs and start clapping, faces brightening. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: release, joy. CAMERA: wide high-angle shot, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 130,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<7ce04525-6a2a-4741-8189-f27858642e84>>> in a navy vest over a light blue shirt with a blue lanyard in <<<98bebb3b-ef33-4f76-b103-30a0731898d1>>>. ACTION: he bursts into a big open laugh for the first time, eyes crinkling, clapping. LIGHTING: Wednesday late afternoon, warm golden window light, soft and cheerful. MOOD: relief and happiness. CAMERA: close-up, slight low angle, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 131,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: <<<bf7aa7d0-ac76-4b27-9022-01373b87ba93>>> seated at his desk in <<<31a0d225-f8ae-4d63-adba-95cf0df2dd4a>>> at sunset, a red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> in his breast pocket. ACTION: he slowly looks down at a small blank memo card on the desk, phone receiver resting at his ear, mouth closed. LIGHTING: deep orange sunset through the window. MOOD: suspicion. CAMERA: wide shot from the doorway, slow and heavy, no one looks at the camera. No text, no letters, no numbers on any paper, screen or sign."
+}
+},
+{
+"index": 132,
+"params": {
+"model": "gpt_image_2_6",
+"quality": "high",
+"resolution": "2k",
+"aspect_ratio": "9:16",
+"prompt": "Korean webtoon style illustration, clean ink line art, soft cel shading, muted realistic colors. SUBJECT: the red fountain pen <<<2af71b8d-318f-4a5a-8bc7-6687caab18aa>>> clipped in the breast pocket of a dark charcoal three-piece suit worn by <<<bf7aa7d0-ac76-4b27-9022-01373b87ba93>>>. ACTION: he breathes, the fabric moves slightly. LIGHTING: warm sunset light, shallow depth of field. MOOD: mystery. CAMERA: extreme close-up of the chest pocket and pen, face out of frame, same framing as a matching shot of another person's pen. No text, no letters, no numbers on any paper, screen or sign."
+}
+}
+]
