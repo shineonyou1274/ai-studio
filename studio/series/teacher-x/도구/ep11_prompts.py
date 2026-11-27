@@ -6,7 +6,7 @@ E=dict(D='ea997844-73ab-4258-8dd0-8940d0076093',VP='e314203d-6f17-44da-a6c3-0638
  W='f4311bd5-c6a7-405b-8563-6b99d83e7151',RP='ba71d505-448d-4ea9-8554-f0dff0a0d4e9',JH='5a303a9c-e741-43ae-bb1e-c024ba6cce00',EN='34f6597e-9be2-47a2-96d2-0ba6ba6db13a')
 def e(k): return '<<<%s>>>'%E[k]
 DH=f"{e('D')} in a black suit and white blouse, red fountain pen {e('PEN')} clipped in her breast pocket, silver watch {e('W')}, flat expressionless face, no smile,"
-CHR=f"{e('CH')} the elderly chairman in a dark brown suit, red fountain pen {e('PEN')} in his breast pocket,"
+CHR=f"{e('CH')} the chairman exactly as in his reference sheet: neatly combed-back silver hair, clean-shaven face with no beard and no mustache, slim face, charcoal black three-piece suit, navy tie, red fountain pen {e('PEN')} in his breast pocket,"
 ENV=f"the cream envelope with a red seal {e('EN')}"
 VPP=f"{e('VP')} in a dark grey suit with a red necktie and glasses,"
 RPP=f"{e('RP')} the reporter with a small black notebook,"
@@ -54,5 +54,5 @@ STY="Korean webtoon style illustration, clean ink line art, soft cel shading, mu
 R=[]
 for i,s,a,c in S:
     R.append({"index":i,"params":{"model":"gpt_image_2_6","quality":"high","resolution":"2k","aspect_ratio":"9:16",
-     "prompt":f"{STY} SUBJECT: {s}. ACTION: {a}. CAMERA: {c}, no one looks at the camera. No text, no letters, no numbers on any paper, screen, board or sign."}})
+     "prompt":f"{STY} SUBJECT: {s}. ACTION: {a}. CAMERA: {c}, no one looks at the camera. No text, no letters, no numbers on any paper, screen, board or sign. No comic symbols, no sweat drops, no shock lines."}})
 json.dump({"requests":R},sys.stdout,ensure_ascii=False,indent=0)

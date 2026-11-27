@@ -7,7 +7,7 @@ SHEET=dict(D='7cbf684e-6c7a-4c66-b125-aa1e217d9c43',VP='7d5c63b4-3afa-4e9d-8877-
 CHAR=dict(D="the woman teacher from the references (straight black shoulder-length hair, black suit, white blouse, red fountain pen in her breast pocket, silver watch). Calm, cold, expressionless face, no smile.",
  VP="the middle-aged vice principal from the references (dark hair, glasses, dark grey suit, red necktie).",
  CA="the woman teacher from the references (brown hair in a low bun, round glasses, beige cardigan).",
- CH="the elderly chairman from the references (grey swept-back hair, grey goatee, dark brown suit, red fountain pen in his breast pocket).",
+ CH="the chairman from the references (neatly combed-back silver hair, clean-shaven, no beard, charcoal black three-piece suit, navy tie, red fountain pen in his breast pocket).",
  RP="the woman reporter from the references (black chin-length bob, navy blazer, white shirt, lanyard, small black notebook).",
  JH="the high school boy from the references (messy black hair with fringe, dark green school blazer, loose tie).",
  S1="the high school girl with a ponytail in a dark green school blazer.",S2="the high school boy with a buzz cut in a dark green school blazer.",S3="the high school girl with short hair, clips and glasses in a dark green school blazer.")
