@@ -1,6 +1,7 @@
 # 교사X 11화 상태 (2026-11-27)
 - 대본 v2 확정(사장님 "괜찮아 시작해 가자. 묻지말고 주욱 뽑아").
 - 생성 끝: 그림·녹음·대사 영상 26·반응 12 (04_생성물/생성로그.md).
+- 편집 v8: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/23f6f32b-6007-43ce-9329-ed7cfe4fd910.mp4 (긴 컷 펀치 인, 엔딩 12화 12/14(월) 18시, 133.5초, 컷 74)
 - 편집 v7: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/abf4c5b1-8257-4591-b653-b9b687ca96fd.mp4 (Gemini v6 검수 반영, 편집만, 133.5초, 컷 69)
 - 편집 v6: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/18b7e7fe-3e40-42b9-93cc-a2c2c9f632b1.mp4 (13 "선생님, 지금 뭐라고 하셨어요?" / 14 "그건 집중력.", 133.5초)
 - 편집 v5: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/503c156e-26eb-4b22-8605-f2325530ac51.mp4 (03·04 뺌, 준호 음높이 맞춤, 132.5초, 끝 4.4초)
