@@ -11,6 +11,8 @@
 - v1: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f30d3658-6abb-486d-b0b9-3cf99a9e82e3.mp4
 - [ ] 사장님 청취 · 은색 시계(L09)는 그대로(사장님 11/25)
 
+> **커버 띠 새 제목판(11/28, 이것으로 맞춤 미리보기 교체)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/d1b37d1e-a053-43da-909e-4530ee4118b0.png — 아래 질문·그림은 확정 커버 그대로
+
 ## 제목 — **새로 확정(사장님 11/28, 학교 문제를 묻는 틀·회차는 뒤)**: `계획서, 보고서는 누구를 위해 작성하는가 | 교사X 10화`
 (아래 이전 제목은 기록용)
 

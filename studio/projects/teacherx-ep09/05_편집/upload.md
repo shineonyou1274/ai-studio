@@ -16,6 +16,8 @@
 - 들어 보기(02·15 테이크 비교, 삐 소리마다 한 테이크: 02 t1~t4 → 15 t1~t4): https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/7496c943-fc96-4dfa-9bb7-fb3a3b7efd5a.mp3 — 지금 영상에는 02 t4, 15 t4
 - [ ] 사장님 청취 · [ ] Gemini 검수
 
+> **커버 띠 새 제목판(11/28, 이것으로 맞춤 미리보기 교체)**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/563dbbef-a2a0-4add-86f9-9a178493d633.png — 아래 질문·그림은 확정 커버 그대로
+
 ## 제목 — **새로 확정(사장님 11/28, 학교 문제를 묻는 틀·회차는 뒤)**: `AI가 쓴 과제 제출에 대처하는 법 | 교사X 9화`
 (아래 이전 제목은 기록용)
 

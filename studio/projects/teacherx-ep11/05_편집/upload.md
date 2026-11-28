@@ -6,6 +6,8 @@
 - **v9**: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/4e829327-b383-4ff3-9c81-d82eb93d800f.mp4 — 129.4초, 컷 72, 꼬리 4.6초, -14 LUFS, 자막 겹침 0
 - 지난 판: ../status.md
 
+> **커버 띠 새 제목판(11/28)**: A https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/6264a658-0566-4464-bbe9-261d587f726a.png · B https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/c97e6437-483a-461e-92bf-a625d90c77dc.png · C https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/8268836f-0cc9-4d7d-a372-1cad561fa11f.png — 아래 질문·그림은 그대로
+
 ## 제목 — **새로 확정(사장님 11/28, 학교 문제를 묻는 틀·회차는 뒤)**: `화장실 청소를 엄마가 대신? 15분 지각생에게 날린 한마디 | 교사X 11화`
 (아래 이전 제목은 기록용)
 
