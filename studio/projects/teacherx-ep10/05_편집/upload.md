@@ -11,6 +11,9 @@
 - v1: https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f30d3658-6abb-486d-b0b9-3cf99a9e82e3.mp4
 - [ ] 사장님 청취 · 은색 시계(L09)는 그대로(사장님 11/25)
 
+## 제목 — **새로 확정(사장님 11/28, 학교 문제를 묻는 틀·회차는 뒤)**: `계획서, 보고서는 누구를 위해 작성하는가 | 교사X 10화`
+(아래 이전 제목은 기록용)
+
 ## 제목 — 확정(사장님 11/25): `[10화] 형식적인 보고서가 없어진다면? No More Paperwork`
 
 ## 커버 — **A로(사장님 11/25)**, 문구 바꿈: 감사 나오면? / 책임은 교장인 **제가!** https://d2ol7oe51mr4n9.cloudfront.net/user_3FTKXD9o00xF3LlXkylAhMW8MLY/f0428471-a05c-4ae3-83df-39cee7fa02f5.png
