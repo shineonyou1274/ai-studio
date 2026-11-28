@@ -287,7 +287,7 @@ SUB+=[(MK['s1']+0.05,MK['walk']-0.05,CAPL+'5교시 · 교무실','Cap'),
       (MK['s5']+0.05,MK['t26']+1.0,CAPL+'쉬는 시간 · 복도','Cap'),
       (MK['news']+0.05,MK['drawer']-0.05,CAPL+'그날 저녁 · 뉴스','Cap'),
       (MK['fin']+0.05,MK['fin']+1.2,'{\\pos(360,780)\\fad(150,0)\\fscx110\\fscy110}손님이 온다, 바다 건너서','Ono'),
-      (MK['fin']+0.25,MK['fin']+1.2,'{\\pos(360,900)\\fnNanumGothic\\b1\\fs28\\fsp3\\bord3\\c&H0078E0FF&}교사X 12화 · 곧 공개','Ono')]
+      (MK['fin']+0.25,MK['fin']+1.2,'{\\pos(360,900)\\fnNanumGothic\\b1\\fs28\\fsp3\\bord3\\c&H0078E0FF&}교사X 12화 · 12월 14일(월) 저녁 6시','Ono')]
 # 배경음: 교무실·복도 가벼운 바탕 → 교실 긴장 저음(결정타 0.5초 전 끊음 = 정적) → 끝은 따뜻한 화음
 EV.append((A+'bedA.wav',MK['s1'],0.35,'s',('end',MK['s3']-MK['s1'])))
 EV.append((A+'dark.wav',MK['t16'],0.5,'s',('cut',MK['t22']-MK['t16']-0.5)))
